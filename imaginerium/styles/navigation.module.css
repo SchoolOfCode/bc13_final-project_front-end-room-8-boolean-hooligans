@@ -1,0 +1,11 @@
+.nav{
+    display: flex;
+    flex-direction: row;
+    background-color: brown;
+    height: 150px;
+    text-align: center;
+}
+
+.menu{
+    gap: 1
+}
