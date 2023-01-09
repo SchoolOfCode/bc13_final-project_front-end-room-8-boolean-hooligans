@@ -2,4 +2,5 @@
     background-color: brown;
     height: 100px;
     text-align: center;
+    display: flex;
 }
