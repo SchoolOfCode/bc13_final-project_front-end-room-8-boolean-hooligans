@@ -1,7 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
-import styles from "../styles/Home.module.css";
+// import styles from "../styles/Home.module.css";
+import Link from "next/link";
+import Navigation from "../Components/Navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,8 +16,22 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Imaginerium</h1>
-      <h1>Imaginerium</h1>
+      <Navigation />
+      <main>
+        <h1>Imaginerium</h1>
+        <p>
+          Imaginerium is a place where you can create your own characters and
+          share them with the world.
+        </p>
+        <div>
+          <button>
+            <Link href={"/createCharacter"}>Create Character</Link>
+          </button>
+          <button>
+            <Link href={"/characterList"}>Characters List</Link>
+          </button>
+        </div>
+      </main>
     </>
   );
 }
