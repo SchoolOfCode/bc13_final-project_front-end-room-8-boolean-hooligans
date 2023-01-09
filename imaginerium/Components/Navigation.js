@@ -16,7 +16,7 @@ export default function Navigation() {
           alt="Imaginerium"
         />
       </div>
-      <div className={styles.dropdown}>
+      <div className={styles.menu}>
         <ul>
           <li>
             <Link href="/">← Back to home</Link>
