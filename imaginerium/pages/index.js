@@ -4,7 +4,7 @@ import { Inter } from "@next/font/google";
 // import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Navigation from "../Components/Navigation";
-import Button from "../Components/Button";
+import ButtonLink from "../Components/ButtonLink";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,8 +25,11 @@ export default function Home() {
           share them with the world.
         </p>
         <div>
-          <Button text="Create character" src={"/createCharacter"}></Button>
-          <Button text="Character list" src={"/characterList"}></Button>
+          <ButtonLink
+            text="Create character"
+            src={"/createCharacter"}
+          ></ButtonLink>
+          <ButtonLink text="Character list" src={"/characterList"}></ButtonLink>
         </div>
       </main>
     </>
