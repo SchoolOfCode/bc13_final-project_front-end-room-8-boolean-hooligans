@@ -22,6 +22,10 @@
 }
 
 .img{
-    height: 80%;
+    height: 70%;
     object-fit: cover;
+}
+
+.name {
+    height: 30%;
 }

@@ -29,11 +29,11 @@ export default function characterList() {
     <>
       <Navigation></Navigation>
       <div>
+        <h1>List of characters</h1>
         <div className="searchBar">
           <Input placeholder="Search" type="text" />
           <Button text="Search" />
         </div>
-        <h1>List of characters</h1>
         <div className={styles.cardsContainer}>
           {characters.map((character) => {
             return (
