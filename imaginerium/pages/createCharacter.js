@@ -11,10 +11,13 @@ export default function createCharacter() {
   console.log(isAlive)
   
   function handleCheckbox(){
-    console.log("this function is being called")
     setIsAlive(isAlive == true ? false : true)
     return isAlive
-  } 
+  }
+
+  function saveCharacter(){
+    
+  }
 
     return (
         <>
@@ -26,7 +29,7 @@ export default function createCharacter() {
         <Input placeholder ="Enter character age" type="number"></Input>
         <p>Is your character alive?</p><Input type="checkbox" onClick={handleCheckbox}/>
         {isAlive}
-        <Button text="Submit Character"/>
+        <Button text="Submit Character" onClick={saveCharacter}/>
       </div>
       </>
     );
