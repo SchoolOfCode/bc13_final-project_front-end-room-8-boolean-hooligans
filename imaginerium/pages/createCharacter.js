@@ -10,7 +10,8 @@ export default function createCharacter() {
   const[isAlive, setIsAlive] = useState(false);
   console.log(isAlive)
   
-  function handlecheckbox(){
+  function handleCheckbox(){
+    console.log("this function is being called")
     setIsAlive(isAlive == true ? false : true)
     return isAlive
   } 
@@ -23,7 +24,7 @@ export default function createCharacter() {
         <Input placeholder ="Enter character name" type="text"></Input>
         <Input placeholder ="Enter character height cm" type="number"></Input> {/*To limit to positive numbers only */}
         <Input placeholder ="Enter character age" type="number"></Input>
-        <p>Is your character alive?</p><Input type="checkbox" onClick={handlecheckbox}/>
+        <p>Is your character alive?</p><Input type="checkbox" onClick={handleCheckbox}/>
         {isAlive}
         <Button text="Submit Character"/>
       </div>
