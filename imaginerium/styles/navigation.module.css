@@ -1,11 +1,105 @@
-.nav{
-    display: flex;
-    flex-direction: row;
-    background-color: brown;
-    height: 150px;
-    text-align: center;
+.nav {
+  display: flex;
+  flex-direction: row;
+  background-color: #156E58;
+  height: 70px;
+  text-align: center;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
 }
 
-.menu{
-    gap: 1
+.menu {
+  gap: 1
+}
+
+.dropbtn {
+  background-color: #FFA400;
+  width: 147px;
+  height: 45px;
+  border-radius: 10px;
+  border-color: #156E58;
+  color: #383535;
+  ;
+  font-size: 18px;
+
+}
+
+.dropdown {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  min-width: 147px;
+  background-color: inherit;
+  font-family: sans-serif;
+  /*Important for vertical align on mobile phones */
+  margin: 0;
+  /* Important for vertical align on mobile phones */
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #FFA400;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 147px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.dropdownContent a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.dropdownContent a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+.loginAndToggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 25%;
+}
+
+.loginButton {
+  width: 147px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: #F48227;
+  border-color: #156E58;
+  color: #383535;
+  font-size: 18px;
+}
+
+.navButtons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navButtons i {
+  margin-left: 10px;
+}
+
+.dropbtn a {
+  text-decoration: none;
+  color: #383535;
 }

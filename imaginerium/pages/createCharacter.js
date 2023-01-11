@@ -63,7 +63,6 @@ export default function createCharacter() {
           <option value="true">They live!</option>
           <option value="false">They are dead!</option>
           </select>
-
           <button id="next">Submit</button>
         </form>
       </div>

@@ -1,7 +1,7 @@
 import styles from "../styles/navigation.module.css";
 import Link from "next/link";
-import ButtonLink from "./ButtonLink";
-import Image from 'next/image';
+import ButtonToggleDarkMode from "./DarkModeToggle";
+import Image from "next/image";
 
 export default function Navigation() {
   return (
@@ -9,32 +9,48 @@ export default function Navigation() {
       <div className={styles.logo}>
         <Image
           priority
-          src="/../public/imagineriumLogo.png"
+          src="/../public/imaginerium-logo2 (1).png"
           className={styles.logo}
-          height={30}
-          width={90}
+          height={65}
+          width={212}
           alt="Imaginerium"
         />
       </div>
-      <div className={styles.menu}>
-        <ul>
-          <li>
-            <Link href="/">← Back to home</Link>
-          </li>
-          <li>
-            <Link href="/characterList">Character list</Link>
-          </li>
-          <li>
+      <div class={styles.navButtons}>
+        <div class={styles.dropdown}>
+          <button class={styles.dropbtn}>
+            <Link href="/">HOME</Link>
+          </button>
+        </div>
+        <div class={styles.dropdown}>
+          <button class={styles.dropbtn}>
+            CREATE
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class={styles.dropdownContent}>
             <Link href="/createCharacter">Create character</Link>
-          </li>
-        </ul>
+          </div>
+        </div>
+        <div class={styles.dropdown}>
+          <button class={styles.dropbtn}>
+            VIEW
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class={styles.dropdownContent}>
+            <Link href="/characterList">Character list</Link>
+          </div>
+        </div>
       </div>
-      <div className={styles.darkModeSwitch}>
-        <button>🌓</button>
-      </div>
-      <div className={styles.user}>
-        <button>User</button>
+      <div className={styles.loginAndToggle}>
+        <div className={styles.darkModeSwitch}>
+          <ButtonToggleDarkMode></ButtonToggleDarkMode>
+        </div>
+        <div>
+          <button className={styles.loginButton}>LOGIN</button>
+        </div>
       </div>
     </div>
   );
 }
+
+/*Comment for commit*/
