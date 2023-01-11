@@ -25,7 +25,7 @@ export default function createCharacter() {
 
     return (
         <>
-        {/* <Navigation></Navigation> */}
+        <Navigation></Navigation>
         <div>
         <h1>Create character</h1>
        <form onSubmit={(e) => {

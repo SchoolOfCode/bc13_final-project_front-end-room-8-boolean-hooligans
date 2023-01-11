@@ -16,19 +16,16 @@ export default function Navigation() {
           alt="Imaginerium"
         />
       </div>
-      <div className={styles.menu}>
-        <ul>
-          <li>
-            <Link href="/">← Back to home</Link>
-          </li>
-          <li>
-            <Link href="/characterList">Character list</Link>
-          </li>
-          <li>
-            <Link href="/createCharacter">Create character</Link>
-          </li>
-        </ul>
-      </div>
+  <div class={styles.dropdown}>
+    <button class={styles.dropbtn}>Characters 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class={styles.dropdownContent}>
+    <Link href="/">← Back to home</Link>
+    <Link href="/characterList">Character list</Link>
+    <Link href="/createCharacter">Create character</Link>
+    </div>
+</div>
       <div className={styles.darkModeSwitch}>
         <button>🌓</button>
       </div>
