@@ -1,8 +1,7 @@
 import styles from "../styles/characterCard.module.css";
 import { SlGhost } from 'react-icons/sl';
 import { GiHeartInside } from  'react-icons/gi';
-// import { state, useState } from 'react';
-import MyPopup from "../modals/characterCardModals.js";
+
 
 
 export default function CharacterCard(props) {

@@ -5,12 +5,13 @@ import Navigation from "../Components/Navigation.js";
 import CharacterCard from "../Components/CharacterCard.js";
 import styles from "../styles/characterList.module.css";
 import useFetch from "../hooks/useFetch";
-import MyPopup from "../modals/characterCardModals.js";
+// import MyPopup from "../modals/characterCardModals.js";
 import { state, useState } from 'react';
+import PopUpCharacterCard from "../modals/popUpCharacterCard"
 
 export default function characterList() {
-const [showModal, setShowModal] = useState(false);
 
+const [showModal, setShowModal] = useState(false);
 const charactersArray = useFetch()
 
 console.log(charactersArray)
@@ -19,6 +20,13 @@ console.log(charactersArray)
     <>
       <Navigation/>
       <div>
+      <button onClick={() => setShowModal(true)}>Open Modal</button>
+            <PopUpCharacterCard
+                onClose={() => setShowModal(false)}
+                show={showModal}
+            >
+                Hello from the modal!
+            </PopUpCharacterCard>
         <h1>List of characters</h1>
         <div className="searchBar">
           <Input placeholder="Search" type="text" />
@@ -40,7 +48,7 @@ console.log(charactersArray)
             );
           })}
         </div>
-        {showModal ? (<MyPopup/>): null}
+        {/* {showModal ? (<MyPopup/>): null} */}
       </div>
     </>
   );
