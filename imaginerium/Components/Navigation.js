@@ -17,13 +17,13 @@ export default function Navigation() {
         />
       </div>
   <div class={styles.dropdown}>
-    <button class={styles.dropbtn}>Characters 
+    <button class={styles.dropbtn}>CHARACTER 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class={styles.dropdownContent}>
-    <Link href="/">← Back to home</Link>
-    <Link href="/characterList">Character list</Link>
-    <Link href="/createCharacter">Create character</Link>
+    <Link href="/">←HOME</Link>
+    <Link href="/characterList">CHARACTER LIST</Link>
+    <Link href="/createCharacter">CREATE CHARACTER</Link>
     </div>
 </div>
 <div className={styles.loginAndToggle}>
@@ -31,7 +31,7 @@ export default function Navigation() {
         <button>🌓</button>
       </div>
       <div>
-        <button className={styles.loginButton}>Login</button>
+        <button className={styles.loginButton}>LOG IN</button>
       </div>
     </div>
     </div>
