@@ -11,8 +11,8 @@ export default function Navigation() {
           priority
           src="/../public/imagineriumLogo.png"
           className={styles.logo}
-          height={30}
-          width={90}
+          height={80}
+          width={200}
           alt="Imaginerium"
         />
       </div>
@@ -26,12 +26,14 @@ export default function Navigation() {
     <Link href="/createCharacter">Create character</Link>
     </div>
 </div>
+<div className={styles.loginAndToggle}>
       <div className={styles.darkModeSwitch}>
         <button>🌓</button>
       </div>
-      <div className={styles.user}>
-        <button>User</button>
+      <div>
+        <button className={styles.loginButton}>Login</button>
       </div>
+    </div>
     </div>
   );
 }

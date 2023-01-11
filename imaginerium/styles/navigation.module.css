@@ -1,7 +1,7 @@
 .nav{
     display: flex;
     flex-direction: row;
-    background-color: brown;
+    background-color: #156E58;
     height: 150px;
     text-align: center;
     justify-content: space-between;
@@ -59,3 +59,18 @@
   .dropdown:hover .dropdownContent {
     display: block;
   }  
+
+  .loginAndToggle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 25%;
+  }
+
+  .loginButton{
+    width: 191px;
+    height: 62px;
+    border-radius: 10px;
+    background-color: #F48227;
+  }
