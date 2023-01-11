@@ -1,0 +1,128 @@
+.form-container {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 500px;
+    background-color: cornflowerblue;
+    overflow-x: hidden;
+
+}
+
+.long-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 1500px;
+    background-color: rgb(241, 132, 132);
+}
+
+
+
+.form-content-one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 100%;
+
+
+
+}
+
+.inputs-container {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-container-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 15%;
+
+}
+
+.button-container-one button {
+    align-self: flex-end;
+    margin-right: 20px;
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+
+}
+
+.form-content-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 500px;
+    height: 100%;
+
+}
+
+.button-container-two {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 15%;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.button-container-two button {
+
+    width: 100px;
+    height: 50px;
+    margin: 0 20px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+
+}
+
+.form-content-three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 500px;
+    height: 100%;
+
+}
+
+.button-container-three {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 15%;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.button-container-three button {
+
+    width: 100px;
+    height: 50px;
+    margin: 0 20px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+
+}
