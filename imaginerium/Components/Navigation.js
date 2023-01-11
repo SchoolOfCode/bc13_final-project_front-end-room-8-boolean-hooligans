@@ -16,22 +16,38 @@ export default function Navigation() {
           alt="Imaginerium"
         />
       </div>
+      <div class={styles.navButtons}>
   <div class={styles.dropdown}>
-    <button class={styles.dropbtn}>CHARACTER 
+    <button class={styles.dropbtn}>HOME 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class={styles.dropdownContent}>
-    <Link href="/">←HOME</Link>
-    <Link href="/characterList">CHARACTER LIST</Link>
-    <Link href="/createCharacter">CREATE CHARACTER</Link>
+    <Link href="/">← Back to home</Link>
     </div>
+</div>
+<div class={styles.dropdown}>
+    <button class={styles.dropbtn}>CREATE 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class={styles.dropdownContent}>
+    <Link href="/createCharacter">Create character</Link>
+    </div>
+</div>
+<div class={styles.dropdown}>
+    <button class={styles.dropbtn}>VIEW 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class={styles.dropdownContent}>
+    <Link href="/characterList">Character list</Link>
+    </div>
+</div>
 </div>
 <div className={styles.loginAndToggle}>
       <div className={styles.darkModeSwitch}>
-        <ButtonToggleDarkMode></ButtonToggleDarkMode>
+      <ButtonToggleDarkMode></ButtonToggleDarkMode>
       </div>
       <div>
-        <button className={styles.loginButton}>LOG IN</button>
+        <button className={styles.loginButton}>LOGIN</button>
       </div>
     </div>
     </div>

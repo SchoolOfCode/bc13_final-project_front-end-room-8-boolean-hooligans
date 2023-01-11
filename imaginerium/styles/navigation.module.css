@@ -20,11 +20,12 @@
 
 .dropbtn {
  background-color: #FFA400;
- width: 200px;
+ width: 147px;
  height: 62px;
  border-radius: 10px;
  border-color: #156E58;
  color: #FFFFFF;
+ font-size: 24px;
   }
   
 .dropdown {
@@ -33,7 +34,7 @@
     outline: none;
     color: white;
     padding: 14px 16px;
-    min-width: 160px;
+    min-width: 147px;
     background-color: inherit;
     font-family: sans-serif;  /*Important for vertical align on mobile phones */
     margin: 0; /* Important for vertical align on mobile phones */
@@ -47,7 +48,7 @@
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 147px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border-radius: 10px;
@@ -86,4 +87,9 @@
     background-color: #F48227;
     border-color: #156E58;
     color: #383535;
+    font-size: 24px;
+  }
+
+  .navButtons {
+    justify-content: space-evenly;
   }
