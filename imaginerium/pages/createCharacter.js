@@ -1,56 +1,72 @@
-import Link from "next/link";
-import Navigation from "../Components/Navigation";
-// import NameInput from "../Components/NameInput";
-import Input from "../Components/Input";
-import Button from "../Components/Button";
-import { useState } from "react";
-
+// import Link from "next/link";
+ import Navigation from "../Components/Navigation";
+//  import NameInput from "../Components/NameInput";
+// import Input from "../Components/Input";
+// import Button from "../Components/Button";
+// import { useState } from "react";
 
 export default function createCharacter() {
-  // const[isAlive, setIsAlive] = useState(false);
-  // console.log(isAlive)
-  
-  // function handleCheckbox(){
-  //   setIsAlive(isAlive == true ? false : true)
-  //   return isAlive
-  // }
+  async function addNewCharacter(characterData) {
+    await fetch(`https://imaginerium-qpii.onrender.com/characters`, {
+      method: "POST",
+      mode: "cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(characterData),
+    });
+  }
+  return (
+    <>
+       <Navigation></Navigation> 
+      <div>
+        <h1>Create Your Character Here:</h1>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const characterData = {
+              user_id: 1,
+              char_name: formData.get("char_name"),
+              char_height: formData.get("char_height"),
+              char_age: formData.get("char_age"),
+              char_alive: formData.get("char_alive"),
+            };
 
-  const[characterObject, setcharacterObject] = useState({
-    characterName: '',
-    characterHeight: null,
-    characterAge: null,
-    characterAlive: null
-  })
-  
+            addNewCharacter(characterData);
 
-    return (
-        <>
-        {/* <Navigation></Navigation> */}
-        <div>
-        <h1>Create character</h1>
-       <form onSubmit={(e) => {
-        e.preventDefault();
-        const formData = new FormData(e.target);
-        const characterObject = {
-          characterName: formData.get('characterName'),
-          characterHeight: formData.get('characterHeight'),
-          characterAge: formData.get('characterAge'),
-          characterAlive: formData.get('characterAlive')
-        }
-        setcharacterObject(characterObject)
-        console.log(characterObject)
-        console.log(e)
-       }}>
-        
-        <Input placeholder ="Enter character name" type="text" name="characterName"></Input>
-        <Input placeholder ="Enter character height cm" type="number" name="characterHeight"></Input> {/*To limit to positive numbers only */}
-        <Input placeholder ="Enter character age" type="number" name="characterAge"></Input>
-        <p>Is your character alive?</p><Input type="checkbox" name="characterAlive"/>
-        {/* {isAlive} */}
-        {/* <Input text="Submit Character" type='submit' value='Submit'/> */}
-        <button id="next">Submit</button>
+            alert(`You have created ${characterData.char_name}`)
+          }}
+        >
+          <label htmlFor="char_name">Character Name:</label>
+          <input type="text" name="char_name" id="char_name"/>
+          
+          <label htmlFor="char_height">Height in feet?</label>
+          <select className='dropdown' name="char_height" id="char_height">
+          <option value="" defaultValue>How tall are they?</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          </select>
+
+          {/*change to limit to positive numbers only */}
+          <label htmlFor="char_age">How old are they in years?</label>
+          <input type="number" name="char_age" id="char_age"/>
+
+          <label htmlFor="char_alive">Are they alive?</label>
+          <select className='dropdown' name="char_alive" id="char_alive">
+          <option value="true">They live!</option>
+          <option value="false">They are dead!</option>
+          </select>
+
+          <button id="next">Submit</button>
         </form>
       </div>
-      </>
-    );
-  }
+    </>
+  );
+}
