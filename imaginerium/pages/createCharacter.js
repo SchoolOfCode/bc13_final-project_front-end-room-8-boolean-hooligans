@@ -16,7 +16,7 @@ export default function createCharacter() {
   // }
 
   const[characterObject, setcharacterObject] = useState({
-    characterName: null,
+    characterName: '',
     characterHeight: null,
     characterAge: null,
     characterAlive: null
@@ -25,7 +25,7 @@ export default function createCharacter() {
 
     return (
         <>
-        <Navigation></Navigation>
+        {/* <Navigation></Navigation> */}
         <div>
         <h1>Create character</h1>
        <form onSubmit={(e) => {
@@ -39,6 +39,7 @@ export default function createCharacter() {
         }
         setcharacterObject(characterObject)
         console.log(characterObject)
+        console.log(e)
        }}>
         
         <Input placeholder ="Enter character name" type="text" name="characterName"></Input>
@@ -46,8 +47,8 @@ export default function createCharacter() {
         <Input placeholder ="Enter character age" type="number" name="characterAge"></Input>
         <p>Is your character alive?</p><Input type="checkbox" name="characterAlive"/>
         {/* {isAlive} */}
-        <Input text="Submit Character" type='submit' value='Submit'/>
-        {/* <button id="next">Submit</button> */}
+        {/* <Input text="Submit Character" type='submit' value='Submit'/> */}
+        <button id="next">Submit</button>
         </form>
       </div>
       </>
