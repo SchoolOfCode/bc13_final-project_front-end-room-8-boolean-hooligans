@@ -48,6 +48,8 @@ console.log(charactersArray)
               <CharacterCard
               key={character.character_id}
                 char_name={character.char_name}
+                char_age={character.char_age}
+                char_alive={character.char_alive}
                 // image={character.image}
                 // alt={character.alt}
               />
