@@ -40,9 +40,8 @@ export default function createCharacter() {
         setTimeout(() => {
           setCharacterObject(characterData)
         }, "1000")
-        setTimeout(() => {
-          console.log(characterObject)
-        }, "2000")
+    
+        
        }}>
 
 
