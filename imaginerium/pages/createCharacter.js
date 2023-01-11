@@ -15,11 +15,11 @@ export default function createCharacter() {
   //   return isAlive
   // }
 
-  const[characterObject, setcharacterObject] = useState({
-    characterName: '',
-    characterHeight: null,
-    characterAge: null,
-    characterAlive: null
+  const[characterObject, setCharacterObject] = useState({
+    char_name: '',
+    char_height: null,
+    char_age: null,
+    char_alive: null
   })
   
 
@@ -31,21 +31,27 @@ export default function createCharacter() {
        <form onSubmit={(e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
-        const characterObject = {
-          characterName: formData.get('characterName'),
-          characterHeight: formData.get('characterHeight'),
-          characterAge: formData.get('characterAge'),
-          characterAlive: formData.get('characterAlive')
+        const characterData = {
+          char_name: formData.get('characterName'),
+          char_height: formData.get('characterHeight'),
+          char_age: formData.get('characterAge'),
+          char_alive: formData.get('characterAlive')
         }
-        setcharacterObject(characterObject)
-        console.log(characterObject)
-        console.log(e)
+        setTimeout(() => {
+          setCharacterObject(characterData)
+        }, "1000")
+        setTimeout(() => {
+          console.log(characterObject)
+        }, "2000")
        }}>
+
+
+      
         
-        <Input placeholder ="Enter character name" type="text" name="characterName"></Input>
-        <Input placeholder ="Enter character height cm" type="number" name="characterHeight"></Input> {/*To limit to positive numbers only */}
-        <Input placeholder ="Enter character age" type="number" name="characterAge"></Input>
-        <p>Is your character alive?</p><Input type="checkbox" name="characterAlive"/>
+        <input placeholder ="Enter character name" type="text" name="characterName" />
+        <input placeholder ="Enter character height cm" type="number" name="characterHeight" /> {/*To limit to positive numbers only */}
+        <input placeholder ="Enter character age" type="number" name="characterAge"/>
+        <p>Is your character alive?</p><input type="checkbox" name="characterAlive"/>
         {/* {isAlive} */}
         {/* <Input text="Submit Character" type='submit' value='Submit'/> */}
         <button id="next">Submit</button>
