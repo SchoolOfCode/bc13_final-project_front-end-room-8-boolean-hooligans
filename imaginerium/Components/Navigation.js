@@ -1,6 +1,6 @@
 import styles from "../styles/navigation.module.css";
 import Link from "next/link";
-import ButtonLink from "./ButtonLink";
+import ButtonToggleDarkMode from "./DarkModeToggle";
 import Image from 'next/image';
 
 export default function Navigation() {
@@ -28,7 +28,7 @@ export default function Navigation() {
 </div>
 <div className={styles.loginAndToggle}>
       <div className={styles.darkModeSwitch}>
-        <button>🌓</button>
+        <ButtonToggleDarkMode></ButtonToggleDarkMode>
       </div>
       <div>
         <button className={styles.loginButton}>LOG IN</button>
