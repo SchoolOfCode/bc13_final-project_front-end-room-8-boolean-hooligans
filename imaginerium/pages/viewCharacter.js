@@ -1,8 +1,12 @@
 import React from 'react'
+import Navigation from '../Components/Navigation'
 
 function viewCharacter() {
-  return (
+  return (<div>
+    <Navigation/>
     <div>viewCharacter</div>
+
+    </div>
   )
 }
 

@@ -4,27 +4,35 @@ import Button from "../Components/Button";
 import Navigation from "../Components/Navigation";
 import CharacterCard from "../Components/CharacterCard";
 import styles from "../styles/characterList.module.css";
+import useFetch from "../hooks/useFetch";
 
 export default function characterList() {
-  const characters = [
-    {
-      name: "John Doe",
-      image:
-        "https://i0.wp.com/www.hireanillustrator.com/i/images/2021/02/DnD1.jpg?resize=600%2C849&ssl=1",
-      alt: "john doe"
-    },
-    {
-      name: "Jane Doe",
-      image: "https://i.imgur.com/ItxjA1w.png",
-      alt: "jane doe"
-    },
-    {
-      name: "Bojo",
-      image:
-        "https://i0.wp.com/www.hireanillustrator.com/i/images/2021/02/DnD1.jpg?resize=600%2C849&ssl=1",
-      alt: "bojo"
-    }
-  ];
+
+
+  const charactersArray = useFetch()
+  // const characters = [
+  //   {
+  //     name: "John Doe",
+  //     image:
+  //       "https://i0.wp.com/www.hireanillustrator.com/i/images/2021/02/DnD1.jpg?resize=600%2C849&ssl=1",
+  //     alt: "john doe"
+  //   },
+  //   {
+  //     name: "Jane Doe",
+  //     image: "https://i.imgur.com/ItxjA1w.png",
+  //     alt: "jane doe"
+  //   },
+  //   {
+  //     name: "Bojo",
+  //     image:
+  //       "https://i0.wp.com/www.hireanillustrator.com/i/images/2021/02/DnD1.jpg?resize=600%2C849&ssl=1",
+  //     alt: "bojo"
+  //   }
+  // ];
+console.log(charactersArray)
+
+
+
   return (
     <>
       <Navigation></Navigation>
@@ -35,12 +43,13 @@ export default function characterList() {
           <Button text="Search" />
         </div>
         <div className={styles.cardsContainer}>
-          {characters.map((character) => {
+          {charactersArray[0].map((character) => {
             return (
               <CharacterCard
-                name={character.name}
-                image={character.image}
-                alt={character.alt}
+              key={character.character_id}
+                char_name={character.char_name}
+                // image={character.image}
+                // alt={character.alt}
               />
             );
           })}
