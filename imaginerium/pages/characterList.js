@@ -1,54 +1,55 @@
 import Link from "next/link";
 import Input from "../Components/Input";
 import Button from "../Components/Button";
-import Navigation from "../Components/Navigation";
-import CharacterCard from "../Components/CharacterCard";
+import Navigation from "../Components/Navigation.js";
+import CharacterCard from "../Components/CharacterCard.js";
 import styles from "../styles/characterList.module.css";
+import useFetch from "../hooks/useFetch";
+// import MyPopup from "../modals/characterCardModals.js";
+import { state, useState } from 'react';
+import PopUpCharacterCard from "../modals/popUpCharacterCard"
 
 export default function characterList() {
-  const characters = [
-    {
-      name: "John Doe",
-      image:
-        "https://i0.wp.com/www.hireanillustrator.com/i/images/2021/02/DnD1.jpg?resize=600%2C849&ssl=1",
-      alt: "john doe"
-    },
-    {
-      name: "Jane Doe",
-      image: "https://i.imgur.com/ItxjA1w.png",
-      alt: "jane doe"
-    },
-    {
-      name: "Bojo",
-      image:
-        "https://i0.wp.com/www.hireanillustrator.com/i/images/2021/02/DnD1.jpg?resize=600%2C849&ssl=1",
-      alt: "bojo"
-    }
-  ];
+
+const [showModal, setShowModal] = useState(false);
+const charactersArray = useFetch()
+
+console.log(charactersArray)
+
   return (
     <>
-      <Navigation></Navigation>
+      <Navigation/>
       <div>
+      <button onClick={() => setShowModal(true)}>Open Modal</button>
+            <PopUpCharacterCard
+                onClose={() => setShowModal(false)}
+                show={showModal}
+            >
+                Hello from the modal!
+            </PopUpCharacterCard>
         <h1>List of characters</h1>
         <div className="searchBar">
           <Input placeholder="Search" type="text" />
           <Button text="Search" />
         </div>
         <div className={styles.cardsContainer}>
-          {characters.map((character) => {
+          {charactersArray[0].map((character) => {
             return (
-              <CharacterCard
-                name={character.name}
-                image={character.image}
-                alt={character.alt}
+              <div>
+              <CharacterCard 
+                key={character.character_id}
+                char_name={character.char_name}
+                char_age={character.char_age}
+                char_alive={character.char_alive}
+                // image={character.image}
+                // alt={character.alt}
               />
+              </div>
             );
           })}
         </div>
+        {/* {showModal ? (<MyPopup/>): null} */}
       </div>
-      <button>
-        <Link href="/">← Back to home</Link>
-      </button>
     </>
   );
 }
