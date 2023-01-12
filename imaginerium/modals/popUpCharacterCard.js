@@ -1,40 +1,19 @@
+import React, { useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 
-import React, { useEffect, useState } from "react";
-import ReactDOM from "react-dom";
-import "../styles/characterCard.module.css"
-
-
-const PopUpCharacterCard = ({ show, onClose }) => {
-  const [isBrowser, setIsBrowser] = useState(false);
+const Modal = ({ children }) => {
+  const elRef = useRef(null);
+  if (!elRef.current) {
+    elRef.current = document.createElement("div");
+  }
 
   useEffect(() => {
-    setIsBrowser(true);
+    const modalRoot = document.getElementById("modal-root");
+    modalRoot.appendChild(elRef.current);
+    return () => modalRoot.removeChild(elRef.current);
   }, []);
 
-  const handleCloseClick = (e) => {
-    e.preventDefault();
-    onClose();
-  };
-
-  const modalContent = show ? (
-  <div className="pop-up">
-          <a href="#" onClick={handleCloseClick}>
-            x
-          </a>
-        <p>Hello world</p>
-        </div>
-  ) : null;
-
-  if (isBrowser) {
-    return ReactDOM.createPortal(
-      modalContent,
-      document.getElementById("modal-root")
-    );
-  } else {
-    return null;
-  }
+  return createPortal(<div>{children}</div>, elRef.current);
 };
 
-
-
-export default PopUpCharacterCard;
+export default Modal;
