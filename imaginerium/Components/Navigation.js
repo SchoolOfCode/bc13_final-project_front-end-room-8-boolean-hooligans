@@ -9,7 +9,7 @@ export default function Navigation() {
       <div className={styles.logo}>
         <Image
           priority
-            src="/../public/imaginerium-logo2 (1).png"
+            src="https://i.ibb.co/0BtC8vF/imaginerium-logo2-1.png"
           className={styles.logo}
           height={65}
           width={212}
