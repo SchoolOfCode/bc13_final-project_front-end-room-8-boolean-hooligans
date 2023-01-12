@@ -1,15 +1,18 @@
 .cardsContainer {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; */
   margin: 0 auto; 
   margin-top: 20vh;
-
   max-width: 80vw;
   padding: 15px;
- 
- 
+ display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-column-gap: 140px;
+  grid-row-gap: 5px;
 }
+ 
+
 
 .displayCharactersContainer {
   background-color: bisque;

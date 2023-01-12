@@ -155,6 +155,7 @@ body{
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
+ 
 }
 .description{
   margin-top: 0px;
@@ -194,7 +195,7 @@ body{
 }
 
 .image{
-  margin-top: 20%;
+  margin-top: 0%;
   max-width: 80%;
 padding: 15px;
 }
@@ -222,15 +223,17 @@ padding: 15px;
 
 .additional .alive-status 
  {
-  top: 80%;
+margin: 5px;
   color: #fff;
   text-transform: uppercase;
-  font-size: 0.7em;
+  font-size: 1em;
   font-weight: bold;
   background: rgba(0,0,0,0.15);
-  padding: 0.1rem 0.64rem;
+  padding-top: 6px;
+  padding-bottom: 6px;
   border-radius: 100px;
   white-space: nowrap;
+  text-align: center;
 }
 
 
