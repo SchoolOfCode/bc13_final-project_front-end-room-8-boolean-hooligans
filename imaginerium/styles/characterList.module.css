@@ -2,7 +2,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 20px;
+  margin: 0 auto; 
+  margin-top: 20vh;
+
+  max-width: 80vw;
+  padding: 15px;
+ 
+ 
+}
+
+.displayCharactersContainer {
+  background-color: bisque;
+  padding: 5px;
+  width: 100vw;
+ 
 }

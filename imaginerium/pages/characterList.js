@@ -22,6 +22,7 @@ console.log(charactersArray)
           <Input placeholder="Search" type="text" />
           <Button text="Search" />
         </div>
+        <div className={styles.displayCharactersContainer}>
         <div className={styles.cardsContainer}>
           {charactersArray[0].map((character) => {
             return (
@@ -38,6 +39,7 @@ console.log(charactersArray)
               </div>
             );
           })}
+        </div>
         </div>
       </div>
     </>
