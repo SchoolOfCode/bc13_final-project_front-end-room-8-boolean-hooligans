@@ -18,9 +18,8 @@ export default function Navigation() {
       </div>
       <div class={styles.navButtons}>
         <div class={styles.dropdown}>
-          <button class={styles.dropbtn}>
-            <Link href="/">HOME</Link>
-          </button>
+        <Link href="/"><button class={styles.dropbtn}>HOME
+          </button></Link>
         </div>
         <div class={styles.dropdown}>
           <button class={styles.dropbtn}>
