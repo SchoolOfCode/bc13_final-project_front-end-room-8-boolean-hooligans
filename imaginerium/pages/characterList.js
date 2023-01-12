@@ -22,10 +22,11 @@ console.log(charactersArray)
           <Input placeholder="Search" type="text" />
           <Button text="Search" />
         </div>
+        <div className={styles.displayCharactersContainer}>
         <div className={styles.cardsContainer}>
           {charactersArray[0].map((character) => {
             return (
-              <div>
+              
               <CharacterCard 
                 key={character.character_id}
                 char_name={character.char_name}
@@ -35,9 +36,10 @@ console.log(charactersArray)
                 // image={character.image}
                 // alt={character.alt}
               />
-              </div>
+              
             );
           })}
+        </div>
         </div>
       </div>
     </>

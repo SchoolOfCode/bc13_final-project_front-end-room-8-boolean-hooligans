@@ -150,3 +150,198 @@ body {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   transition: all 0.3s;
 }
+
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Character cards CSS */
+
+.center {
+  /* position: absolute; */
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+ 
+}
+.description{
+  margin-top: 0px;
+  width: 80%;
+  float: right;
+}
+
+.card {
+  width: 360px;
+  height: 200px;
+  background-color: #fff;
+  background: linear-gradient(#f8f8f8, #fff);
+  box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  margin: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.card h1 {
+  text-align: center;
+}
+
+.card .additional {
+  position: absolute;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(#dE685E, #EE786E);
+  transition: width 0.4s;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.card.green .additional {
+  background: linear-gradient(#92bCa6, #A2CCB6);
+}
+
+.image{
+  margin-top: 0%;
+  max-width: 80%;
+padding: 15px;
+}
+.card:hover .additional {
+  width: 100%;
+  border-radius: 0 5px 5px 0;
+}
+
+.card .additional .user-card {
+  width: 150px;
+  height: 100%;
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+
+.card .additional .user-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10%;
+  right: -2px;
+  height: 80%;
+  border-left: 2px solid rgba(0,0,0,0.025);
+  overflow: hidden;
+}
+
+.additional .alive-status 
+ {
+margin: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: bold;
+  background: rgba(0,0,0,0.15);
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+}
+
+
+
+ .additional .user-card svg {
+  top: 50%;
+}
+
+ .additional .more-info {
+  width: 240px;
+  float: left;
+  position: absolute;
+  left: 120px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.additional .more-info h1 {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.green .additional .more-info h1 {
+  color: #224C36;
+}
+
+ .additional .coords {
+  margin: 0 1rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.green .additional .coords {
+  color: #325C46;
+}
+
+.additional .coords span + span {
+  float: right;
+}
+
+.card .additional .stats {
+  font-size: 1.3rem;
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  top: auto;
+  color: #fff;
+  overflow: hidden;
+}
+
+.card.green .additional .stats {
+  color: #325C46;
+}
+
+.card .additional .stats > div {
+  flex: 1;
+  text-align: center;
+}
+
+.card .additional .stats i {
+  display: block;
+}
+
+.card .additional .stats div.title {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+ .additional .stats div.value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.2rem;
+}
+
+ .general {
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-top: 0;
+  overflow: hidden;
+}
+
+ .general .more {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.9em;
+  overflow: hidden;
+}
+
+
+
