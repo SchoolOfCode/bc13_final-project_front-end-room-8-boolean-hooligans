@@ -16,27 +16,27 @@ export default function Navigation() {
           alt="Imaginerium"
         />
       </div>
-      <div class={styles.navButtons}>
-        <div class={styles.dropdown}>
-          <button class={styles.dropbtn}>
+      <div className={styles.navButtons}>
+        <div className={styles.dropdown}>
+          <button className={styles.dropbtn}>
             <Link href="/">HOME</Link>
           </button>
         </div>
-        <div class={styles.dropdown}>
-          <button class={styles.dropbtn}>
+        <div className={styles.dropdown}>
+          <button className={styles.dropbtn}>
             CREATE
-            <i class="fa fa-caret-down"></i>
+            <i className="fa fa-caret-down"></i>
           </button>
-          <div class={styles.dropdownContent}>
+          <div className={styles.dropdownContent}>
             <Link href="/createCharacter">Create character</Link>
           </div>
         </div>
-        <div class={styles.dropdown}>
-          <button class={styles.dropbtn}>
+        <div className={styles.dropdown}>
+          <button className={styles.dropbtn}>
             VIEW
-            <i class="fa fa-caret-down"></i>
+            <i className="fa fa-caret-down"></i>
           </button>
-          <div class={styles.dropdownContent}>
+          <div className={styles.dropdownContent}>
             <Link href="/characterList">Character list</Link>
           </div>
         </div>
