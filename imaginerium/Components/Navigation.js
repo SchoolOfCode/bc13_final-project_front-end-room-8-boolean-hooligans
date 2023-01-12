@@ -17,8 +17,8 @@ export default function Navigation() {
         />
       </div>
 
-      <div class={styles.navButtons}>
-        <div class={styles.dropdown}>
+      <div className={styles.navButtons}>
+        <div className={styles.dropdown}>
         <Link href="/"><button class={styles.dropbtn}>HOME
           </button></Link>
 

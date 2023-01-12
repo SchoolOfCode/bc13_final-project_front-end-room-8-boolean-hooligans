@@ -104,7 +104,14 @@ body {
   html {
     color-scheme: dark;
   }
-} */ 
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
 
 #modal-root {
   position: fixed;
@@ -131,7 +138,7 @@ body {
 }
 
 #pop-up {
-  
+
   width: 60%;
   max-height: 70%;
   position: absolute;

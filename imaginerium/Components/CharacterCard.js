@@ -1,8 +1,4 @@
 import styles from "../styles/characterCard.module.css";
-
-
-
-
 import { SlGhost } from "react-icons/sl";
 import { GiHeartInside } from "react-icons/gi";
 import { useState } from "react";

@@ -1,10 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
-// import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Navigation from "../Components/Navigation";
 import ButtonLink from "../Components/ButtonLink";
+import { VscPersonAdd, VscOrganization
+} from "react-icons/vsc";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,21 +20,49 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className={styles.homeContainer}>
       <Navigation />
-      <main>
-        <h1>Imaginerium</h1>
-        <p>
-          Imaginerium is a place where you can create your own characters and
-          share them with the world.
-        </p>
-        <div>
-          <ButtonLink
-            text="Create character"
-            src={"/createCharacter"}
-          ></ButtonLink>
-          <ButtonLink text="Character list" src={"/characterList"}></ButtonLink>
+      <main className={styles.main}>
+      <div className={styles.titleContainer}>
+        <h1>IMAGINERIUM</h1>
+        <div className={styles.descriptionContainer}>
+          <Image
+            priority
+              src="https://i.ibb.co/ZVj6bcP/spinning-Earth-unscreen.gif"
+            className={styles.earth}
+            height={320}
+            width={ 427}
+            alt="Earth"
+          />
+         
+          <p>
+            Imaginerium is a place where you can create your own characters and
+            share them with the world.
+          </p>
+          
+        </div>
+
+        <div className={styles.buttonsContainer}>
+       
+          <button className={styles.buttonMain}>
+          <div>
+            Create Character
+            </div>
+            <VscPersonAdd className={styles.add}/>
+          </button>
+          
+          <button className={styles.buttonMain}>
+          <div>
+          Character List
+          </div>
+            
+            <VscOrganization className={styles.add}/>
+          </button>
+
+        </div>
         </div>
       </main>
+      </div>
     </>
   );
 }
