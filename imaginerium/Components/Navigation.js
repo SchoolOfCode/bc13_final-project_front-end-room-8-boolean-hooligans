@@ -9,18 +9,19 @@ export default function Navigation() {
       <div className={styles.logo}>
         <Image
           priority
-          src="/../public/imaginerium-logo2 (1).png"
+            src="https://i.ibb.co/0BtC8vF/imaginerium-logo2-1.png"
           className={styles.logo}
           height={65}
           width={212}
           alt="Imaginerium"
         />
       </div>
-      <div className={styles.navButtons}>
-        <div className={styles.dropdown}>
-          <button className={styles.dropbtn}>
-            <Link href="/">HOME</Link>
-          </button>
+
+      <div class={styles.navButtons}>
+        <div class={styles.dropdown}>
+        <Link href="/"><button class={styles.dropbtn}>HOME
+          </button></Link>
+
         </div>
         <div className={styles.dropdown}>
           <button className={styles.dropbtn}>

@@ -1,8 +1,13 @@
 import styles from "../styles/characterCard.module.css";
+
+
+
+
 import { SlGhost } from "react-icons/sl";
 import { GiHeartInside } from "react-icons/gi";
 import { useState } from "react";
 import PopUpCharacterCard from "../modals/popUpCharacterCard";
+
 
 export default function CharacterCard(props) {
   const [showModal, setShowModal] = useState(false);
@@ -25,6 +30,7 @@ export default function CharacterCard(props) {
           </p>
         )}
 
+
         {showModal ? (
           <PopUpCharacterCard>
             <div className="pop-up">
@@ -39,6 +45,7 @@ export default function CharacterCard(props) {
           </PopUpCharacterCard>
         ) : null}
       </div>
+
     </>
   );
 }
