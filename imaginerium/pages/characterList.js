@@ -5,26 +5,54 @@ import Navigation from "../Components/Navigation.js";
 import CharacterCard from "../Components/CharacterCard.js";
 import styles from "../styles/characterList.module.css";
 import useFetch from "../hooks/useFetch";
-import { state, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function characterList() {
 
-const charactersArray = useFetch()
+// const charactersArray = useFetch()
+const [charactersArray, setCharactersArray] = useState([]);
 
-console.log(charactersArray)
+useEffect(() => {
+    async function fetchData() {
+        const response = await fetch(`https://imaginerium-qpii.onrender.com/characters`);
+        const data = await response.json();
+        setCharactersArray(data.payload);
+    }
+    fetchData();
+}, []);
+
+async function searchByName (nameToSearch){
+ 
+    const response = await fetch(`https://imaginerium-qpii.onrender.com/characters?char_name=${nameToSearch}`);
+    const data = await response.json();
+    setCharactersArray(data.payload);
+}
 
   return (
     <>
       <Navigation/>
       <div>
           <h1>List of characters</h1>
-        <div className="searchBar">
-          <Input placeholder="Search" type="text" />
-          <Button text="Search" />
+          <div className="searchBar">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            let nameToSearch =  formData.get("char_name")
+           
+            searchByName(nameToSearch)
+          
+          }}
+        >
+          <label htmlFor="char_name">Search by name:</label>
+          <input type="text" name="char_name" id="char_name"/>
+          <button >Submit</button>
+          </form>
+         
         </div>
         <div className={styles.displayCharactersContainer}>
         <div className={styles.cardsContainer}>
-          {charactersArray[0].map((character) => {
+          {charactersArray.map((character) => {
             return (
               
               <CharacterCard 
