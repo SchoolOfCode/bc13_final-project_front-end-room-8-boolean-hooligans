@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   justify-content: center; */
   margin: 0 auto; 
-  margin-top: 20vh;
+  margin-top: 14vh;
   max-width: 80vw;
   padding: 15px;
  display: grid;
@@ -19,4 +19,13 @@
   padding: 5px;
   width: 100vw;
  
+}
+
+
+.searchBar {
+  margin-top: 2.5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

@@ -4,6 +4,7 @@
 // import Input from "../Components/Input";
 // import Button from "../Components/Button";
 // import { useState } from "react";
+import styles from "./../styles/createCharacter.module.css"
 
 export default function createCharacter() {
   async function addNewCharacter(characterData) {
@@ -17,8 +18,9 @@ export default function createCharacter() {
   return (
     <>
        <Navigation></Navigation> 
-      <div>
-        <h1>Create Your Character Here:</h1>
+      <div className={styles.createCharacter}>
+      <div><h1>Create Your Character Here:</h1></div>
+        <div>
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -38,7 +40,8 @@ export default function createCharacter() {
         >
           <label htmlFor="char_name">Character Name:</label>
           <input type="text" name="char_name" id="char_name"/>
-          
+          <br />
+          <br />
           <label htmlFor="char_height">Height in feet?</label>
           <select className='dropdown' name="char_height" id="char_height">
           <option value="" defaultValue>How tall are they?</option>
@@ -53,18 +56,23 @@ export default function createCharacter() {
           <option value="9">9</option>
           <option value="10">10</option>
           </select>
-
+          <br />
+          <br />
           {/*change to limit to positive numbers only */}
           <label htmlFor="char_age">How old are they in years?</label>
           <input type="number" name="char_age" id="char_age"/>
-
+          <br />
+          <br />
           <label htmlFor="char_alive">Are they alive?</label>
           <select className='dropdown' name="char_alive" id="char_alive">
           <option value="true">They live!</option>
           <option value="false">They are dead!</option>
           </select>
+          <br />
+          <br />
           <button id="next">Submit</button>
         </form>
+        </div>
       </div>
     </>
   );
