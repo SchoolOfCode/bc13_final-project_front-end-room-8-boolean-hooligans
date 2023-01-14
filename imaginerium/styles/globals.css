@@ -26,6 +26,9 @@ body {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   transition: all 0.3s;
   border-radius: 6px;
+  background-color: white;
+  align-items: baseline;
+
 }
 
 #modal-root:empty {
@@ -40,12 +43,11 @@ body {
  flex-direction: row;
  padding: 10px;
  background-color: white;
- height: 67vh;
- border-radius: 6px;
+ height: 65vh;
 
 }
 .pop-up-left {
-  background-color: rgb(134, 211, 198);
+  background-color: #e3fdce;
   padding: 15px;
   width: 30%;
   
@@ -55,21 +57,39 @@ height: 90%;
 
   max-width: 14vw;
 }
-.edit-button {
+.edit-button , .close-pop-up-button {
   float: right;
+  background-color: #c7fbc2;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
+.category {
+  padding: 10px;
+}
+.edit-button:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
 
 
 .pop-up-right {
   padding: 15px;
   width: 96%
  
-}
-.close-pop-up-button {
-  float: right;
-  border-radius: 20%;
-  padding: 8px;
-  background-color: #92bCa6;
 }
 
 /* ********** Character cards CSS ************** */

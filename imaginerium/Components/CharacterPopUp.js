@@ -14,14 +14,14 @@ return (
         </div>
         <div className="pop-up-right">
             <h1>{props.char_name}</h1>
-            <p>Height in feet: {props.char_height}<button className="edit-button">edit</button></p>
-            <p>Age in years: {props.char_age}<button className="edit-button">edit</button></p>
+            <p className="category">Height in feet: {props.char_height}<button className="edit-button">edit</button></p>
+            <p className="category">Age in years: {props.char_age}<button className="edit-button">edit</button></p>
             {props.char_alive ? (
-              <p>
+              <p className="category">
                 Status: <GiHeartInside /> Alive!
               </p>
             ) : (
-              <p>
+              <p className="category">
                 Status: <SlGhost /> Dead
               </p>
             )}<button className="edit-button">edit</button>

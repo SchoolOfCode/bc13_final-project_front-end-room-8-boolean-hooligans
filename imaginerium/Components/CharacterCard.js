@@ -66,10 +66,11 @@ export default function CharacterCard(props) {
 
       {showModal ? (
         <PopUpCharacterCard>
-          <CharacterPopUp char_name={props.char_name} char_height={props.char_height} char_age={props.char_age} char_alive={props.char_alive}/>
           <button className="close-pop-up-button" onClick={() => setShowModal(false)}>
               Close X
             </button>
+          <CharacterPopUp char_name={props.char_name} char_height={props.char_height} char_age={props.char_age} char_alive={props.char_alive}/>
+          
         </PopUpCharacterCard>
       ) : null}
     </div>
