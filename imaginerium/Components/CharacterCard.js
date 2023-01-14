@@ -6,6 +6,7 @@ import { HiUserGroup } from "react-icons/hi";
 import { MdHeight } from "react-icons/md";
 import { useState } from "react";
 import PopUpCharacterCard from "../modals/popUpCharacterCard";
+import CharacterPopUp from "./CharacterPopUp";
 
 export default function CharacterCard(props) {
   const [showModal, setShowModal] = useState(false);
@@ -65,23 +66,10 @@ export default function CharacterCard(props) {
 
       {showModal ? (
         <PopUpCharacterCard>
-          <div classNameName="pop-up">
-            <h1>{props.char_name}</h1>
-            <p>Height in feet: {props.char_height}</p>
-            <p>Age in years: {props.char_age}</p>
-            {props.char_alive ? (
-              <p>
-                Status: <GiHeartInside /> Alive!
-              </p>
-            ) : (
-              <p>
-                Status: <SlGhost /> Dead
-              </p>
-            )}
-            <button id="pop-up-button" onClick={() => setShowModal(false)}>
-              Close
+          <CharacterPopUp char_name={props.char_name} char_height={props.char_height} char_age={props.char_age} char_alive={props.char_alive}/>
+          <button className="close-pop-up-button" onClick={() => setShowModal(false)}>
+              Close X
             </button>
-          </div>
         </PopUpCharacterCard>
       ) : null}
     </div>
