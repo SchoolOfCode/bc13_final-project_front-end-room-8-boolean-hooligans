@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 export default function CharacterPopUp(props){
 
   const[edit, setEdit] = useState(false)
-  const[editName, setEditName] = useState("") 
+  const[editName, setEditName] = useState(null) 
   const[editHeight, setEditHeight] = useState(null)
 
 async function destroyCharacter(id) {
@@ -35,6 +35,7 @@ async function editCharacter(id,key,value) {
     mode: "cors",
     headers: { "Content-Type": "application/json" }
   })
+  setEditName(null)
 }
 
 
@@ -51,8 +52,8 @@ return (
         </div>
         <div className="pop-up-right">
             <h1>{props.char_name}</h1>
-            <p className="category">Height in feet: {props.char_height}<button className="edit-button">edit</button></p>
-            {/* {edit?(<div><input onChange={(e)=>setEditName(e.target.value)}></input><button onClick={()=>editCharacter(props.character_id, editName)} className="edit-button">Done</button></div>):(<div><h3>{props.char_name}</h3><button onClick={()=>setEdit(!edit)} className="edit-button">edit</button></div>)} */}
+            <p className="category">Height in feet: {props.char_height}{edit?(<div><input onChange={(e)=>setEditName(e.target.value)}></input><button onClick={()=>editCharacter(props.character_id, editName)} className="edit-button">Done</button></div>):(<div><h3>{props.char_height}</h3><button onClick={()=>setEdit(!edit)} className="edit-button">edit</button></div>)}</p>
+            {/* {edit?(<div><input onChange={(e)=>setEditName(e.target.value)}></input><button onClick={()=>editCharacter(props.character_id, editName)} className="edit-button">Done</button></div>):(<div><h3>{props.char_height}</h3><button onClick={()=>setEdit(!edit)} className="edit-button">edit</button></div>)} */}
             <p className="category">Age in years: {props.char_age}<button className="edit-button">edit</button></p>
             {props.char_alive ? (
               <p className="category">
