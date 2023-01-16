@@ -53,7 +53,7 @@ body {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); 
   transition: all 0.3s;
   border-radius: 6px;
-  background-color: white;
+  /*background-color: white;*/
   align-items: baseline;
 
 }
@@ -141,8 +141,8 @@ height: 200px;
 .card {
   width: 360px;
   height: 200px;
-  background-color: #fff;
-  background: linear-gradient(#f8f8f8, #fff);
+  /*background-color: #fff;*/
+  /*background: linear-gradient(#f8f8f8, #fff);*/
   box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
   border-radius: 6px;
   overflow: hidden;
@@ -307,10 +307,16 @@ overflow-wrap: break-word;
   overflow: hidden;
 }
 
-:root {
+:root, .card {
   /* Light theme */
   background-color:  #F7F2CB;
   text-decoration-color: black;
+}
+
+
+[data-theme='dark'],.form-submission-pop-up, .pop-up, .card{
+background-color: #156E58;
+text-decoration-color:#F7F2CB;
 }
 
 [data-theme='dark'] {
