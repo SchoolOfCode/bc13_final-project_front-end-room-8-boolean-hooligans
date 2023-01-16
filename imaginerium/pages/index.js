@@ -45,18 +45,21 @@ export default function Home() {
         <div className={styles.buttonsContainer}>
        
           <button className={styles.buttonMain}>
+          <Link href="/createCharacter"> 
           <div>
             Create Character
             </div>
             <VscPersonAdd className={styles.add}/>
+            </Link>
           </button>
+        
           
-          <button className={styles.buttonMain}>
-          <div>
+         <button className={styles.buttonMain}><Link href="/characterList" >
+          <div className={styles.buttonMain}>
           Character List
           </div>
-            
-            <VscOrganization className={styles.add}/>
+        
+            <VscOrganization className={styles.add}/></Link>
           </button>
 
         </div>
