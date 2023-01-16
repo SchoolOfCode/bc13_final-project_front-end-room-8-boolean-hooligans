@@ -6,13 +6,21 @@ import { MdHeight } from "react-icons/md";
 
 export default function CharacterPopUp(props){
 
+async function destroyCharacter(id) {
+  await fetch(`https://imaginerium-qpii.onrender.com/characters?character_id=${id}`, {
+    method: "DELETE",
+    mode: "cors",
+    headers: { "Content-Type": "application/json" },
+  })
+};
+
 return (
     <div className="pop-up">
         <div className="pop-up-left">
         <img className="pop-up-image" src="https://deepgrouplondon.com/wp-content/uploads/2019/06/person-placeholder-5.png" />
         <h3>{props.char_name}</h3>
           <button className="edit-button">edit</button>
-          <button>delete {props.char_name}</button>
+          <button className="delete-button" onClick={destroyCharacter(props.character_id)}>delete {props.char_name}</button>
         </div>
         <div className="pop-up-right">
             <h1>{props.char_name}</h1>
