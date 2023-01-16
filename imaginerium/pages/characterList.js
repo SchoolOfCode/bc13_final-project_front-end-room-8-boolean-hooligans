@@ -62,6 +62,7 @@ export default function characterList() {
               return (
                 <CharacterCard
                   key={character.character_id}
+                  character_id={character.character_id}
                   char_name={character.char_name}
                   char_age={character.char_age}
                   char_alive={character.char_alive}

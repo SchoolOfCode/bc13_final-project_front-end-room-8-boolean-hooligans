@@ -3,11 +3,14 @@ import { GiHeartInside } from "react-icons/gi";
 import { RiCake2Fill } from "react-icons/ri";
 import { HiUserGroup } from "react-icons/hi";
 import { MdHeight } from "react-icons/md";
+import { useEffect } from "react";
 
 export default function CharacterPopUp(props){
 
 async function destroyCharacter(id) {
-  await fetch(`https://imaginerium-qpii.onrender.com/characters?character_id=${id}`, {
+  console.log("destroy has been called");
+  console.log(id);
+  await fetch(`https://imaginerium-qpii.onrender.com/characters/${id}`, {
     method: "DELETE",
     mode: "cors",
     headers: { "Content-Type": "application/json" },
@@ -15,12 +18,14 @@ async function destroyCharacter(id) {
 };
 
 return (
-    <div className="pop-up">
+  <div className="pop-up">
+  {console.log(props.char_name)}
+  {console.log(props.character_id)}
         <div className="pop-up-left">
         <img className="pop-up-image" src="https://deepgrouplondon.com/wp-content/uploads/2019/06/person-placeholder-5.png" />
         <h3>{props.char_name}</h3>
           <button className="edit-button">edit</button>
-          <button className="delete-button" onClick={destroyCharacter(props.character_id)}>delete {props.char_name}</button>
+          <button className="delete-button" onClick={()=> destroyCharacter(props.character_id)}>delete {props.char_name}</button>
         </div>
         <div className="pop-up-right">
             <h1>{props.char_name}</h1>
