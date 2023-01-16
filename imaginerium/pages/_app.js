@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import React from "react";
 import Head from "next/head";
+import { ThemeProvider } from "next-themes";
 
 export default function App({ Component, pageProps }) {
   return ( 
@@ -13,7 +14,9 @@ export default function App({ Component, pageProps }) {
       referrerPolicy="no-referrer"
     />
   </Head>
+  <ThemeProvider>
   <Component {...pageProps} />
+  </ThemeProvider>
   </React.Fragment>
   );
 }

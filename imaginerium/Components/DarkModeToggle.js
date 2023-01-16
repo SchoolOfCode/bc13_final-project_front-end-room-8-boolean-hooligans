@@ -1,15 +1,17 @@
 import style from "../styles/darkModeToggle.module.css"
+import { theme, useTheme } from "next-themes";
 
 const ButtonToggleDarkMode = () => {
-    /*const { theme, setTheme } = useTheme();*/
+    const { theme, setTheme } = useTheme();
   
     return (
       <div>
         <input
           type="checkbox"
           className={style.checkbox}
-        //   onChange={() => setTheme(theme == "dark" ? "light" : "dark")}
-        //   checked={theme == "dark" ? true : false}
+           onChange={() => setTheme(theme == "dark" ? "light" : "dark")}
+
+           checked={theme == "dark" ? true : false}
           id="chk"
         />
         <label className={style.label} htmlFor="chk">
