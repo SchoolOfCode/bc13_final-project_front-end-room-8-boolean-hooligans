@@ -19,7 +19,7 @@ body {
   top: 0;
   z-index: 10;
   width: 60%;
-  height: 70vh;
+  height: 40vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -44,12 +44,12 @@ body {
   bottom: 0;
   top: 0;
   z-index: 10;
-  width: 60%;
-  height: 70vh;
+  width: 40vw;
+  height: 30vh;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  transform: translate(-50%, -50%); 
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); 
   transition: all 0.3s;
   border-radius: 6px;
   background-color: white;
@@ -59,6 +59,12 @@ body {
 
 #form-submission-pop-up:empty {
   display: none;
+}
+
+.form-submission-pop-up {
+
+  padding: 20px;
+
 }
 
 

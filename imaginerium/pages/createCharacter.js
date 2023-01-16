@@ -1,4 +1,4 @@
-// import Link from "next/link";
+ import Link from "next/link";
  import Navigation from "../Components/Navigation";
 //  import NameInput from "../Components/NameInput";
 // import Input from "../Components/Input";
@@ -7,6 +7,7 @@
 import styles from "./../styles/createCharacter.module.css"
 import FormSubmissionPopUp from "../modals/formSubmissionPopUp";
 import { useState } from "react";
+import Router from 'next/router'
 
 export default function createCharacter() {
   const [showModal, setShowModal] = useState(false)
@@ -19,6 +20,8 @@ export default function createCharacter() {
       body: JSON.stringify(characterData),
     });
   }
+
+ 
   return (
     <>
        <Navigation></Navigation> 
@@ -76,8 +79,12 @@ export default function createCharacter() {
           <button id="next">Submit</button>
         </form>
         </div>
-        {showModal ? (<FormSubmissionPopUp className="form-submission-pop-up">
-              <p>Character created successfully</p>
+        {showModal ? (<FormSubmissionPopUp >
+          <div className="form-submission-pop-up">
+              <h3>Character created successfully!</h3>
+            <button onClick={()=>{Router.reload(window.location.createCharacter)}}>Create another character</button><Link href="/"><button >Back to home
+          </button></Link>
+              </div>
             </FormSubmissionPopUp>):null }
       </div>
     </>
