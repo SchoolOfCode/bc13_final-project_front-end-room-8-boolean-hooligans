@@ -1,9 +1,10 @@
 
 /* ************Global styles***************** */
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #F7F2CB;
+  /* background-color: #F7F2CB; */
   box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   
@@ -306,5 +307,20 @@ overflow-wrap: break-word;
   overflow: hidden;
 }
 
+:root {
+  /* Light theme */
+  background-color:  #F7F2CB;
+  text-decoration-color: black;
+}
 
+[data-theme='dark'] {
+  background-color: black;
+  text-decoration-color:#F7F2CB;
+  
+}
 
+/*PLAN 
+Isolate the pop-ups 
+Enable the pop-ups to respond to dark/light theme 
+
+*/
