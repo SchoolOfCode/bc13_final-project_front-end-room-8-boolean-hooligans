@@ -5,8 +5,12 @@
 // import Button from "../Components/Button";
 // import { useState } from "react";
 import styles from "./../styles/createCharacter.module.css"
+import FormSubmissionPopUp from "../modals/formSubmissionPopUp";
+import { useState } from "react";
 
 export default function createCharacter() {
+  const [showModal, setShowModal] = useState(false)
+
   async function addNewCharacter(characterData) {
     await fetch(`https://imaginerium-qpii.onrender.com/characters`, {
       method: "POST",
@@ -34,8 +38,7 @@ export default function createCharacter() {
             };
 
             addNewCharacter(characterData);
-
-            alert(`You have created ${characterData.char_name}`)
+            setShowModal(true)
           }}
         >
           <label htmlFor="char_name">Character Name:</label>
@@ -73,6 +76,9 @@ export default function createCharacter() {
           <button id="next">Submit</button>
         </form>
         </div>
+        {showModal ? (<FormSubmissionPopUp className="form-submission-pop-up">
+              <p>Character created successfully</p>
+            </FormSubmissionPopUp>):null }
       </div>
     </>
   );

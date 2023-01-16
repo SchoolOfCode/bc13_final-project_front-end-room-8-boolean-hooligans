@@ -15,6 +15,7 @@ class MainDocument extends Document {
           <NextScript />
           {/*Below we add the modal wrapper*/}
           <div id="modal-root"></div>
+          <div id="form-submission-pop-up"></div>
         </body>
       </Html>
     );
