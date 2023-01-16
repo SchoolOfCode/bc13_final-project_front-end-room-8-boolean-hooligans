@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 export default function characterList() {
   // const charactersArray = useFetch()
   const [charactersArray, setCharactersArray] = useState([]);
-
+ 
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
@@ -30,6 +30,7 @@ export default function characterList() {
     setCharactersArray(data.payload);
   }
 
+  
   return (
     <>
     
@@ -38,6 +39,7 @@ export default function characterList() {
         <div className={styles.searchBar}>
           <div>
             <h1>List of characters</h1>
+            
           </div>
           <div>
             <form
@@ -62,6 +64,7 @@ export default function characterList() {
               return (
                 <CharacterCard
                   key={character.character_id}
+                  character_id={character.character_id}
                   char_name={character.char_name}
                   char_age={character.char_age}
                   char_alive={character.char_alive}

@@ -12,7 +12,8 @@ export default function CharacterCard(props) {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <div onClick={() => setShowModal(!showModal)} className="center">
+    <div>
+    <div onClick={() => setShowModal(true)} className="center">
       <div className="card green">
         <div className="additional">
           <div className="user-card">
@@ -63,13 +64,13 @@ export default function CharacterCard(props) {
           <span className="more">Click to expand</span>
         </div>
       </div>
-
+</div>  
       {showModal ? (
         <PopUpCharacterCard>
           <button className="close-pop-up-button" onClick={() => setShowModal(false)}>
               Close X
             </button>
-          <CharacterPopUp char_name={props.char_name} char_height={props.char_height} char_age={props.char_age} char_alive={props.char_alive}/>
+          <CharacterPopUp character_id={props.character_id} char_name={props.char_name} char_height={props.char_height} char_age={props.char_age} char_alive={props.char_alive}/>
           
         </PopUpCharacterCard>
       ) : null}
