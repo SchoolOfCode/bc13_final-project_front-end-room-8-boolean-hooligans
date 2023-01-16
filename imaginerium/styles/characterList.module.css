@@ -1,25 +1,17 @@
 .cardsContainer {
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: center; */
+ align-content: center;
   margin: 0 auto; 
   margin-top: 14vh;
-  max-width: 80vw;
-  padding: 15px;
+  max-width: 95vw;
+  padding: 10px;
+  margin-left: 0px;
  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-column-gap: 140px;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-column-gap: 10px;
   grid-row-gap: 5px;
 }
  
 
-
-.displayCharactersContainer {
-  background-color: bisque;
-  padding: 5px;
-  width: 100vw;
- 
-}
 
 
 .searchBar {

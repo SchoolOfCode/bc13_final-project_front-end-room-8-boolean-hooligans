@@ -32,6 +32,7 @@ export default function characterList() {
 
   return (
     <>
+    
       <Navigation />
       <div>
         <div className={styles.searchBar}>
@@ -55,7 +56,7 @@ export default function characterList() {
           </div>
         </div>
 
-        <div className={styles.displayCharactersContainer}>
+        
           <div className={styles.cardsContainer}>
             {charactersArray.map((character) => {
               return (
@@ -71,7 +72,7 @@ export default function characterList() {
               );
             })}
           </div>
-        </div>
+       
       </div>
     </>
   );
