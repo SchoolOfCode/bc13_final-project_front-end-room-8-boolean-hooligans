@@ -63,7 +63,7 @@ export default function characterList() {
           <div className={styles.cardsContainer}>
             {charactersArray.map((character) => {
               return (
-                <CharacterCard
+                <CharacterCard className="cctest"
                   key={character.character_id}
                   character_id={character.character_id}
                   char_name={character.char_name}
