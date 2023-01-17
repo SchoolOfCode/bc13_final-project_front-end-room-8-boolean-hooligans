@@ -310,7 +310,7 @@ body {
   right: 1rem;
   font-size: 0.9em;
   overflow: hidden;
-
+}
 :root, .card {
   /* Light theme */
   background-color:  #F7F2CB;
