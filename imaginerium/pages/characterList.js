@@ -37,7 +37,7 @@ export default function characterList() {
       <Navigation />
       <div>
         <div className={styles.searchBar}>
-          <div>
+          <div role="heading" aria-level="1">
             <h1>List of characters</h1>
             
           </div>

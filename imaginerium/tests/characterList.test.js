@@ -1,21 +1,17 @@
-import characterList from "../pages/characterList.js";
 import { test, expect } from "@jest/globals";
 import { render, screen } from "@testing-library/react";
 import '@testing-library/jest-dom' 
-import CharacterCard from "../Components/CharacterCard.js";
+import CharacterList from "../pages/characterList.js";
 
 
+describe ('characterList', () => {
+it('check the h1 element is on the page', () => {
+  render(<CharacterList/>)
 
-  describe('Character Card', () => {
-    it('renders the Character card', () => {
-      render(<CharacterCard character_alive={false}/>)
-  
-      const cardsContainer = screen.getByText('Dead')
-  
-      expect(cardsContainer).toBeInTheDocument()
+    const heading = screen.getByRole('heading', {
+      name: "List of characters",
     })
+    
+    expect(heading).toBeInTheDocument()
   })
-
-
-
-
+})
