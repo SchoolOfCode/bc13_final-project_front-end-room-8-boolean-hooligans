@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest --watch"
   },
   "dependencies": {
     "@next/font": "13.1.1",
@@ -19,6 +20,9 @@
     "supertest": "^6.3.3"
   },
   "devDependencies": {
-    "cypress": "^12.3.0"
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "cypress": "^12.3.0",
+    "jest-environment-jsdom": "^29.3.1"
   }
 }
