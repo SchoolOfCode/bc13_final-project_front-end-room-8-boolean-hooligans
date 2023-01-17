@@ -9,9 +9,13 @@ import { useEffect, useState } from "react";
 
 export default function CharacterPopUp(props){
 
-  const[edit, setEdit] = useState(false)
+  const[editNameInput, setEditNameInput] = useState(false)
   const[editName, setEditName] = useState(null) 
+  const[editHeightInput, setEditHeightInput] = useState(false)
   const[editHeight, setEditHeight] = useState(null)
+  const[editAgeInput, setEditAgeInput] = useState(false)
+  const[editAge, setEditAge] = useState(null)
+  const[editAlive, setEditAlive] = useState(null)
 
 async function destroyCharacter(id) {
   console.log("destroy has been called");
@@ -35,7 +39,8 @@ async function editCharacter(id,key,value) {
     mode: "cors",
     headers: { "Content-Type": "application/json" }
   })
-  setEditName(null)
+  console.log(body)
+  // setEditName(null)
 }
 
 
@@ -47,13 +52,19 @@ return (
   {console.log(props.character_id)}
         <div className="pop-up-left">
         <img className="pop-up-image" src="https://deepgrouplondon.com/wp-content/uploads/2019/06/person-placeholder-5.png" />
-        {edit?(<div><input onChange={(e)=>setEditName(e.target.value)}></input><button onClick={()=>editCharacter(props.character_id,'char_name',editName)} className="edit-button">Done</button></div>):(<div><h3>{props.char_name}</h3><button onClick={()=>setEdit(!edit)} className="edit-button">edit</button></div>)}
+        {editNameInput?(<div><input onChange={(e)=>setEditName(e.target.value)}></input><button onClick={()=>editCharacter(props.character_id,'char_name',editName)} className="edit-button">Done</button></div>):(<div><h3>{props.char_name}</h3><button onClick={()=>setEditNameInput(!editNameInput)} className="edit-button">edit</button></div>)}
           <button className="delete-button" onClick={()=> destroyCharacter(props.character_id)}>delete {props.char_name}</button>
         </div>
         <div className="pop-up-right">
             <h1>{props.char_name}</h1>
-            <p className="category">Height in feet: {props.char_height}{edit?(<div><input onChange={(e)=>setEditName(e.target.value)}></input><button onClick={()=>editCharacter(props.character_id, editName)} className="edit-button">Done</button></div>):(<div><h3>{props.char_height}</h3><button onClick={()=>setEdit(!edit)} className="edit-button">edit</button></div>)}</p>
-            {/* {edit?(<div><input onChange={(e)=>setEditName(e.target.value)}></input><button onClick={()=>editCharacter(props.character_id, editName)} className="edit-button">Done</button></div>):(<div><h3>{props.char_height}</h3><button onClick={()=>setEdit(!edit)} className="edit-button">edit</button></div>)} */}
+
+            <p className="category">Height in feet: {props.char_height}
+            
+            {editHeightInput?(<div><input type='number' onChange={(e)=>setEditHeight(e.target.value)}></input><button onClick={()=>editCharacter(props.character_id, 'char_height',editHeight)} className="edit-button">Done</button></div>):(<div><h3>{props.char_height}</h3><button onClick={()=>setEditHeightInput(!editHeightInput)} className="edit-button">edit</button></div>)}</p>
+
+            {editAgeInput?(<div><input type='number' onChange={(e)=>setEditAge(e.target.value)}></input><button onClick={()=>editCharacter(props.character_id, 'char_age', editAge)} className="edit-button">Done</button></div>):(<div><h3>{props.char_height}</h3><button onClick={()=>setEditAgeInput(!editAgeInput)} className="edit-button">edit</button></div>)}
+
+
             <p className="category">Age in years: {props.char_age}<button className="edit-button">edit</button></p>
             {props.char_alive ? (
               <p className="category">
