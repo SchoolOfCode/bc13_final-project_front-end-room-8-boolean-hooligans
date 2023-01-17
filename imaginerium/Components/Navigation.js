@@ -30,6 +30,7 @@ export default function Navigation() {
           </button>
           <div className={styles.dropdownContent}>
             <Link href="/createCharacter">Create character</Link>
+            <Link href="/createNewWorld">Create world map</Link>
           </div>
         </div>
         <div className={styles.dropdown}>
