@@ -1,21 +1,17 @@
-import characterList from "../pages/characterList.js";
 import { test, expect } from "@jest/globals";
 import { render, screen } from "@testing-library/react";
+import '@testing-library/jest-dom' 
+import CharacterList from "../pages/characterList.js";
 
+/* Not passing test, needs to be checked */
+describe ('characterList', () => {
+it('check the h1 element is on the page', () => {
+  render(<CharacterList/>)
 
-
-  describe('Character List', () => {
-    it('renders the Character List', () => {
-      render(<characterList />)
-  
-      const characterCard = screen.getByRole('characterCard', {
-        name: /cctest\.js!/i,}
-        )
-  
-      expect(characterCard).toBeInTheDocument()
+    const heading = screen.getByRole('heading', {
+      name: "List of characters",
     })
+    
+    expect(heading).toBeInTheDocument()
   })
-
-
-
-
+})
