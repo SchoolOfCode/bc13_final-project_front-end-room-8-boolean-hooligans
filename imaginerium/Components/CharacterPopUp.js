@@ -58,23 +58,23 @@ return (
         <div className="pop-up-right">
             <h1>{props.char_name}</h1>
 
-            <p className="category">Height in feet: {props.char_height}
+            <p className="category">Height in feet:</p>            
+            {editHeightInput?(<div><input type='number' onChange={(e)=>setEditHeight(e.target.value)}></input><button onClick={()=>editCharacter(props.character_id, 'char_height',editHeight)} >Done</button></div>):(<div><h3>{props.char_height}</h3><button onClick={()=>setEditHeightInput(!editHeightInput)} className="edit-button">edit</button></div>)}
             
-            {editHeightInput?(<div><input type='number' onChange={(e)=>setEditHeight(e.target.value)}></input><button onClick={()=>editCharacter(props.character_id, 'char_height',editHeight)} className="edit-button">Done</button></div>):(<div><h3>{props.char_height}</h3><button onClick={()=>setEditHeightInput(!editHeightInput)} className="edit-button">edit</button></div>)}</p>
+            <p className="category">Age in years: </p>
+            {editAgeInput?(<div><input type='number' onChange={(e)=>setEditAge(e.target.value)}></input><button onClick={()=>editCharacter(props.character_id, 'char_age', editAge)} className="edit-button">Done</button></div>):(<div><h3>{props.char_age}</h3><button onClick={()=>setEditAgeInput(!editAgeInput)} className="edit-button">edit</button></div>)}
 
-            {editAgeInput?(<div><input type='number' onChange={(e)=>setEditAge(e.target.value)}></input><button onClick={()=>editCharacter(props.character_id, 'char_age', editAge)} className="edit-button">Done</button></div>):(<div><h3>{props.char_height}</h3><button onClick={()=>setEditAgeInput(!editAgeInput)} className="edit-button">edit</button></div>)}
-
-
-            <p className="category">Age in years: {props.char_age}<button className="edit-button">edit</button></p>
             {props.char_alive ? (
               <p className="category">
                 Status: <GiHeartInside /> Alive!
+                <button onClick={()=>editCharacter(props.character_id,'char_alive',false)}>Kill</button>
               </p>
             ) : (
               <p className="category">
                 Status: <SlGhost /> Dead
+                <button onClick={()=>editCharacter(props.character_id,'char_alive',true)}>Ressurect</button>
               </p>
-            )}<button className="edit-button">edit</button>
+            )}
            </div>
           </div>
          
