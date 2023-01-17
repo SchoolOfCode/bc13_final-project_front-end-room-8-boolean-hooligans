@@ -1,7 +1,7 @@
 import CharacterCard from "../Components/CharacterCard.js";
 import { test, expect } from "@jest/globals";
 import { render, screen } from "@testing-library/react";
-import '@testing-library/jest-dom' 
+
 
 describe('Character Card', () => {
     it('renders the Character card', () => {

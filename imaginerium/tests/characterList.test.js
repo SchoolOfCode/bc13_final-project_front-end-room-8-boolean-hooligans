@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import '@testing-library/jest-dom' 
 import CharacterList from "../pages/characterList.js";
 
-
+/* Not passing test, needs to be checked */
 describe ('characterList', () => {
 it('check the h1 element is on the page', () => {
   render(<CharacterList/>)
