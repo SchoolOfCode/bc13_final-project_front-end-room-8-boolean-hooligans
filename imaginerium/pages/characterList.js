@@ -55,6 +55,7 @@ export default function characterList() {
               <input type="text" name="char_name" id="char_name" />
               <button>Submit</button>
             </form>
+            <button onClick={()=>searchByName("")}>View All Characters</button>
           </div>
         </div>
 
