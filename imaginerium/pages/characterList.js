@@ -1,26 +1,32 @@
-import Link from "next/link";
-import Input from "../Components/Input";
-import Button from "../Components/Button";
+
 import Navigation from "../Components/Navigation.js";
 import CharacterCard from "../Components/CharacterCard.js";
 import styles from "../styles/characterList.module.css";
 import useFetch from "../hooks/useFetch";
 import { useEffect, useState } from "react";
+import { useSession, getSession } from "next-auth/react"
 
 export default function characterList() {
-  // const charactersArray = useFetch()
+
+  const { data: session } = useSession()
+  //const { data: session } = getSession()
   const [charactersArray, setCharactersArray] = useState([]);
  
-  useEffect(() => {
-    async function fetchData() {
-      const response = await fetch(
-        `https://imaginerium-qpii.onrender.com/characters`
-      );
-      const data = await response.json();
-      setCharactersArray(data.payload);
-    }
-    fetchData();
-  }, []);
+  console.log(session)
+  
+
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const response = await fetch(
+  //       `http://localhost:3001/characters?user_id=${session?.user.email}`
+  //     );
+  //     const data = await response.json();
+  //     setCharactersArray(data.payload);
+  //   }
+  //   fetchData();
+  // }, [session]);
+
+
 
   async function searchByName(nameToSearch) {
     const response = await fetch(
@@ -29,9 +35,17 @@ export default function characterList() {
     const data = await response.json();
     setCharactersArray(data.payload);
   }
-
   
-  return (
+
+  if (!session) {
+    
+    return (
+      <div>Log in to view your saved characters</div>
+    )
+  }
+
+    
+    return (
     <>
     
       <Navigation />
