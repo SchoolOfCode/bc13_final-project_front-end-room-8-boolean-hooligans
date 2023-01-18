@@ -2,6 +2,7 @@ import styles from "../styles/navigation.module.css";
 import Link from "next/link";
 import ButtonToggleDarkMode from "./DarkModeToggle";
 import Image from "next/image";
+import LoginOutButton from "./login-btn";
 
 export default function Navigation() {
   return (
@@ -50,8 +51,10 @@ export default function Navigation() {
           <ButtonToggleDarkMode></ButtonToggleDarkMode>
         </div>
         <div>
-          <button className={styles.logoutButton}>LOGOUT</button>
+          <LoginOutButton></LoginOutButton>
+
         </div>
+
       </div>
     </div>
   );
