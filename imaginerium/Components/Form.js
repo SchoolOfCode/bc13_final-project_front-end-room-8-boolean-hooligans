@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import Step1 from './Step1';
 import Step2 from './Step2';
+import Step3 from './Step3'
 // import styles from '../styles/Form.module.css';
  
 export default function Form() {
@@ -15,12 +16,15 @@ export default function Form() {
   return (
     
       <div>
-        <p>Step {step} of 2</p>
+        <p>Step {step} of 3</p>
         {
           step === 1 && (<Step1 setStep={setStep} formValues={formValues} setFormValues={setFormValues}/>)
         }
         {
           step === 2 && (<Step2 setStep={setStep} formValues={formValues} setFormValues={setFormValues}/>)
+        }
+        {
+          step === 3 && (<Step3 setStep={setStep} formValues={formValues} setFormValues={setFormValues}/>)
         }
         
         
