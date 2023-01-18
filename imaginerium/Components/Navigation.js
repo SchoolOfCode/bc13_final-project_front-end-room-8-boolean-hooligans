@@ -31,7 +31,9 @@ export default function Navigation() {
           </button>
           <div className={styles.dropdownContent}>
             <Link href="/createCharacter">Create character</Link>
-            <Link href="/createWorldMap">Create world map</Link>
+            
+            <Link href="/createNewWorld">Create world map</Link>
+
           </div>
         </div>
         <div className={styles.dropdown}>
@@ -50,6 +52,7 @@ export default function Navigation() {
         </div>
         <div>
           <LoginOutButton></LoginOutButton>
+
         </div>
 
       </div>
