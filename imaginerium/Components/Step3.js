@@ -21,25 +21,37 @@ export default function Step3({setStep, formValues, setFormValues}) {
 
   
   async function onSubmit(values) {
-    console.log({...formValues, ...values})
+    setFormValues({...formValues, ...values})
+    
     setShowModal(true)
   }
-  
   console.log("After submit",formValues);
   return (
     <div>
     <h2>Miscellaneous:</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-      <label htmlFor="char_hopes">What are their hopes, dreams, goals, and motivations?:</label>
-      <textarea rows="4" cols="50" {...register('char_hopes', { required: true })} name="char_hopes" id="char_hopes"/>
-      <label htmlFor="char_fears">What are their fears, troubles and flaws?:</label>
-      <textarea rows="4" cols="50" {...register('char_fears', { required: true })} name="char_fears" id="char_fears"/>
-      <label htmlFor="char_speech">Do they have any catch phrases, sayings or speech patterns?:</label>
-      <textarea rows="4" cols="50" {...register('char_speech', { required: true })} name="char_speech" id="char_speech"/>
-      <label htmlFor="char_likes">What are their likes and dislikes?:</label>
-      <textarea placeholder='Food, music etc.' rows="4" cols="50" {...register('char_likes', { required: true })} name="char_likes" id="char_likes"/>
-      <button type='submit'>Next</button>
+      <label htmlFor="char_relationships">Key relationships:</label>
+      <textarea placeholder='family, partners, friendships, comrades' rows="4" cols="50" {...register('char_relationships', { required: false })} name="char_relationships" id="char_relationships"/>
+      <label htmlFor="char_background">Background:</label>
+      <textarea placeholder='Brief background' rows="4" cols="50" {...register('char_background', { required: false })} name="char_background" id="char_background"/>
+      <label htmlFor="char_disabilities">Disabilities:</label>
+      <input type="text" {...register('char_disabilities', { required: false })} name="char_disabilities" id="char_disabilities"/>
+      <label htmlFor="char_job">What do they do for a living?:</label>
+      <input type="text" {...register('char_job', { required: false })} name="char_job" id="char_job"/>
+      <label htmlFor="char_gender">Gender:</label>
+      <input type="text" {...register('char_gender', { required: false })} name="char_gender" id="char_gender"/>
+      <label htmlFor="char_sexuality">Sexuality:</label>
+      <input type="text" {...register('char_sexuality', { required: false })} name="char_sexuality" id="char_sexuality"/>
+      <label htmlFor="char_skills">Skills:</label>
+      <input placeholder='languages, archery' type="text" {...register('char_skills', { required: false })} name="char_skills" id="char_skills"/>
+      <label htmlFor="char_morality">Morality alignment:</label>
+      <input placeholder='lawful good, chaotic evil etc' type="text" {...register('char_morality', { required: false })} name="char_morality" id="char_morality"/>
+      <label htmlFor="char_notes">General character notes section:</label>
+      <textarea rows="4" cols="50" {...register('char_notes', { required: false })} name="char_notes" id="char_notes"/>
+      <button onClick={() => setStep(2)} type="submit">Back</button>
+      <button type='submit'>Submit</button>
     </form>
+
     {showModal ? (<FormSubmissionPopUp >
           <div className="form-submission-pop-up">
               <h3>Character created successfully!</h3>
@@ -50,3 +62,4 @@ export default function Step3({setStep, formValues, setFormValues}) {
     </div>
   )
 }
+

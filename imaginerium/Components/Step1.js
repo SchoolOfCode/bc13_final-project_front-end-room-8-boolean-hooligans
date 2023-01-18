@@ -31,27 +31,27 @@ export default function Step1({setStep, formValues, setFormValues}) {
           <button onClick={()=> randomName()}>Randomise</button>
           <img src="https://randomuser.me/api/portraits/men/60.jpg" alt='Character placeholder'></img>
           <label htmlFor="char_img">Enter image url:</label>
-          <input name="char_img" type='text'/>
+          <input {...register('char_img', { required: false })} name="char_img" type='text'/>
           <label htmlFor="char_age">How old are they in years?</label>
-          <input placeholder="Enter number" type="number" {...register('char_age', { required: true })} name="char_age" id="char_age"/>
+          <input placeholder="Enter number" type="number" {...register('char_age', { required: false })} name="char_age" id="char_age"/>
           <label htmlFor="char_species">Character species:</label>
-          <input type="text" {...register('char_species', { required: true })} name="char_species" id="char_species"/>
+          <input type="text" {...register('char_species', { required: false })} name="char_species" id="char_species"/>
           <label htmlFor="char_hairColour">Hair colour:</label>
-          <input type="text" {...register('char_hairColour', { required: true })} name="char_hairColour" id="char_hairColour"/>
+          <input type="text" {...register('char_hairColour', { required: false })} name="char_hairColour" id="char_hairColour"/>
           <label htmlFor="char_eyeColour">Eye colour:</label>
-          <input type="text" {...register('char_eyeColour', { required: true })} name="char_eyeColour" id="char_eyeColour"/>
+          <input type="text" {...register('char_eyeColour', { required: false })} name="char_eyeColour" id="char_eyeColour"/>
           <label htmlFor="char_skinColour">Skin colour:</label>
-          <input type="text" {...register('char_skinColour', { required: true })} name="char_skinColour" id="char_skinColour"/>
+          <input type="text" {...register('char_skinColour', { required: false })} name="char_skinColour" id="char_skinColour"/>
           <label htmlFor="char_height">Height in feet?</label>
-          <input placeholder="Enter number" type="number" {...register('char_height', { required: true })} name="char_height" id="char_height"/>
+          <input placeholder="Enter number" type="number" {...register('char_height', { required: false })} name="char_height" id="char_height"/>
           <label htmlFor="char_weight">Weight in kg?</label>
-          <input placeholder="Enter number" type="number" {...register('char_weight', { required: true })} name="char_weight" id="char_weight"/>
+          <input placeholder="Enter number" type="number" {...register('char_weight', { required: false })} name="char_weight" id="char_weight"/>
           <label htmlFor="char_features">Character special features</label>
-          <input placeholder="Scars / piercings /tattoos / prosthetics" type="text" {...register('char_features', { required: true })} name="char_features" id="char_features"/>
+          <input placeholder="Scars / piercings /tattoos / prosthetics" type="text" {...register('char_features', { required: false })} name="char_features" id="char_features"/>
           <label htmlFor="char_desc">Character description:</label>
-          <textarea rows="4" cols="50" {...register('char_desc', { required: true })} name="char_desc" id="char_desc"/>
+          <textarea rows="4" cols="50" {...register('char_desc', { required: false })} name="char_desc" id="char_desc"/>
           <label htmlFor="char_alive">Are they alive?</label>
-          <select className='dropdown' {...register('char_alive', { required: true })} name="char_alive" id="char_alive">
+          <select className='dropdown' {...register('char_alive', { required: false })} name="char_alive" id="char_alive">
           <option value="true">They live!</option>
           <option value="false">They are dead!</option>
           </select>
