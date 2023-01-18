@@ -50,7 +50,7 @@ export default function Navigation() {
           <ButtonToggleDarkMode></ButtonToggleDarkMode>
         </div>
         <div>
-          <button className={styles.loginButton}>LOGIN</button>
+          <button className={styles.logoutButton}>LOGOUT</button>
         </div>
       </div>
     </div>
