@@ -16,6 +16,7 @@
     "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.42.1",
     "react-icons": "^4.7.1",
     "supertest": "^6.3.3",
     "worldmap-generator": "^0.9.2"
