@@ -1,7 +1,10 @@
 import React, { cloneElement } from 'react'
 import {useForm} from 'react-hook-form';
+import { useState } from 'react';
 
 export default function Step1({setStep, formValues, setFormValues}) {
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
 
   const {register, handleSubmit} = useForm();
 
@@ -11,12 +14,20 @@ export default function Step1({setStep, formValues, setFormValues}) {
     setStep(2);
   }
   
+  async function randomName(){
+      const response = await fetch (`https://randomuser.me/api/`)
+      const data = await response.json()
+      setFirstName(data.results[0].name.first + ' ' + data.results[0].name.last)
+      // setLastName(data.results[0].name.last)
+    }
+  
 
   return (
     <div>
     <form onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor="char_name">Character Name:</label>
-          <input type="text" {...register('char_name', { required: true })} name="char_name" id="char_name"/>
+          <input defaultValue={firstName} type="text" {...register('char_name', { required: true })} name="char_name" id="char_name"/>
+          <button onClick={()=> randomName()}>Randomise</button>
           
           <label htmlFor="char_height">Height in feet?</label>
           <select className='dropdown' {...register('char_height', { required: true })} name="char_height" id="char_height">
