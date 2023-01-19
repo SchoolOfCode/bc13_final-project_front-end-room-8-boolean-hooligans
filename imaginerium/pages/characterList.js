@@ -9,16 +9,18 @@ export default function characterList() {
   const { data: session } = useSession();
  
   const [charactersArray, setCharactersArray] = useState([]);
+ 
 
 
   useEffect(() => {
     if (session) {
       async function fetchData() {
         const response = await fetch(
-          `http://localhost:3001/characters?user_id=${session.user.email}`
+          `https://imaginerium-qpii.onrender.com/characters?user_id=${session.user.email}`
         );
         const data = await response.json();
         setCharactersArray(data.payload);
+        
         console.log(session.user.email)
       }
       fetchData();
@@ -64,7 +66,7 @@ export default function characterList() {
             </button>
           </div>
         </div>
-
+        {/* {charactersArray.length === 0 : <p>loading..</p> */}
         <div className={styles.cardsContainer}>
           {charactersArray.map((character) => {
             return (
