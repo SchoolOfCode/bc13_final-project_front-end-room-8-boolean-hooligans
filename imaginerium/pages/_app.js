@@ -9,7 +9,7 @@ import { Session } from "next-auth"
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import NProgress from 'nprogress';
-import Spinner from "../components/Spinner";
+import Spinner from "../components/Spinner.js";
 
 export default function App({
   Component,
