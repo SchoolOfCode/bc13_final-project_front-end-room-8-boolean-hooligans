@@ -126,6 +126,7 @@ body {
 
 
 .pop-up-right {
+  overflow: scroll;
   padding: 15px;
   width: 96%
 }
