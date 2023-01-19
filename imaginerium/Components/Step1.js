@@ -1,40 +1,50 @@
-import React, { cloneElement } from 'react'
+import React, { cloneElement, useEffect } from 'react'
 import {useForm} from 'react-hook-form';
 import { useState } from 'react';
+import { useRef } from 'react';
 import styles from '../styles/steps.module.css'
 
 export default function Step1({setStep, formValues, setFormValues}) {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
+  const myForm = useRef();
 
   const {register, handleSubmit} = useForm();
 
-  function onSubmit(values) {
-   
-    setFormValues({...formValues, ...values});
-    setStep(2);
-  }
   
   async function randomName(){
-      const response = await fetch (`https://randomuser.me/api/`)
-      const data = await response.json()
-      setFirstName(data.results[0].name.first + ' ' + data.results[0].name.last)
-      setFormValues({...formValues, char_name: firstName})
-    }
+    const response = await fetch (`https://randomuser.me/api/`)
+    const data = await response.json()
+    setFirstName(data.results[0].name.first + ' ' + data.results[0].name.last)
+    setFormValues({...formValues, char_name: firstName})
+  }
+  
+  useEffect(() => { 
+    randomName()
+  }, [])
 
   
+    async function onSubmit(values, e) {
+      e.preventDefault();
+      setFormValues({...formValues, ...values});
+      setStep(2);
+    //   if(myForm.current.buttonId === 'next') {
+    // }
+    
+  }
+    
   
-console.log(formValues);
+console.log('step1:', formValues);
   return (
     <div>
     <h2 className={styles.heading}>Physical features</h2>
     <div className={styles.mainContainer}>
-    <form className={styles.formContainer} onSubmit={handleSubmit(onSubmit)}>
+    <form className={styles.formContainer} onSubmit={handleSubmit(onSubmit)} >
 
           <div className={styles.stepOneLeftContainer}>
             <label htmlFor="char_name">Character Name</label>
             <input defaultValue={formValues.char_name} type="text" {...register('char_name', { required: true })} name="char_name" id="char_name"/>
-            <button onClick={()=> randomName()}>Randomise</button>
+            <button type="button" onClick={()=> randomName()}>Randomise</button>
             <img src="https://randomuser.me/api/portraits/men/60.jpg" alt='Character placeholder'></img>
             <label htmlFor="char_img">Enter image url</label>
             <input defaultValue={formValues.char_img} {...register('char_img', { required: false })} name="char_img" type='text'/>
@@ -85,7 +95,7 @@ console.log(formValues);
               </select>
             </div>
 
-            <button type='submit'>Next</button>
+            <button type='submit' id='next'>Next</button>
           </div>
 
     </form>

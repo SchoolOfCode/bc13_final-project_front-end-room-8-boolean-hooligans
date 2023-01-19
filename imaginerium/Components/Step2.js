@@ -20,13 +20,10 @@ export default function Step2({setStep, formValues, setFormValues}) {
   }
   
   
-  
-  
-  
   console.log('step2:', formValues);
   return (
     <div>
-    <h2>Personality:</h2>
+    <h2>Personality</h2>
       <form onSubmit={handleSubmit(onSubmit) } ref={myForm}>
       <label htmlFor="char_hopes">What are their hopes, dreams, goals, and motivations?</label>
       <textarea defaultValue={formValues.char_hopes} rows="4" cols="50" {...register('char_hopes', { required: false })} name="char_hopes" id="char_hopes"/>
