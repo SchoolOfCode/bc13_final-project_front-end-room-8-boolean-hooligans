@@ -13,12 +13,12 @@ export default function Step3({setStep, formValues, setFormValues}) {
   
 /*Use to post to backend */
   async function addNewCharacter(formValues) {
-    // await fetch(`https://imaginerium-qpii.onrender.com/characters`, {
-    //   method: "POST",
-    //   mode: "cors",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(formValues),
-    // });
+    await fetch(`https://imaginerium-qpii.onrender.com/characters`, {
+      method: "POST",
+      mode: "cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formValues),
+    });
   }
 
   
