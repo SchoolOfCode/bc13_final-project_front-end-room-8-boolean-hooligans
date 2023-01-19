@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
-import {useForm} from 'react-hook-form';
+
 import Step1 from './Step1';
 import Step2 from './Step2';
 import Step3 from './Step3'
 // import styles from '../styles/Form.module.css';
  
 export default function Form() {
-  const {register, handleSubmit} = useForm();
+  
   const [step, setStep] = useState(1);
   const [formValues, setFormValues] = useState({});
 
