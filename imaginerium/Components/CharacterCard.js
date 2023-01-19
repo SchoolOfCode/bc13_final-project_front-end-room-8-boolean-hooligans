@@ -48,11 +48,6 @@ export default function CharacterCard(props) {
                 <MdHeight />
                 <div className="value">{props.char_height}ft</div>
               </div>
-              <div>
-                <div className="title">Family</div>
-                <HiUserGroup />
-                <div className="value">Doe</div>
-              </div>
             </div>
           </div>
         </div>

@@ -314,6 +314,16 @@ body {
   overflow: hidden;
 }
 
+/* WORLD MAP */
+
+.map {
+  top: 8vh;
+  width: 100vw;
+  height: 85vh;
+}
+
+/* LIGHT DARK THEME TOGGLE */
+
 :root,
 .card {
   /* Light theme */

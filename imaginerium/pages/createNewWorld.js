@@ -6,7 +6,7 @@ return (
     <>
     <Navigation />
     <iframe
-    width="100%"
+    className="map"
     src="https://azgaar.github.io/Fantasy-Map-Generator/">
     </iframe>
 </>
