@@ -2,6 +2,7 @@ import React, { cloneElement, useEffect } from 'react'
 import {useForm} from 'react-hook-form';
 import { useState } from 'react';
 import { useRef } from 'react';
+import { useSession } from "next-auth/react";
 import styles from '../styles/steps.module.css'
 
 export default function Step1({setStep, formValues, setFormValues}) {
@@ -11,6 +12,7 @@ export default function Step1({setStep, formValues, setFormValues}) {
 
   const {register, handleSubmit} = useForm();
 
+  const { data: session } = useSession();
   
   async function randomName(){
     const response = await fetch (`https://randomuser.me/api/`)
@@ -23,10 +25,11 @@ export default function Step1({setStep, formValues, setFormValues}) {
     randomName()
   }, [])
 
-  
+  let user = {user_email: session.user.email}
+
     async function onSubmit(values, e) {
       e.preventDefault();
-      setFormValues({...formValues, ...values});
+      setFormValues({...user, ...formValues, ...values});
       setStep(2);
     //   if(myForm.current.buttonId === 'next') {
     // }

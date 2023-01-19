@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {useForm} from 'react-hook-form';
 import { useState, useRef } from 'react';
 import FormSubmissionPopUp from "../modals/formSubmissionPopUp";
 import Link from 'next/link';
 import Router from 'next/router'
-
+import { useSession } from "next-auth/react";
 
 export default function Step3({setStep, formValues, setFormValues}) {
   const {register, handleSubmit} = useForm();
   const [showModal, setShowModal] = useState(false)
   const myForm = useRef();
+
+  const { data: session } = useSession();
   
+
 /*Use to post to backend */
   async function addNewCharacter(formValues) {
     await fetch(`https://imaginerium-qpii.onrender.com/characters`, {
@@ -21,7 +24,8 @@ export default function Step3({setStep, formValues, setFormValues}) {
     });
   }
 
-  
+
+
   async function onSubmit(values) {
     setFormValues({...formValues, ...values})
     if(myForm.current.buttonId === 'back') {
