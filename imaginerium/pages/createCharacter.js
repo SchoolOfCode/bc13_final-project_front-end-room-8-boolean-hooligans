@@ -1,9 +1,6 @@
- import Link from "next/link";
- import Navigation from "../Components/Navigation";
- import Form from "../Components/Form";
-//  import NameInput from "../Components/NameInput";
-// import Input from "../Components/Input";
-// import Button from "../Components/Button";
+import Link from "next/link";
+import Navigation from "../Components/Navigation";
+import Form from "../Components/Form";
 import styles from "./../styles/createCharacter.module.css"
 
 import { useState } from "react";

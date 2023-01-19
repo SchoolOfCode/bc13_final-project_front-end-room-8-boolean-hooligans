@@ -5,6 +5,7 @@ import FormSubmissionPopUp from "../modals/formSubmissionPopUp";
 import Link from 'next/link';
 import Router from 'next/router'
 
+
 export default function Step3({setStep, formValues, setFormValues}) {
   const {register, handleSubmit} = useForm();
   const [showModal, setShowModal] = useState(false)
@@ -58,7 +59,7 @@ export default function Step3({setStep, formValues, setFormValues}) {
     </form>
 
     {showModal ? (<FormSubmissionPopUp >
-          <div className="form-submission-pop-up">
+          <div className={"form-submission-pop-up"}>
               <h3>Character created successfully!</h3>
             <button onClick={()=>{Router.reload(window.location.createCharacter)}}>Create another character</button><Link href="/characterList"><button >View Characters
           </button></Link>
