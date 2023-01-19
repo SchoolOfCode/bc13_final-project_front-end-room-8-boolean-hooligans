@@ -26,7 +26,10 @@ export default function Step3({setStep, formValues, setFormValues}) {
     setFormValues({...formValues, ...values})
     if(myForm.current.buttonId === 'back') {
       setStep(2);
-    } else {setShowModal(true)}
+    } else {
+      addNewCharacter(formValues)
+      setShowModal(true)
+    }
     
   }
   
