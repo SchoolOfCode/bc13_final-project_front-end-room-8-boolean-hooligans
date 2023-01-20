@@ -44,11 +44,27 @@ export const authOptions = {
     colorScheme: "light",
   },
   callbacks: {
-    async jwt({ token }) {
-      token.userRole = "admin"
-      return token
+    jwt: async (options) => {
+      //if sign in is attempted successfully a jwt token is created, options contains all the data available
+      console.log("options", options.user);
+      if (options.user) {
+        options.token.role = options.user.role; //Makes role available to access in object
+      }
+      return options.token;
+    },
+    session: async ({ session, token, user }) => {
+      if (token.role) {
+        session.role = token.role;
+      }
+      return session;
     },
   },
+  secret: "test",
+  jwt: {
+    secret: "test",
+    encryption: true,
+  }
 }
 
 export default NextAuth(authOptions)
+
