@@ -47,7 +47,7 @@
 }
 #cover {
 
- 
+
   width: 440px;
   padding: 22.4px;
   background: rgba(255, 255, 255, 0.5);
@@ -86,56 +86,22 @@
   float:right;
   width: 32px;
   height: 40px;
-  right: 12px;
-  bottom: 12px;
+  right: 7%;
+  bottom: 8.2vh;
   cursor: pointer;
 }
 
-#sCircle {
-  position: relative;
-  top: -6.4px;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  margin-top: 0;
-  border-width: 7.2px;
-  border: 7.2px solid #fff;
-  background-color: transparent;
-  border-radius: 50%;
-  transition: 0.5s ease all;
-}
 
-.button span {
-  position: absolute;
-  top: 48px;
-  left: 28px;
-  display: block;
-  width: 28px;
-  height: 6.4px;
-  background-color: transparent;
-  border-radius: 8px;
-  transform: rotateZ(52deg);
-  transition: 0.5s ease all;
-}
 
-.button span:before,
-.button span:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 28px;
-  height: 12px;
-  
-}
+
 
 
 .allButton {
  
-  width: 11vw;
-  height: 14vh;
+  width: 9vw;
+  height: 10vh;
   color: #fff;
-  font-size: 30px;
+  font-size: 1.2rem;
   border-radius: 5px;
   background: rgba(220, 252, 252, 0.103);
   -webkit-backdrop-filter: blur(2px);

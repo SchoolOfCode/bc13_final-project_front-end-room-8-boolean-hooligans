@@ -4,7 +4,7 @@ import styles from "../styles/characterList.module.css";
 import useFetch from "../hooks/useFetch";
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
-import { GrView } from "react-icons/gr"
+import { BiSearchAlt } from "react-icons/bi"
 export default function characterList() {
   const { data: session } = useSession();
  
@@ -74,19 +74,18 @@ export default function characterList() {
               {/* <label htmlFor="char_name">Search by name:</label> */}
               <input placeholder="search by name" className={styles.input} type="text" name="char_name" id="char_name" />
               <button className={styles.button} type="submit">
-          <div id={styles.sCircle}></div>
-          <span></span>
+          <span><BiSearchAlt size="63"/></span>
         </button>
               </div>
               </div>
             </form>
             </div>
             <button className={styles.allButton} onClick={() => searchByName("")}>
-              View All
+              <div>view all</div>
             </button>
             </div>
             <select
-            className="dropdown"
+            className={styles.allButton}
             defaultValue={"DEFAULT"}
             onChange={(e) => setSortState(e.target.value)}
           >
