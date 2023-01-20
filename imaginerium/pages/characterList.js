@@ -27,7 +27,7 @@ export default function characterList() {
 
   async function searchByName(nameToSearch) {
     const response = await fetch(
-      `https://imaginerium-qpii.onrender.com/characters?char_name=${nameToSearch}`
+      `https://imaginerium-qpii.onrender.com/characters?char_name=${nameToSearch}&user_email=${session.user.email}`
     );
     const data = await response.json();
     setCharactersArray(data.payload);
@@ -44,7 +44,7 @@ export default function characterList() {
   };
 
 
-  
+
 
   if (!session) {
     return <div>Log in to view your saved characters</div>;
