@@ -8,8 +8,6 @@ import { useSession } from "next-auth/react";
 export default function characterList() {
   const { data: session } = useSession();
  
-  const [charactersArray, setCharactersArray] = useState([]);
- 
 
 
   useEffect(() => {
@@ -29,11 +27,24 @@ export default function characterList() {
 
   async function searchByName(nameToSearch) {
     const response = await fetch(
-      `https://imaginerium-qpii.onrender.com/characters?char_name=${nameToSearch}`
+      `https://imaginerium-qpii.onrender.com/characters?char_name=${nameToSearch}&user_email=${session.user.email}`
     );
     const data = await response.json();
     setCharactersArray(data.payload);
   }
+
+  //sort by date created functionality
+  const [charactersArray, setCharactersArray] = useState([]);
+  const [sortState, setSortState] = useState("none");
+ 
+  const sortMethods = {
+    none: { method: (a, b) => null },
+    ascending: { method: (a, b) => (a.character_id < b.character_id ? -1 : 1) },
+    descending: { method: (a, b) => (a.character_id > b.character_id ? -1 : 1) },
+  };
+
+
+
 
   if (!session) {
     return <div>Log in to view your saved characters</div>;
@@ -64,11 +75,26 @@ export default function characterList() {
             <button onClick={() => searchByName("")}>
               View All Characters
             </button>
+            <select
+            className="dropdown"
+            defaultValue={"DEFAULT"}
+            onChange={(e) => setSortState(e.target.value)}
+          >
+            <option className="option" value="DEFAULT" disabled>
+              Sort by date created
+            </option>
+            <option className="option" value="ascending">
+              newest to oldest
+            </option>
+            <option className="option" value="descending">
+              oldest to newest
+            </option>
+          </select>{" "}
           </div>
         </div>
         {/* {charactersArray.length === 0 : <p>loading..</p> */}
         <div className={styles.cardsContainer}>
-          {charactersArray.map((character) => {
+          {charactersArray.sort(sortMethods[sortState].method).map((character) => {
             return (
               <CharacterCard
                 className="cctest"
