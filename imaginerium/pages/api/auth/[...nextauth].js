@@ -48,6 +48,10 @@ export const authOptions = {
       token.userRole = "admin"
       return token
     },
+
+    // async redirect({ url, baseUrl }) {
+    //   return baseUrl
+    // },
   },
 }
 
