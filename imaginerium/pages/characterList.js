@@ -59,8 +59,8 @@ export default function characterList() {
             <h1>List of characters</h1>
           </div>
           <div>
-            <div id={styles.cover}
-            <form
+            <div id={styles.cover}>
+            <form className={styles.form}
               onSubmit={(e) => {
                 e.preventDefault();
                 const formData = new FormData(e.target);
@@ -69,9 +69,16 @@ export default function characterList() {
                 searchByName(nameToSearch);
               }}
             >
-              <label htmlFor="char_name">Search by name:</label>
-              <input type="text" name="char_name" id="char_name" />
-              <button>Submit</button>
+              <div className={styles.tb}>
+                <div className={styles.td} id={styles.sCover}>
+              {/* <label htmlFor="char_name">Search by name:</label> */}
+              <input placeholder="search by name" className={styles.input} type="text" name="char_name" id="char_name" />
+              <button className={styles.button} type="submit">
+          <div id={styles.sCircle}></div>
+          <span></span>
+        </button>
+              </div>
+              </div>
             </form>
             </div>
             <button onClick={() => searchByName("")}>
