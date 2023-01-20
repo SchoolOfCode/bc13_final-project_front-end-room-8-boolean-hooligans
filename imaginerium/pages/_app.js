@@ -42,8 +42,8 @@ export default function App({
     />
   </Head>
   <ThemeProvider>
-  {/* <Component {...pageProps} />
-  {delay === 0 ? <Spinner /> : null} */}
+  <Component {...pageProps} />
+  {/* {delay === 0 ? <Spinner /> : null} */}
   
   </ThemeProvider>
   </React.Fragment>
