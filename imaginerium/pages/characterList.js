@@ -59,6 +59,7 @@ export default function characterList() {
             <h1>List of characters</h1>
           </div>
           <div>
+            <div id={styles.cover}
             <form
               onSubmit={(e) => {
                 e.preventDefault();
@@ -72,9 +73,11 @@ export default function characterList() {
               <input type="text" name="char_name" id="char_name" />
               <button>Submit</button>
             </form>
+            </div>
             <button onClick={() => searchByName("")}>
               View All Characters
             </button>
+           
             <select
             className="dropdown"
             defaultValue={"DEFAULT"}
@@ -90,6 +93,7 @@ export default function characterList() {
               oldest to newest
             </option>
           </select>{" "}
+          
           </div>
         </div>
         {/* {charactersArray.length === 0 : <p>loading..</p> */}
