@@ -36,8 +36,7 @@ export default function Home() {
           />
          
           <p>
-            Imaginerium is a place where you can create your own characters and
-            share them with the world.
+            Breathe life into your imagination with imaginerium - the ultimate creative playground for world building, character creation, and story building.
           </p>
           
         </div>
