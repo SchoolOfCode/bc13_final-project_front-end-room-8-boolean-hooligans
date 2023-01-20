@@ -1,24 +1,38 @@
 /* formContainer stepOneLeftContainer stepOneRightContainer */
 
 .mainContainer {
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-items: center;
+    background-color: #e7e7e7;
+    border-radius: 1rem;
 
 }
 
+.mainStepTwo{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    
+   
+}
+
 .formContainer {
-    width: 80%;
+    width: 90%;
     height: 100%;
     display: flex;
     padding: 3rem;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    background-color: #82818194;
+    background-color: #e7e7e7;
     border-radius: 1rem;
+    align-items: center ;
 }
 
 
@@ -89,3 +103,194 @@
     font-weight: 500;
     color: #000;
 }
+
+.stepOneButton{
+    width: 20%;
+    height: 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: rgb(87, 75, 75);
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+.stepOneButton:hover{
+    background-color: rgb(87, 75, 75);
+    opacity: 0.8;
+    width: 80%;
+}
+
+.stepOneButton:active{
+    background-color: rgb(87, 75, 75);
+    opacity: 0.6;
+    transform: scale(0.98);
+}
+
+
+.stepTwoLeftContainer {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.7rem;
+    /* background-color: #f2f2f2; */
+}
+
+.stepTwoLeftContainer div {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    
+}
+
+.stepTwoRightContainer div {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    
+}
+
+.stepTwoRightContainer{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.7rem;
+    /* background-color: #f2f2f2; */
+}
+
+.buttonsContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.buttonsContainer div{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.stepTwoButton {
+    width: 20%;
+    height: 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: rgb(87, 75, 75);
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+.stepTwoButton:hover{
+    background-color: rgb(87, 75, 75);
+    opacity: 0.8;
+    width: 80%;
+}
+
+
+
+.stepThreeLeftContainer{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.7rem;
+    
+}
+
+.stepThreeRightContainer{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.7rem;
+    
+}
+
+
+
+
+.stepThreeLeftContainer input {
+
+    width: 80%;
+    height: 2rem;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000;
+}
+
+
+
+.stepThreeLeftContainer label {
+    text-align: left;
+    
+}
+.stepThreeRightContainer textarea {
+    width: 80%;
+    
+    
+}
+
+
+
+.stepThreeLeftContainer div {
+    width: 80%;
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    gap: 1rem;
+    align-items: center;
+}
+
+
+
+.stepThreeLeftContainer label {
+    width: 40%;
+}
+
+
+.stepThreeLeftContainer input {
+
+    width: 80%;
+    height: 2rem;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000;
+}
+
