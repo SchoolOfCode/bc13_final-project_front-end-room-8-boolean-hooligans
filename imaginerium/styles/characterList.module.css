@@ -2,7 +2,7 @@
 .cardsContainer {
  align-content: center;
   margin: 0 auto; 
-  margin-top: 14vh;
+  margin-top: 5vh;
   max-width: 95vw;
   padding: 10px;
   margin-left: 0px;
@@ -100,7 +100,7 @@
 .allButton {
  
   max-width: 18.6vw;
-  height: 10vh;
+  height: 9vh;
   color: #fff;
   font-size: 1.2rem;
   border-radius: 5px;
@@ -120,7 +120,7 @@
 cursor: pointer;
   box-sizing: border-box;
   transition: 200ms;
-  padding: 20px;
+  padding: 15px;
 }
 
 .allButton:hover {
