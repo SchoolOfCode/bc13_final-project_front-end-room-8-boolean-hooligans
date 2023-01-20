@@ -53,7 +53,7 @@ export default function characterList() {
       <div>
         <div className={styles.header}>
           <div role="heading" aria-level="1">
-            <h1 className={styles.h1}>List of characters</h1>
+            <h1 className={styles.h1}>Your Characters</h1>
           </div>
         </div>
 
@@ -96,14 +96,14 @@ export default function characterList() {
               <div>view all</div>
             </button>
           </div>
-          <div>
+          <div >
             <select
               className={styles.allButton}
               defaultValue={"DEFAULT"}
               onChange={(e) => setSortState(e.target.value)}
             >
               <option className="option" value="DEFAULT" disabled>
-                Sort by date created
+                sort by: date created
               </option>
               <option className="option" value="ascending">
                 newest to oldest

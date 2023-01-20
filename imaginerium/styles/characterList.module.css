@@ -14,6 +14,7 @@
  
 .h1{
   padding: 20px;
+  color: white;
 }
 
 
@@ -31,11 +32,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
 }
 
 .tb {
   display: table;
- 
 }
 
 .td {
@@ -52,18 +53,15 @@
   background-color: transparent;
 }
 #cover {
-
-
   width: 440px;
   padding: 22.4px;
- 
-  background: rgba(255, 255, 255, 0.5);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+  background: rgba(255, 255, 255, 0.2);
+
   border: 1px solid rgba(255, 255, 255, 0.603);
   border-radius: 16px;
-  box-shadow: 0 10px 40px #fcb5b5, 0 0 0 20px #ffffffeb;
+  box-shadow: 0 10px 30px #fcb5b5, 0 0 0 15px #ffffffeb;
   transform: scale(0.48);
+  margin: 0px;
 }
 .input:focus {
   outline: 0;
@@ -74,7 +72,7 @@
 
 .input[type="text"] {
   width: 100%;
-  height: 5.6vh;
+  height: 6vh;
   font-size: 2.4rem;
   line-height: 1;
 }
@@ -101,7 +99,7 @@
 
 .allButton {
  
-  width: 9vw;
+  max-width: 18.6vw;
   height: 10vh;
   color: #fff;
   font-size: 1.2rem;
@@ -114,7 +112,7 @@
   border-bottom-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
   text-decoration: none;
-  margin: 20px;
+  margin: 17px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -122,6 +120,7 @@
 cursor: pointer;
   box-sizing: border-box;
   transition: 200ms;
+  padding: 20px;
 }
 
 .allButton:hover {
@@ -129,4 +128,9 @@ cursor: pointer;
 }
 .allButton:hover:before {
   transform: skewX(45deg) translateX(calc(var(--width) * -1 - 50%));
+}
+
+.allButton option {
+  color: black;
+
 }
