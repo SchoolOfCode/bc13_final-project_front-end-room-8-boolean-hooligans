@@ -54,11 +54,12 @@ export default function characterList() {
     <div className={styles.main}>
       <Navigation />
       <div >
-        <div className={styles.searchBar}>
+        <div className={styles.header}>
+        <div>
           <div role="heading" aria-level="1">
             <h1 className={styles.h1}>List of characters</h1>
           </div>
-          <div>
+          <div className={styles.filter}>
             <div id={styles.cover}>
             <form className={styles.form}
               onSubmit={(e) => {
@@ -74,16 +75,18 @@ export default function characterList() {
               {/* <label htmlFor="char_name">Search by name:</label> */}
               <input placeholder="search by name" className={styles.input} type="text" name="char_name" id="char_name" />
               <button className={styles.button} type="submit">
-          <span><BiSearchAlt size="63"/></span>
+          <span><BiSearchAlt size="60"/></span>
         </button>
               </div>
               </div>
             </form>
             </div>
+            <div>
             <button className={styles.allButton} onClick={() => searchByName("")}>
               <div>view all</div>
             </button>
             </div>
+            <div>
             <select
             className={styles.allButton}
             defaultValue={"DEFAULT"}
@@ -99,8 +102,9 @@ export default function characterList() {
               oldest to newest
             </option>
           </select>{" "}
-          
-          
+          </div>
+          </div>
+          </div> 
         </div>
         {/* {charactersArray.length === 0 : <p>loading..</p> */}
         <div className={styles.cardsContainer}>
