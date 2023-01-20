@@ -4,7 +4,7 @@ import styles from "../styles/characterList.module.css";
 import useFetch from "../hooks/useFetch";
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
-
+import { GrView } from "react-icons/gr"
 export default function characterList() {
   const { data: session } = useSession();
  
@@ -51,12 +51,12 @@ export default function characterList() {
   }
 
   return (
-    <>
+    <div className={styles.main}>
       <Navigation />
-      <div>
+      <div >
         <div className={styles.searchBar}>
           <div role="heading" aria-level="1">
-            <h1>List of characters</h1>
+            <h1 className={styles.h1}>List of characters</h1>
           </div>
           <div>
             <div id={styles.cover}>
@@ -81,10 +81,10 @@ export default function characterList() {
               </div>
             </form>
             </div>
-            <button onClick={() => searchByName("")}>
-              View All Characters
+            <button className={styles.allButton} onClick={() => searchByName("")}>
+              View All
             </button>
-           
+            </div>
             <select
             className="dropdown"
             defaultValue={"DEFAULT"}
@@ -101,7 +101,7 @@ export default function characterList() {
             </option>
           </select>{" "}
           
-          </div>
+          
         </div>
         {/* {charactersArray.length === 0 : <p>loading..</p> */}
         <div className={styles.cardsContainer}>
@@ -142,6 +142,6 @@ export default function characterList() {
           })}
         </div>
       </div>
-    </>
+    </div>
   );
 }

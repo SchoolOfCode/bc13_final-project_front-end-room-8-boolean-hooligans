@@ -7,7 +7,41 @@ body {
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-}
+
+  
+    background: linear-gradient(230deg, #59c0e6, #4e6db9, #a571fb);
+    background-size: 600% 600%;
+  
+    -webkit-animation: AnimationName 14s ease infinite;
+    animation: AnimationName 14s ease infinite;
+  }
+  
+  @-webkit-keyframes AnimationName {
+    0% {
+      background-position: 0% 29%;
+    }
+    50% {
+      background-position: 100% 72%;
+    }
+    100% {
+      background-position: 0% 29%;
+    }
+  }
+  @keyframes AnimationName {
+    0% {
+      background-position: 0% 29%;
+    }
+    50% {
+      background-position: 100% 72%;
+    }
+    100% {
+      background-position: 0% 29%;
+    }
+  
+  }
+  
+  
+
 
 /* *********** Pop Up modal route styling must stay in global styles ************** */
 
