@@ -1,8 +1,14 @@
+import { signIn } from "next-auth/react";
 import styles from "../styles/landing.module.css";
 
 export default function landing(){
 
+// how to redirect from login 
+// make earth image a login button 
+// alter this page to index.js 
+// alter index.js to dashboard
 
+// const { data: session } = useSession()
 
     return (
 
@@ -10,8 +16,7 @@ export default function landing(){
 <div className={styles.body}>
         <div className={styles.scene}>
         <div className={styles.upper}>
-          <img className={styles.earth} src="./earth.png"/>
-          <h2 className={styles.enter}>ENTER</h2>
+          <img onClick={() => signIn()} className={styles.earth} src="./earth1.png"/>
           <img className={styles.moon1copy} src="./moon1.png"/>
           <img className={styles.moon1} src="./moon1.png"/>
             <img className={styles.moon2copy} src="./moon3.png"/>
