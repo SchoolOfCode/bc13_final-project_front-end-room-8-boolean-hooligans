@@ -1,4 +1,4 @@
-import { useSession, signIn, signOut } from "next-auth/react"
+import { useSession, signIn, signOut } from "next-auth/react";
 
 export default function LoginOutButton() {
   const { data: session } = useSession()
@@ -6,7 +6,10 @@ export default function LoginOutButton() {
     return (
       <>
         Signed in as {session.user.email} <br />
-        <button onClick={() => signOut()}>Sign out</button>
+        <button onClick={() => {
+            signOut();
+            `http://localhost:3000`;
+          }}>Sign out</button>
       </>
     )
   }

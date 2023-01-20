@@ -20,7 +20,7 @@ export default function Navigation() {
 
       <div className={styles.navButtons}>
         <div className={styles.dropdown}>
-        <Link href="/"><button class={styles.dropbtn}>HOME
+        <Link href="/dashboard"><button class={styles.dropbtn}>HOME
           </button></Link>
 
         </div>
