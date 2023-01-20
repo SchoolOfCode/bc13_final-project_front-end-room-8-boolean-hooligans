@@ -6,14 +6,42 @@
     overflow: hidden;
     
     position: relative;
-    background: bisque;
     
-    text-transform: uppercase;
-    scroll-snap-type: y mandatory;
-    position: relative;
-    height: 100vh;
-    overflow-y: scroll;
+  background: linear-gradient(230deg, #59c0e6, #4e6db9, #a571fb);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 14s ease infinite;
+  animation: AnimationName 14s ease infinite;
+  text-transform: uppercase;
+  scroll-snap-type: y mandatory;
+  position: relative;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 29%;
   }
+  50% {
+    background-position: 100% 72%;
+  }
+  100% {
+    background-position: 0% 29%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 29%;
+  }
+  50% {
+    background-position: 100% 72%;
+  }
+  100% {
+    background-position: 0% 29%;
+  }
+    
+}
   
   .scene {
     width: 100vw;
@@ -290,7 +318,7 @@
     font: 600 3rem sans-serif;
     text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     color: transparent;
-    -webkit-text-stroke: 2px  #c2733a;
+    -webkit-text-stroke: 2px  #f8ede5;
     text-shadow: none;
     transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
