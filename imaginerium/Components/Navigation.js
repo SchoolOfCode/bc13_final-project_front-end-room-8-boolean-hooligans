@@ -19,11 +19,18 @@ export default function Navigation() {
       </div>
 
       <div className={styles.navButtons}>
+        
         <div className={styles.dropdown}>
-        <Link href="/dashboard"><button class={styles.dropbtn}>HOME
-          </button></Link>
-
+        <button className={styles.dropbtn}>
+        HOME
+        <i className="fa fa-caret-down"></i>
+        </button>
+        <div className={styles.dropdownContent}>
+          <Link href="/dashboard">Homepage</Link>
+          <Link href="/aboutUs">About Us</Link>
         </div>
+        </div>
+
         <div className={styles.dropdown}>
           <button className={styles.dropbtn}>
             CREATE
@@ -31,11 +38,10 @@ export default function Navigation() {
           </button>
           <div className={styles.dropdownContent}>
             <Link href="/createCharacter">Create character</Link>
-            
             <Link href="/createNewWorld">Create world map</Link>
-
           </div>
         </div>
+
         <div className={styles.dropdown}>
           <button className={styles.dropbtn}>
             VIEW
@@ -45,6 +51,7 @@ export default function Navigation() {
             <Link href="/characterList">Character list</Link>
           </div>
         </div>
+
       </div>
       <div className={styles.loginAndToggle}>
         <div className={styles.darkModeSwitch}>
