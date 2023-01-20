@@ -42,6 +42,7 @@
     opacity: 0.9;
     transform: translatey(0px);
     animation: float 6s ease-in-out infinite;
+    cursor:pointer;
   }
   
   
@@ -81,7 +82,7 @@
     left: 30vw;
     animation-duration: 0.5s;
     animation-name: animate-fade;
-  
+
     animation-fill-mode: backwards;
   }
   @keyframes animate-fade {
