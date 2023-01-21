@@ -53,7 +53,7 @@ export default function characterList() {
       <div>
         <div className={styles.header}>
           <div role="heading" aria-level="1">
-            <h1 className={styles.h1}>Your Characters</h1>
+            <h1 className={styles.h1}>Characters shared with you</h1>
           </div>
         </div>
 
