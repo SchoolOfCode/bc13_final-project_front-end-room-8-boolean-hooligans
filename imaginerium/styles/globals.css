@@ -7,7 +7,41 @@ body {
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-}
+
+  
+    background: linear-gradient(230deg, #59c0e6, #4e6db9, #a571fb);
+    background-size: 600% 600%;
+  
+    -webkit-animation: AnimationName 14s ease infinite;
+    animation: AnimationName 14s ease infinite;
+  }
+  
+  @-webkit-keyframes AnimationName {
+    0% {
+      background-position: 0% 29%;
+    }
+    50% {
+      background-position: 100% 72%;
+    }
+    100% {
+      background-position: 0% 29%;
+    }
+  }
+  @keyframes AnimationName {
+    0% {
+      background-position: 0% 29%;
+    }
+    50% {
+      background-position: 100% 72%;
+    }
+    100% {
+      background-position: 0% 29%;
+    }
+  
+  }
+  
+  
+
 
 /* *********** Pop Up modal route styling must stay in global styles ************** */
 
@@ -126,7 +160,7 @@ body {
 
 
 .pop-up-right {
-  overflow: scroll;
+  overflow: auto;
   padding: 15px;
   width: 96%
 }
@@ -143,6 +177,8 @@ body {
   margin-top: 0px;
   width: 80%;
   float: right;
+  overflow: hidden;
+  height: 48%;
 }
 
 .card {
@@ -156,11 +192,20 @@ body {
   position: relative;
   margin: 1.5rem;
   font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.671);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-right-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  
 }
 
 .card h1 {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   overflow: hidden;
 }
 
@@ -168,14 +213,14 @@ body {
   position: absolute;
   width: 150px;
   height: 100%;
-  background: linear-gradient(#dE685E, #EE786E);
+ 
   transition: width 0.4s;
   overflow: hidden;
   z-index: 2;
 }
 
 .card.green .additional {
-  background: linear-gradient(#92bCa6, #A2CCB6);
+  background: linear-gradient(#b3e5ee, #a2bfcc);
 
 }
 
@@ -247,7 +292,7 @@ body {
 .green .additional .more-info h1 {
   color: #224C36;
 
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   overflow-wrap: break-word;
 
 }
@@ -327,7 +372,7 @@ body {
 :root,
 .card {
   /* Light theme */
-  background-color: #F7F2CB;
+  /* background-color: #F7F2CB; */
   text-decoration-color: black;
 }
 
@@ -336,7 +381,7 @@ body {
 .form-submission-pop-up,
 .pop-up,
 .card {
-  background-color: #156E58;
+  /* background-color: #156E58; */
   text-decoration-color: #F7F2CB;
 }
 
@@ -353,3 +398,6 @@ Isolate the pop-ups
 Enable the pop-ups to respond to dark/light theme 
 
 */
+
+
+
