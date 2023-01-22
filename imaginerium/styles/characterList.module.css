@@ -4,7 +4,9 @@
   margin: 0 auto; 
   margin-top: 5vh;
   max-width: 95vw;
-  padding: 10px;
+  padding-left: 80px;
+  padding-right: 80px;
+
   margin-left: 0px;
  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));

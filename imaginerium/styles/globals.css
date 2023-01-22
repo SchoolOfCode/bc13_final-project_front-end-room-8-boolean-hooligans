@@ -177,6 +177,8 @@ body {
   margin-top: 0px;
   width: 80%;
   float: right;
+  overflow: hidden;
+  height: 48%;
 }
 
 .card {

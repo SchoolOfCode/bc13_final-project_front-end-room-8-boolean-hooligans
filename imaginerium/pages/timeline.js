@@ -18,14 +18,15 @@ export default function Timeline() {
             { data.map((event) => {
               return (
             <li className={styles.event}>
-              <div className={styles.date}>{event.date}</div>
+              <div className={styles.date}>{event.date}</div><button className={styles.edit}>edit</button>
               <p className={styles.desc}>{event.desc}</p>
             </li>);
             })}
            
           </ul>
+          <button>add new event</button>
         </div>
       </div>
     </div>
   );
-}
+b}
