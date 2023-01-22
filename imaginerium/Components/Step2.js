@@ -30,7 +30,7 @@ export default function Step2({ setStep, formValues, setFormValues }) {
         onSubmit={handleSubmit(onSubmit)}
         ref={myForm}
       >
-        <div className={styles.formContainer}>
+        <div className={styles.formContainerStepTwo}>
           <div className={styles.stepTwoLeftContainer}>
             <div>
               <label htmlFor="char_hopes">

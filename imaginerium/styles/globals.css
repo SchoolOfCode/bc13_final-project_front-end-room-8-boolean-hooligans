@@ -6,8 +6,51 @@ body {
   /* background-color: #F7F2CB; */
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+    padding: 0;
+    width:  100vw;
+    height: 100%;
+    overflow: hidden;
+    
+    position: relative;
+    
+  background: linear-gradient(230deg, #59c0e6, #4e6db9, #a571fb);
+  background-size: 600% 600%;
 
+  -webkit-animation: AnimationName 14s ease infinite;
+  animation: AnimationName 14s ease infinite;
+  text-transform: uppercase;
+  scroll-snap-type: y mandatory;
+  position: relative;
+  height: 100vh;
+  overflow-y: scroll;
 }
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 29%;
+  }
+  50% {
+    background-position: 100% 72%;
+  }
+  100% {
+    background-position: 0% 29%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 29%;
+  }
+  50% {
+    background-position: 100% 72%;
+  }
+  100% {
+    background-position: 0% 29%;
+  }
+    
+}
+
+
 
 /* *********** Pop Up modal route styling must stay in global styles ************** */
 
@@ -324,10 +367,14 @@ body {
 
 /* LIGHT DARK THEME TOGGLE */
 
-:root,
+:root{
+
+}
+
+
 .card {
   /* Light theme */
-  background-color: #F7F2CB;
+  background-color: #2341ad;
   text-decoration-color: black;
 }
 

@@ -6,7 +6,7 @@
     overflow: hidden;
     
     position: relative;
-    background: bisque;
+    background: rgb(150, 106, 52);
     
     text-transform: uppercase;
     scroll-snap-type: y mandatory;
