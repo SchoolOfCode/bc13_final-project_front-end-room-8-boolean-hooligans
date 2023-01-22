@@ -1,7 +1,6 @@
 import Navigation from "../Components/Navigation.js";
 import CharacterCard from "../Components/CharacterCard.js";
 import styles from "../styles/characterList.module.css";
-import useFetch from "../hooks/useFetch";
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import { BiSearchAlt } from "react-icons/bi";
