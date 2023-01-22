@@ -1,67 +1,31 @@
 import styles from "../styles/timeline.module.css";
+import Navigation from "../Components/Navigation";
 
-export default function Timeline (){
-    return(
-    <div className={styles.timeline">
-  <div class="container left">
-    <div className={styles.date">15 Dec</div>
-    <i className={styles.icon fa fa-home"></i>
-    <div className={styles.content">
-      <h2>Lorem ipsum dolor sit amet</h2>
-      <p>
-        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-      </p>
+export default function Timeline() {
+  let data = [
+    { date: 32, desc: "this happened, that happened, it was amazing" },
+    { date: 45, desc: "then something else happened and it was scary" },
+    { date: 66, desc: "some filler events happend for character growth" },
+    { date: 69, desc: "everything turned out ok in the end!" },
+  ];
+  return (
+    <div>
+      <Navigation />
+      <div className={styles.container}>
+        <div className={styles.wrapper}>
+          <h1 className={styles.title}> Timeline </h1>
+          <ul className={styles.timeline}>
+            { data.map((event) => {
+              return (
+            <li className={styles.event}>
+              <div className={styles.date}>{event.date}</div>
+              <p className={styles.desc}>{event.desc}</p>
+            </li>);
+            })}
+           
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
-  <div className={styles.container right">
-    <div className={styles.date">22 Oct</div>
-    <i className={styles.icon fa fa-gift"></i>
-    <div className={styles.content">
-      <h2>Lorem ipsum dolor sit amet</h2>
-      <p>
-        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-      </p>
-    </div>
-  </div>
-  <div className={styles.container left">
-    <div class="date">10 Jul</div>
-    <i class="icon fa fa-user"></i>
-    <div class="content">
-      <h2>Lorem ipsum dolor sit amet</h2>
-      <p>
-        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-      </p>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="date">18 May</div>
-    <i class="icon fa fa-running"></i>
-    <div class="content">
-      <h2>Lorem ipsum dolor sit amet</h2>
-      <p>
-        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-      </p>
-    </div>
-  </div>
-  <div class="container left">
-    <div class="date">10 Feb</div>
-    <i class="icon fa fa-cog"></i>
-    <div class="content">
-      <h2>Lorem ipsum dolor sit amet</h2>
-      <p>
-        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-      </p>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="date">01 Jan</div>
-    <i class="icon fa fa-certificate"></i>
-    <div class="content">
-      <h2>Lorem ipsum dolor sit amet</h2>
-      <p>
-        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-      </p>
-    </div>
-  </div>
-</div>)
+  );
 }
