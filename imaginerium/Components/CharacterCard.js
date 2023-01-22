@@ -87,6 +87,7 @@ export default function CharacterCard(props) {
                 char_likes={props.char_likes}
                 char_morality={props.char_morality}
                 char_notes={props.char_notes}
+                char_pronouns={props.char_pronouns}
                 char_relationships={props.char_relationships}
                 char_sexuality={props.char_sexuality}
                 char_skills={props.char_skills}

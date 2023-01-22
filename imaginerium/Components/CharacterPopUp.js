@@ -44,6 +44,8 @@ export default function CharacterPopUp(props){
   const[editMorality, setEditMorality] = useState(null)
   const[editNotesInput, setEditNotesInput] = useState(false)
   const[editNotes, setEditNotes] = useState(null)
+  const[editPronounsInput, setEditPronounsInput] = useState(false)
+  const[editPronouns, setEditPronouns] = useState(null)
   const[editRelationshipsInput, setEditRelationshipsInput] = useState(false)
   const[editRelationships, setEditRelationships] = useState(null)
   const[editSexualityInput, setEditSexualityInput] = useState(false)
@@ -171,6 +173,9 @@ return (
 
             <p className="category">Gender:</p>
             {editGenderInput?(<div><input type='text' onChange={(e)=>setEditGender(e.target.value)}></input><button onClick={()=>editCharacter(props.character_id, 'char_gender', editGender)} className="edit-button">Done</button></div>):(<div><h3>{props.char_gender}</h3><button onClick={()=>setEditGenderInput(!editGenderInput)} className="edit-button">edit</button></div>)}
+
+            <p className="category">Pronouns:</p>
+            {editPronounsInput?(<div><input type='text' onChange={(e)=>setEditPronouns(e.target.value)}></input><button onClick={()=>editCharacter(props.character_id, 'char_pronouns', editPronouns)} className="edit-button">Done</button></div>):(<div><h3>{props.char_pronouns}</h3><button onClick={()=>setEditPronounsInput(!editPronounsInput)} className="edit-button">edit</button></div>)}
 
             <p className="category">Sexuality:</p>
             {editSexualityInput?(<div><input type='text' onChange={(e)=>setEditSexuality(e.target.value)}></input><button onClick={()=>editCharacter(props.character_id, 'char_sexuality', editSexuality)} className="edit-button">Done</button></div>):(<div><h3>{props.char_sexuality}</h3><button onClick={()=>setEditSexualityInput(!editSexualityInput)} className="edit-button">edit</button></div>)}

@@ -144,6 +144,7 @@ export default function characterList() {
                   char_likes={character.char_likes}
                   char_morality={character.char_morality}
                   char_notes={character.char_notes}
+                  char_pronouns={character.char_pronouns}
                   char_relationships={character.char_relationships}
                   char_sexuality={character.char_sexuality}
                   char_skills={character.char_skills}
