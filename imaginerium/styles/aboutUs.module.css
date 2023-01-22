@@ -51,6 +51,26 @@
     font-size: 0.9rem;
   }
 
+.userCard {
+  width: 150px;
+  height: 100%;
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+
+.general {
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-top: 0;
+  overflow-y: scroll;
+}
   /* .card  */
   .additional {
     position: absolute;
@@ -93,4 +113,9 @@
     white-space: nowrap;
     overflow: hidden;
     text-align: center;
+  }
+
+  .card:hover .additional {
+    width: 100%;
+    border-radius: 0 5px 5px 0;
   }

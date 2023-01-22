@@ -2,6 +2,7 @@ import Navigation from "../Components/Navigation";
 import styles from "../styles/aboutUs.module.css";
 import Link from "next/link";
 import { GiHeartInside } from "react-icons/gi";
+
 // import Image from "next/image";
 
 export default function aboutUs() {
@@ -20,24 +21,44 @@ return (
     </div>
 
     <div className={styles.cardsContainer}>
-    <div className={styles.card}>
-        <div className={styles.additional}>
+    
+    <div>
+        <div className="center">
+          <div className={styles.card}>
+            <div className={styles.additional}>
+              <div className={styles.userCard}>
+                <div className={styles.aliveStatus}>
+                    <span>
+                      <GiHeartInside /> <span>Alive</span>
+                    </span>
+                </div>
+    
+                <img
+                  className="image"
+                  src="https://deepgrouplondon.com/wp-content/uploads/2019/06/person-placeholder-5.png"
+                />
+              </div>
+              <div className={styles.moreInfo}>
                 <h1>Felicity Cullen</h1>
-                <p><Link href="https://www.linkedin.com/in/felicitycullen">LinkedIn</Link></p>
-                <p><Link href="https://github.com/Fliss317">GitHub</Link></p>
-                <div className={styles.aliveStatus}><span>
-                  <GiHeartInside /> <span>Alive</span>
-                </span></div>
+    
+                <div className="stats">
+                  <div>
+                  <p><Link href="https://www.linkedin.com/in/felicitycullen"> LinkedIn</Link></p>
+                  </div>
+                  <div>
+                  <p><Link href="https://github.com/Fliss317">GitHub</Link></p>
+                  </div>
+                </div>
+              </div>
             </div>
-
-        <div className={styles.moreInfo}>
-        <img
-              className="image"
-              src="https://deepgrouplondon.com/wp-content/uploads/2019/06/person-placeholder-5.png"
-            />
-        <p>Prior to the bootcamp, Felicity spent 15 years in a variety of retail, office, and other service jobs before deciding to take the plunge into tech and do something constructive with the potential to improve the lives of many people. She enjoys back-end development and in her free time likes to indulge her nerdy hobbies such as painting toy soldiers and playing boardgames, and occasionally writing poetry. </p>
-        </div>
-    </div>
+            <div className={styles.general}>
+              <h1>Felicity Cullen</h1>
+              <p className="description">Prior to the bootcamp, Felicity spent 15 years in a variety of retail, office, and other service jobs before deciding to take the plunge into tech and do something constructive with the potential to improve the lives of many people. She enjoys back-end development and in her free time likes to indulge her nerdy hobbies such as painting toy soldiers and playing boardgames, and occasionally writing poetry. </p>
+              {/* <span className="more">Click to expand</span> */}
+            </div>
+          </div>
+    </div>  
+    </div> 
 
     <div className="card green">
         <h2>Andres Espin Martinez</h2>
