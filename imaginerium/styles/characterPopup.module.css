@@ -1,0 +1,63 @@
+
+  .popUp {
+  
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    background-color: white;
+    height: 65vh;
+  
+  }
+  
+  .popUpLeft {
+    background-color: #e3fdce;
+    padding: 15px;
+    width: 30%;
+  
+    height: 90%;
+  }
+  
+  .popUpImage {
+  
+    max-width: 14vw;
+    border-radius: 50%;
+  }
+  
+  .editButton,
+  .closePopUpButton {
+    float: right;
+    background-color: #c7fbc2;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: block;
+    /*inline-block removed due to float: right on line 94*/
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .category {
+    padding: 10px;
+  }
+  
+  .editButton:hover {
+    box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+  }
+  
+  
+  
+  .popUpRight {
+    overflow: auto;
+    padding: 15px;
+    width: 96%
+  }
