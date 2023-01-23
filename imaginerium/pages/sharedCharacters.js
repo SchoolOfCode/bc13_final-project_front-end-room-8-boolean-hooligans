@@ -11,7 +11,7 @@ export default function characterList() {
     if (session) {
       async function fetchData() {
         const response = await fetch(
-           `https://imaginerium-qpii.onrender.com//collab?user_email=${session.user.email}`
+           `https://imaginerium-qpii.onrender.com/collab?user_email=${session.user.email}`
         );
         const data = await response.json();
         setCharactersArray(data.payload);
@@ -47,6 +47,7 @@ console.log(data.payload)
         <div className={styles.header}>
           <div role="heading" aria-level="1">
             <h1 className={styles.h1}>Characters shared with you</h1>
+           
           </div>
         </div>
 
@@ -78,6 +79,7 @@ console.log(data.payload)
             .map((character) => {
               return (
                 <CharacterCard
+               
                   className="cctest"
                   key={character.character_id}
                   character_id={character.character_id}
