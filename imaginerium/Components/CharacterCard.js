@@ -14,7 +14,7 @@ export default function CharacterCard(props) {
   return (
     <div>
       <div onClick={() => setShowModal(true)} className={styles.center}>
-        <div className={styles.card}>
+        <div className="card green">
           <div className={styles.additional}>
             <div className={styles.userCard}>
               <div className={styles.aliveStatus}>

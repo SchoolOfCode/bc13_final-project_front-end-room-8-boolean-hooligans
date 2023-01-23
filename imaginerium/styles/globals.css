@@ -56,327 +56,323 @@ body {
   
   }
   
+  /* * *********** Pop Up modal route styling must stay in global styles ************** */ */
+
+  #modal-root {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 10;
+    width: 60%;
+    height: 70vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: all 0.3s;
+    border-radius: 6px;
+    background-color: white;
+    align-items: baseline;
+  
+  }
+  
+  #modal-root:empty {
+    display: none;
+  }
+  
+  /*  ***************** Form-submission-pop-up modal route ******************************/
+  
+  #form-submission-pop-up {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 10;
+    width: 40vw;
+    height: 30vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: all 0.3s;
+    border-radius: 6px;
+    /*background-color: white;*/
+    align-items: baseline;
+  
+  }
+  
+  #form-submission-pop-up:empty {
+    display: none;
+  }
+  
+  .form-submission-pop-up {
+  
+    padding: 20px;
+  
+  }
+  
+  
+  /* ***************** Character Card - expanded - POP UP ***************** */
+  .pop-up {
+  
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    background-color: white;
+    height: 65vh;
+  
+  }
+  
+  .pop-up-left {
+    background-color: #e3fdce;
+    padding: 15px;
+    width: 30%;
+  
+    height: 90%;
+  }
+  
+  .pop-up-image {
+  
+    max-width: 14vw;
+  }
+  
+  .edit-button,
+  .close-pop-up-button {
+    float: right;
+    background-color: #c7fbc2;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: block;
+    /*inline-block removed due to float: right on line 94*/
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .category {
+    padding: 10px;
+  }
+  
+  .edit-button:hover {
+    box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+  }
+  
+  
+  
+  .pop-up-right {
+    overflow: auto;
+    padding: 15px;
+    width: 96%
+  }
+  
+  /* ********** Character cards CSS ************** */
+  
+  
+  .centre {
+    width: 360px;
+    height: 200px;
+  }
+  
+  .description {
+    margin-top: 0px;
+    width: 80%;
+    float: right;
+    overflow: hidden;
+    height: 48%;
+  }
+  
+  .card {
+    width: 360px;
+    height: 200px;
+    /*background-color: #fff;*/
+    /*background: linear-gradient(#f8f8f8, #fff);*/
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    margin: 1.5rem;
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.671);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-right-color: rgba(255, 255, 255, 0.1);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    
+  }
+  
+  .card h1 {
+    text-align: center;
+    font-size: 1.4rem;
+    overflow: hidden;
+  }
+  
+  .card .additional {
+    position: absolute;
+    width: 150px;
+    height: 100%;
+   
+    transition: width 0.4s;
+    overflow: hidden;
+    z-index: 2;
+  }
+  
+  .card.green .additional {
+    background: linear-gradient(#b3e5ee, #a2bfcc);
+  
+  }
+  
+  .image {
+    margin-top: 0%;
+    max-width: 80%;
+    padding: 15px;
+  }
+  
+  .card:hover .additional {
+    width: 100%;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  .card .additional .user-card {
+    width: 150px;
+    height: 100%;
+    position: relative;
+    float: left;
+    overflow: hidden;
+  }
+  
+  .card .additional .user-card::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10%;
+    right: -2px;
+    height: 80%;
+    border-left: 2px solid rgba(0, 0, 0, 0.025);
+    overflow: hidden;
+  }
+  
+  .additional .alive-status {
+    margin: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.15);
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  
+  
+  .additional .user-card svg {
+    top: 50%;
+  }
+  
+  .additional .more-info {
+    width: 240px;
+    float: left;
+    position: absolute;
+    left: 120px;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .additional .more-info h1 {
+    color: #fff;
+    margin-bottom: 0;
+  }
+  
+  .green .additional .more-info h1 {
+    color: #224C36;
+  
+    font-size: 1.4rem;
+    overflow-wrap: break-word;
+  
+  }
+  
+  
+  
+  .card .additional .stats {
+    font-size: 1.3rem;
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    top: auto;
+    color: #fff;
+    overflow: hidden;
+  }
+  
+  .card.green .additional .stats {
+    color: #325C46;
+  }
+  
+  .card .additional .stats>div {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .card .additional .stats i {
+    display: block;
+  }
+  
+  .card .additional .stats div.title {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    overflow: hidden;
+  
+  }
+  
+  .additional .stats div.value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.2rem;
+  }
+  
+  .general {
+    width: 240px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 1rem;
+    padding-top: 0;
+    overflow: hidden;
+  }
+  
+  .general .more {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 0.9em;
+    overflow: hidden;
+  }
   
 
-
-
-
-
-/* *********** Pop Up modal route styling must stay in global styles ************** */
-
-#modal-root {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  z-index: 10;
-  width: 60%;
-  height: 70vh;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  transition: all 0.3s;
-  border-radius: 6px;
-  background-color: white;
-  align-items: baseline;
-
-}
-
-#modal-root:empty {
-  display: none;
-}
-
-/*  ***************** Form-submission-pop-up modal route ******************************/
-
-#form-submission-pop-up {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  z-index: 10;
-  width: 40vw;
-  height: 30vh;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  transition: all 0.3s;
-  border-radius: 6px;
-  /*background-color: white;*/
-  align-items: baseline;
-
-}
-
-#form-submission-pop-up:empty {
-  display: none;
-}
-
-.form-submission-pop-up {
-
-  padding: 20px;
-
-}
-
-
-/* ***************** Character Card - expanded - POP UP ***************** */
-.pop-up {
-
-  display: flex;
-  flex-direction: row;
-  padding: 10px;
-  background-color: white;
-  height: 65vh;
-
-}
-
-.pop-up-left {
-  background-color: #e3fdce;
-  padding: 15px;
-  width: 30%;
-
-  height: 90%;
-}
-
-.pop-up-image {
-
-  max-width: 14vw;
-}
-
-.edit-button,
-.close-pop-up-button {
-  float: right;
-  background-color: #c7fbc2;
-  border-radius: 100px;
-  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
-  color: green;
-  cursor: pointer;
-  display: block;
-  /*inline-block removed due to float: right on line 94*/
-  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
-  padding: 7px 20px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 250ms;
-  border: 0;
-  font-size: 16px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.category {
-  padding: 10px;
-}
-
-.edit-button:hover {
-  box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
-  transform: scale(1.05) rotate(-1deg);
-}
-
-
-
-.pop-up-right {
-  overflow: auto;
-  padding: 15px;
-  width: 96%
-}
-
-/* ********** Character cards CSS ************** */
-
-
-.centre {
-  width: 360px;
-  height: 200px;
-}
-
-.description {
-  margin-top: 0px;
-  width: 80%;
-  float: right;
-  overflow: hidden;
-  height: 48%;
-}
-
-.card {
-  width: 360px;
-  height: 200px;
-  /*background-color: #fff;*/
-  /*background: linear-gradient(#f8f8f8, #fff);*/
-  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
-  border-radius: 6px;
-  overflow: hidden;
-  position: relative;
-  margin: 1.5rem;
-  font-size: 0.9rem;
-  background: rgba(255, 255, 255, 0.671);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-right-color: rgba(255, 255, 255, 0.1);
-  border-bottom-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  
-}
-
-.card h1 {
-  text-align: center;
-  font-size: 1.4rem;
-  overflow: hidden;
-}
-
-.card .additional {
-  position: absolute;
-  width: 150px;
-  height: 100%;
- 
-  transition: width 0.4s;
-  overflow: hidden;
-  z-index: 2;
-}
-
-.card.green .additional {
-  background: linear-gradient(#b3e5ee, #a2bfcc);
-
-}
-
-.image {
-  margin-top: 0%;
-  max-width: 80%;
-  padding: 15px;
-}
-
-.card:hover .additional {
-  width: 100%;
-  border-radius: 0 5px 5px 0;
-}
-
-.card .additional .user-card {
-  width: 150px;
-  height: 100%;
-  position: relative;
-  float: left;
-  overflow: hidden;
-}
-
-.card .additional .user-card::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 10%;
-  right: -2px;
-  height: 80%;
-  border-left: 2px solid rgba(0, 0, 0, 0.025);
-  overflow: hidden;
-}
-
-.additional .alive-status {
-  margin: 5px;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1em;
-  font-weight: bold;
-  background: rgba(0, 0, 0, 0.15);
-  padding-top: 6px;
-  padding-bottom: 6px;
-  border-radius: 100px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-align: center;
-}
-
-
-
-.additional .user-card svg {
-  top: 50%;
-}
-
-.additional .more-info {
-  width: 240px;
-  float: left;
-  position: absolute;
-  left: 120px;
-  height: 100%;
-  overflow: hidden;
-}
-
-.additional .more-info h1 {
-  color: #fff;
-  margin-bottom: 0;
-}
-
-.green .additional .more-info h1 {
-  color: #224C36;
-
-  font-size: 1.4rem;
-  overflow-wrap: break-word;
-
-}
-
-
-
-.card .additional .stats {
-  font-size: 1.3rem;
-  display: flex;
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  right: 1rem;
-  top: auto;
-  color: #fff;
-  overflow: hidden;
-}
-
-.card.green .additional .stats {
-  color: #325C46;
-}
-
-.card .additional .stats>div {
-  flex: 1;
-  text-align: center;
-}
-
-.card .additional .stats i {
-  display: block;
-}
-
-.card .additional .stats div.title {
-  font-size: 0.75rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  overflow: hidden;
-
-}
-
-.additional .stats div.value {
-  font-size: 1.2rem;
-  font-weight: bold;
-  line-height: 1.2rem;
-}
-
-.general {
-  width: 240px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  box-sizing: border-box;
-  padding: 1rem;
-  padding-top: 0;
-  overflow: hidden;
-}
-
-.general .more {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  font-size: 0.9em;
-  overflow: hidden;
-}
 
 /* WORLD MAP */
 
