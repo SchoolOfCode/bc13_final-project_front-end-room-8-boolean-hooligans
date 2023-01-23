@@ -56,7 +56,7 @@ body {
   
   }
   
-  /* * *********** Pop Up modal route styling must stay in global styles ************** */ */
+  /* * *********** Pop Up modal route styling must stay in global styles ************** */ 
 
   #modal-root {
     position: fixed;
