@@ -6,9 +6,7 @@ import Link from "next/link";
 import Navigation from "../Components/Navigation";
 import NewNavBar from "../Components/NewNavBar.js";
 import ButtonLink from "../Components/ButtonLink";
-import { VscPersonAdd, VscOrganization, VscGlobe
-} from "react-icons/vsc";
-
+import { VscPersonAdd, VscOrganization, VscGlobe } from "react-icons/vsc";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,61 +20,54 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.homeContainer}>
-      {/* <Navigation /> */}
-      <NewNavBar/>
-      <main className={styles.main}>
-      <div className={styles.titleContainer}>
-        <h1>IMAGINERIUM</h1>
-        <div className={styles.descriptionContainer}>
-          <Image
-            priority
-              src="https://i.ibb.co/ZVj6bcP/spinning-Earth-unscreen.gif"
-            className={styles.earth}
-            height={320}
-            width={ 427}
-            alt="Earth"
-          />
-         
-          <p>
-            Breathe life into your imagination with <span className={styles.background}>IMAGINERIUM</span> the ultimate creative playground for world building, character creation, and story weaving.
-          </p>
-          
-        </div>
+        {/* <Navigation /> */}
+        <NewNavBar />
+        <main className={styles.main}>
+          <div className={styles.titleContainer}>
+            <h1>IMAGINERIUM</h1>
+            <div className={styles.descriptionContainer}>
+              <Image
+                priority
+                src="https://i.ibb.co/ZVj6bcP/spinning-Earth-unscreen.gif"
+                className={styles.earth}
+                height={320}
+                width={427}
+                alt="Earth"
+              />
 
-        <div className={styles.buttonsContainer}>
-       
-          <button className={styles.buttonMain}>
-          <Link href="/createCharacter"> 
-          <div>
-            Create
+              <p>
+                Breathe life into your imagination with{" "}
+                <span className={styles.background}>IMAGINERIUM</span> the
+                ultimate creative playground for world building, character
+                creation, and story weaving.
+              </p>
             </div>
-            <VscPersonAdd className={styles.add}/>
-            </Link>
-          </button>
-        
-          
 
-         <button className={styles.buttonMain}><Link href="/characterList" >
-          <div className={styles.buttonMain}>
-          View
+            <div className={styles.buttonsContainer}>
+              <button className={styles.buttonMain}>
+                <Link href="/createCharacter">
+                  <div>Create</div>
+                  <VscPersonAdd className={styles.add} />
+                </Link>
+              </button>
+
+              <button className={styles.buttonMain}>
+                <Link href="/characterList">
+                  <div className={styles.buttonMain}>View</div>
+
+                  <VscOrganization className={styles.add} />
+                </Link>
+              </button>
+
+              <button className={styles.buttonMain}>
+                <Link href="/createNewWorld">
+                  <div>Create New World</div>
+                  <VscGlobe className={styles.add} />
+                </Link>
+              </button>
+            </div>
           </div>
-        
-
-            <VscOrganization className={styles.add}/></Link>
-          </button>
-
-          <button className={styles.buttonMain}>
-          <Link href="/createNewWorld">
-          <div>
-          Create New World
-          </div>
-          <VscGlobe className={styles.add}/>
-          </Link>
-          </button>
-
-        </div>
-        </div>
-      </main>
+        </main>
       </div>
     </>
   );
