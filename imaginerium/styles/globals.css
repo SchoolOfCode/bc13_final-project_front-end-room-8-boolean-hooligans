@@ -7,7 +7,25 @@ body {
   background-size: 600% 600%;
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+    padding: 0;
+    width:  100vw;
+    height: 100%;
+    overflow: hidden;
+    
+    position: relative;
+    
+  background: linear-gradient(230deg, #59c0e6, #4e6db9, #a571fb);
+  background-size: 600% 600%;
 
+  -webkit-animation: AnimationName 14s ease infinite;
+  animation: AnimationName 14s ease infinite;
+  text-transform: uppercase;
+  scroll-snap-type: y mandatory;
+  position: relative;
+  height: 100vh;
+  overflow-y: scroll;
+}
 
   
     background: linear-gradient(230deg, #59c0e6, #4e6db9, #a571fb);
@@ -42,6 +60,9 @@ body {
   }
   
   
+
+
+
 
 
 /* *********** Pop Up modal route styling must stay in global styles ************** */
@@ -370,13 +391,15 @@ body {
 
 /* LIGHT DARK THEME TOGGLE */
 
-:root,
+:root{
+
+}
+
+
 .card {
   /* Light theme */
-
   /* background-color: #F7F2CB;
   text-decoration-color: black; */
-
 }
 
 
@@ -395,14 +418,6 @@ body {
   text-decoration-color: #F7F2CB; */
 
 }
-
-
-
-/*PLAN 
-Isolate the pop-ups 
-Enable the pop-ups to respond to dark/light theme 
-
-*/
 
 
 

@@ -4,10 +4,13 @@ import { useState } from "react";
 import { useRef } from "react";
 import { useSession } from "next-auth/react";
 import styles from "../styles/steps.module.css";
+import { motion } from "framer-motion";
 
 export default function Step1({ setStep, formValues, setFormValues }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [image, setImage] = useState("");
+  const [trigger, setTrigger] = useState(true);
   const myForm = useRef();
 
   const { register, handleSubmit } = useForm();
@@ -17,13 +20,19 @@ export default function Step1({ setStep, formValues, setFormValues }) {
   async function randomName() {
     const response = await fetch(`https://randomuser.me/api/`);
     const data = await response.json();
-    setFirstName(data.results[0].name.first + " " + data.results[0].name.last);
-    setFormValues({ ...formValues, char_name: firstName });
+    if (data) {
+      setFirstName(
+        data.results[0].name.first + " " + data.results[0].name.last
+      );
+      setImage(data.results[0].picture.large);
+      setFormValues({ ...formValues, char_name: firstName, char_img: image });
+    }
   }
 
   useEffect(() => {
     randomName();
-  }, []);
+    // setTrigger(true);
+  }, [trigger]);
 
   let user = { user_email: session.user.email };
 
@@ -40,7 +49,12 @@ export default function Step1({ setStep, formValues, setFormValues }) {
     <div className={styles.mainStepTwo}>
       <h2 className={styles.heading}>Physical features</h2>
 
-      <form className={styles.formContainer} onSubmit={handleSubmit(onSubmit)}>
+      <motion.form
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        className={styles.formContainer}
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <div className={styles.stepOneLeftContainer}>
           <label htmlFor="char_name">Character Name</label>
           <input
@@ -53,10 +67,16 @@ export default function Step1({ setStep, formValues, setFormValues }) {
           <button type="button" onClick={() => randomName()}>
             Randomise
           </button>
-          <img
-            src="https://randomuser.me/api/portraits/men/60.jpg"
-            alt="Character placeholder"
-          ></img>
+          {formValues.char_img ? ( // if image is true, show image, else show placeholder
+            <img src={formValues.char_img} alt="Character placeholder" />
+          ) : (
+            // if image is false, show placeholder
+            <img // placeholder image
+              src="https://deepgrouplondon.com/wp-content/uploads/2019/06/person-placeholder-5.png"
+              alt="Character placeholder"
+            />
+          )}
+
           <label htmlFor="char_img">Enter image url</label>
           <input
             defaultValue={formValues.char_img}
@@ -179,7 +199,7 @@ export default function Step1({ setStep, formValues, setFormValues }) {
             Next
           </button>
         </div>
-      </form>
+      </motion.form>
     </div>
   );
 }
