@@ -54,6 +54,7 @@ export default function Step1({ setStep, formValues, setFormValues }) {
         animate={{ scale: 1 }}
         className={styles.formContainer}
         onSubmit={handleSubmit(onSubmit)}
+        ref={myForm}
       >
         <div className={styles.stepOneLeftContainer}>
           <label htmlFor="char_name">Character Name</label>
