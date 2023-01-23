@@ -4,15 +4,14 @@ import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Navigation from "../Components/Navigation";
+import NewNavBar from "../Components/NewNavBar.js";
 import ButtonLink from "../Components/ButtonLink";
-import { VscPersonAdd, VscOrganization, VscGlobe
-} from "react-icons/vsc";
-
+import { VscPersonAdd, VscOrganization, VscGlobe } from "react-icons/vsc";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  return (
+ return (
     <>
       <Head>
         <title>Imaginerium</title>
@@ -21,7 +20,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.homeContainer}>
-      <Navigation />
+      {/* <Navigation /> */}
+      <NewNavBar />
       <main className={styles.main}>
       <div className={styles.titleContainer}>
         <h1>IMAGINERIUM</h1>
@@ -36,40 +36,41 @@ export default function Home() {
           />
          
           <p>
-            Breathe life into your imagination with <span className={styles.background}>IMAGINERIUM</span>: the ultimate creative playground for world building, character creation, and story weaving.
+            Breathe life into your imagination with <span className={styles.background}>IMAGINERIUM</span> the ultimate creative playground for world building, character creation, and story weaving.
           </p>
           
         </div>
 
         <div className={styles.buttonsContainer}>
        
-        <Link href="/createCharacter">
-          <button className={styles.buttonMain} >
-            <div>
-            Create Character
+          <button className={styles.buttonMain}>
+          <Link href="/createCharacter"> 
+          <div>
+            Create
             </div>
             <VscPersonAdd className={styles.add}/>
+            </Link>
           </button>
-        </Link>
+        
           
 
-         <Link href="/characterList" >
-         <button className={styles.buttonMain}>
+         <button className={styles.buttonMain}><Link href="/characterList" >
           <div className={styles.buttonMain}>
-          View Characters
+          View
           </div>
-         <VscOrganization className={styles.add}/>
-          </button>
-          </Link>
+        
 
-          <Link href="/createNewWorld">
+            <VscOrganization className={styles.add}/></Link>
+          </button>
+
           <button className={styles.buttonMain}>
+          <Link href="/createNewWorld">
           <div>
-          Create World
+          Create New World
           </div>
           <VscGlobe className={styles.add}/>
-          </button>
           </Link>
+          </button>
 
         </div>
         </div>

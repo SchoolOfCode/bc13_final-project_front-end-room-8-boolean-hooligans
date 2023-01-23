@@ -4,6 +4,7 @@ import styles from "../styles/characterList.module.css";
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import { BiSearchAlt } from "react-icons/bi";
+import NewNavBar from "../Components/NewNavBar";
 export default function characterList() {
   const { data: session } = useSession();
 
@@ -15,7 +16,7 @@ export default function characterList() {
         );
         const data = await response.json();
         setCharactersArray(data.payload);
-console.log(data.payload)
+        console.log(data.payload);
         console.log(session.user.email);
       }
       fetchData();
@@ -38,8 +39,8 @@ console.log(data.payload)
     none: { method: (a, b) => null },
     ascending: { method: (a, b) => (a.character_id < b.character_id ? -1 : 1) },
     descending: {
-      method: (a, b) => (a.character_id > b.character_id ? -1 : 1),
-    },
+      method: (a, b) => (a.character_id > b.character_id ? -1 : 1)
+    }
   };
 
   if (!session) {
@@ -48,7 +49,8 @@ console.log(data.payload)
 
   return (
     <div className={styles.main}>
-      <Navigation />
+      {/* <Navigation /> */}
+      <NewNavBar />
       <div>
         <div className={styles.header}>
           <div role="heading" aria-level="1">
@@ -95,7 +97,7 @@ console.log(data.payload)
               <div>view all</div>
             </button>
           </div>
-          <div >
+          <div>
             <select
               className={styles.allButton}
               defaultValue={"DEFAULT"}

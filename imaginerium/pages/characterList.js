@@ -5,6 +5,7 @@ import useFetch from "../hooks/useFetch";
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import { BiSearchAlt } from "react-icons/bi";
+import NewNavBar from "../Components/NewNavBar.js";
 export default function characterList() {
   const { data: session } = useSession();
 
@@ -39,20 +40,23 @@ export default function characterList() {
     none: { method: (a, b) => null },
     ascending: { method: (a, b) => (a.character_id < b.character_id ? -1 : 1) },
     descending: {
-      method: (a, b) => (a.character_id > b.character_id ? -1 : 1),
-    },
+      method: (a, b) => (a.character_id > b.character_id ? -1 : 1)
+    }
   };
 
   if (!session) {
-    return( <>
-      <Navigation />
-      <div>Log in to view your saved characters</div>;
-      </>)
+    return (
+      <>
+        {/* <Navigation /> */}
+        <NewNavBar />
+        <div>Log in to view your saved characters</div>;
+      </>
+    );
   }
 
   return (
     <div className={styles.main}>
-      <Navigation />
+      <NewNavBar />
       <div>
         <div className={styles.header}>
           <div role="heading" aria-level="1">
@@ -99,7 +103,7 @@ export default function characterList() {
               <div>view all</div>
             </button>
           </div>
-          <div >
+          <div>
             <select
               className={styles.allButton}
               defaultValue={"DEFAULT"}
