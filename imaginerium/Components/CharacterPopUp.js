@@ -125,7 +125,7 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <h3>{props.char_name}</h3>
+            <p>{props.char_name}</p>
             <button
               onClick={() => setEditNameInput(!editNameInput)}
               className={styles.editButton}
@@ -163,10 +163,12 @@ export default function CharacterPopUp(props) {
         <h2>Physical Appearance:</h2>
 
         {/* <p className="category">Portrait:</p>
-            {editImgInput?(<div><input type='text' onChange={(e)=>setEditImg(e.target.value)}></input><button onClick={()=>editImg(props.character_id, 'char_img', editImg)} className="edit-button">Done</button></div>):(<div><h3>{props.char_img}</h3><button onClick={()=>setEditImgInput(!editImgInput)} className="edit-button">edit</button></div>)} */}
+            {editImgInput?(<div><input type='text' onChange={(e)=>setEditImg(e.target.value)}></input><button onClick={()=>editImg(props.character_id, 'char_img', editImg)} className="edit-button">Done</button></div>):(<div><p>{props.char_img}</p><button onClick={()=>setEditImgInput(!editImgInput)} className="edit-button">edit</button></div>)} */}
 
-        <p className="category">Age in years: </p>
+        <p className={styles.category}>Age in years: </p>
         {editAgeInput ? (
+          <>
+          <p>
           <div>
             <input
               type="number"
@@ -180,18 +182,23 @@ export default function CharacterPopUp(props) {
             >
               Done
             </button>
-
           </div>
-        ) : (
+          </p>
+          </>
+          ) : (
+            <>
           <div>
-            <h3>{props.char_age}</h3>
+            <p>{props.char_age}
             <button
               onClick={() => setEditAgeInput(!editAgeInput)}
               className={styles.editButton}
             >
               edit
-            </button>
+            </button> 
+           </p>
           </div>
+
+          </>
         )}
 
         <p className={styles.category}>Ethnic group and species:</p>
@@ -212,7 +219,7 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <h3>{props.char_species}</h3>
+            <p>{props.char_species}</p>
             <button
               onClick={() => setEditSpeciesInput(!editSpeciesInput)}
               className={styles.editButton}>
@@ -239,7 +246,7 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <h3>{props.char_hairColour}</h3>
+            <p>{props.char_hairColour}</p>
             <button
               onClick={() => setEditHairInput(!editHairInput)}
               className={styles.editButton}
@@ -267,7 +274,7 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <h3>{props.char_eyeColour}</h3>
+            <p>{props.char_eyeColour}</p>
             <button
               onClick={() => setEditEyeInput(!editEyeInput)}
               className={styles.editButton}
@@ -295,7 +302,7 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <h3>{props.char_skinColour}</h3>
+            <p>{props.char_skinColour}</p>
             <button
               onClick={() => setEditSkinInput(!editSkinInput)}
               className="edit-button"
@@ -322,7 +329,7 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <h3>{props.char_height}</h3>
+            <p>{props.char_height}</p>
             <button
               onClick={() => setEditHeightInput(!editHeightInput)}
               className={styles.editButton}
@@ -350,7 +357,7 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <h3>{props.char_weight}</h3>
+            <p>{props.char_weight}</p>
             <button
               onClick={() => setEditWeightInput(!editWeightInput)}
               className={styles.editButton}
@@ -378,7 +385,7 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <h3>{props.char_features}</h3>
+            <p>{props.char_features}</p>
             <button
               onClick={() => setEditFeaturesInput(!editFeaturesInput)}
               className={styles.editButton}
@@ -406,7 +413,7 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <h3>{props.char_desc}</h3>
+            <p>{props.char_desc}</p>
             <button
               onClick={() => setEditDescInput(!editDescInput)}
               className={styles.editButton}
@@ -416,10 +423,11 @@ export default function CharacterPopUp(props) {
           </div>
         )}
 
-        {props.char_alive ? (
+        {props.char_alive ? (<>
           <p className={styles.category}>
-            Status: <GiHeartInside /> Alive!
-            <button
+            Status:</p>
+            <p> <GiHeartInside /> Alive!
+            <button className={styles.editButton}
               onClick={() =>
                 editCharacter(props.character_id, "char_alive", false)
               }
@@ -427,10 +435,12 @@ export default function CharacterPopUp(props) {
               Kill!
             </button>
           </p>
-        ) : (
+          </>
+        ) : (<>
           <p className={styles.category}>
-            Status: <SlGhost /> Dead
-            <button
+            Status:</p>
+            <p> <SlGhost /> Dead
+            <button className={styles.editButton}
               onClick={() =>
                 editCharacter(props.character_id, "char_alive", true)
               }
@@ -438,6 +448,7 @@ export default function CharacterPopUp(props) {
               Resurrect!
             </button>
           </p>
+          </>
         )}
 
         <h2>Personality:</h2>
@@ -460,7 +471,7 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <h3>{props.char_hopes}</h3>
+            <p>{props.char_hopes}</p>
             <button
               onClick={() => setEditHopesInput(!editHopes)}
               className={styles.editButton}
@@ -488,7 +499,7 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <h3>{props.char_fears}</h3>
+            <p>{props.char_fears}</p>
             <button
               onClick={() => setEditFearsInput(!editFearsInput)}
               className={styles.editButton}
@@ -516,7 +527,7 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <h3>{props.char_speech}</h3>
+            <p>{props.char_speech}</p>
             <button
               onClick={() => setEditSpeechInput(!editSpeechInput)}
               className={styles.editButton}
@@ -544,7 +555,7 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <h3>{props.char_likes}</h3>
+            <p>{props.char_likes}</p>
             <button
               onClick={() => setEditLikesInput(!editLikesInput)}
               className={styles.editButton}
@@ -578,7 +589,7 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <h3>{props.char_background}</h3>
+            <p>{props.char_background}</p>
             <button
               onClick={() => setEditBackgroundInput(!editBackgroundInput)}
               className={styles.editButton}
@@ -610,7 +621,7 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <h3>{props.char_disabilities}</h3>
+            <p>{props.char_disabilities}</p>
             <button
               onClick={() => setEditDisabilitiesInput(!editDisabilitiesInput)}
               className={styles.editButton}
@@ -638,7 +649,7 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <h3>{props.char_job}</h3>
+            <p>{props.char_job}</p>
             <button
               onClick={() => setEditJobInput(!editJobInput)}
               className={styles.editButton}
@@ -666,7 +677,7 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <h3>{props.char_gender}</h3>
+            <p>{props.char_gender}</p>
             <button
               onClick={() => setEditGenderInput(!editGenderInput)}
               className={styles.editButton}
@@ -676,7 +687,7 @@ export default function CharacterPopUp(props) {
           </div>
         )}
  <p className={styles.category}>Pronouns:</p>
-            {editPronounsInput?(<div><input type='text' onChange={(e)=>setEditPronouns(e.target.value)}></input><button onClick={()=>editCharacter(props.character_id, 'char_pronouns', editPronouns)} className={styles.editButton}>Done</button></div>):(<div><h3>{props.char_pronouns}</h3><button onClick={()=>setEditPronounsInput(!editPronounsInput)} className={styles.editButton}>edit</button></div>)}
+            {editPronounsInput?(<div><input type='text' onChange={(e)=>setEditPronouns(e.target.value)}></input><button onClick={()=>editCharacter(props.character_id, 'char_pronouns', editPronouns)} className={styles.editButton}>Done</button></div>):(<div><p>{props.char_pronouns}</p><button onClick={()=>setEditPronounsInput(!editPronounsInput)} className={styles.editButton}>edit</button></div>)}
 
         <p className={styles.category}>Sexuality:</p>
         {editSexualityInput ? (
@@ -700,7 +711,7 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <h3>{props.char_sexuality}</h3>
+            <p>{props.char_sexuality}</p>
             <button
               onClick={() => setEditSexualityInput(!editSexualityInput)}
               className={styles.editButton}
@@ -728,7 +739,7 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <h3>{props.char_skills}</h3>
+            <p>{props.char_skills}</p>
             <button
               onClick={() => setEditSkillsInput(!editSkillsInput)}
               className={styles.editButton}
@@ -756,7 +767,7 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <h3>{props.char_morality}</h3>
+            <p>{props.char_morality}</p>
             <button
               onClick={() => setEditMoralityInput(!editMoralityInput)}
               className={styles.editButton}
@@ -788,7 +799,7 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <h3>{props.char_relationships}</h3>
+            <p>{props.char_relationships}</p>
             <button
               onClick={() => setEditRelationshipsInput(!editRelationshipsInput)}
               className={styles.editButton}
@@ -816,7 +827,7 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <h3>{props.char_notes}</h3>
+            <p>{props.char_notes}</p>
             <button
               onClick={() => setEditNotesInput(!editNotesInput)}
               className={styles.editButton}
