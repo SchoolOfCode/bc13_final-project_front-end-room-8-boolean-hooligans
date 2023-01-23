@@ -56,7 +56,7 @@ export default function characterList() {
 
   return (
     <div className={styles.main}>
-      <Navigation />
+      <NewNavBar />
       <div>
         <div className={styles.header}>
           <div role="heading" aria-level="1">

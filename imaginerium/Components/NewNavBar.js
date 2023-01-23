@@ -1,12 +1,13 @@
 import styles from "../styles/newNavBar.module.css";
 import React from "react";
+import Link from "next/link";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 
 const links = [
-  { name: "Home", to: "/characterList", id: 1 },
-  { name: "About", to: "#", id: 2 },
-  { name: "Blog", to: "#", id: 3 },
-  { name: "Contact", to: "#", id: 4 }
+  { name: "Home", to: "/dashboard", id: 1 },
+  { name: "About", to: "/aboutUs", id: 2 },
+  { name: "Create", to: "/createCharacter", id: 3 },
+  { name: "View", to: "/characterList", id: 4 }
 ];
 
 const itemVariants = {
