@@ -59,7 +59,9 @@
   .image {
     margin-top: 0%;
     max-width: 80%;
+    max-height: 63%;
     padding: 15px;
+    border-radius: 50%;
   }
   
   .card:hover .additional {

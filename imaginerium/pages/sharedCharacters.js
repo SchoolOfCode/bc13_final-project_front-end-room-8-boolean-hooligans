@@ -12,7 +12,7 @@ export default function characterList() {
     if (session) {
       async function fetchData() {
         const response = await fetch(
-           `https://imaginerium-qpii.onrender.com//collab?user_email=${session.user.email}`
+           `https://imaginerium-qpii.onrender.com/collab?user_email=${session.user.email}`
         );
         const data = await response.json();
         setCharactersArray(data.payload);
@@ -23,13 +23,7 @@ export default function characterList() {
     }
   }, [session]);
 
-  async function searchByName(nameToSearch) {
-    const response = await fetch(
-      `https://imaginerium-qpii.onrender.com/collab?char_name=${nameToSearch}&user_email=${session.user.email}`
-    );
-    const data = await response.json();
-    setCharactersArray(data.payload);
-  }
+ 
 
   //sort by date created functionality
   const [charactersArray, setCharactersArray] = useState([]);
@@ -55,49 +49,15 @@ export default function characterList() {
         <div className={styles.header}>
           <div role="heading" aria-level="1">
             <h1 className={styles.h1}>Characters shared with you</h1>
+           
           </div>
         </div>
 
         <div className={styles.filters} aria-level="2">
-          <div id={styles.cover}>
-            <form
-              className={styles.form}
-              onSubmit={(e) => {
-                e.preventDefault();
-                const formData = new FormData(e.target);
-                let nameToSearch = formData.get("char_name");
 
-                searchByName(nameToSearch);
-              }}
-            >
-              <div className={styles.tb}>
-                <div className={styles.td} id={styles.sCover}>
-                  {/* <label htmlFor="char_name">Search by name:</label> */}
-                  <input
-                    placeholder="search by name"
-                    className={styles.input}
-                    type="text"
-                    name="char_name"
-                    id="char_name"
-                  />
-                  <button className={styles.button} type="submit">
-                    <span>
-                      <BiSearchAlt size="60" />
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div>
-            <button
-              className={styles.allButton}
-              onClick={() => searchByName("")}
-            >
-              <div>view all</div>
-            </button>
-          </div>
-          <div>
+         
+          <div >
+
             <select
               className={styles.allButton}
               defaultValue={"DEFAULT"}
@@ -123,6 +83,7 @@ export default function characterList() {
             .map((character) => {
               return (
                 <CharacterCard
+               
                   className="cctest"
                   key={character.character_id}
                   character_id={character.character_id}

@@ -1,5 +1,3 @@
-
-
 import styles from "../styles/characterCard.module.css";
 import { SlGhost } from "react-icons/sl";
 import { GiHeartInside } from "react-icons/gi";
@@ -17,7 +15,7 @@ export default function CharacterCard(props) {
     <div>
     <div onClick={() => setShowModal(true)} className={styles.center}>
       <div className={styles.card}>
-        <div className={styles.additional}>
+        <div className={styles.additional} >
           <div className={styles.userCard}>
             <div className={styles.aliveStatus}>
               {props.char_alive ? (
