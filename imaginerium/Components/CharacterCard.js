@@ -48,13 +48,15 @@ export default function CharacterCard(props) {
               </div>
             </div>
           </div>
-          <div className="general">
-            <h1>{props.char_name}</h1>
-            <p className="description">
-              First few lines of character description? Lorem etc we like words{" "}
-            </p>
-            <span className="more">Click to expand</span>
-          </div>
+
+        </div>
+        <div className="general">
+          <h1>{props.char_name}</h1>
+          <p className="description">
+           {props.char_desc}
+          </p>
+          <span className="more">Click to expand</span>
+
         </div>
       </div>
       {showModal ? (
