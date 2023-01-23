@@ -22,13 +22,7 @@ console.log(data.payload)
     }
   }, [session]);
 
-  async function searchByName(nameToSearch) {
-    const response = await fetch(
-      `https://imaginerium-qpii.onrender.com/collab?char_name=${nameToSearch}&user_email=${session.user.email}`
-    );
-    const data = await response.json();
-    setCharactersArray(data.payload);
-  }
+ 
 
   //sort by date created functionality
   const [charactersArray, setCharactersArray] = useState([]);
@@ -57,44 +51,7 @@ console.log(data.payload)
         </div>
 
         <div className={styles.filters} aria-level="2">
-          <div id={styles.cover}>
-            <form
-              className={styles.form}
-              onSubmit={(e) => {
-                e.preventDefault();
-                const formData = new FormData(e.target);
-                let nameToSearch = formData.get("char_name");
-
-                searchByName(nameToSearch);
-              }}
-            >
-              <div className={styles.tb}>
-                <div className={styles.td} id={styles.sCover}>
-                  {/* <label htmlFor="char_name">Search by name:</label> */}
-                  <input
-                    placeholder="search by name"
-                    className={styles.input}
-                    type="text"
-                    name="char_name"
-                    id="char_name"
-                  />
-                  <button className={styles.button} type="submit">
-                    <span>
-                      <BiSearchAlt size="60" />
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div>
-            <button
-              className={styles.allButton}
-              onClick={() => searchByName("")}
-            >
-              <div>view all</div>
-            </button>
-          </div>
+         
           <div >
             <select
               className={styles.allButton}
