@@ -53,7 +53,9 @@ export default function CharacterCard(props) {
         <div className="general">
           <h1>{props.char_name}</h1>
           <p className="description">
-           {props.char_desc}
+
+            {props.char_desc}
+
           </p>
           <span className="more">Click to expand</span>
 

@@ -19,33 +19,48 @@ export default function Navigation() {
           />
         </Link>
       </div>
+
       <div className={styles.rightNavBar}>
       <div className={styles.dropdown}>
-        <Link href="/dashboard"><button class={styles.dropbtn}>Home
-          </button></Link>
+      <button className={styles.dropbtn}>
+        Home
+        <i className="fa fa-caret-down"></i>
+        </button>
+        <div className={styles.dropdownContent}>
+          <Link href="/dashboard">Homepage</Link>
+          <Link href="/aboutUs">About Us</Link>
+
 
         </div>
+
         <div className={styles.dropdown}>
           
-          <button className={styles.dropbtn}>Create</button>
+          <button className={styles.dropbtn}>Create 
+          <i className="fa fa-caret-down"></i>
+          </button>
           
           <div className={styles.dropdownContent}>
+
             <Link href="/createCharacter">Character</Link>
             <Link href="/createNewWorld">World map</Link>
-            <Link href="/createNewWorld">Story</Link>
+           {/* <Link href="/createNewWorld">Story</Link>*/}
           </div>
         </div>
+
 
 
 
         <div className={styles.dropdown}>
-          <button className={styles.dropbtn}>View</button>
+          <button className={styles.dropbtn}>View 
+          <i className="fa fa-caret-down"></i>
+          </button>
           <div className={styles.dropdownContent}>
             <Link href="/characterList">Characters</Link>
-            <Link href="/characterList">World Maps</Link>
-            <Link href="/characterList">Stories</Link>
+            <Link href="/sharedCharacters">Shared characters</Link>
+            {/*<Link href="/characterList">Stories</Link> */}
           </div>
         </div>
+
         <div className={styles.darkModeSwitch}>
           <ButtonToggleDarkMode></ButtonToggleDarkMode>
         </div>

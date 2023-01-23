@@ -1,0 +1,122 @@
+.cardsContainer {
+    align-content: center;
+     margin: 0 auto; 
+     margin-top: 14vh;
+     max-width: 95vw;
+     padding: 10px;
+     margin: 0px;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+     grid-column-gap: 10px;
+     grid-row-gap: 5px;
+   }
+
+.teamLogo {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+    width: 50%;
+    padding: 20px;
+}
+
+.headerBlock {
+    display: flex;
+    text-align: left;
+    border: 5px solid #156E58;
+    margin: 0 250px;
+}
+
+.headerText {
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.image {
+    height: auto;
+    width: auto;
+}
+
+.card {
+    width: 360px;
+    height: 200px;
+    background-color: #156E58;
+    /*background: linear-gradient(#f8f8f8, #fff);*/
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    margin: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+.userCard {
+  width: 150px;
+  height: 100%;
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+
+.general {
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-top: 0;
+  overflow: hidden;
+}
+  /* .card  */
+  .additional {
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(#92bCa6, #A2CCB6);;
+    transition: width 0.4s;
+    overflow: hidden;
+    z-index: 2;
+  }
+
+  .card .additional .user-card {
+    width: 150px;
+    height: 100%;
+    position: relative;
+    float: left;
+    overflow: hidden;
+  }
+
+  /* .additional */.moreInfo {
+    width: 240px;
+    float: right;
+    position: absolute;
+    left: 120px;
+    height: 100%;
+    overflow-y: scroll;
+  }
+
+  .additional .aliveStatus {
+    margin: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.15);
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .card:hover .additional {
+    width: 100%;
+    border-radius: 0 5px 5px 0;
+  }

@@ -5,7 +5,7 @@ import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Navigation from "../Components/Navigation";
 import ButtonLink from "../Components/ButtonLink";
-import { VscPersonAdd, VscOrganization
+import { VscPersonAdd, VscOrganization, VscGlobe
 } from "react-icons/vsc";
 
 
@@ -53,12 +53,23 @@ export default function Home() {
           </button>
         
           
+
          <button className={styles.buttonMain}><Link href="/characterList" >
           <div className={styles.buttonMain}>
           View
           </div>
         
+
             <VscOrganization className={styles.add}/></Link>
+          </button>
+
+          <button className={styles.buttonMain}>
+          <Link href="/createNewWorld">
+          <div>
+          Create New World
+          </div>
+          <VscGlobe className={styles.add}/>
+          </Link>
           </button>
 
         </div>
