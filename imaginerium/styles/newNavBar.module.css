@@ -17,6 +17,7 @@
   
   .btnContainer {
     position: fixed;
+    z-index: 50;
   }
   
   .container a {
@@ -34,5 +35,6 @@
     border: none;
     padding: 0.5rem 1rem;
     background-color: #f9fafb;
+   
   }
   

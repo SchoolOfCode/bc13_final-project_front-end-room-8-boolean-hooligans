@@ -1,4 +1,4 @@
-import styles from "../styles/NewNavBar.module.css";
+import styles from "../styles/newNavBar.module.css";
 import React from "react";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 
@@ -71,7 +71,9 @@ export default function NewNavBar() {
         )}
       </AnimatePresence>
       <div className={styles.btnContainer}>
-        <button className={styles.hamburgerButton} onClick={cycleOpen}>{open ? "Close" : "Open"}</button>
+        <button className={styles.hamburgerButton} onClick={cycleOpen}>
+          {open ? "Close" : "Open"}
+        </button>
       </div>
     </div>
   );
