@@ -4,6 +4,7 @@ import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Navigation from "../Components/Navigation";
+import NewNavBar from "../Components/NewNavBar.js";
 import ButtonLink from "../Components/ButtonLink";
 import { VscPersonAdd, VscOrganization, VscGlobe
 } from "react-icons/vsc";
@@ -21,7 +22,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.homeContainer}>
-      <Navigation />
+      {/* <Navigation /> */}
+      <NewNavBar/>
       <main className={styles.main}>
       <div className={styles.titleContainer}>
         <h1>IMAGINERIUM</h1>
