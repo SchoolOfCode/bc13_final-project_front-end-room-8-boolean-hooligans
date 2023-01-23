@@ -69,7 +69,7 @@
   box-sizing: border-box;
   padding: 1rem;
   padding-top: 0;
-  overflow-y: scroll;
+  overflow: hidden;
 }
   /* .card  */
   .additional {
