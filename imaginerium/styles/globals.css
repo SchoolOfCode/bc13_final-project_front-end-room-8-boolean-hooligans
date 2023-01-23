@@ -25,9 +25,6 @@ body {
   position: relative;
   height: 100vh;
   overflow-y: scroll;
-}
-
-  
     background: linear-gradient(230deg, #59c0e6, #4e6db9, #a571fb);
     background-size: 600% 600%;
   
@@ -391,33 +388,33 @@ body {
 
 /* LIGHT DARK THEME TOGGLE */
 
-:root{
+/* :root{
 
-}
+} */
 
 
-.card {
+/* .card {
   /* Light theme */
   /* background-color: #F7F2CB;
-  text-decoration-color: black; */
-}
+  text-decoration-color: black;
+} */
 
 
-[data-theme='dark'],
+/*[data-theme='dark'],
 /* .form-submission-pop-up,
 .pop-up,
 .card {
 
   background-color: #156E58;
   text-decoration-color: #F7F2CB; 
-}*/
+}
 
 
 [data-theme='dark'] {
 /*   background-color: black;
-  text-decoration-color: #F7F2CB; */
+  text-decoration-color: #F7F2CB;
 
-}
+}*/
 
 
 
