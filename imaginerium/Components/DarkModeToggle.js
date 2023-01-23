@@ -1,12 +1,12 @@
 import style from "../styles/darkModeToggle.module.css"
-import { theme, useTheme } from "next-themes";
+//import { theme, useTheme } from "next-themes";
 
 const ButtonToggleDarkMode = () => {
-    const { theme, setTheme } = useTheme();
+    //const { theme, setTheme } = useTheme();
   
     return (
       <div>
-        <input
+        {/* <input
           type="checkbox"
           className={style.checkbox}
            onChange={() => setTheme(theme == "dark" ? "light" : "dark")}
@@ -18,7 +18,7 @@ const ButtonToggleDarkMode = () => {
           <i className={`fas fa-moon ${style.faMoon}`}></i>
           <i className={`fas fa-sun ${style.faSun}`}></i>
           <div className={style.ball}></div>
-        </label>
+        </label> */}
       </div>
     );
   };

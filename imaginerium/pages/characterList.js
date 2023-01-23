@@ -44,7 +44,10 @@ export default function characterList() {
   };
 
   if (!session) {
-    return <div>Log in to view your saved characters</div>;
+    return( <>
+      <Navigation />
+      <div>Log in to view your saved characters</div>;
+      </>)
   }
 
   return (
