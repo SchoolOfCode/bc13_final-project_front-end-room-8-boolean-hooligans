@@ -11,7 +11,7 @@ import { VscPersonAdd, VscOrganization, VscGlobe } from "react-icons/vsc";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  return (
+ return (
     <>
       <Head>
         <title>Imaginerium</title>
@@ -20,54 +20,61 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.homeContainer}>
-        {/* <Navigation /> */}
-        <NewNavBar />
-        <main className={styles.main}>
-          <div className={styles.titleContainer}>
-            <h1>IMAGINERIUM</h1>
-            <div className={styles.descriptionContainer}>
-              <Image
-                priority
-                src="https://i.ibb.co/ZVj6bcP/spinning-Earth-unscreen.gif"
-                className={styles.earth}
-                height={320}
-                width={427}
-                alt="Earth"
-              />
+      {/* <Navigation /> */}
+      <NewNavBar />
+      <main className={styles.main}>
+      <div className={styles.titleContainer}>
+        <h1>IMAGINERIUM</h1>
+        <div className={styles.descriptionContainer}>
+          <Image
+            priority
+              src="https://i.ibb.co/ZVj6bcP/spinning-Earth-unscreen.gif"
+            className={styles.earth}
+            height={320}
+            width={ 427}
+            alt="Earth"
+          />
+         
+          <p>
+            Breathe life into your imagination with <span className={styles.background}>IMAGINERIUM</span> the ultimate creative playground for world building, character creation, and story weaving.
+          </p>
+          
+        </div>
 
-              <p>
-                Breathe life into your imagination with{" "}
-                <span className={styles.background}>IMAGINERIUM</span> the
-                ultimate creative playground for world building, character
-                creation, and story weaving.
-              </p>
+        <div className={styles.buttonsContainer}>
+       
+          <button className={styles.buttonMain}>
+          <Link href="/createCharacter"> 
+          <div>
+            Create
             </div>
+            <VscPersonAdd className={styles.add}/>
+            </Link>
+          </button>
+        
+          
 
-            <div className={styles.buttonsContainer}>
-              <button className={styles.buttonMain}>
-                <Link href="/createCharacter">
-                  <div>Create</div>
-                  <VscPersonAdd className={styles.add} />
-                </Link>
-              </button>
-
-              <button className={styles.buttonMain}>
-                <Link href="/characterList">
-                  <div className={styles.buttonMain}>View</div>
-
-                  <VscOrganization className={styles.add} />
-                </Link>
-              </button>
-
-              <button className={styles.buttonMain}>
-                <Link href="/createNewWorld">
-                  <div>Create New World</div>
-                  <VscGlobe className={styles.add} />
-                </Link>
-              </button>
-            </div>
+         <button className={styles.buttonMain}><Link href="/characterList" >
+          <div className={styles.buttonMain}>
+          View
           </div>
-        </main>
+        
+
+            <VscOrganization className={styles.add}/></Link>
+          </button>
+
+          <button className={styles.buttonMain}>
+          <Link href="/createNewWorld">
+          <div>
+          Create New World
+          </div>
+          <VscGlobe className={styles.add}/>
+          </Link>
+          </button>
+
+        </div>
+        </div>
+      </main>
       </div>
     </>
   );
