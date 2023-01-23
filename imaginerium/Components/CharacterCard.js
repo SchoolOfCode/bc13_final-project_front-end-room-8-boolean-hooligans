@@ -13,11 +13,11 @@ export default function CharacterCard(props) {
 
   return (
     <div>
-      <div onClick={() => setShowModal(true)} className="center">
-        <div className="card green">
-          <div className="additional">
-            <div className="user-card">
-              <div className="alive-status">
+      <div onClick={() => setShowModal(true)} className={styles.center}>
+        <div className={styles.card}>
+          <div className={styles.additional}>
+            <div className={styles.userCard}>
+              <div className={styles.aliveStatus}>
                 {props.char_alive ? (
                   <span>
                     <GiHeartInside /> <span>Alive</span>
@@ -29,35 +29,35 @@ export default function CharacterCard(props) {
                 )}
               </div>
 
-              <img className="image" src={props.char_img} />
+              <img className={styles.image} src={props.char_img} />
             </div>
-            <div className="more-info">
+            <div className={styles.moreInfo}>
               <h1>{props.char_name}</h1>
 
-              <div className="stats">
+              <div className={styles.stats}>
                 <div>
-                  <div className="title">Age</div>
+                  <div className={styles.title}>Age</div>
                   <RiCake2Fill />
-                  <div className="value">{props.char_age}</div>
+                  <div className={styles.value}>{props.char_age}</div>
                 </div>
                 <div>
-                  <div className="title">Height</div>
+                  <div className={styles.title}>Height</div>
                   <MdHeight />
-                  <div className="value">{props.char_height}ft</div>
+                  <div className={styles.value}>{props.char_height}ft</div>
                 </div>
               </div>
             </div>
           </div>
 
         </div>
-        <div className="general">
+        <div className={styles.general}>
           <h1>{props.char_name}</h1>
-          <p className="description">
+          <p className={styles.description}>
 
             {props.char_desc}
 
           </p>
-          <span className="more">Click to expand</span>
+          <span className={styles.more}>Click to expand</span>
 
         </div>
       </div>

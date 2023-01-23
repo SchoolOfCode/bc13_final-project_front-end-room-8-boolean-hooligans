@@ -11,7 +11,7 @@ export default function characterList() {
     if (session) {
       async function fetchData() {
         const response = await fetch(
-          `http://localhost:3001/collab?user_email=${session.user.email}`
+           `https://imaginerium-qpii.onrender.com//collab?user_email=${session.user.email}`
         );
         const data = await response.json();
         setCharactersArray(data.payload);
