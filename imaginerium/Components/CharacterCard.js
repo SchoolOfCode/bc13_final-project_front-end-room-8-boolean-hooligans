@@ -13,59 +13,64 @@ export default function CharacterCard(props) {
 
   return (
     <div>
-    <div onClick={() => setShowModal(true)} className="center">
-      <div className="card green">
-        <div className="additional">
-          <div className="user-card">
-            <div className="alive-status">
-              {props.char_alive ? (
-                <span>
-                  <GiHeartInside /> <span>Alive</span>
-                </span>
-              ) : (
-                <span>
-                  <SlGhost /> <span>Dead</span>
-                </span>
-              )}
-            </div>
-
-            <img
-              className="image"
-              src="https://deepgrouplondon.com/wp-content/uploads/2019/06/person-placeholder-5.png"
-            />
-          </div>
-          <div className="more-info">
-            <h1>{props.char_name}</h1>
-
-            <div className="stats">
-              <div>
-                <div className="title">Age</div>
-                <RiCake2Fill />
-                <div className="value">{props.char_age}</div>
+      <div onClick={() => setShowModal(true)} className="center">
+        <div className="card green">
+          <div className="additional">
+            <div className="user-card">
+              <div className="alive-status">
+                {props.char_alive ? (
+                  <span>
+                    <GiHeartInside /> <span>Alive</span>
+                  </span>
+                ) : (
+                  <span>
+                    <SlGhost /> <span>Dead</span>
+                  </span>
+                )}
               </div>
-              <div>
-                <div className="title">Height</div>
-                <MdHeight />
-                <div className="value">{props.char_height}ft</div>
+
+              <img className="image" src={props.char_img} />
+            </div>
+            <div className="more-info">
+              <h1>{props.char_name}</h1>
+
+              <div className="stats">
+                <div>
+                  <div className="title">Age</div>
+                  <RiCake2Fill />
+                  <div className="value">{props.char_age}</div>
+                </div>
+                <div>
+                  <div className="title">Height</div>
+                  <MdHeight />
+                  <div className="value">{props.char_height}ft</div>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
         <div className="general">
           <h1>{props.char_name}</h1>
           <p className="description">
+
             {props.char_desc}
+
           </p>
           <span className="more">Click to expand</span>
+
         </div>
       </div>
-</div>  
       {showModal ? (
         <PopUpCharacterCard>
-          <button className="close-pop-up-button" onClick={() => setShowModal(false)}>
-              Close X
-            </button>
+          <button
+            className="close-pop-up-button"
+            onClick={() => setShowModal(false)}
+          >
+            Close X
+          </button>
           <CharacterPopUp
+
                 key={props.character_id}
                 character_id={props.character_id}
                 user_email={props.user_email}
@@ -87,6 +92,7 @@ export default function CharacterCard(props) {
                 char_likes={props.char_likes}
                 char_morality={props.char_morality}
                 char_notes={props.char_notes}
+                char_pronouns={props.char_pronouns}
                 char_relationships={props.char_relationships}
                 char_sexuality={props.char_sexuality}
                 char_skills={props.char_skills}
@@ -95,6 +101,7 @@ export default function CharacterCard(props) {
                 char_speech={props.char_speech}
                 char_weight={props.char_weight}
                 />
+
         </PopUpCharacterCard>
       ) : null}
     </div>

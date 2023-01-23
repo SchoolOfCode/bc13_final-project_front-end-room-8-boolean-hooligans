@@ -36,8 +36,7 @@ export default function Home() {
           />
          
           <p>
-            Imaginerium is a place where you can create your own characters and
-            share them with the world.
+            Breathe life into your imagination with <span className={styles.background}>IMAGINERIUM</span> the ultimate creative playground for world building, character creation, and story weaving.
           </p>
           
         </div>
@@ -47,18 +46,20 @@ export default function Home() {
           <button className={styles.buttonMain}>
           <Link href="/createCharacter"> 
           <div>
-            Create Character
+            Create
             </div>
             <VscPersonAdd className={styles.add}/>
             </Link>
           </button>
         
           
-         <button className={styles.buttonMain}>
-         <Link href="/characterList" >
-          <div>
-          Character List
-          </div>        
+
+         <button className={styles.buttonMain}><Link href="/characterList" >
+          <div className={styles.buttonMain}>
+          View
+          </div>
+        
+
             <VscOrganization className={styles.add}/></Link>
           </button>
 

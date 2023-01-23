@@ -56,6 +56,15 @@ export default function Step3({ setStep, formValues, setFormValues }) {
               />
             </div>
             <div>
+              <label htmlFor="char_pronouns">Pronouns</label>
+              <input defaultValue={formValues.char_pronouns}
+              type="text"
+              { ...register("char_pronouns", { required: false })}
+              name="char_pronouns"
+              id="char_pronouns"
+              />
+            </div>
+            <div>
               <label htmlFor="char_sexuality">Sexuality</label>
               <input
                 defaultValue={formValues.sexuality}

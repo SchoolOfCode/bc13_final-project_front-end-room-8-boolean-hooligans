@@ -1,9 +1,12 @@
+
 .cardsContainer {
  align-content: center;
   margin: 0 auto; 
-  margin-top: 14vh;
+  margin-top: 5vh;
   max-width: 95vw;
-  padding: 10px;
+  padding-left: 80px;
+  padding-right: 80px;
+
   margin-left: 0px;
  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
@@ -11,13 +14,125 @@
   grid-row-gap: 5px;
 }
  
+.h1{
+  padding: 20px;
+  color: white;
+}
 
 
-
-.searchBar {
+.header {
   margin-top: 2.5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.tb {
+  display: table;
+}
+
+.td {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.input,
+.button {
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+}
+#cover {
+  width: 440px;
+  padding: 22.4px;
+  background: rgba(255, 255, 255, 0.2);
+
+  border: 1px solid rgba(255, 255, 255, 0.603);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px #fcb5b5, 0 0 0 15px #ffffffeb;
+  transform: scale(0.48);
+  margin: 0px;
+}
+.input:focus {
+  outline: 0;
+  }
+.form {
+  height: 4.8vh;
+}
+
+.input[type="text"] {
+  width: 100%;
+  height: 6vh;
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.input[type="text"]::placeholder {
+  color: #ffffffa2;
+}
+
+#s-cover {
+  width: 0.8px;
+  padding-left: 16px;
+}
+
+.button {
+  position: relative;
+  float:right;
+  width: 32px;
+  height: 40px;
+  right: 7%;
+  bottom: 8.2vh;
+  cursor: pointer;
+}
+
+
+.allButton {
+ 
+  max-width: 18.6vw;
+  height: 9vh;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  background: rgba(220, 252, 252, 0.103);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-right-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  margin: 17px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+cursor: pointer;
+  box-sizing: border-box;
+  transition: 200ms;
+  padding: 15px;
+}
+
+.allButton:hover {
+  transform: translateY(-20px);
+}
+.allButton:hover:before {
+  transform: skewX(45deg) translateX(calc(var(--width) * -1 - 50%));
+}
+
+.allButton option {
+  color: black;
+
 }

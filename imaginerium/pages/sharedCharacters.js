@@ -1,7 +1,6 @@
 import Navigation from "../Components/Navigation.js";
 import CharacterCard from "../Components/CharacterCard.js";
 import styles from "../styles/characterList.module.css";
-import useFetch from "../hooks/useFetch";
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import { BiSearchAlt } from "react-icons/bi";
@@ -12,11 +11,11 @@ export default function characterList() {
     if (session) {
       async function fetchData() {
         const response = await fetch(
-          `https://imaginerium-qpii.onrender.com/characters?user_email=${session.user.email}`
+          `http://localhost:3001/collab?user_email=${session.user.email}`
         );
         const data = await response.json();
         setCharactersArray(data.payload);
-
+console.log(data.payload)
         console.log(session.user.email);
       }
       fetchData();
@@ -25,7 +24,7 @@ export default function characterList() {
 
   async function searchByName(nameToSearch) {
     const response = await fetch(
-      `https://imaginerium-qpii.onrender.com/characters?char_name=${nameToSearch}&user_email=${session.user.email}`
+      `https://imaginerium-qpii.onrender.com/collab?char_name=${nameToSearch}&user_email=${session.user.email}`
     );
     const data = await response.json();
     setCharactersArray(data.payload);
@@ -44,10 +43,7 @@ export default function characterList() {
   };
 
   if (!session) {
-    return( <>
-      <Navigation />
-      <div>Log in to view your saved characters</div>;
-      </>)
+    return <div>Log in to view your saved characters</div>;
   }
 
   return (
@@ -56,7 +52,7 @@ export default function characterList() {
       <div>
         <div className={styles.header}>
           <div role="heading" aria-level="1">
-            <h1 className={styles.h1}>Your Characters</h1>
+            <h1 className={styles.h1}>Characters shared with you</h1>
           </div>
         </div>
 
@@ -147,7 +143,6 @@ export default function characterList() {
                   char_likes={character.char_likes}
                   char_morality={character.char_morality}
                   char_notes={character.char_notes}
-                  char_pronouns={character.char_pronouns}
                   char_relationships={character.char_relationships}
                   char_sexuality={character.char_sexuality}
                   char_skills={character.char_skills}

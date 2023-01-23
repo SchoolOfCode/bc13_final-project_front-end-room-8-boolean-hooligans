@@ -7,6 +7,6 @@ module.exports = nextConfig;
 
 module.exports = {
   images: {
-      domains:['i.ibb.co']
+      domains:['i.ibb.co', 's.gravatar.com']
   }
 }

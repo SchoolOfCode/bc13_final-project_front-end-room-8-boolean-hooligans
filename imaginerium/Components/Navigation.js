@@ -8,63 +8,66 @@ export default function Navigation() {
   return (
     <div className={styles.nav}>
       <div className={styles.logo}>
-        <Image
-          priority
+        <Link href="/">
+          <Image
+            priority
             src="https://i.ibb.co/0BtC8vF/imaginerium-logo2-1.png"
-          className={styles.logo}
-          height={65}
-          width={212}
-          alt="Imaginerium"
-        />
+            className={styles.logo}
+            height={65}
+            width={212}
+            alt="Imaginerium"
+          />
+        </Link>
       </div>
 
-      <div className={styles.navButtons}>
-        
-        <div className={styles.dropdown}>
-        <button className={styles.dropbtn}>
-        HOME
+      <div className={styles.rightNavBar}>
+      <div className={styles.dropdown}>
+      <button className={styles.dropbtn}>
+        Home
         <i className="fa fa-caret-down"></i>
         </button>
         <div className={styles.dropdownContent}>
           <Link href="/dashboard">Homepage</Link>
           <Link href="/aboutUs">About Us</Link>
-        </div>
+
+
         </div>
 
         <div className={styles.dropdown}>
-          <button className={styles.dropbtn}>
-            CREATE
-            <i className="fa fa-caret-down"></i>
+          
+          <button className={styles.dropbtn}>Create 
+          <i className="fa fa-caret-down"></i>
           </button>
+          
           <div className={styles.dropdownContent}>
-            <Link href="/createCharacter">Create character</Link>
-            <Link href="/createNewWorld">Create world map</Link>
+
+            <Link href="/createCharacter">Character</Link>
+            <Link href="/createNewWorld">World map</Link>
+           {/* <Link href="/createNewWorld">Story</Link>*/}
           </div>
         </div>
+
+
+
 
         <div className={styles.dropdown}>
-          <button className={styles.dropbtn}>
-            VIEW
-            <i className="fa fa-caret-down"></i>
+          <button className={styles.dropbtn}>View 
+          <i className="fa fa-caret-down"></i>
           </button>
           <div className={styles.dropdownContent}>
-            <Link href="/characterList">Character list</Link>
+            <Link href="/characterList">Characters</Link>
+            <Link href="/sharedCharacters">Shared characters</Link>
+            {/*<Link href="/characterList">Stories</Link> */}
           </div>
         </div>
 
-      </div>
-      <div className={styles.loginAndToggle}>
         <div className={styles.darkModeSwitch}>
           <ButtonToggleDarkMode></ButtonToggleDarkMode>
         </div>
-        <div>
+        <div className={styles.loginDiv}>
           <LoginOutButton></LoginOutButton>
-
         </div>
-
       </div>
     </div>
   );
 }
-
-/*Comment for commit*/
