@@ -7,7 +7,8 @@ const links = [
   { name: "Home", to: "/dashboard", id: 1 },
   { name: "About", to: "/aboutUs", id: 2 },
   { name: "Create", to: "/createCharacter", id: 3 },
-  { name: "View", to: "/characterList", id: 4 }
+  { name: "View", to: "/characterList", id: 4 },
+  { name: "Create World", to: "/createNewWorld", id: 5 }
 ];
 
 const itemVariants = {
@@ -47,7 +48,7 @@ export default function NewNavBar() {
             }}
             exit={{
               width: 0,
-              transition: { delay: 0.7, duration: 0.3 }
+              transition: { delay: 0.8, duration: 0.9 }
             }}
           >
             <motion.div
@@ -61,7 +62,7 @@ export default function NewNavBar() {
                 <motion.a
                   key={id}
                   href={to}
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 1.05, color: "#f8f8f8" }}
                   variants={itemVariants}
                 >
                   {name}
@@ -71,10 +72,39 @@ export default function NewNavBar() {
           </motion.aside>
         )}
       </AnimatePresence>
-      <div className={styles.btnContainer}>
-        <button className={styles.hamburgerButton} onClick={cycleOpen}>
-          {open ? "Close" : "Open"}
-        </button>
+      <div className={styles.btnContainer} onClick={cycleOpen}>
+        <div className={styles.hamburgerButton}>
+          {open ? (
+            <>
+              <motion.div
+                animate={{
+                  y: 16,
+                  rotate: [0, 0, -45],
+                  backgroundColor: "#505459"
+                }}
+              />
+              <motion.div
+                animate={{
+                  rotate: [0, 0, -45],
+                  backgroundColor: "#505459"
+                }}
+              />
+              <motion.div
+                animate={{
+                  y: -16,
+                  rotate: [0, 0, 45],
+                  backgroundColor: "#505459"
+                }}
+              />
+            </>
+          ) : (
+            <>
+              <div></div>
+              <div></div>
+              <div></div>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );

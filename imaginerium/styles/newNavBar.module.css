@@ -4,36 +4,58 @@
   }
   
   .aside {
-    background-color: #c4a8ff;
+    
     width: 18.75rem;
     height: 100vh;
     position: absolute;
     z-index: 10;
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.613);
+border-top-right-radius: 40px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+    
   }
   
   .container {
-    margin: 4.5rem 1.4rem;
+    margin: 7.5rem 1.4rem;
   }
   
   .btnContainer {
     position: fixed;
     z-index: 50;
+    top: 1.5rem;
+    left: 1.5rem;
+    cursor: pointer;
   }
-  
+
+  .btnContainer:hover .hamburgerButton div{
+    background-color: #f7f8fa6d;
+  }
+ 
   .container a {
-    color: #f9fafb;
+    color: #505459;
     text-decoration: none;
     font-size: 1.75rem;
     font-weight: 600;
     display: block;
     margin: 20px;
+    font-family: arial;
   }
   
-  .hamburgerButton {
+  .hamburgerButton div{
     cursor: pointer;
-    margin: 1.25rem;
-    border: none;
-    padding: 0.5rem 1rem;
-    background-color: #f9fafb;
+    height: 6px;
+    width: 3rem;
+    border-radius: 40px;
+    margin: 8px;
+    background-color: #dadbdd;
+    border: 1px solid #ffffff;
+   
+    
+
+    
   }
   
