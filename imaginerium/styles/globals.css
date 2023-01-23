@@ -3,7 +3,8 @@
 body {
   margin: 0;
   padding: 0;
-  /* background-color: #F7F2CB; */
+  background: linear-gradient(230deg, #59c0e6, #4e6db9, #a571fb);
+  background-size: 600% 600%;
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 
@@ -327,22 +328,22 @@ body {
 :root,
 .card {
   /* Light theme */
-  background-color: #F7F2CB;
-  text-decoration-color: black;
+  /* background-color: #F7F2CB;
+  text-decoration-color: black; */
 }
 
 
 [data-theme='dark'],
-.form-submission-pop-up,
+/* .form-submission-pop-up,
 .pop-up,
 .card {
   background-color: #156E58;
-  text-decoration-color: #F7F2CB;
-}
+  text-decoration-color: #F7F2CB; 
+}*/
 
 [data-theme='dark'] {
-  background-color: black;
-  text-decoration-color: #F7F2CB;
+/*   background-color: black;
+  text-decoration-color: #F7F2CB; */
 
 }
 
