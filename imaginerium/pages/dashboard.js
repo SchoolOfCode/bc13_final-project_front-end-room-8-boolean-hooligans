@@ -43,34 +43,41 @@ export default function Home() {
 
         <div className={styles.buttonsContainer}>
        
+          <Link href="/createCharacter">
           <button className={styles.buttonMain}>
-          <Link href="/createCharacter"> 
-          <div>
-            Create
+            <div>
+            create character
             </div>
             <VscPersonAdd className={styles.add}/>
-            </Link>
           </button>
-        
-          
+          </Link>     
 
-         <button className={styles.buttonMain}><Link href="/characterList" >
+        <Link href="/characterList" >
+         <button className={styles.buttonMain}>
           <div className={styles.buttonMain}>
-          View
+          your characters
           </div>
-        
-
-            <VscOrganization className={styles.add}/></Link>
+          <VscOrganization className={styles.add}/>
           </button>
+          </Link>
 
-          <button className={styles.buttonMain}>
+          <Link href="/sharedCharacters" >
+         <button className={styles.buttonMain}>
+          <div className={styles.buttonMain}>
+          shared characters
+          </div>
+          <VscOrganization className={styles.add}/>
+          </button>
+          </Link>
+
           <Link href="/createNewWorld">
+          <button className={styles.buttonMain}>
           <div>
-          Create New World
+          create world
           </div>
           <VscGlobe className={styles.add}/>
-          </Link>
           </button>
+          </Link>
 
         </div>
         </div>
