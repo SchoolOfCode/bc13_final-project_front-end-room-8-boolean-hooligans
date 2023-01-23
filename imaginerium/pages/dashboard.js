@@ -46,7 +46,7 @@ export default function Home() {
           <Link href="/createCharacter">
           <button className={styles.buttonMain}>
             <div>
-            Create character
+            create character
             </div>
             <VscPersonAdd className={styles.add}/>
           </button>
@@ -55,7 +55,7 @@ export default function Home() {
         <Link href="/characterList" >
          <button className={styles.buttonMain}>
           <div className={styles.buttonMain}>
-          Your characters
+          your characters
           </div>
           <VscOrganization className={styles.add}/>
           </button>
@@ -64,7 +64,7 @@ export default function Home() {
           <Link href="/sharedCharacters" >
          <button className={styles.buttonMain}>
           <div className={styles.buttonMain}>
-          Shared characters
+          shared characters
           </div>
           <VscOrganization className={styles.add}/>
           </button>
@@ -73,7 +73,7 @@ export default function Home() {
           <Link href="/createNewWorld">
           <button className={styles.buttonMain}>
           <div>
-          Create World
+          create world
           </div>
           <VscGlobe className={styles.add}/>
           </button>
