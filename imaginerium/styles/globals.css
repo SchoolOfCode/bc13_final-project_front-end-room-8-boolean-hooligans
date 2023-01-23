@@ -20,7 +20,7 @@ body {
 
   -webkit-animation: AnimationName 14s ease infinite;
   animation: AnimationName 14s ease infinite;
-  text-transform: uppercase;
+  text-transform: lowercase;
   scroll-snap-type: y mandatory;
   position: relative;
   height: 100vh;

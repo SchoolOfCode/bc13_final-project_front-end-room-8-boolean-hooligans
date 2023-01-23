@@ -24,7 +24,7 @@
 .headerBlock {
     display: flex;
     text-align: left;
-    border: 5px solid #156E58;
+    border: 5px solid #3f069c;
     margin: 0 250px;
 }
 
@@ -42,7 +42,9 @@
 .card {
     width: 360px;
     height: 200px;
-    background-color: #156E58;
+    background: linear-gradient(#B3E5EE
+, #A2BFCC
+);;
     /*background: linear-gradient(#f8f8f8, #fff);*/
     box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
     border-radius: 6px;
@@ -57,7 +59,18 @@
   height: 100%;
   position: relative;
   float: left;
-  overflow: hidden;
+  overflow: scroll;
+}
+
+.stats div.value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.2rem;
+}
+
+.centre {
+  width: 360px;
+  height: 200px;
 }
 
 .general {
@@ -78,9 +91,9 @@
     width: 150px;
     height: 100%;
     text-align: center;
-    background: linear-gradient(#92bCa6, #A2CCB6);;
+    background: linear-gradient(#4e6db9, #59c0e6);;
     transition: width 0.4s;
-    overflow: hidden;
+    overflow-y: scroll;
     z-index: 2;
   }
 
@@ -98,7 +111,43 @@
     position: absolute;
     left: 120px;
     height: 100%;
+    overflow-x: scroll;
+  }
+
+  .image {
+    margin: 25px 25px 10px 20px;
+    max-width: 80%;
+    max-height: 80%;
+    /* padding: 15px; */
+    float: right;
+    /* justify-content: center; */
+  }
+
+  .image2 {
+    margin: 25px 15px 10px 20px;
+    max-width: 80%;
+    max-height: 80%;
+    /* padding: 15px; */
+    float: right;
+    /* justify-content: center; */
+  }
+
+  .image3 {
+    margin: 25px 30px 10px 20px;
+    max-width: 80%;
+    max-height: 80%;
+    /* padding: 15px; */
+    float: right;
+    /* justify-content: center; */
+  }
+
+  .description {
+    margin-top: 0px;
+    width: 80%;
+    float: right;
+    text-align: left;
     overflow-y: scroll;
+    height: 100%;
   }
 
   .additional .aliveStatus {

@@ -36,41 +36,40 @@ export default function Home() {
           />
          
           <p>
-            Breathe life into your imagination with <span className={styles.background}>IMAGINERIUM</span> the ultimate creative playground for world building, character creation, and story weaving.
+            Breathe life into your imagination with <span className={styles.background}>IMAGINERIUM</span>: the ultimate creative playground for world building, character creation, and story weaving.
           </p>
           
         </div>
 
         <div className={styles.buttonsContainer}>
        
-          <button className={styles.buttonMain}>
-          <Link href="/createCharacter"> 
-          <div>
-            Create
+        <Link href="/createCharacter">
+          <button className={styles.buttonMain} >
+            <div>
+            Create Character
             </div>
             <VscPersonAdd className={styles.add}/>
-            </Link>
           </button>
-        
+        </Link>
           
 
-         <button className={styles.buttonMain}><Link href="/characterList" >
+         <Link href="/characterList" >
+         <button className={styles.buttonMain}>
           <div className={styles.buttonMain}>
-          View
+          View Characters
           </div>
-        
-
-            <VscOrganization className={styles.add}/></Link>
+         <VscOrganization className={styles.add}/>
           </button>
+          </Link>
 
-          <button className={styles.buttonMain}>
           <Link href="/createNewWorld">
+          <button className={styles.buttonMain}>
           <div>
-          Create New World
+          Create World
           </div>
           <VscGlobe className={styles.add}/>
-          </Link>
           </button>
+          </Link>
 
         </div>
         </div>
