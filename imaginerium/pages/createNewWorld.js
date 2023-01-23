@@ -1,14 +1,15 @@
-import Navigation from "../Components/Navigation"
+import Navigation from "../Components/Navigation";
+import NewNavBar from "../Components/NewNavBar";
 
 export default function createNewWorld() {
-   
-return (
+  return (
     <>
-    <Navigation />
-    <iframe
-    className="map"
-    src="https://azgaar.github.io/Fantasy-Map-Generator/">
-    </iframe>
-</>
-)
+      {/* <Navigation /> */}
+      <NewNavBar />
+      <iframe
+        className="map"
+        src="https://azgaar.github.io/Fantasy-Map-Generator/"
+      ></iframe>
+    </>
+  );
 }
