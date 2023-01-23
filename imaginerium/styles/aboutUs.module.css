@@ -42,7 +42,9 @@
 .card {
     width: 360px;
     height: 200px;
-    background-color: #3f069c;
+    background: linear-gradient(#B3E5EE
+, #A2BFCC
+);;
     /*background: linear-gradient(#f8f8f8, #fff);*/
     box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
     border-radius: 6px;
@@ -58,6 +60,17 @@
   position: relative;
   float: left;
   overflow: scroll;
+}
+
+.stats div.value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.2rem;
+}
+
+.centre {
+  width: 360px;
+  height: 200px;
 }
 
 .general {

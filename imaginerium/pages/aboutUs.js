@@ -25,7 +25,7 @@ return (
     <div className={styles.cardsContainer}>
     
     <div>
-        <div className="center">
+        <div className={styles.centre}>
           <div className={styles.card}>
             <div className={styles.additional}>
               <div className={styles.userCard}>
@@ -35,7 +35,7 @@ return (
                       <GiHeartInside /> <span>Alive</span>
                     </span>
                 </div>
-                <div className="stats">
+                <div className={styles.stats}>
                   <div>
                   <p><Link href="https://www.linkedin.com/in/felicitycullen"> LinkedIn</Link></p>
                   </div>
@@ -60,7 +60,7 @@ return (
     </div> 
 
     <div>
-        <div className="center">
+        <div className={styles.centre}>
           <div className={styles.card}>
             <div className={styles.additional}>
               <div className={styles.userCard}>
@@ -70,7 +70,7 @@ return (
                       <GiHeartInside /> <span>Alive</span>
                     </span>
                 </div>
-                <div className="stats">
+                <div className={styles.stats}>
                   <div>
                   <p><Link href="https://www.linkedin.com/in/andres-e-036492108/"> LinkedIn</Link></p>
                   </div>
@@ -95,7 +95,7 @@ return (
     </div> 
 
     <div>
-        <div className="center">
+        <div className={styles.centre}>
           <div className={styles.card}>
             <div className={styles.additional}>
               <div className={styles.userCard}>
@@ -105,7 +105,7 @@ return (
                       <GiHeartInside /> <span>Alive</span>
                     </span>
                 </div>
-                <div className="stats">
+                <div className={styles.stats}>
                   <div>
                   <p><Link href="linkedin.com/in/iona-rose/"> LinkedIn</Link></p>
                   </div>
@@ -115,7 +115,7 @@ return (
                 </div>
               </div>
               <div className={styles.moreInfo}>
-                <p className={styles.description}>WORDS HERE </p>
+                <p className={styles.description}>Before retraining, Iona was a medical scientist working mainly in cancer diagnosis and treatment. Initially, she loved her career - there was so much to learn and discover, and she enjoyed working in big teams of skilled professionals. However, the opportunities for growth quickly dried up, and the work became repetitive and uninspiring. Iona knew she needed to find a career where she wouldn’t run out of things to learn, and found code!</p>
               </div>
             </div>
             <div className={styles.general}>
@@ -130,7 +130,7 @@ return (
     </div> 
 
     <div>
-        <div className="center">
+        <div className={styles.centre}>
           <div className={styles.card}>
             <div className={styles.additional}>
               <div className={styles.userCard}>
@@ -140,7 +140,7 @@ return (
                       <GiHeartInside /> <span>Alive</span>
                     </span>
                 </div>
-                <div className="stats">
+                <div className={styles.stats}>
                   <div>
                   <p><Link href="https://www.linkedin.com/in/filip-ruminski/"> LinkedIn</Link></p>
                   </div>
@@ -165,7 +165,7 @@ return (
     </div> 
 
     <div>
-        <div className="center">
+        <div className={styles.centre}>
           <div className={styles.card}>
             <div className={styles.additional}>
               <div className={styles.userCard}>
@@ -175,7 +175,7 @@ return (
                       <GiHeartInside /> <span>Alive</span>
                     </span>
                 </div>
-                <div className="stats">
+                <div className={styles.stats}>
                   <div>
                   <p><Link href="https://www.linkedin.com/in/charlessajan/"> LinkedIn</Link></p>
                   </div>
