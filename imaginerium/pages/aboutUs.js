@@ -182,7 +182,7 @@ export default function aboutUs() {
                   <p><Link href="https://www.linkedin.com/in/charlessajan/"> LinkedIn</Link></p>
                   </div>
                   <div>
-                  <p><Link href="">GitHub</Link></p>
+                  <p><Link href="https://github.com/csajan">GitHub</Link></p>
                   </div>
                 </div>
               </div>
