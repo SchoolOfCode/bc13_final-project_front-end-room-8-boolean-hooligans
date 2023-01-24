@@ -8,8 +8,6 @@ import { useSession } from "next-auth/react";
 import { useState } from "react";
 import Router from "next/router";
 
-import { useSession } from "next-auth/react";
-
 export default function createCharacter() {
   const { data: session } = useSession();
 
