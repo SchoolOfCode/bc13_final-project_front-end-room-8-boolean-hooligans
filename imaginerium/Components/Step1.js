@@ -53,7 +53,7 @@ export default function Step1({ setStep, formValues, setFormValues }) {
       <motion.form
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
-        className={styles.formContainer}
+        className={styles.formContainerOne}
         onSubmit={handleSubmit(onSubmit)}
         ref={myForm}
       >
