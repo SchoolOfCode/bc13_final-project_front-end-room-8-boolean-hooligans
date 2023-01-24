@@ -133,6 +133,7 @@ export default function characterList() {
               return (
                 <CharacterCard
                   className="cctest"
+                  searchByName={searchByName}
                   key={character.character_id}
                   character_id={character.character_id}
                   user_email={character.user_email}
