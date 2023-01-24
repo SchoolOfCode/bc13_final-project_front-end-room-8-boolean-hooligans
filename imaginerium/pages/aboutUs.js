@@ -3,6 +3,8 @@ import styles from "../styles/aboutUs.module.css";
 import Link from "next/link";
 import { GiHeartInside } from "react-icons/gi";
 import NewNavBar from "../Components/NewNavBar";
+import { AiFillGithub } from "react-icons/ai";
+import { AiFillLinkedin } from "react-icons/ai";
 
 // import Image from "next/image";
 
@@ -19,15 +21,15 @@ export default function aboutUs() {
         height={500}
         width={500}/>
     <div className={styles.headerBlock}>
-    <p className={styles.headerText}>We are the BOOLEAN HOOLIGANS: a team of five from the <Link href="https://www.schoolofcode.co.uk/">School of Code's</Link> Cohort 13, and this site is our final project. We built it over the course of four weeks in January 2023, and are very pleased with the end result!<br></br><br></br>
+    <p className={styles.headerText}>We are the Boolean Hooligans: a team of five from the <Link className={styles.link} href="https://www.schoolofcode.co.uk/" target="_blank">School of Code's</Link> Cohort 13, and this site is our final project. We built it over the course of four weeks in January 2023, and are very pleased with the end result!<br></br><br></br>
     Our brief was to come up with a problem, and solve it. After some thinking, we decided to look at creating a simple to use worldbuilding app for creative people such as writers, artists, or roleplaying gamers. The existing options are often confusing, busy, or otherwise suffer from unfriendly UI/UX.<br></br><br></br>
-    The result is IMAGINERIUM, which in its current form allows you to create and save all sorts of original characters, collaborate with other creators, and - thanks to Azgaar's Fantasy Map Generator - make and save world maps. There are many other things we'd like to add in future, from random plot generation to some form of character illustration, along the lines of a picrew. But for now, enjoy the result of our hard work as full stack developers!</p>
+    The result is <strong>Imaginerium</strong>, which in its current form allows you to create and save all sorts of original characters, collaborate with other creators, and - thanks to Azgaar's Fantasy Map Generator - make and save world maps. There are many other things we'd like to add in future, from random plot generation to some form of character illustration, along the lines of a picrew. But for now, enjoy the result of our hard work as full stack developers!</p>
     </div>
 
     <div className={styles.cardsContainer}>
     
     <div>
-        <div className="center">
+        <div className={styles.center}>
           <div className={styles.card}>
             <div className={styles.additional}>
               <div className={styles.userCard}>
@@ -39,10 +41,10 @@ export default function aboutUs() {
                 </div>
                 <div className={styles.stats}>
                   <div>
-                  <p><Link href="https://www.linkedin.com/in/felicitycullen"> LinkedIn</Link></p>
+                  <p><AiFillLinkedin className={styles.icon}/><Link className={styles.link} href="https://www.linkedin.com/in/felicitycullen" target="_blank">LinkedIn</Link></p>
                   </div>
                   <div>
-                  <p><Link href="https://github.com/Fliss317">GitHub</Link></p>
+                  <p><AiFillGithub className={styles.icon} /><Link className={styles.link} href="https://github.com/Fliss317" target="_blank">GitHub</Link></p>
                   </div>
                 </div>
               </div>
@@ -62,7 +64,7 @@ export default function aboutUs() {
     </div> 
 
     <div>
-        <div className="center">
+        <div className={styles.center}>
           <div className={styles.card}>
             <div className={styles.additional}>
               <div className={styles.userCard}>
@@ -74,10 +76,10 @@ export default function aboutUs() {
                 </div>
                 <div className={styles.stats}>
                   <div>
-                  <p><Link href="https://www.linkedin.com/in/andres-e-036492108/"> LinkedIn</Link></p>
+                  <p><AiFillLinkedin className={styles.icon}/><Link className={styles.link} href="https://www.linkedin.com/in/andres-e-036492108/" target="_blank">LinkedIn</Link></p>
                   </div>
                   <div>
-                  <p><Link href="https://github.com/andres3m">GitHub</Link></p>
+                  <p><AiFillGithub className={styles.icon} /><Link className={styles.link} href="https://github.com/andres3m" target="_blank">GitHub</Link></p>
                   </div>
                 </div>
               </div>
@@ -97,7 +99,7 @@ export default function aboutUs() {
     </div> 
 
     <div>
-        <div className="center">
+        <div className={styles.center}>
           <div className={styles.card}>
             <div className={styles.additional}>
               <div className={styles.userCard}>
@@ -109,15 +111,15 @@ export default function aboutUs() {
                 </div>
                 <div className={styles.stats}>
                   <div>
-                  <p><Link href="linkedin.com/in/iona-rose/"> LinkedIn</Link></p>
+                  <p><AiFillLinkedin className={styles.icon}/><Link className={styles.link} href="linkedin.com/in/iona-rose/" target="_blank">LinkedIn</Link></p>
                   </div>
                   <div>
-                  <p><Link href="https://github.com/ionarose">GitHub</Link></p>
+                  <p><AiFillGithub className={styles.icon} /><Link className={styles.link} href="https://github.com/ionarose" target="_blank">GitHub</Link></p>
                   </div>
                 </div>
               </div>
               <div className={styles.moreInfo}>
-                <p className={styles.description}>Before retraining, Iona was a medical scientist working mainly in cancer diagnosis and treatment. Initially, she loved her career - there was so much to learn and discover, and she enjoyed working in big teams of skilled professionals. However, the opportunities for growth quickly dried up, and Iona's work became repetitive and uninspiring. She needed to find a career where she wouldn’t run out of things to learn, and found it in code!</p>
+                <p className={styles.description}>Before retraining, Iona was a medical scientist working mainly in cancer diagnosis and treatment. Initially, she loved her career - there was so much to learn and discover, and she enjoyed working in big teams of skilled professionals - but eventually needed to find a career where she wouldn’t run out of things to learn, and found it in code!</p>
               </div>
             </div>
             <div className={styles.general}>
@@ -132,7 +134,7 @@ export default function aboutUs() {
     </div> 
 
     <div>
-        <div className="center">
+        <div className={styles.center}>
           <div className={styles.card}>
             <div className={styles.additional}>
               <div className={styles.userCard}>
@@ -144,10 +146,10 @@ export default function aboutUs() {
                 </div>
                 <div className={styles.stats}>
                   <div>
-                  <p><Link href="https://www.linkedin.com/in/filip-ruminski/"> LinkedIn</Link></p>
+                  <p><AiFillLinkedin className={styles.icon}/><Link className={styles.link} href="https://www.linkedin.com/in/filip-ruminski/" target="_blank">LinkedIn</Link></p>
                   </div>
                   <div>
-                  <p><Link href="https://github.com/fruminski">GitHub</Link></p>
+                  <p><AiFillGithub className={styles.icon} /><Link className={styles.link} href="https://github.com/fruminski" target="_blank">GitHub</Link></p>
                   </div>
                 </div>
               </div>
@@ -167,7 +169,7 @@ export default function aboutUs() {
     </div> 
 
     <div>
-        <div className="center">
+        <div className={styles.center}>
           <div className={styles.card}>
             <div className={styles.additional}>
               <div className={styles.userCard}>
@@ -179,10 +181,10 @@ export default function aboutUs() {
                 </div>
                 <div className={styles.stats}>
                   <div>
-                  <p><Link href="https://www.linkedin.com/in/charlessajan/"> LinkedIn</Link></p>
+                  <p><AiFillLinkedin className={styles.icon}/><Link className={styles.link} href="https://www.linkedin.com/in/charlessajan/" target="_blank">LinkedIn</Link></p>
                   </div>
                   <div>
-                  <p><Link href="https://github.com/csajan">GitHub</Link></p>
+                  <p><AiFillGithub className={styles.icon} /><Link className={styles.link} href="https://github.com/csajan" target="_blank">GitHub</Link></p>
                   </div>
                 </div>
               </div>

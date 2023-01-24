@@ -11,20 +11,24 @@
      grid-row-gap: 5px;
    }
 
+.center {
+  width: 360px;
+  height: 200px;
+}
+
 .teamLogo {
     position: relative;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 50%;
-    width: 50%;
+    height: 25%;
+    width: 25%;
     padding: 20px;
 }
 
 .headerBlock {
     display: flex;
     text-align: left;
-    border: 5px solid #3f069c;
     margin: 0 250px;
 }
 
@@ -59,13 +63,21 @@
   height: 100%;
   position: relative;
   float: left;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .stats div.value {
   font-size: 1.2rem;
   font-weight: bold;
   line-height: 1.2rem;
+}
+
+.link {
+  color: white;
+}
+
+.link:hover {
+  color: orange;
 }
 
 .centre {
@@ -93,7 +105,7 @@
     text-align: center;
     background: linear-gradient(#4e6db9, #59c0e6);;
     transition: width 0.4s;
-    overflow-y: scroll;
+    overflow: hidden;
     z-index: 2;
   }
 
@@ -141,6 +153,10 @@
     /* justify-content: center; */
   }
 
+  .icon {
+    padding: 0 5px 0 0;
+  }
+
   .description {
     margin-top: 0px;
     width: 80%;
@@ -148,6 +164,7 @@
     text-align: left;
     overflow-y: scroll;
     height: 100%;
+    padding: 10px;
   }
 
   .additional .aliveStatus {
