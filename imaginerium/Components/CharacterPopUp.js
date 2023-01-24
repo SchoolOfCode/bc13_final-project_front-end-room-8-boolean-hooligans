@@ -110,9 +110,17 @@ export default function CharacterPopUp(props) {
                   onChange={(e) => setEditName(e.target.value)}
                 ></input>
                 <button
-                  onClick={() =>
-                    editCharacter(props.character_id, "char_name", editName)
-                  }
+                  onClick={() => {
+                    editCharacter(
+                      props.character_id,
+                      "char_name",
+                      editName
+                    ).then(() => {
+                      props.searchByName("").then(() => {
+                        setEditNameInput(false);
+                      });
+                    });
+                  }}
                   className={styles.editButton}
                 >
                   Done
@@ -132,26 +140,7 @@ export default function CharacterPopUp(props) {
               </div>
             )}
           </div>
-          <div className={styles.deleteContainer}>
-            <button
-              className={styles.deleteButton}
-              onClick={() => {
-                if (
-                  confirm(
-                    "Are you sure you want to delete " +
-                      props.char_name +
-                      "? This cannot be undone."
-                  )
-                ) {
-                  destroyCharacter(props.character_id);
-                  props.searchByName("");
-                  props.setShowModal(false);
-                }
-              }}
-            >
-              delete {props.char_name}
-            </button>
-          </div>
+<div className={styles.buttonsContainerLeft}>
           <div className={styles.shareContainer}>
             {emailTrigger ? (
               <div>
@@ -183,9 +172,30 @@ export default function CharacterPopUp(props) {
                   setEmailTrigger(!emailTrigger);
                 }}
               >
-                Share {props.char_name}
+                Share
               </button>
             )}
+          </div>
+          <div className={styles.deleteContainer}>
+            <button
+              className={styles.deleteButton}
+              onClick={() => {
+                if (
+                  confirm(
+                    "Are you sure you want to delete " +
+                      props.char_name +
+                      "? This cannot be undone."
+                  )
+                ) {
+                  destroyCharacter(props.character_id);
+                  props.searchByName("");
+                  props.setShowModal(false);
+                }
+              }}
+            >
+              delete
+            </button>
+          </div>
           </div>
         </div>
       </div>

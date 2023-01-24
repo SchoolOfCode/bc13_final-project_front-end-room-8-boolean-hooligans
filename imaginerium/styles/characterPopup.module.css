@@ -23,11 +23,38 @@
   }
   
   .popUpImage {
-  
+  margin-top: 20px;
     max-width: 14vw;
     border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    animation: float 6s ease-in-out infinite;
+
   }
   
+  
+  @keyframes float {
+      0% {
+          box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+          transform: translatey(0px);
+      }
+      50% {
+          box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+          transform: translatey(-15px);
+      }
+      100% {
+          box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+          transform: translatey(0px);
+      }
+  
+  }
+  
+.buttonsContainerLeft {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
   .editButton,
   .deleteButton,
   .shareButton,
@@ -102,17 +129,18 @@ margin-right: -20px;
   padding: 10px;
   display: flex;
   flex-direction: column;
-  height: 41%;
+  height: 36%;
 align-content: center;
 justify-content: center;
 align-items: center;
+box-shadow: 0 15px 15px 0px rgba(0,0,0,0.2);
 }
 
 .deleteButton {
   margin: 5px;
   box-shadow: rgba(187, 73, 44, 0.2) 0 -25px 18px -14px inset, rgba(187, 96, 44, 0.15) 0 1px 2px, rgba(187, 130, 44, 0.15) 0 2px 4px, rgba(187, 77, 44, 0.15) 0 4px 8px, rgba(187, 65, 44, 0.15) 0 8px 16px, rgba(187, 113, 44, 0.15) 0 16px 32px;
-  background-color: rgb(253, 183, 125);
-  color: rgb(77, 1, 1);
+  background-color: rgb(253, 197, 125);
+  color: rgb(26, 0, 0);
 }
 .shareButton {
   margin: 5px;
@@ -136,6 +164,7 @@ align-items: center;
   border-radius: 10px;
   padding: 10px;
   line-height: 120%;
+  box-shadow: 5px 10px 10px 5px rgba(0,0,0,0.2);
 }
 .popUpLeft input,
 .section input {
