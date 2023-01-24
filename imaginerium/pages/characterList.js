@@ -55,7 +55,7 @@ export default function characterList() {
     );
   }
 
-  if (charactersArray = []) {
+  if (charactersArray.length < 1) {
     return (
       <>
         <NoCharactersYet />
