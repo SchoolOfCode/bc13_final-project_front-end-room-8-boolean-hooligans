@@ -37,38 +37,38 @@ export default function Home() {
 
               <p>
                 Breathe life into your imagination with{" "}
-                <span className={styles.background}>IMAGINERIUM</span> the
+                <span className={styles.pBackground}>IMAGINERIUM</span> the
                 ultimate creative playground for world building, character
                 creation, and story weaving.
               </p>
             </div>
 
             <div className={styles.buttonsContainer}>
-              <Link href="/createCharacter">
+              <Link className={styles.buttonText} href="/createCharacter">
                 <button className={styles.buttonMain}>
-                  <div>create character</div>
-                  <VscPersonAdd className={styles.add} />
+                  <div><VscPersonAdd className={styles.icon} /></div>
+                  <div>Create Character</div>
                 </button>
               </Link>
 
-              <Link href="/characterList">
+              <Link className={styles.buttonText} href="/characterList">
                 <button className={styles.buttonMain}>
-                  <div className={styles.buttonMain}>your characters</div>
-                  <VscOrganization className={styles.add} />
+                  <div><VscOrganization className={styles.icon} /></div>
+                  <div>Your Characters</div>
                 </button>
               </Link>
 
-              <Link href="/sharedCharacters">
+              <Link className={styles.buttonText} href="/sharedCharacters">
                 <button className={styles.buttonMain}>
-                  <div className={styles.buttonMain}>shared characters</div>
-                  <VscOrganization className={styles.add} />
+                  <div><VscOrganization className={styles.icon} /></div>
+                  <div>Shared Characters</div>
                 </button>
               </Link>
 
-              <Link href="/createNewWorld">
+              <Link className={styles.buttonText} href="/createNewWorld">
                 <button className={styles.buttonMain}>
-                  <div>create world</div>
-                  <VscGlobe className={styles.add} />
+                  <div><VscGlobe className={styles.icon} /></div>
+                  <div>Create World</div>
                 </button>
               </Link>
             </div>
