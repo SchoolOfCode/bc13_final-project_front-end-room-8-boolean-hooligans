@@ -10,7 +10,7 @@ return (
     <>
         <NewNavBar/>
             <div>
-            <h1 className={styles.h1}>You have not yet made any characters! <Link href="/createCharacter">Why not create one now</Link>?</h1>
+            <h1 className={styles.h1}>You have not yet shared any characters! <Link href="/characterList">Why not share some now</Link>?</h1>
             <LoginOutButton />
             </div>
     </>
