@@ -9,6 +9,10 @@ import NewNavBar from "../Components/NewNavBar.js";
 export default function characterList() {
   const { data: session } = useSession();
 
+
+
+
+
   useEffect(() => {
     if (session) {
       async function fetchData() {

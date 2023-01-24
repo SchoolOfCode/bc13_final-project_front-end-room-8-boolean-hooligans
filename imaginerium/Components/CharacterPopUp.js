@@ -5,8 +5,11 @@ import { HiUserGroup } from "react-icons/hi";
 import { MdHeight } from "react-icons/md";
 import { useEffect, useState } from "react";
 import styles from "../styles/characterPopup.module.css";
+import { useRouter } from 'next/router'
 
 export default function CharacterPopUp(props) {
+  const router = useRouter()
+
   const [editNameInput, setEditNameInput] = useState(false);
   const [editName, setEditName] = useState(null);
   const [editAgeInput, setEditAgeInput] = useState(false);
@@ -138,7 +141,8 @@ export default function CharacterPopUp(props) {
     className={styles.deleteButton}
     onClick={() => {
         if (confirm("Are you sure you want to delete " + props.char_name + "? This cannot be undone.")) {
-            destroyCharacter(props.character_id);
+            destroyCharacter(props.character_id)
+            router.reload(window.location.pathname);
         }
     }}
 >
@@ -166,6 +170,7 @@ export default function CharacterPopUp(props) {
       </div>
 
       <div className={styles.popUpRight}>
+        <button className={styles.editButton} onClick={()=>{ router.reload(window.location.pathname)}}>close</button>
         <h1>{props.char_name}</h1>
 
         <h2>Physical Appearance:</h2>

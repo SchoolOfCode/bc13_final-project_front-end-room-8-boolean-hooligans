@@ -8,7 +8,11 @@ import { useState } from "react";
 import PopUpCharacterCard from "../modals/popUpCharacterCard";
 import CharacterPopUp from "./CharacterPopUp";
 
+
 export default function CharacterCard(props) {
+
+
+
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -64,9 +68,9 @@ export default function CharacterCard(props) {
 </div>  
       {showModal ? (
         <PopUpCharacterCard>
-          <button className="close-pop-up-button" onClick={() => setShowModal(false)}>
+          {/* <button className="close-pop-up-button" onClick={() => setShowModal(false) router.reload(window.location.pathname)}>
               Close X
-            </button>
+            </button> */}
           <CharacterPopUp
                 key={props.character_id}
                 character_id={props.character_id}
