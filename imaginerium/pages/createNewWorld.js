@@ -2,6 +2,7 @@ import Navigation from "../Components/Navigation";
 import NewNavBar from "../Components/NewNavBar";
 import styles from "../styles/createNewWorld.module.css";
 import { useSession } from "next-auth/react";
+import PleaseLogin from "../Components/PleaseLogin.js";
 
 export default function createNewWorld() {
 const { data: session } = useSession();
