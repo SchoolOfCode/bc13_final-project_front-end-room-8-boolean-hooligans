@@ -2,9 +2,16 @@
 .loggedInUserDiv, .loggedOutUserDiv{
     display: flex;
     flex-direction: row;
+    height: 50px;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    z-index: 50;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
     gap: 5%;
+    
 
 }
 

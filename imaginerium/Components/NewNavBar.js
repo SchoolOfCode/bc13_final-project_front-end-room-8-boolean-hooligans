@@ -2,6 +2,7 @@ import styles from "../styles/newNavBar.module.css";
 import React from "react";
 import Link from "next/link";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
+import LoginOutButton from "./login-btn";
 
 const links = [
   { name: "Home", to: "/dashboard", id: 1 },
@@ -99,13 +100,31 @@ export default function NewNavBar() {
             </>
           ) : (
             <>
-              <div></div>
-              <div></div>
-              <div></div>
+              <motion.div
+                animate={{
+                  y: 0,
+                  rotate: [45, 0, 0]
+                  // backgroundColor: "#505459"
+                }}
+              />
+              <motion.div
+                animate={{
+                  rotate: [0, 0, 0]
+                  // backgroundColor: "#505459"
+                }}
+              />
+              <motion.div
+                animate={{
+                  y: 0,
+                  rotate: [-45, 0, 0]
+                  // backgroundColor: "#505459"
+                }}
+              />
             </>
           )}
         </div>
       </div>
+      <LoginOutButton></LoginOutButton>
     </div>
   );
 }
