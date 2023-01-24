@@ -8,11 +8,7 @@ import { useState } from "react";
 import PopUpCharacterCard from "../modals/popUpCharacterCard";
 import CharacterPopUp from "./CharacterPopUp";
 
-
 export default function CharacterCard(props) {
-
-
-
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -68,10 +64,12 @@ export default function CharacterCard(props) {
 </div>  
       {showModal ? (
         <PopUpCharacterCard>
-          {/* <button className="close-pop-up-button" onClick={() => setShowModal(false) router.reload(window.location.pathname)}>
+          <button className="close-pop-up-button" onClick={() => setShowModal(false)}>
               Close X
-            </button> */}
+            </button>
           <CharacterPopUp
+          setShowModal={setShowModal}
+          searchByName={props.searchByName}
                 key={props.character_id}
                 character_id={props.character_id}
                 user_email={props.user_email}
@@ -81,11 +79,11 @@ export default function CharacterCard(props) {
                 char_background={props.char_background}
                 char_desc={props.char_desc}
                 char_disabilities={props.char_disabilities}
-                char_eyecolour={props.char_eyecolour}
+                char_eyeColour={props.char_eyeColour}
                 char_fears={props.char_fears}
                 char_features={props.char_features}
                 char_gender={props.char_gender}
-                char_haircolour={props.char_haircolour}
+                char_hairColour={props.char_hairColour}
                 char_height={props.char_height}
                 char_hopes={props.char_hopes}
                 char_img={props.char_img}
@@ -97,7 +95,7 @@ export default function CharacterCard(props) {
                 char_relationships={props.char_relationships}
                 char_sexuality={props.char_sexuality}
                 char_skills={props.char_skills}
-                char_skincolour={props.char_skincolour}
+                char_skinColour={props.char_skinColour}
                 char_species={props.char_species}
                 char_speech={props.char_speech}
                 char_weight={props.char_weight}

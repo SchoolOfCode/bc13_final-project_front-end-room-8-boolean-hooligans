@@ -5,10 +5,10 @@ import { HiUserGroup } from "react-icons/hi";
 import { MdHeight } from "react-icons/md";
 import { useEffect, useState } from "react";
 import styles from "../styles/characterPopup.module.css";
-import { useRouter } from "next/router";
+
 
 export default function CharacterPopUp(props) {
-  const router = useRouter();
+  
 
   const [editNameInput, setEditNameInput] = useState(false);
   const [editName, setEditName] = useState(null);
@@ -152,7 +152,8 @@ export default function CharacterPopUp(props) {
               )
             ) {
               destroyCharacter(props.character_id);
-              router.reload(window.location.pathname);
+              props.searchByName("")
+              props.setShowModal(false);
             }
           }}
         >
@@ -197,7 +198,8 @@ export default function CharacterPopUp(props) {
         <button
           className={styles.closePopUpButton}
           onClick={() => {
-            router.reload(window.location.pathname);
+            props.searchByName("")
+            props.setShowModal(false);
           }}
         >
           close
@@ -210,9 +212,12 @@ export default function CharacterPopUp(props) {
         {/* <p className="category">Portrait:</p>
             {editImgInput?(<div><input type='text' onChange={(e)=>setEditImg(e.target.value)}></input><button onClick={()=>editImg(props.character_id, 'char_img', editImg)} className="edit-button">Done</button></div>):(<div><p>{props.char_img}</p><button onClick={()=>setEditImgInput(!editImgInput)} className="edit-button">edit</button></div>)} */}
 
-        <p className={styles.category}>Age in years: </p>
+        <span className={styles.category}>Age in years: </span>
+
         {editAgeInput ? (
+          
           <>
+         
             <p>
               <div>
                 <input
@@ -231,19 +236,19 @@ export default function CharacterPopUp(props) {
             </p>
           </>
         ) : (
-          <>
-            <div>
-              <p>
-                {props.char_age}
-                <button
+         <>
+            <button
                   onClick={() => setEditAgeInput(!editAgeInput)}
                   className={styles.editButton}
                 >
                   edit
                 </button>
+              <p>
+                {props.char_age}
+                
               </p>
-            </div>
-          </>
+              </>
+         
         )}
 
         <p className={styles.category}>Ethnic group and species:</p>
@@ -504,10 +509,10 @@ export default function CharacterPopUp(props) {
           <>
             <p>
               <div>
-                <input
+                <textarea
                   type="text"
                   onChange={(e) => setEditDesc(e.target.value)}
-                ></input>
+                ></textarea>
                 <button
                   onClick={() =>
                     editCharacter(props.character_id, "char_desc", editDesc)
@@ -575,10 +580,10 @@ export default function CharacterPopUp(props) {
           <>
             <p>
               <div>
-                <input
+                <textarea
                   type="text"
                   onChange={(e) => setEditHopes(e.target.value)}
-                ></input>
+                ></textarea>
                 <button
                   onClick={() =>
                     editCharacter(props.character_id, "char_hopes", editHopes)
@@ -609,10 +614,10 @@ export default function CharacterPopUp(props) {
           <>
             <p>
               <div>
-                <input
+                <textarea
                   type="text"
                   onChange={(e) => setEditFears(e.target.value)}
-                ></input>
+                ></textarea>
                 <button
                   onClick={() =>
                     editCharacter(props.character_id, "char_fears", editFears)
@@ -645,10 +650,10 @@ export default function CharacterPopUp(props) {
           <>
             <p>
               <div>
-                <input
+                <textarea
                   type="text"
                   onChange={(e) => setEditSpeech(e.target.value)}
-                ></input>
+                ></textarea>
                 <button
                   onClick={() =>
                     editCharacter(props.character_id, "char_speech", editSpeech)
@@ -679,10 +684,10 @@ export default function CharacterPopUp(props) {
           <>
             <p>
               <div>
-                <input
+                <textarea
                   type="text"
                   onChange={(e) => setEditLikes(e.target.value)}
-                ></input>
+                ></textarea>
                 <button
                   onClick={() =>
                     editCharacter(props.character_id, "char_likes", editLikes)
@@ -716,10 +721,10 @@ export default function CharacterPopUp(props) {
           <>
             <p>
               <div>
-                <input
+                <textarea
                   type="text"
                   onChange={(e) => setEditBackground(e.target.value)}
-                ></input>
+                ></textarea>
                 <button
                   onClick={() =>
                     editCharacter(
@@ -754,10 +759,10 @@ export default function CharacterPopUp(props) {
           <>
             <p>
               <div>
-                <input
+                <textarea
                   type="text"
                   onChange={(e) => setEditDisabilities(e.target.value)}
-                ></input>
+                ></textarea>
                 <button
                   onClick={() =>
                     editCharacter(
@@ -792,10 +797,10 @@ export default function CharacterPopUp(props) {
           <>
             <p>
               <div>
-                <input
+                <textarea
                   type="text"
                   onChange={(e) => setEditJob(e.target.value)}
-                ></input>
+                ></textarea>
                 <button
                   onClick={() =>
                     editCharacter(props.character_id, "char_job", editJob)
@@ -936,10 +941,10 @@ export default function CharacterPopUp(props) {
           <>
             <p>
               <div>
-                <input
+                <textarea
                   type="text"
                   onChange={(e) => setEditSkills(e.target.value)}
-                ></input>
+                ></textarea>
                 <button
                   onClick={() =>
                     editCharacter(props.character_id, "char_skills", editSkills)
@@ -970,10 +975,10 @@ export default function CharacterPopUp(props) {
           <>
             <p>
               <div>
-                <input
+                <textarea
                   type="text"
                   onChange={(e) => setEditMorality(e.target.value)}
-                ></input>
+                ></textarea>
                 <button
                   onClick={() =>
                     editCharacter(
@@ -1008,10 +1013,10 @@ export default function CharacterPopUp(props) {
           <>
             <p>
               <div>
-                <input
+                <textarea
                   type="text"
                   onChange={(e) => setEditRelationships(e.target.value)}
-                ></input>
+                ></textarea>
                 <button
                   onClick={() =>
                     editCharacter(
@@ -1048,10 +1053,10 @@ export default function CharacterPopUp(props) {
           <>
             <p>
               <div>
-                <input
+                <textarea
                   type="text"
                   onChange={(e) => setEditNotes(e.target.value)}
-                ></input>
+                ></textarea>
                 <button
                   onClick={() =>
                     editCharacter(props.character_id, "char_notes", editNotes)
