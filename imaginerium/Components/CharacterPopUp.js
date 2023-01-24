@@ -5,8 +5,11 @@ import { HiUserGroup } from "react-icons/hi";
 import { MdHeight } from "react-icons/md";
 import { useEffect, useState } from "react";
 import styles from "../styles/characterPopup.module.css";
+import { useRouter } from 'next/router'
 
 export default function CharacterPopUp(props) {
+  const router = useRouter()
+
   const [editNameInput, setEditNameInput] = useState(false);
   const [editName, setEditName] = useState(null);
   const [editAgeInput, setEditAgeInput] = useState(false);
@@ -42,8 +45,8 @@ export default function CharacterPopUp(props) {
   const [editMorality, setEditMorality] = useState(null);
   const [editNotesInput, setEditNotesInput] = useState(false);
   const [editNotes, setEditNotes] = useState(null);
-  const[editPronounsInput, setEditPronounsInput] = useState(false)
-  const[editPronouns, setEditPronouns] = useState(null)
+  const [editPronounsInput, setEditPronounsInput] = useState(false)
+  const [editPronouns, setEditPronouns] = useState(null)
   const [editRelationshipsInput, setEditRelationshipsInput] = useState(false);
   const [editRelationships, setEditRelationships] = useState(null);
   const [editSexualityInput, setEditSexualityInput] = useState(false);
@@ -134,21 +137,30 @@ export default function CharacterPopUp(props) {
             </button>
           </div>
         )}
-        <button
-          className={styles.deleteButton}
-          onClick={() => destroyCharacter(props.character_id)}
-        >
-          delete {props.char_name}
-        </button>
+      <button
+    className={styles.deleteButton}
+    onClick={() => {
+        if (confirm("Are you sure you want to delete " + props.char_name + "? This cannot be undone.")) {
+            destroyCharacter(props.character_id)
+            router.reload(window.location.pathname);
+        }
+    }}
+>
+    delete {props.char_name}
+</button>
+
+
 
         {emailTrigger ? (
           <div>
             <input type="text" onChange={(e) => setEmail(e.target.value)} />
-            <button onClick={shareCharacter}>Share Char</button>
+            <button onClick={()=> { if (confirm("Are you sure you want to share " + props.char_name + " with this person? They will be able to edit anything they choose.")) {
+             {shareCharacter} }}}> Share Char</button>
           </div>
         ) : (
           <button
-            onClick={() => {
+            onClick={() => {;
+          
               setEmailTrigger(!emailTrigger);
             }}
           >
@@ -158,6 +170,7 @@ export default function CharacterPopUp(props) {
       </div>
 
       <div className={styles.popUpRight}>
+        <button className={styles.editButton} onClick={()=>{ router.reload(window.location.pathname)}}>close</button>
         <h1>{props.char_name}</h1>
 
         <h2>Physical Appearance:</h2>
@@ -243,7 +256,7 @@ export default function CharacterPopUp(props) {
             ></input>
             <button
               onClick={() =>
-                editCharacter(props.character_id, "char_hairColour", editHair)
+                editCharacter(props.character_id, "char_haircolour", editHair)
               }
               className={styles.editButton}
             >
@@ -254,7 +267,7 @@ export default function CharacterPopUp(props) {
           </>
         ) : (
           <div>
-            <p>{props.char_hairColour}
+            <p>{props.char_haircolour}
             <button
               onClick={() => setEditHairInput(!editHairInput)}
               className={styles.editButton}
@@ -276,7 +289,7 @@ export default function CharacterPopUp(props) {
             ></input>
             <button
               onClick={() =>
-                editCharacter(props.character_id, "char_eyeColour", editEye)
+                editCharacter(props.character_id, "char_eyecolour", editEye)
               }
               className={styles.editButton}
             >
@@ -287,7 +300,7 @@ export default function CharacterPopUp(props) {
           </>
         ) : (
           <div>
-            <p>{props.char_eyeColour}
+            <p>{props.char_eyecolour}
             <button
               onClick={() => setEditEyeInput(!editEyeInput)}
               className={styles.editButton}
@@ -309,7 +322,7 @@ export default function CharacterPopUp(props) {
             ></input>
             <button
               onClick={() =>
-                editCharacter(props.character_id, "char_skinColour", editSkin)
+                editCharacter(props.character_id, "char_skincolour", editSkin)
               }
               className={styles.editButton}
             >
@@ -320,7 +333,7 @@ export default function CharacterPopUp(props) {
           </>
         ) : (
           <div>
-            <p>{props.char_skinColour}
+            <p>{props.char_skincolour}
             <button
               onClick={() => setEditSkinInput(!editSkinInput)}
               className="edit-button"
@@ -331,7 +344,7 @@ export default function CharacterPopUp(props) {
           </div>
         )}
 
-        <p className={styles.category}>Height in feet:</p>
+        <p className={styles.category}>Height in metres:</p>
         {editHeightInput ? (
           <>
           <p>

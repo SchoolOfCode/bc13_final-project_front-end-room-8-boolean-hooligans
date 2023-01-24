@@ -140,7 +140,7 @@ export default function Step1({ setStep, formValues, setFormValues }) {
             />
           </div>
           <div>
-            <label htmlFor="char_height">Height in feet?</label>
+            <label htmlFor="char_height">Height in metres?</label>
             <input
               defaultValue={formValues.char_height}
               placeholder="Enter number"

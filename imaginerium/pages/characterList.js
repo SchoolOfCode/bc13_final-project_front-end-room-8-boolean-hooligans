@@ -9,6 +9,10 @@ import NewNavBar from "../Components/NewNavBar.js";
 export default function characterList() {
   const { data: session } = useSession();
 
+
+
+
+
   useEffect(() => {
     if (session) {
       async function fetchData() {
@@ -139,11 +143,11 @@ export default function characterList() {
                   char_background={character.char_background}
                   char_desc={character.char_desc}
                   char_disabilities={character.char_disabilities}
-                  char_eyeColour={character.char_eyeColour}
+                  char_eyecolour={character.char_eyecolour}
                   char_fears={character.char_fears}
                   char_features={character.char_features}
                   char_gender={character.char_gender}
-                  char_hairColour={character.char_hairColour}
+                  char_haircolour={character.char_haircolour}
                   char_height={character.char_height}
                   char_hopes={character.char_hopes}
                   char_img={character.char_img}
@@ -155,7 +159,7 @@ export default function characterList() {
                   char_relationships={character.char_relationships}
                   char_sexuality={character.char_sexuality}
                   char_skills={character.char_skills}
-                  char_skinColour={character.char_skinColour}
+                  char_skincolour={character.char_skincolour}
                   char_species={character.char_species}
                   char_speech={character.char_speech}
                   char_weight={character.char_weight}
