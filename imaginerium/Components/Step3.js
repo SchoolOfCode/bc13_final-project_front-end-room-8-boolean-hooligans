@@ -25,16 +25,19 @@ export default function Step3({ setStep, formValues, setFormValues }) {
   }
 
   async function onSubmit(values) {
-    setFormValues({ ...formValues, ...values });
-    if (myForm.current.buttonId === "back") {
-      setStep(2);
-    } else {
-      addNewCharacter(formValues);
+    // e.preventDefault();
+    console.log("values", values);
+    let updatedValues = { ...formValues, ...values };
+    setFormValues(updatedValues);
+    console.log("After submit", updatedValues);
+    if (myForm.current.buttonId === "submit") {
+      addNewCharacter(updatedValues);
       setShowModal(true);
+    } else if (myForm.current.buttonId === "back") {
+      setStep(2);
     }
   }
 
-  console.log("After submit", formValues);
   return (
     <div className={styles.mainStepTwo}>
       <h2 className={styles.heading}>Miscellaneous</h2>
@@ -57,11 +60,12 @@ export default function Step3({ setStep, formValues, setFormValues }) {
             </div>
             <div>
               <label htmlFor="char_pronouns">Pronouns</label>
-              <input defaultValue={formValues.char_pronouns}
-              type="text"
-              { ...register("char_pronouns", { required: false })}
-              name="char_pronouns"
-              id="char_pronouns"
+              <input
+                defaultValue={formValues.char_pronouns}
+                type="text"
+                {...register("char_pronouns", { required: false })}
+                name="char_pronouns"
+                id="char_pronouns"
               />
             </div>
             <div>
@@ -161,7 +165,12 @@ export default function Step3({ setStep, formValues, setFormValues }) {
             </button>
           </div>
           <div>
-            <button className={styles.stepTwoButton} type="submit">
+            <button
+              className={styles.stepTwoButton}
+              type="submit"
+              id="submit"
+              onClick={(e) => (myForm.current.buttonId = e.target.id)}
+            >
               Submit
             </button>
           </div>
