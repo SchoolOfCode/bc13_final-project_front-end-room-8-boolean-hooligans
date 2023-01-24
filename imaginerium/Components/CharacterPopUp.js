@@ -1,6 +1,6 @@
 import { SlGhost } from "react-icons/sl";
 import { GiHeartInside } from "react-icons/gi";
-
+import { AiFillEdit } from "react-icons/ai"
 import { useState } from "react";
 import styles from "../styles/characterPopup.module.css";
 
@@ -135,7 +135,7 @@ export default function CharacterPopUp(props) {
                   onClick={() => setEditNameInput(!editNameInput)}
                   className={styles.editButton}
                 >
-                  edit name
+                  < AiFillEdit />
                 </button>
               </div>
             )}
@@ -161,8 +161,7 @@ export default function CharacterPopUp(props) {
                     }
                   }}
                 >
-                  {" "}
-                  Share Char
+               
                 </button>
               </div>
             ) : (
@@ -225,7 +224,7 @@ export default function CharacterPopUp(props) {
                   onClick={() => setEditAgeInput(!editAgeInput)}
                   className={styles.editButton}
                 >
-                  edit
+                  < AiFillEdit />
                 </button>
               </div>
             </div>
@@ -270,7 +269,7 @@ export default function CharacterPopUp(props) {
                   onClick={() => setEditSpeciesInput(!editSpeciesInput)}
                   className={styles.editButton}
                 >
-                  edit
+                  < AiFillEdit />
                 </button>
               </div>
             </div>
@@ -287,11 +286,11 @@ export default function CharacterPopUp(props) {
                       onClick={() => {
                         editCharacter(
                           props.character_id,
-                          "char_age",
-                          editAge
+                          "char_species",
+                          editSpecies
                         ).then(() => {
                           props.searchByName("").then(() => {
-                            setEditAgeInput(false);
+                            setEditSpeciesInput(false);
                           });
                         });
                       }}
@@ -315,7 +314,7 @@ export default function CharacterPopUp(props) {
                   onClick={() => setEditHairInput(!editHairInput)}
                   className={styles.editButton}
                 >
-                  edit
+                   < AiFillEdit />
                 </button>
               </div>
             </div>

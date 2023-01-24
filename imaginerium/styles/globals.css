@@ -75,7 +75,8 @@ body {
     transform: translate(-50%, -50%);
     transition: all 0.3s;
     border-radius: 6px;
-    background: linear-gradient(#b3e5ee, #a2bfcc);
+    background: linear-gradient(#b3e5ee, #b3c9fa);
+    
     align-items: baseline;
     padding: 10px;
   box-shadow:   10px 20px 30px rgba(0, 0, 0, 0.253);
