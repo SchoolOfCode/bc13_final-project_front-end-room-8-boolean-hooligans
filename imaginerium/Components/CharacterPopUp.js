@@ -205,6 +205,9 @@ export default function CharacterPopUp(props) {
           <div className={styles.section}>
             <h2>Physical Appearance:</h2>
 
+
+
+
             <div className={styles.category}>
               <div>Age in years: </div>
               <div hidden={editAgeInput}>
@@ -227,11 +230,15 @@ export default function CharacterPopUp(props) {
                     ></input>
                     <button
                       onClick={() => {
-                        editCharacter(props.character_id, "char_age", editAge);
-                        props.searchByName("");
-                        setTimeout(() => {
-                          setEditAgeInput(false);
-                        }, 700);
+                        editCharacter(
+                          props.character_id,
+                          "char_age",
+                          editAge
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditAgeInput(false);
+                          });
+                        });
                       }}
                       className={styles.editButton}
                     >
@@ -270,13 +277,13 @@ export default function CharacterPopUp(props) {
                       onClick={() => {
                         editCharacter(
                           props.character_id,
-                          "char_species",
-                          editSpecies
-                        );
-                        props.searchByName("");
-                        setTimeout(() => {
-                          setEditSpeciesInput(false);
-                        }, 700);
+                          "char_age",
+                          editAge
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditAgeInput(false);
+                          });
+                        });
                       }}
                       className={styles.editButton}
                     >
@@ -291,23 +298,38 @@ export default function CharacterPopUp(props) {
               </>
             )}
 
-            <p className={styles.category}>Hair colour:</p>
+            <div className={styles.category}>
+              <div>Hair colour: </div>
+              <div hidden={editHairInput}>
+                <button
+                  onClick={() => setEditHairInput(!editHairInput)}
+                  className={styles.editButton}
+                >
+                  edit
+                </button>
+              </div>
+            </div>
             {editHairInput ? (
               <>
                 <p>
                   <div>
                     <input
+                      defaultValue={props.char_haircolour}
                       type="text"
                       onChange={(e) => setEditHair(e.target.value)}
                     ></input>
                     <button
-                      onClick={() =>
+                      onClick={() => {
                         editCharacter(
                           props.character_id,
                           "char_haircolour",
                           editHair
-                        )
-                      }
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditHairInput(false);
+                          });
+                        });
+                      }}
                       className={styles.editButton}
                     >
                       Done
@@ -316,36 +338,44 @@ export default function CharacterPopUp(props) {
                 </p>
               </>
             ) : (
-              <div>
-                <p>
-                  {props.char_haircolour}
-                  <button
-                    onClick={() => setEditHairInput(!editHairInput)}
-                    className={styles.editButton}
-                  >
-                    edit
-                  </button>
-                </p>
-              </div>
+              <>
+                <p>{props.char_haircolour}</p>
+              </>
             )}
 
-            <p className={styles.category}>Eye colour:</p>
+
+<div className={styles.category}>
+              <div>Eye colour: </div>
+              <div hidden={editEyeInput}>
+                <button
+                  onClick={() => setEditEyeInput(!editEyeInput)}
+                  className={styles.editButton}
+                >
+                  edit
+                </button>
+              </div>
+            </div>
             {editEyeInput ? (
               <>
                 <p>
                   <div>
                     <input
+                      defaultValue={props.char_eyecolour}
                       type="text"
                       onChange={(e) => setEditEye(e.target.value)}
                     ></input>
                     <button
-                      onClick={() =>
+                      onClick={() => {
                         editCharacter(
                           props.character_id,
                           "char_eyecolour",
                           editEye
-                        )
-                      }
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditEyeInput(false);
+                          });
+                        });
+                      }}
                       className={styles.editButton}
                     >
                       Done
@@ -354,36 +384,45 @@ export default function CharacterPopUp(props) {
                 </p>
               </>
             ) : (
-              <div>
-                <p>
-                  {props.char_eyecolour}
-                  <button
-                    onClick={() => setEditEyeInput(!editEyeInput)}
-                    className={styles.editButton}
-                  >
-                    edit
-                  </button>
-                </p>
-              </div>
+              <>
+                <p>{props.char_eyecolour}</p>
+              </>
             )}
 
-            <p className={styles.category}>Skin colour:</p>
+
+
+<div className={styles.category}>
+              <div>Skin colour: </div>
+              <div hidden={editSkinInput}>
+                <button
+                  onClick={() => setEditSkinInput(!editSkinInput)}
+                  className={styles.editButton}
+                >
+                  edit
+                </button>
+              </div>
+            </div>
             {editSkinInput ? (
               <>
                 <p>
                   <div>
                     <input
+                      defaultValue={props.char_skincolour}
                       type="text"
                       onChange={(e) => setEditSkin(e.target.value)}
                     ></input>
                     <button
-                      onClick={() =>
+                      onClick={() => {
                         editCharacter(
                           props.character_id,
                           "char_skincolour",
                           editSkin
-                        )
-                      }
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditSkinInput(false);
+                          });
+                        });
+                      }}
                       className={styles.editButton}
                     >
                       Done
@@ -392,18 +431,11 @@ export default function CharacterPopUp(props) {
                 </p>
               </>
             ) : (
-              <div>
-                <p>
-                  {props.char_skincolour}
-                  <button
-                    onClick={() => setEditSkinInput(!editSkinInput)}
-                    className={styles.editButton}
-                  >
-                    edit
-                  </button>
-                </p>
-              </div>
+              <>
+                <p>{props.char_skincolour}</p>
+              </>
             )}
+
 
             <p className={styles.category}>Height in metres:</p>
             {editHeightInput ? (

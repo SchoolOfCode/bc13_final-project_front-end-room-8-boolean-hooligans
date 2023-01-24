@@ -77,11 +77,11 @@ export default function CharacterCard(props) {
                 char_background={props.char_background}
                 char_desc={props.char_desc}
                 char_disabilities={props.char_disabilities}
-                char_eyeColour={props.char_eyeColour}
+                char_eyecolour={props.char_eyecolour}
                 char_fears={props.char_fears}
                 char_features={props.char_features}
                 char_gender={props.char_gender}
-                char_hairColour={props.char_hairColour}
+                char_haircolour={props.char_haircolour}
                 char_height={props.char_height}
                 char_hopes={props.char_hopes}
                 char_img={props.char_img}
@@ -93,7 +93,7 @@ export default function CharacterCard(props) {
                 char_relationships={props.char_relationships}
                 char_sexuality={props.char_sexuality}
                 char_skills={props.char_skills}
-                char_skinColour={props.char_skinColour}
+                char_skincolour={props.char_skincolour}
                 char_species={props.char_species}
                 char_speech={props.char_speech}
                 char_weight={props.char_weight}
