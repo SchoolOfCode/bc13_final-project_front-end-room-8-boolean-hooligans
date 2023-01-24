@@ -38,10 +38,9 @@
     box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
     color: green;
     cursor: pointer;
-    display: block;
-    /*inline-block removed due to float: right on line 94*/
+    /* display: block; */
     font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
-    padding: 7px 20px;
+    padding: 7px 14px;
     text-align: center;
     text-decoration: none;
     transition: all 250ms;
@@ -50,7 +49,10 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+   
+    margin-left: auto;
   }
+
   
 
   .deleteButton:hover,
@@ -136,6 +138,21 @@ align-items: center;
   padding: 10px;
   line-height: 120%;
 }
+
+.section input {
+  border-radius: 10px;
+  padding:10px;
+  font-size: 1rem;
+  border: 1px solid rgba(187, 130, 233, 0.493);
+  
+}
+.section textarea {
+  border-radius: 10px;
+  padding:10px;
+  font-size: 1rem;
+  border: 1px solid rgba(187, 130, 233, 0.493);
+  
+}
 .section h2 {
   font-size: 1.3rem;
   font-weight: 600px;;
@@ -144,6 +161,10 @@ align-items: center;
   border-radius: 10px;
   box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 82, 187, 0.15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 130, 187, 0.15) 0 4px 8px, rgba(44, 154, 187, 0.15) 0 8px 16px, rgba(44, 106, 187, 0.15) 0 16px 32px;
    margin-top: 18px;
-    padding: 15px;
+    padding: 10px;
     font-size: 1.1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+ 
   }

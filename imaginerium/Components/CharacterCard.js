@@ -64,9 +64,7 @@ export default function CharacterCard(props) {
 </div>  
       {showModal ? (
         <PopUpCharacterCard>
-          <button className="close-pop-up-button" onClick={() => setShowModal(false)}>
-              Close X
-            </button>
+       
           <CharacterPopUp
           setShowModal={setShowModal}
           searchByName={props.searchByName}

@@ -217,9 +217,8 @@ export default function CharacterPopUp(props) {
             {editImgInput?(<div><input type='text' onChange={(e)=>setEditImg(e.target.value)}></input><button onClick={()=>editImg(props.character_id, 'char_img', editImg)} className="edit-button">Done</button></div>):(<div><p>{props.char_img}</p><button onClick={()=>setEditImgInput(!editImgInput)} className="edit-button">edit</button></div>)} */}
 
             <div className={styles.category}>
-              Age in years:{" "}
+             <div>Age in years: </div>
               <div hidden={editAgeInput}>
-                {" "}
                 <button
                   onClick={() => setEditAgeInput(!editAgeInput)}
                   className={styles.editButton}
@@ -228,7 +227,6 @@ export default function CharacterPopUp(props) {
                 </button>
               </div>
             </div>
-
             {editAgeInput ? (
               <>
                 <p>
