@@ -6,33 +6,31 @@ body {
   background: linear-gradient(230deg, #59c0e6, #4e6db9, #a571fb);
   background-size: 600% 600%;
   box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Arial, Verdana, Trebuchet, Tahoma, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  word-spacing:0.35em;
+  line-height: 1.5em;
+  color: white;
   margin: 0;
-    padding: 0;
-    width:  100vw;
-    height: 100%;
-    overflow: hidden;
-    
-    position: relative;
-    
+  padding: 0;
+  width:  100vw;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
   background: linear-gradient(230deg, #59c0e6, #4e6db9, #a571fb);
   background-size: 600% 600%;
-
   -webkit-animation: AnimationName 14s ease infinite;
   animation: AnimationName 14s ease infinite;
-
   /* text-transform: lowercase; */
-  color: white;
-
   scroll-snap-type: y mandatory;
   position: relative;
   height: 100vh;
   overflow-y: scroll;
-    background: linear-gradient(230deg, #59c0e6, #4e6db9, #a571fb);
-    background-size: 600% 600%;
-  
-    -webkit-animation: AnimationName 14s ease infinite;
-    animation: AnimationName 14s ease infinite;
+  /* background: linear-gradient(230deg, #59c0e6, #4e6db9, #a571fb);
+  background-size: 600% 600%;
+  -webkit-animation: AnimationName 14s ease infinite;
+  animation: AnimationName 14s ease infinite; */
   }
   
   @-webkit-keyframes AnimationName {
@@ -78,7 +76,7 @@ body {
     background: linear-gradient(#b3e5ee, #a2bfcc);
     align-items: baseline;
     padding: 10px;
-  box-shadow:   10px 20px 30px rgba(0, 0, 0, 0.253);
+    box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.253);
     height: 70vh;
    
   }

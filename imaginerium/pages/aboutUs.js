@@ -22,7 +22,7 @@ export default function aboutUs() {
         width={500}/>
     <div className={styles.headerBlock}>
     <p className={styles.headerText}>We are the Boolean Hooligans: a team of five from the <Link className={styles.link} href="https://www.schoolofcode.co.uk/" target="_blank">School of Code's</Link> Cohort 13, and this site is our final project. We built it over the course of four weeks in January 2023, and are very pleased with the end result!<br></br><br></br>
-    Our brief was to come up with a problem, and solve it. After some thinking, we decided to look at creating a simple to use worldbuilding app for creative people such as writers, artists, or roleplaying gamers. The existing options are often confusing, busy, or otherwise suffer from unfriendly UI/UX.<br></br><br></br>
+    Our brief was to come up with a problem, and solve it. After some thinking, we decided to look at creating a simple to use and accessible worldbuilding app for creative people such as writers, artists, or roleplaying gamers. The existing options are often confusing, busy, or otherwise suffer from unfriendly UI/UX.<br></br><br></br>
     The result is <strong>Imaginerium</strong>, which in its current form allows you to create and save all sorts of original characters, collaborate with other creators, and - thanks to Azgaar's Fantasy Map Generator - make and save world maps. There are many other things we'd like to add in future, from random plot generation to some form of character illustration, along the lines of a picrew. But for now, enjoy the result of our hard work as full stack developers!</p>
     </div>
 
