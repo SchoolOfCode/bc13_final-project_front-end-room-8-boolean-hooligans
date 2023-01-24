@@ -110,37 +110,37 @@ export default function Step1({ setStep, formValues, setFormValues }) {
             />
           </div>
           <div>
-            <label htmlFor="char_hairColour">Hair colour</label>
+            <label htmlFor="char_haircolour">Hair colour</label>
             <input
-              defaultValue={formValues.char_hairColour}
+              defaultValue={formValues.char_haircolour}
               type="text"
-              {...register("char_hairColour", { required: false })}
-              name="char_hairColour"
-              id="char_hairColour"
+              {...register("char_haircolour", { required: false })}
+              name="char_haircolour"
+              id="char_haircolour"
             />
           </div>
           <div>
-            <label htmlFor="char_eyeColour">Eye colour</label>
+            <label htmlFor="char_eyecolour">Eye colour</label>
             <input
-              defaultValue={formValues.char_eyeColour}
+              defaultValue={formValues.char_eyecolour}
               type="text"
-              {...register("char_eyeColour", { required: false })}
-              name="char_eyeColour"
-              id="char_eyeColour"
+              {...register("char_eyecolour", { required: false })}
+              name="char_eyecolour"
+              id="char_eyecolour"
             />
           </div>
           <div>
-            <label htmlFor="char_skinColour">Skin colour</label>
+            <label htmlFor="char_skincolour">Skin colour</label>
             <input
-              defaultValue={formValues.char_skinColour}
+              defaultValue={formValues.char_skincolour}
               type="text"
-              {...register("char_skinColour", { required: false })}
-              name="char_skinColour"
-              id="char_skinColour"
+              {...register("char_skincolour", { required: false })}
+              name="char_skincolour"
+              id="char_skincolour"
             />
           </div>
           <div>
-            <label htmlFor="char_height">Height in feet?</label>
+            <label htmlFor="char_height">Height in metres?</label>
             <input
               defaultValue={formValues.char_height}
               placeholder="Enter number"
