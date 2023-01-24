@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import { BiSearchAlt } from "react-icons/bi";
 import NewNavBar from "../Components/NewNavBar";
+import PleaseLogin from "../Components/PleaseLogin.js"
+
 export default function characterList() {
   const { data: session } = useSession();
 
@@ -38,7 +40,11 @@ export default function characterList() {
   };
 
   if (!session) {
-    return <div>Log in to view your saved characters</div>;
+    return (
+      <>
+        <PleaseLogin/>
+      </>
+    )
   }
 
   return (

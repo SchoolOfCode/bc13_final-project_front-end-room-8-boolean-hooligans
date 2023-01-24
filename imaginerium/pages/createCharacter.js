@@ -15,9 +15,7 @@ export default function createCharacter() {
   if (!session) {
     return (
       <>
-        {/* <Navigation></Navigation>  */}
-        <NewNavBar />
-        <div>Log in to create character</div>;
+       <PleaseLogin />
       </>
     );
   }
