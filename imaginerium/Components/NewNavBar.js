@@ -7,9 +7,10 @@ import LoginOutButton from "./login-btn";
 const links = [
   { name: "Home", to: "/dashboard", id: 1 },
   { name: "About", to: "/aboutUs", id: 2 },
-  { name: "Create", to: "/createCharacter", id: 3 },
-  { name: "View", to: "/characterList", id: 4 },
-  { name: "Create World", to: "/createNewWorld", id: 5 }
+  { name: "Create Characters", to: "/createCharacter", id: 3 },
+  { name: "View Characters", to: "/characterList", id: 4 },
+  { name: "Shared Characters", to: "/sharedCharacters", id: 5 },
+  { name: "Create World", to: "/createNewWorld", id: 6 }
 ];
 
 const itemVariants = {
