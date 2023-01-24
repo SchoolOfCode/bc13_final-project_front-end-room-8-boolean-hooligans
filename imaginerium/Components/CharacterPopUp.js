@@ -109,9 +109,9 @@ export default function CharacterPopUp(props) {
     <div className={styles.popUp}>
       {console.log(props.char_name)}
       {console.log(props.character_id)}
-      <div className="pop-up-left">
+      <div className={styles.popUpLeft}>
         <img
-          className="pop-up-image"
+          className={styles.popUpImage}
           src="https://deepgrouplondon.com/wp-content/uploads/2019/06/person-placeholder-5.png"
         />
         {editNameInput ? (
@@ -493,7 +493,7 @@ export default function CharacterPopUp(props) {
             </p>
           </div>
         )}
-</div>
+
         <p className={styles.category}>Physical Description:</p>
         {editDescInput ? (
           <>
@@ -561,6 +561,7 @@ export default function CharacterPopUp(props) {
             </p>
           </>
         )}
+        </div>
 
         <h2>Personality:</h2>
         <div className={styles.section}>
