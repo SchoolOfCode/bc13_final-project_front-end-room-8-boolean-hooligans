@@ -37,7 +37,7 @@ export default function aboutUs() {
                       <GiHeartInside /> <span>Alive</span>
                     </span>
                 </div>
-                <div className="stats">
+                <div className={styles.stats}>
                   <div>
                   <p><Link href="https://www.linkedin.com/in/felicitycullen"> LinkedIn</Link></p>
                   </div>
@@ -47,12 +47,12 @@ export default function aboutUs() {
                 </div>
               </div>
               <div className={styles.moreInfo}>
-                <p className="description">Prior to the bootcamp, Felicity spent 15 years in a variety of retail, office, and other service jobs before deciding to take the plunge into tech and do something constructive with the potential to improve the lives of many people. She enjoys back-end development and in her free time likes to indulge her nerdy hobbies such as painting toy soldiers and playing boardgames, and occasionally writing poetry. </p>
+                <p className={styles.description}>Prior to the bootcamp, Felicity spent 15 years in a variety of retail, office, and other service jobs before deciding to take the plunge into tech and do something constructive with the potential to improve the lives of many people. {/*She enjoys back-end development and in her free time likes to indulge her nerdy hobbies such as painting toy soldiers and playing boardgames, and occasionally writing poetry.*/} </p>
               </div>
             </div>
             <div className={styles.general}>
                 <img
-                  className="image"
+                  className={styles.image}
                   src="./felicity_pfp.jpg"
                   alt="A photo of Felicity, holding a toy soldier. She is smiling."
                 />
@@ -72,7 +72,7 @@ export default function aboutUs() {
                       <GiHeartInside /> <span>Alive</span>
                     </span>
                 </div>
-                <div className="stats">
+                <div className={styles.stats}>
                   <div>
                   <p><Link href="https://www.linkedin.com/in/andres-e-036492108/"> LinkedIn</Link></p>
                   </div>
@@ -82,12 +82,12 @@ export default function aboutUs() {
                 </div>
               </div>
               <div className={styles.moreInfo}>
-                <p className="description">WORDS HERE </p>
+                <p className={styles.description}>Andrés has seven years of experience working with hardware as an electronics technician. However, when he discovered the power of the web he decided to apply to School of Code to learn new skills and transfer his current ones in to software.</p>
               </div>
             </div>
             <div className={styles.general}>
                 <img
-                  className="image"
+                  className={styles.image2}
                   src="./andres_pfp.png"
                   alt="Pixel art of Andrés."
                 />
@@ -107,7 +107,7 @@ export default function aboutUs() {
                       <GiHeartInside /> <span>Alive</span>
                     </span>
                 </div>
-                <div className="stats">
+                <div className={styles.stats}>
                   <div>
                   <p><Link href="linkedin.com/in/iona-rose/"> LinkedIn</Link></p>
                   </div>
@@ -117,12 +117,12 @@ export default function aboutUs() {
                 </div>
               </div>
               <div className={styles.moreInfo}>
-                <p className="description">WORDS HERE </p>
+                <p className={styles.description}>Before retraining, Iona was a medical scientist working mainly in cancer diagnosis and treatment. Initially, she loved her career - there was so much to learn and discover, and she enjoyed working in big teams of skilled professionals. However, the opportunities for growth quickly dried up, and Iona's work became repetitive and uninspiring. She needed to find a career where she wouldn’t run out of things to learn, and found it in code!</p>
               </div>
             </div>
             <div className={styles.general}>
                 <img
-                  className="image"
+                  className={styles.image2}
                   src="./iona_pfp.jpg"
                   alt="A photo of Iona."
                 />
@@ -142,7 +142,7 @@ export default function aboutUs() {
                       <GiHeartInside /> <span>Alive</span>
                     </span>
                 </div>
-                <div className="stats">
+                <div className={styles.stats}>
                   <div>
                   <p><Link href="https://www.linkedin.com/in/filip-ruminski/"> LinkedIn</Link></p>
                   </div>
@@ -152,12 +152,12 @@ export default function aboutUs() {
                 </div>
               </div>
               <div className={styles.moreInfo}>
-                <p className="description">WORDS HERE </p>
+                <p className={styles.description}>WORDS HERE </p>
               </div>
             </div>
             <div className={styles.general}>
                 <img
-                  className="image"
+                  className={styles.image2}
                   src="./filip_pfp.png"
                   alt="Pixel art of Filip."
                 />
@@ -177,22 +177,22 @@ export default function aboutUs() {
                       <GiHeartInside /> <span>Alive</span>
                     </span>
                 </div>
-                <div className="stats">
+                <div className={styles.stats}>
                   <div>
                   <p><Link href="https://www.linkedin.com/in/charlessajan/"> LinkedIn</Link></p>
                   </div>
                   <div>
-                  <p><Link href="">GitHub</Link></p>
+                  <p><Link href="https://github.com/csajan">GitHub</Link></p>
                   </div>
                 </div>
               </div>
               <div className={styles.moreInfo}>
-                <p className="description">WORDS HERE </p>
+                <p className={styles.description}>WORDS HERE </p>
               </div>
             </div>
             <div className={styles.general}>
                 <img
-                  className="image"
+                  className={styles.image3}
                   src="./charles_pfp.jpg"
                   alt="A photo of Charles."
                 />
