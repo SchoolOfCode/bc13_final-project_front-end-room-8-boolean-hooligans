@@ -48,7 +48,7 @@ export default function Step1({ setStep, formValues, setFormValues }) {
 
   return (
     <div className={styles.mainStepTwo}>
-      <h2 className={styles.heading}>Physical features</h2>
+      <h2>Physical Features</h2>
 
       <motion.form
         initial={{ scale: 0 }}
@@ -193,8 +193,8 @@ export default function Step1({ setStep, formValues, setFormValues }) {
               name="char_alive"
               id="char_alive"
             >
-              <option value="true">They live!</option>
-              <option value="false">They are dead!</option>
+              <option value="true">They're alive!</option>
+              <option value="false">They're dead!</option>
             </select>
           </div>
 

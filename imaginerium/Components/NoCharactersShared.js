@@ -10,8 +10,7 @@ return (
     <>
         <NewNavBar/>
             <div>
-            <h1 className={styles.h1}>You have not yet shared any characters!</h1>
-            <h1 className={styles.h1}><Link href="/characterList">Why not share some now</Link>?</h1>
+            <h1 className={styles.h1}>You are not currently working with anyone</h1>
             <LoginOutButton />
             </div>
     </>

@@ -23,7 +23,7 @@ export default function Step2({ setStep, formValues, setFormValues }) {
 
   return (
     <div className={styles.mainStepTwo}>
-      <h2 className={styles.heading}>Personality</h2>
+      <h2>Personality</h2>
 
       <form
         className={styles.mainContainer}
