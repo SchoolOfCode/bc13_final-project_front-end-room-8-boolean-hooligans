@@ -9,6 +9,7 @@
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 20px;
   color: #ffffff;
+  background-color: orange;
 }
 
 .main {
@@ -53,7 +54,9 @@
   width: 30%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 50px;
+  background-color: green;
 }
 
 .descriptionContainer {
@@ -62,11 +65,11 @@
   align-items: center;
   gap: 20px;
   text-align: center;
-  /* background-color: #FFF7DB; */
+   background-color: red; 
  
   font-size: 30px;
   border-radius: 15px;
-  background: rgba(190, 255, 241, 0.37);
+  /* background: rgba(190, 255, 241, 0.37); */
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -100,7 +103,7 @@
 .buttonsContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 20px;
 }
