@@ -1,7 +1,7 @@
 import styles from "../styles/newNavBar.module.css";
 import React from "react";
 import Link from "next/link";
-import { AnimatePresence, motion, useCycle } from "framer-motion";
+import { AnimatePresence, clamp, motion, useCycle } from "framer-motion";
 import LoginOutButton from "./login-btn";
 
 const links = [
@@ -45,7 +45,7 @@ export default function NewNavBar() {
             className={styles.aside}
             initial={{ width: 0 }}
             animate={{
-              width: 300
+              width: 250
             }}
             exit={{
               width: 0,
@@ -79,20 +79,20 @@ export default function NewNavBar() {
             <>
               <motion.div
                 animate={{
-                  y: 16,
+                  y: 13,
                   rotate: [0, 0, -45],
                   backgroundColor: "#505459"
                 }}
               />
               <motion.div
                 animate={{
-                  rotate: [0, 0, -45],
-                  backgroundColor: "#505459"
+                  rotate: [0, 360, 360],
+                  opacity: [1, 1, 0]
                 }}
               />
               <motion.div
                 animate={{
-                  y: -16,
+                  y: -13,
                   rotate: [0, 0, 45],
                   backgroundColor: "#505459"
                 }}
@@ -103,21 +103,21 @@ export default function NewNavBar() {
               <motion.div
                 animate={{
                   y: 0,
-                  rotate: [45, 0, 0]
-                  // backgroundColor: "#505459"
+                  rotate: [45, 0, 0],
+                  backgroundColor: "#505459"
                 }}
               />
               <motion.div
                 animate={{
-                  rotate: [0, 0, 0]
-                  // backgroundColor: "#505459"
+                  rotate: [0, 0, 0],
+                  backgroundColor: "#505459"
                 }}
               />
               <motion.div
                 animate={{
                   y: 0,
-                  rotate: [-45, 0, 0]
-                  // backgroundColor: "#505459"
+                  rotate: [-45, 0, 0],
+                  backgroundColor: "#505459"
                 }}
               />
             </>
