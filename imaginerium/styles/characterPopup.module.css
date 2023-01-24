@@ -15,7 +15,7 @@
    
     padding: 15px;
     width: 30%;
-    background: rgb(245, 245, 255);
+   
     border-radius: 10px;
     height: 90%;
     z-index:5;
@@ -29,6 +29,8 @@
   }
   
   .editButton,
+  .deleteButton,
+  .shareButton,
   .closePopUpButton {
     float: right;
     background-color: #c7fbc2;
@@ -89,6 +91,28 @@ margin-right: -20px;
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: rgb(57, 51, 88);
+}
+
+.leftStuffContainer {
+  margin-top: 30px;;
+  background: rgb(233, 233, 248);;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 41%;
+align-content: center;
+justify-content: center;
+}
+
+.deleteButton {
+  margin: 5px;
+}
+.shareButton {
+  margin: 5px;
+}
+.editNameButton {
+  margin: 5px;
 }
 
 .section {

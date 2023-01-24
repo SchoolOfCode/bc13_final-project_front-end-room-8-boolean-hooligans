@@ -107,13 +107,14 @@ export default function CharacterPopUp(props) {
 
   return (
     <div className={styles.popUp}>
-      {console.log(props.char_name)}
-      {console.log(props.character_id)}
+  
       <div className={styles.popUpLeft}>
         <img
           className={styles.popUpImage}
           src="https://deepgrouplondon.com/wp-content/uploads/2019/06/person-placeholder-5.png"
         />
+        <div className={styles.leftStuffContainer}>
+          <div className={styles.editName}>
         {editNameInput ? (
           <div>
             <input onChange={(e) => setEditName(e.target.value)}></input>
@@ -128,15 +129,18 @@ export default function CharacterPopUp(props) {
           </div>
         ) : (
           <div>
-            <p>{props.char_name}</p>
+            <div>
+            <p>{props.char_name}</p></div>
             <button
               onClick={() => setEditNameInput(!editNameInput)}
               className={styles.editButton}
             >
-              edit
+              edit name
             </button>
           </div>
         )}
+        </div>
+        <div className={styles.deleteContainer}>
         <button
           className={styles.deleteButton}
           onClick={() => {
@@ -153,12 +157,13 @@ export default function CharacterPopUp(props) {
           }}
         >
           delete {props.char_name}
-        </button>
-
+        </button></div>
+<div className={styles.shareContainer}>
         {emailTrigger ? (
           <div>
             <input type="text" onChange={(e) => setEmail(e.target.value)} />
             <button
+            className={styles.shareButton}
               onClick={() => {
                 if (
                   confirm(
@@ -178,15 +183,15 @@ export default function CharacterPopUp(props) {
             </button>
           </div>
         ) : (
-          <button
+          <button className={styles.shareButton}
             onClick={() => {
               setEmailTrigger(!emailTrigger);
             }}
           >
-            Share
+            Share {props.char_name} 
           </button>
         )}
-      </div>
+      </div></div></div>
 
       <div className={styles.popUpRight}>
         <button
@@ -562,9 +567,9 @@ export default function CharacterPopUp(props) {
           </>
         )}
         </div>
-
-        <h2>Personality:</h2>
         <div className={styles.section}>
+        <h2>Personality:</h2>
+      
         <p className={styles.category}>Hopes, dreams, motivation, and goals:</p>
         {editHopesInput ? (
           <>
@@ -634,7 +639,7 @@ export default function CharacterPopUp(props) {
         )}
 
         <p className={styles.category}>
-          Catchphrases, sayings, languages spoken:
+          Catchphrases, speech patterns, languages spoken:
         </p>
         {editSpeechInput ? (
           <>
