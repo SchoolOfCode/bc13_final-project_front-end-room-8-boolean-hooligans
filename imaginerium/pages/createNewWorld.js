@@ -1,8 +1,18 @@
 import Navigation from "../Components/Navigation";
 import NewNavBar from "../Components/NewNavBar";
 import styles from "../styles/createNewWorld.module.css";
+import { useSession } from "next-auth/react";
 
 export default function createNewWorld() {
+const { data: session } = useSession();
+  if (!session) {
+    return (
+      <>
+       <PleaseLogin />
+      </>
+    );
+  } else {
+  
   return (
     <>
       {/* <Navigation /> */}
@@ -13,4 +23,5 @@ export default function createNewWorld() {
       ></iframe>
     </>
   );
+}
 }
