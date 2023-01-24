@@ -72,8 +72,7 @@ export default function CharacterPopUp(props) {
   }
 
   async function editCharacter(id, key, value) {
-    console.log("edit has been called");
-    console.log(id);
+ 
     let body = {};
     body.user_id = 1;
     body[key] = value;
@@ -83,8 +82,7 @@ export default function CharacterPopUp(props) {
       mode: "cors",
       headers: { "Content-Type": "application/json" },
     });
-    console.log(body);
-    // setEditName(null)
+
   }
 
   async function shareCharacter() {
@@ -237,9 +235,13 @@ export default function CharacterPopUp(props) {
                       onChange={(e) => setEditAge(e.target.value)}
                     ></input>
                     <button
-                      onClick={() =>
+                      onClick={() =>{
                         editCharacter(props.character_id, "char_age", editAge)
-                      }
+                        props.searchByName("")
+                        setTimeout(() => {
+                            setEditAgeInput(false)
+                        }, 600)
+                    }}
                       className={styles.editButton}
                     >
                       Done
@@ -253,23 +255,34 @@ export default function CharacterPopUp(props) {
               </>
             )}
 
-            <p className={styles.category}>Ethnic group and species:</p>
+<div className={styles.category}>
+             <div>Species / ethnicity: </div>
+              <div hidden={editSpeciesInput}>
+                <button
+                  onClick={() => editSpeciesInput(!editSpeciesInput)}
+                  className={styles.editButton}
+                >
+                     edit
+                </button>
+              </div>
+            </div>
             {editSpeciesInput ? (
               <>
                 <p>
                   <div>
                     <input
+                      defaultValue={props.char_species}
                       type="text"
                       onChange={(e) => setEditSpecies(e.target.value)}
                     ></input>
                     <button
-                      onClick={() =>
-                        editCharacter(
-                          props.character_id,
-                          "char_species",
-                          editSpecies
-                        )
-                      }
+                      onClick={() =>{
+                        editCharacter(props.character_id, "char_species", editSpecies)
+                        props.searchByName("")
+                        setTimeout(() => {
+                            setEditSpeciesInput(false)
+                        }, 600)
+                    }}
                       className={styles.editButton}
                     >
                       Done
@@ -278,17 +291,9 @@ export default function CharacterPopUp(props) {
                 </p>
               </>
             ) : (
-              <div>
-                <p>
-                  {props.char_species}
-                  <button
-                    onClick={() => setEditSpeciesInput(!editSpeciesInput)}
-                    className={styles.editButton}
-                  >
-                    edit
-                  </button>
-                </p>
-              </div>
+              <>
+                <p>{props.char_species}</p>
+              </>
             )}
 
             <p className={styles.category}>Hair colour:</p>
