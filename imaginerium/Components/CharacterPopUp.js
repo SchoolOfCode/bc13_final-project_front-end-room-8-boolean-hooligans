@@ -360,7 +360,7 @@ export default function CharacterPopUp(props) {
                   type="text"
                   onChange={(e) => setEditSkin(e.target.value)}
                 ></input>
-                <button
+                <button 
                   onClick={() =>
                     editCharacter(
                       props.character_id,
@@ -381,7 +381,7 @@ export default function CharacterPopUp(props) {
               {props.char_skincolour}
               <button
                 onClick={() => setEditSkinInput(!editSkinInput)}
-                className="edit-button"
+                className={styles.editButton}
               >
                 edit
               </button>

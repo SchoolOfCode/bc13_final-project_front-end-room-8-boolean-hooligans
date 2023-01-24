@@ -64,7 +64,7 @@ body {
     right: 0;
     bottom: 0;
     top: 0;
-    z-index: 10;
+    z-index: 1;
     width: 60%;
     height: 70vh;
     top: 50%;
@@ -72,13 +72,15 @@ body {
     transform: translate(-50%, -50%);
     transition: all 0.3s;
     border-radius: 6px;
-    background: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(#b3e5ee, #a2bfcc);
     align-items: baseline;
     padding: 10px;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
     height: 70vh;
-  
+   
   }
+
+  
   
   #modal-root:empty {
     display: none;
