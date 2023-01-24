@@ -6,10 +6,7 @@ import { MdHeight } from "react-icons/md";
 import { useEffect, useState } from "react";
 import styles from "../styles/characterPopup.module.css";
 
-
 export default function CharacterPopUp(props) {
-  
-
   const [editNameInput, setEditNameInput] = useState(false);
   const [editName, setEditName] = useState(null);
   const [editAgeInput, setEditAgeInput] = useState(false);
@@ -107,7 +104,6 @@ export default function CharacterPopUp(props) {
 
   return (
     <div className={styles.popUp}>
-  
       <div className={styles.popUpLeft}>
         <img
           className={styles.popUpImage}
@@ -115,973 +111,1026 @@ export default function CharacterPopUp(props) {
         />
         <div className={styles.leftStuffContainer}>
           <div className={styles.editName}>
-        {editNameInput ? (
-          <div>
-            <input onChange={(e) => setEditName(e.target.value)}></input>
-            <button
-              onClick={() =>
-                editCharacter(props.character_id, "char_name", editName)
-              }
-              className={styles.editButton}
-            >
-              Done
-            </button>
+            {editNameInput ? (
+              <div>
+                <input
+                  defaultValue={props.char_name}
+                  onChange={(e) => setEditName(e.target.value)}
+                ></input>
+                <button
+                  onClick={() =>
+                    editCharacter(props.character_id, "char_name", editName)
+                  }
+                  className={styles.editButton}
+                >
+                  Done
+                </button>
+              </div>
+            ) : (
+              <div>
+                <div>
+                  <p>{props.char_name}</p>
+                </div>
+                <button
+                  onClick={() => setEditNameInput(!editNameInput)}
+                  className={styles.editButton}
+                >
+                  edit name
+                </button>
+              </div>
+            )}
           </div>
-        ) : (
-          <div>
-            <div>
-            <p>{props.char_name}</p></div>
+          <div className={styles.deleteContainer}>
             <button
-              onClick={() => setEditNameInput(!editNameInput)}
-              className={styles.editButton}
-            >
-              edit name
-            </button>
-          </div>
-        )}
-        </div>
-        <div className={styles.deleteContainer}>
-        <button
-          className={styles.deleteButton}
-          onClick={() => {
-            if (
-              confirm(
-                "Are you sure you want to delete " +
-                  props.char_name +
-                  "? This cannot be undone."
-              )
-            ) {
-              destroyCharacter(props.character_id);
-              props.searchByName("")
-              props.setShowModal(false);
-            }
-          }}
-        >
-          delete {props.char_name}
-        </button></div>
-<div className={styles.shareContainer}>
-        {emailTrigger ? (
-          <div>
-            <input type="text" onChange={(e) => setEmail(e.target.value)} />
-            <button
-            className={styles.shareButton}
+              className={styles.deleteButton}
               onClick={() => {
                 if (
                   confirm(
-                    "Are you sure you want to share " +
+                    "Are you sure you want to delete " +
                       props.char_name +
-                      " with this person? They will be able to edit anything they choose."
+                      "? This cannot be undone."
                   )
                 ) {
-                  {
-                    shareCharacter;
-                  }
+                  destroyCharacter(props.character_id);
+                  props.searchByName("");
+                  props.setShowModal(false);
                 }
               }}
             >
-              {" "}
-              Share Char
+              delete {props.char_name}
             </button>
           </div>
-        ) : (
-          <button className={styles.shareButton}
-            onClick={() => {
-              setEmailTrigger(!emailTrigger);
-            }}
-          >
-            Share {props.char_name} 
-          </button>
-        )}
-      </div></div></div>
+          <div className={styles.shareContainer}>
+            {emailTrigger ? (
+              <div>
+                <input type="text" onChange={(e) => setEmail(e.target.value)} />
+                <button
+                  className={styles.shareButton}
+                  onClick={() => {
+                    if (
+                      confirm(
+                        "Are you sure you want to share " +
+                          props.char_name +
+                          " with this person? They will be able to edit anything they choose."
+                      )
+                    ) {
+                      {
+                        shareCharacter;
+                      }
+                    }
+                  }}
+                >
+                  {" "}
+                  Share Char
+                </button>
+              </div>
+            ) : (
+              <button
+                className={styles.shareButton}
+                onClick={() => {
+                  setEmailTrigger(!emailTrigger);
+                }}
+              >
+                Share {props.char_name}
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
 
       <div className={styles.popUpRight}>
         <button
           className={styles.closePopUpButton}
           onClick={() => {
-            props.searchByName("")
+            props.searchByName("");
             props.setShowModal(false);
           }}
         >
           close
         </button>
         <h1 className={styles.header}>{props.char_name}</h1>
-<div className={styles.infoContainer}>
-  <div className={styles.section}>
-        <h2>Physical Appearance:</h2>
+        <div className={styles.infoContainer}>
+          <div className={styles.section}>
+            <h2>Physical Appearance:</h2>
 
-        {/* <p className="category">Portrait:</p>
+            {/* <p className="category">Portrait:</p>
             {editImgInput?(<div><input type='text' onChange={(e)=>setEditImg(e.target.value)}></input><button onClick={()=>editImg(props.character_id, 'char_img', editImg)} className="edit-button">Done</button></div>):(<div><p>{props.char_img}</p><button onClick={()=>setEditImgInput(!editImgInput)} className="edit-button">edit</button></div>)} */}
 
-        <span className={styles.category}>Age in years: </span>
-
-        {editAgeInput ? (
-          
-          <>
-         
-            <p>
-              <div>
-                <input
-                  type="number"
-                  onChange={(e) => setEditAge(e.target.value)}
-                ></input>
+            <div className={styles.category}>
+              Age in years:{" "}
+              <div hidden={editAgeInput}>
+                {" "}
                 <button
-                  onClick={() =>
-                    editCharacter(props.character_id, "char_age", editAge)
-                  }
-                  className={styles.editButton}
-                >
-                  Done
-                </button>
-              </div>
-            </p>
-          </>
-        ) : (
-         <>
-            <button
                   onClick={() => setEditAgeInput(!editAgeInput)}
                   className={styles.editButton}
                 >
                   edit
                 </button>
-              <p>
-                {props.char_age}
-                
-              </p>
+              </div>
+            </div>
+
+            {editAgeInput ? (
+              <>
+                <p>
+                  <div>
+                    <input
+                      defaultValue={props.char_age}
+                      type="number"
+                      onChange={(e) => setEditAge(e.target.value)}
+                    ></input>
+                    <button
+                      onClick={() =>
+                        editCharacter(props.character_id, "char_age", editAge)
+                      }
+                      className={styles.editButton}
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
               </>
-         
-        )}
+            ) : (
+              <>
+                <p>{props.char_age}</p>
+              </>
+            )}
 
-        <p className={styles.category}>Ethnic group and species:</p>
-        {editSpeciesInput ? (
-          <>
-            <p>
+            <p className={styles.category}>Ethnic group and species:</p>
+            {editSpeciesInput ? (
+              <>
+                <p>
+                  <div>
+                    <input
+                      type="text"
+                      onChange={(e) => setEditSpecies(e.target.value)}
+                    ></input>
+                    <button
+                      onClick={() =>
+                        editCharacter(
+                          props.character_id,
+                          "char_species",
+                          editSpecies
+                        )
+                      }
+                      className={styles.editButton}
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
+              </>
+            ) : (
               <div>
-                <input
-                  type="text"
-                  onChange={(e) => setEditSpecies(e.target.value)}
-                ></input>
-                <button
-                  onClick={() =>
-                    editCharacter(
-                      props.character_id,
-                      "char_species",
-                      editSpecies
-                    )
-                  }
-                  className={styles.editButton}
-                >
-                  Done
-                </button>
+                <p>
+                  {props.char_species}
+                  <button
+                    onClick={() => setEditSpeciesInput(!editSpeciesInput)}
+                    className={styles.editButton}
+                  >
+                    edit
+                  </button>
+                </p>
               </div>
-            </p>
-          </>
-        ) : (
-          <div>
-            <p>
-              {props.char_species}
-              <button
-                onClick={() => setEditSpeciesInput(!editSpeciesInput)}
-                className={styles.editButton}
-              >
-                edit
-              </button>
-            </p>
-          </div>
-        )}
+            )}
 
-        <p className={styles.category}>Hair colour:</p>
-        {editHairInput ? (
-          <>
-            <p>
+            <p className={styles.category}>Hair colour:</p>
+            {editHairInput ? (
+              <>
+                <p>
+                  <div>
+                    <input
+                      type="text"
+                      onChange={(e) => setEditHair(e.target.value)}
+                    ></input>
+                    <button
+                      onClick={() =>
+                        editCharacter(
+                          props.character_id,
+                          "char_haircolour",
+                          editHair
+                        )
+                      }
+                      className={styles.editButton}
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
+              </>
+            ) : (
               <div>
-                <input
-                  type="text"
-                  onChange={(e) => setEditHair(e.target.value)}
-                ></input>
-                <button
-                  onClick={() =>
-                    editCharacter(
-                      props.character_id,
-                      "char_haircolour",
-                      editHair
-                    )
-                  }
-                  className={styles.editButton}
-                >
-                  Done
-                </button>
+                <p>
+                  {props.char_haircolour}
+                  <button
+                    onClick={() => setEditHairInput(!editHairInput)}
+                    className={styles.editButton}
+                  >
+                    edit
+                  </button>
+                </p>
               </div>
-            </p>
-          </>
-        ) : (
-          <div>
-            <p>
-              {props.char_haircolour}
-              <button
-                onClick={() => setEditHairInput(!editHairInput)}
-                className={styles.editButton}
-              >
-                edit
-              </button>
-            </p>
-          </div>
-        )}
+            )}
 
-        <p className={styles.category}>Eye colour:</p>
-        {editEyeInput ? (
-          <>
-            <p>
+            <p className={styles.category}>Eye colour:</p>
+            {editEyeInput ? (
+              <>
+                <p>
+                  <div>
+                    <input
+                      type="text"
+                      onChange={(e) => setEditEye(e.target.value)}
+                    ></input>
+                    <button
+                      onClick={() =>
+                        editCharacter(
+                          props.character_id,
+                          "char_eyecolour",
+                          editEye
+                        )
+                      }
+                      className={styles.editButton}
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
+              </>
+            ) : (
               <div>
-                <input
-                  type="text"
-                  onChange={(e) => setEditEye(e.target.value)}
-                ></input>
-                <button
-                  onClick={() =>
-                    editCharacter(props.character_id, "char_eyecolour", editEye)
-                  }
-                  className={styles.editButton}
-                >
-                  Done
-                </button>
+                <p>
+                  {props.char_eyecolour}
+                  <button
+                    onClick={() => setEditEyeInput(!editEyeInput)}
+                    className={styles.editButton}
+                  >
+                    edit
+                  </button>
+                </p>
               </div>
-            </p>
-          </>
-        ) : (
-          <div>
-            <p>
-              {props.char_eyecolour}
-              <button
-                onClick={() => setEditEyeInput(!editEyeInput)}
-                className={styles.editButton}
-              >
-                edit
-              </button>
-            </p>
-          </div>
-        )}
+            )}
 
-        <p className={styles.category}>Skin colour:</p>
-        {editSkinInput ? (
-          <>
-            <p>
+            <p className={styles.category}>Skin colour:</p>
+            {editSkinInput ? (
+              <>
+                <p>
+                  <div>
+                    <input
+                      type="text"
+                      onChange={(e) => setEditSkin(e.target.value)}
+                    ></input>
+                    <button
+                      onClick={() =>
+                        editCharacter(
+                          props.character_id,
+                          "char_skincolour",
+                          editSkin
+                        )
+                      }
+                      className={styles.editButton}
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
+              </>
+            ) : (
               <div>
-                <input
-                  type="text"
-                  onChange={(e) => setEditSkin(e.target.value)}
-                ></input>
-                <button 
-                  onClick={() =>
-                    editCharacter(
-                      props.character_id,
-                      "char_skincolour",
-                      editSkin
-                    )
-                  }
-                  className={styles.editButton}
-                >
-                  Done
-                </button>
+                <p>
+                  {props.char_skincolour}
+                  <button
+                    onClick={() => setEditSkinInput(!editSkinInput)}
+                    className={styles.editButton}
+                  >
+                    edit
+                  </button>
+                </p>
               </div>
-            </p>
-          </>
-        ) : (
-          <div>
-            <p>
-              {props.char_skincolour}
-              <button
-                onClick={() => setEditSkinInput(!editSkinInput)}
-                className={styles.editButton}
-              >
-                edit
-              </button>
-            </p>
-          </div>
-        )}
+            )}
 
-        <p className={styles.category}>Height in metres:</p>
-        {editHeightInput ? (
-          <>
-            <p>
+            <p className={styles.category}>Height in metres:</p>
+            {editHeightInput ? (
+              <>
+                <p>
+                  <div>
+                    <input
+                      type="number"
+                      onChange={(e) => setEditHeight(e.target.value)}
+                    ></input>
+                    <button
+                      onClick={() =>
+                        editCharacter(
+                          props.character_id,
+                          "char_height",
+                          editHeight
+                        )
+                      }
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
+              </>
+            ) : (
               <div>
-                <input
-                  type="number"
-                  onChange={(e) => setEditHeight(e.target.value)}
-                ></input>
-                <button
-                  onClick={() =>
-                    editCharacter(props.character_id, "char_height", editHeight)
-                  }
-                >
-                  Done
-                </button>
+                <p>
+                  {props.char_height}
+                  <button
+                    onClick={() => setEditHeightInput(!editHeightInput)}
+                    className={styles.editButton}
+                  >
+                    edit
+                  </button>
+                </p>
               </div>
-            </p>
-          </>
-        ) : (
-          <div>
-            <p>
-              {props.char_height}
-              <button
-                onClick={() => setEditHeightInput(!editHeightInput)}
-                className={styles.editButton}
-              >
-                edit
-              </button>
-            </p>
-          </div>
-        )}
+            )}
 
-        <p className={styles.category}>Weight in Kilograms:</p>
-        {editWeightInput ? (
-          <>
-            <p>
+            <p className={styles.category}>Weight in Kilograms:</p>
+            {editWeightInput ? (
+              <>
+                <p>
+                  <div>
+                    <input
+                      type="text"
+                      onChange={(e) => setEditWeight(e.target.value)}
+                    ></input>
+                    <button
+                      onClick={() =>
+                        editCharacter(
+                          props.character_id,
+                          "char_weight",
+                          editWeight
+                        )
+                      }
+                      className={styles.editButton}
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
+              </>
+            ) : (
               <div>
-                <input
-                  type="text"
-                  onChange={(e) => setEditWeight(e.target.value)}
-                ></input>
-                <button
-                  onClick={() =>
-                    editCharacter(props.character_id, "char_weight", editWeight)
-                  }
-                  className={styles.editButton}
-                >
-                  Done
-                </button>
+                <p>
+                  {props.char_weight}
+                  <button
+                    onClick={() => setEditWeightInput(!editWeightInput)}
+                    className={styles.editButton}
+                  >
+                    edit
+                  </button>
+                </p>
               </div>
-            </p>
-          </>
-        ) : (
-          <div>
-            <p>
-              {props.char_weight}
-              <button
-                onClick={() => setEditWeightInput(!editWeightInput)}
-                className={styles.editButton}
-              >
-                edit
-              </button>
-            </p>
-          </div>
-        )}
+            )}
 
-        <p className={styles.category}>Distinguishing features:</p>
-        {editFeaturesInput ? (
-          <>
-            <p>
+            <p className={styles.category}>Distinguishing features:</p>
+            {editFeaturesInput ? (
+              <>
+                <p>
+                  <div>
+                    <input
+                      type="text"
+                      onChange={(e) => setEditFeatures(e.target.value)}
+                    ></input>
+                    <button
+                      onClick={() =>
+                        editCharacter(
+                          props.character_id,
+                          "char_features",
+                          editFeatures
+                        )
+                      }
+                      className={styles.editButton}
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
+              </>
+            ) : (
               <div>
-                <input
-                  type="text"
-                  onChange={(e) => setEditFeatures(e.target.value)}
-                ></input>
-                <button
-                  onClick={() =>
-                    editCharacter(
-                      props.character_id,
-                      "char_features",
-                      editFeatures
-                    )
-                  }
-                  className={styles.editButton}
-                >
-                  Done
-                </button>
+                <p>
+                  {props.char_features}
+                  <button
+                    onClick={() => setEditFeaturesInput(!editFeaturesInput)}
+                    className={styles.editButton}
+                  >
+                    edit
+                  </button>
+                </p>
               </div>
-            </p>
-          </>
-        ) : (
-          <div>
-            <p>
-              {props.char_features}
-              <button
-                onClick={() => setEditFeaturesInput(!editFeaturesInput)}
-                className={styles.editButton}
-              >
-                edit
-              </button>
-            </p>
-          </div>
-        )}
+            )}
 
-        <p className={styles.category}>Physical Description:</p>
-        {editDescInput ? (
-          <>
-            <p>
+            <p className={styles.category}>Physical Description:</p>
+            {editDescInput ? (
+              <>
+                <p>
+                  <div>
+                    <textarea
+                      type="text"
+                      onChange={(e) => setEditDesc(e.target.value)}
+                    ></textarea>
+                    <button
+                      onClick={() =>
+                        editCharacter(props.character_id, "char_desc", editDesc)
+                      }
+                      className={styles.editButton}
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
+              </>
+            ) : (
               <div>
-                <textarea
-                  type="text"
-                  onChange={(e) => setEditDesc(e.target.value)}
-                ></textarea>
-                <button
-                  onClick={() =>
-                    editCharacter(props.character_id, "char_desc", editDesc)
-                  }
-                  className={styles.editButton}
-                >
-                  Done
-                </button>
+                <p>
+                  {props.char_desc}
+                  <button
+                    onClick={() => setEditDescInput(!editDescInput)}
+                    className={styles.editButton}
+                  >
+                    edit
+                  </button>
+                </p>
               </div>
-            </p>
-          </>
-        ) : (
-          <div>
-            <p>
-              {props.char_desc}
-              <button
-                onClick={() => setEditDescInput(!editDescInput)}
-                className={styles.editButton}
-              >
-                edit
-              </button>
-            </p>
-          </div>
-        )}
+            )}
 
-        {props.char_alive ? (
-          <>
-            <p className={styles.category}>Status:</p>
-            <p>
-              {" "}
-              <GiHeartInside /> Alive!
-              <button
-                className={styles.editButton}
-                onClick={() =>
-                  editCharacter(props.character_id, "char_alive", false)
-                }
-              >
-                Kill!
-              </button>
+            {props.char_alive ? (
+              <>
+                <p className={styles.category}>Status:</p>
+                <p>
+                  {" "}
+                  <GiHeartInside /> Alive!
+                  <button
+                    className={styles.editButton}
+                    onClick={() =>
+                      editCharacter(props.character_id, "char_alive", false)
+                    }
+                  >
+                    Kill!
+                  </button>
+                </p>
+              </>
+            ) : (
+              <>
+                <p className={styles.category}>Status:</p>
+                <p>
+                  {" "}
+                  <SlGhost /> Dead
+                  <button
+                    className={styles.editButton}
+                    onClick={() =>
+                      editCharacter(props.character_id, "char_alive", true)
+                    }
+                  >
+                    Resurrect!
+                  </button>
+                </p>
+              </>
+            )}
+          </div>
+          <div className={styles.section}>
+            <h2>Personality:</h2>
+
+            <p className={styles.category}>
+              Hopes, dreams, motivation, and goals:
             </p>
-          </>
-        ) : (
-          <>
-            <p className={styles.category}>Status:</p>
-            <p>
-              {" "}
-              <SlGhost /> Dead
-              <button
-                className={styles.editButton}
-                onClick={() =>
-                  editCharacter(props.character_id, "char_alive", true)
-                }
-              >
-                Resurrect!
-              </button>
+            {editHopesInput ? (
+              <>
+                <p>
+                  <div>
+                    <textarea
+                      type="text"
+                      onChange={(e) => setEditHopes(e.target.value)}
+                    ></textarea>
+                    <button
+                      onClick={() =>
+                        editCharacter(
+                          props.character_id,
+                          "char_hopes",
+                          editHopes
+                        )
+                      }
+                      className={styles.editButton}
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
+              </>
+            ) : (
+              <div>
+                <p>
+                  {props.char_hopes}
+                  <button
+                    onClick={() => setEditHopesInput(!editHopes)}
+                    className={styles.editButton}
+                  >
+                    edit
+                  </button>
+                </p>
+              </div>
+            )}
+
+            <p className={styles.category}>Fears, troubles, and flaws:</p>
+            {editFearsInput ? (
+              <>
+                <p>
+                  <div>
+                    <textarea
+                      type="text"
+                      onChange={(e) => setEditFears(e.target.value)}
+                    ></textarea>
+                    <button
+                      onClick={() =>
+                        editCharacter(
+                          props.character_id,
+                          "char_fears",
+                          editFears
+                        )
+                      }
+                      className={styles.editButton}
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
+              </>
+            ) : (
+              <div>
+                <p>
+                  {props.char_fears}
+                  <button
+                    onClick={() => setEditFearsInput(!editFearsInput)}
+                    className={styles.editButton}
+                  >
+                    edit
+                  </button>
+                </p>
+              </div>
+            )}
+
+            <p className={styles.category}>
+              Catchphrases, speech patterns, languages spoken:
             </p>
-          </>
-        )}
+            {editSpeechInput ? (
+              <>
+                <p>
+                  <div>
+                    <textarea
+                      type="text"
+                      onChange={(e) => setEditSpeech(e.target.value)}
+                    ></textarea>
+                    <button
+                      onClick={() =>
+                        editCharacter(
+                          props.character_id,
+                          "char_speech",
+                          editSpeech
+                        )
+                      }
+                      className={styles.editButton}
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
+              </>
+            ) : (
+              <div>
+                <p>
+                  {props.char_speech}
+                  <button
+                    onClick={() => setEditSpeechInput(!editSpeechInput)}
+                    className={styles.editButton}
+                  >
+                    edit
+                  </button>
+                </p>
+              </div>
+            )}
+
+            <p className={styles.category}>Likes and dislikes:</p>
+            {editLikesInput ? (
+              <>
+                <p>
+                  <div>
+                    <textarea
+                      type="text"
+                      onChange={(e) => setEditLikes(e.target.value)}
+                    ></textarea>
+                    <button
+                      onClick={() =>
+                        editCharacter(
+                          props.character_id,
+                          "char_likes",
+                          editLikes
+                        )
+                      }
+                      className={styles.editButton}
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
+              </>
+            ) : (
+              <div>
+                <p>
+                  {props.char_likes}
+                  <button
+                    onClick={() => setEditLikesInput(!editLikesInput)}
+                    className={styles.editButton}
+                  >
+                    edit
+                  </button>
+                </p>
+              </div>
+            )}
+          </div>
+          <div className={styles.section}>
+            <h2>Other Details:</h2>
+
+            <p className={styles.category}>Brief Background:</p>
+            {editBackgroundInput ? (
+              <>
+                <p>
+                  <div>
+                    <textarea
+                      type="text"
+                      onChange={(e) => setEditBackground(e.target.value)}
+                    ></textarea>
+                    <button
+                      onClick={() =>
+                        editCharacter(
+                          props.character_id,
+                          "char_background",
+                          editBackground
+                        )
+                      }
+                      className={styles.editButton}
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
+              </>
+            ) : (
+              <div>
+                <p>
+                  {props.char_background}
+                  <button
+                    onClick={() => setEditBackgroundInput(!editBackgroundInput)}
+                    className={styles.editButton}
+                  >
+                    edit
+                  </button>
+                </p>
+              </div>
+            )}
+
+            <p className={styles.category}>Disabilities:</p>
+            {editDisabilitiesInput ? (
+              <>
+                <p>
+                  <div>
+                    <textarea
+                      type="text"
+                      onChange={(e) => setEditDisabilities(e.target.value)}
+                    ></textarea>
+                    <button
+                      onClick={() =>
+                        editCharacter(
+                          props.character_id,
+                          "char_disabilities",
+                          editDisabilities
+                        )
+                      }
+                      className={styles.editButton}
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
+              </>
+            ) : (
+              <div>
+                <p>
+                  {props.char_disabilities}
+                  <button
+                    onClick={() =>
+                      setEditDisabilitiesInput(!editDisabilitiesInput)
+                    }
+                    className={styles.editButton}
+                  >
+                    edit
+                  </button>
+                </p>
+              </div>
+            )}
+
+            <p className={styles.category}>Job:</p>
+            {editJobInput ? (
+              <>
+                <p>
+                  <div>
+                    <textarea
+                      type="text"
+                      onChange={(e) => setEditJob(e.target.value)}
+                    ></textarea>
+                    <button
+                      onClick={() =>
+                        editCharacter(props.character_id, "char_job", editJob)
+                      }
+                      className={styles.editButton}
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
+              </>
+            ) : (
+              <div>
+                <p>
+                  {props.char_job}
+                  <button
+                    onClick={() => setEditJobInput(!editJobInput)}
+                    className={styles.editButton}
+                  >
+                    edit
+                  </button>
+                </p>
+              </div>
+            )}
+
+            <p className={styles.category}>Gender:</p>
+            {editGenderInput ? (
+              <>
+                <p>
+                  <div>
+                    <input
+                      type="text"
+                      onChange={(e) => setEditGender(e.target.value)}
+                    ></input>
+                    <button
+                      onClick={() =>
+                        editCharacter(
+                          props.character_id,
+                          "char_gender",
+                          editGender
+                        )
+                      }
+                      className={styles.editButton}
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
+              </>
+            ) : (
+              <div>
+                <p>
+                  {props.char_gender}
+                  <button
+                    onClick={() => setEditGenderInput(!editGenderInput)}
+                    className={styles.editButton}
+                  >
+                    edit
+                  </button>
+                </p>
+              </div>
+            )}
+
+            <p className={styles.category}>Pronouns:</p>
+            {editPronounsInput ? (
+              <>
+                <p>
+                  <div>
+                    <input
+                      type="text"
+                      onChange={(e) => setEditPronouns(e.target.value)}
+                    ></input>
+                    <button
+                      onClick={() =>
+                        editCharacter(
+                          props.character_id,
+                          "char_pronouns",
+                          editPronouns
+                        )
+                      }
+                      className={styles.editButton}
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
+              </>
+            ) : (
+              <div>
+                <p>
+                  {props.char_pronouns}
+                  <button
+                    onClick={() => setEditPronounsInput(!editPronounsInput)}
+                    className={styles.editButton}
+                  >
+                    edit
+                  </button>
+                </p>
+              </div>
+            )}
+
+            <p className={styles.category}>Sexuality:</p>
+            {editSexualityInput ? (
+              <>
+                <p>
+                  <div>
+                    <input
+                      type="text"
+                      onChange={(e) => setEditSexuality(e.target.value)}
+                    ></input>
+                    <button
+                      onClick={() =>
+                        editCharacter(
+                          props.character_id,
+                          "char_sexuality",
+                          editSexuality
+                        )
+                      }
+                      className={styles.editButton}
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
+              </>
+            ) : (
+              <div>
+                <p>
+                  {props.char_sexuality}
+                  <button
+                    onClick={() => setEditSexualityInput(!editSexualityInput)}
+                    className={styles.editButton}
+                  >
+                    edit
+                  </button>
+                </p>
+              </div>
+            )}
+
+            <p className={styles.category}>Skills:</p>
+            {editSkillsInput ? (
+              <>
+                <p>
+                  <div>
+                    <textarea
+                      type="text"
+                      onChange={(e) => setEditSkills(e.target.value)}
+                    ></textarea>
+                    <button
+                      onClick={() =>
+                        editCharacter(
+                          props.character_id,
+                          "char_skills",
+                          editSkills
+                        )
+                      }
+                      className={styles.editButton}
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
+              </>
+            ) : (
+              <div>
+                <p>
+                  {props.char_skills}
+                  <button
+                    onClick={() => setEditSkillsInput(!editSkillsInput)}
+                    className={styles.editButton}
+                  >
+                    edit
+                  </button>
+                </p>
+              </div>
+            )}
+
+            <p className={styles.category}>Morality:</p>
+            {editMoralityInput ? (
+              <>
+                <p>
+                  <div>
+                    <textarea
+                      type="text"
+                      onChange={(e) => setEditMorality(e.target.value)}
+                    ></textarea>
+                    <button
+                      onClick={() =>
+                        editCharacter(
+                          props.character_id,
+                          "char_morality",
+                          editMorality
+                        )
+                      }
+                      className={styles.editButton}
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
+              </>
+            ) : (
+              <div>
+                <p>
+                  {props.char_morality}
+                  <button
+                    onClick={() => setEditMoralityInput(!editMoralityInput)}
+                    className={styles.editButton}
+                  >
+                    edit
+                  </button>
+                </p>
+              </div>
+            )}
+
+            <p className={styles.category}>Personal Relationships:</p>
+            {editRelationshipsInput ? (
+              <>
+                <p>
+                  <div>
+                    <textarea
+                      type="text"
+                      onChange={(e) => setEditRelationships(e.target.value)}
+                    ></textarea>
+                    <button
+                      onClick={() =>
+                        editCharacter(
+                          props.character_id,
+                          "char_relationships",
+                          editRelationships
+                        )
+                      }
+                      className={styles.editButton}
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
+              </>
+            ) : (
+              <div>
+                <p>
+                  {props.char_relationships}
+                  <button
+                    onClick={() =>
+                      setEditRelationshipsInput(!editRelationshipsInput)
+                    }
+                    className={styles.editButton}
+                  >
+                    edit
+                  </button>
+                </p>
+              </div>
+            )}
+
+            <p className={styles.category}>General Notes:</p>
+            {editNotesInput ? (
+              <>
+                <p>
+                  <div>
+                    <textarea
+                      type="text"
+                      onChange={(e) => setEditNotes(e.target.value)}
+                    ></textarea>
+                    <button
+                      onClick={() =>
+                        editCharacter(
+                          props.character_id,
+                          "char_notes",
+                          editNotes
+                        )
+                      }
+                      className={styles.editButton}
+                    >
+                      Done
+                    </button>
+                  </div>
+                </p>
+              </>
+            ) : (
+              <div>
+                <p>
+                  {props.char_notes}
+                  <button
+                    onClick={() => setEditNotesInput(!editNotesInput)}
+                    className={styles.editButton}
+                  >
+                    edit
+                  </button>
+                </p>
+              </div>
+            )}
+          </div>
         </div>
-        <div className={styles.section}>
-        <h2>Personality:</h2>
-      
-        <p className={styles.category}>Hopes, dreams, motivation, and goals:</p>
-        {editHopesInput ? (
-          <>
-            <p>
-              <div>
-                <textarea
-                  type="text"
-                  onChange={(e) => setEditHopes(e.target.value)}
-                ></textarea>
-                <button
-                  onClick={() =>
-                    editCharacter(props.character_id, "char_hopes", editHopes)
-                  }
-                  className={styles.editButton}
-                >
-                  Done
-                </button>
-              </div>
-            </p>
-          </>
-        ) : (
-          <div>
-            <p>
-              {props.char_hopes}
-              <button
-                onClick={() => setEditHopesInput(!editHopes)}
-                className={styles.editButton}
-              >
-                edit
-              </button>
-            </p>
-          </div>
-        )}
-
-        <p className={styles.category}>Fears, troubles, and flaws:</p>
-        {editFearsInput ? (
-          <>
-            <p>
-              <div>
-                <textarea
-                  type="text"
-                  onChange={(e) => setEditFears(e.target.value)}
-                ></textarea>
-                <button
-                  onClick={() =>
-                    editCharacter(props.character_id, "char_fears", editFears)
-                  }
-                  className={styles.editButton}
-                >
-                  Done
-                </button>
-              </div>
-            </p>
-          </>
-        ) : (
-          <div>
-            <p>
-              {props.char_fears}
-              <button
-                onClick={() => setEditFearsInput(!editFearsInput)}
-                className={styles.editButton}
-              >
-                edit
-              </button>
-            </p>
-          </div>
-        )}
-
-        <p className={styles.category}>
-          Catchphrases, speech patterns, languages spoken:
-        </p>
-        {editSpeechInput ? (
-          <>
-            <p>
-              <div>
-                <textarea
-                  type="text"
-                  onChange={(e) => setEditSpeech(e.target.value)}
-                ></textarea>
-                <button
-                  onClick={() =>
-                    editCharacter(props.character_id, "char_speech", editSpeech)
-                  }
-                  className={styles.editButton}
-                >
-                  Done
-                </button>
-              </div>
-            </p>
-          </>
-        ) : (
-          <div>
-            <p>
-              {props.char_speech}
-              <button
-                onClick={() => setEditSpeechInput(!editSpeechInput)}
-                className={styles.editButton}
-              >
-                edit
-              </button>
-            </p>
-          </div>
-        )}
-
-        <p className={styles.category}>Likes and dislikes:</p>
-        {editLikesInput ? (
-          <>
-            <p>
-              <div>
-                <textarea
-                  type="text"
-                  onChange={(e) => setEditLikes(e.target.value)}
-                ></textarea>
-                <button
-                  onClick={() =>
-                    editCharacter(props.character_id, "char_likes", editLikes)
-                  }
-                  className={styles.editButton}
-                >
-                  Done
-                </button>
-              </div>
-            </p>
-          </>
-        ) : (
-          <div>
-            <p>
-              {props.char_likes}
-              <button
-                onClick={() => setEditLikesInput(!editLikesInput)}
-                className={styles.editButton}
-              >
-                edit
-              </button>
-            </p>
-          </div>
-        )}
-</div>
-<div className={styles.section}>
-        <h2>Other Details:</h2>
-
-        <p className={styles.category}>Brief Background:</p>
-        {editBackgroundInput ? (
-          <>
-            <p>
-              <div>
-                <textarea
-                  type="text"
-                  onChange={(e) => setEditBackground(e.target.value)}
-                ></textarea>
-                <button
-                  onClick={() =>
-                    editCharacter(
-                      props.character_id,
-                      "char_background",
-                      editBackground
-                    )
-                  }
-                  className={styles.editButton}
-                >
-                  Done
-                </button>
-              </div>
-            </p>
-          </>
-        ) : (
-          <div>
-            <p>
-              {props.char_background}
-              <button
-                onClick={() => setEditBackgroundInput(!editBackgroundInput)}
-                className={styles.editButton}
-              >
-                edit
-              </button>
-            </p>
-          </div>
-        )}
-
-        <p className={styles.category}>Disabilities:</p>
-        {editDisabilitiesInput ? (
-          <>
-            <p>
-              <div>
-                <textarea
-                  type="text"
-                  onChange={(e) => setEditDisabilities(e.target.value)}
-                ></textarea>
-                <button
-                  onClick={() =>
-                    editCharacter(
-                      props.character_id,
-                      "char_disabilities",
-                      editDisabilities
-                    )
-                  }
-                  className={styles.editButton}
-                >
-                  Done
-                </button>
-              </div>
-            </p>
-          </>
-        ) : (
-          <div>
-            <p>
-              {props.char_disabilities}
-              <button
-                onClick={() => setEditDisabilitiesInput(!editDisabilitiesInput)}
-                className={styles.editButton}
-              >
-                edit
-              </button>
-            </p>
-          </div>
-        )}
-
-        <p className={styles.category}>Job:</p>
-        {editJobInput ? (
-          <>
-            <p>
-              <div>
-                <textarea
-                  type="text"
-                  onChange={(e) => setEditJob(e.target.value)}
-                ></textarea>
-                <button
-                  onClick={() =>
-                    editCharacter(props.character_id, "char_job", editJob)
-                  }
-                  className={styles.editButton}
-                >
-                  Done
-                </button>
-              </div>
-            </p>
-          </>
-        ) : (
-          <div>
-            <p>
-              {props.char_job}
-              <button
-                onClick={() => setEditJobInput(!editJobInput)}
-                className={styles.editButton}
-              >
-                edit
-              </button>
-            </p>
-          </div>
-        )}
-
-        <p className={styles.category}>Gender:</p>
-        {editGenderInput ? (
-          <>
-            <p>
-              <div>
-                <input
-                  type="text"
-                  onChange={(e) => setEditGender(e.target.value)}
-                ></input>
-                <button
-                  onClick={() =>
-                    editCharacter(props.character_id, "char_gender", editGender)
-                  }
-                  className={styles.editButton}
-                >
-                  Done
-                </button>
-              </div>
-            </p>
-          </>
-        ) : (
-          <div>
-            <p>
-              {props.char_gender}
-              <button
-                onClick={() => setEditGenderInput(!editGenderInput)}
-                className={styles.editButton}
-              >
-                edit
-              </button>
-            </p>
-          </div>
-        )}
-
-        <p className={styles.category}>Pronouns:</p>
-        {editPronounsInput ? (
-          <>
-            <p>
-              <div>
-                <input
-                  type="text"
-                  onChange={(e) => setEditPronouns(e.target.value)}
-                ></input>
-                <button
-                  onClick={() =>
-                    editCharacter(
-                      props.character_id,
-                      "char_pronouns",
-                      editPronouns
-                    )
-                  }
-                  className={styles.editButton}
-                >
-                  Done
-                </button>
-              </div>
-            </p>
-          </>
-        ) : (
-          <div>
-            <p>
-              {props.char_pronouns}
-              <button
-                onClick={() => setEditPronounsInput(!editPronounsInput)}
-                className={styles.editButton}
-              >
-                edit
-              </button>
-            </p>
-          </div>
-        )}
-
-        <p className={styles.category}>Sexuality:</p>
-        {editSexualityInput ? (
-          <>
-            <p>
-              <div>
-                <input
-                  type="text"
-                  onChange={(e) => setEditSexuality(e.target.value)}
-                ></input>
-                <button
-                  onClick={() =>
-                    editCharacter(
-                      props.character_id,
-                      "char_sexuality",
-                      editSexuality
-                    )
-                  }
-                  className={styles.editButton}
-                >
-                  Done
-                </button>
-              </div>
-            </p>
-          </>
-        ) : (
-          <div>
-            <p>
-              {props.char_sexuality}
-              <button
-                onClick={() => setEditSexualityInput(!editSexualityInput)}
-                className={styles.editButton}
-              >
-                edit
-              </button>
-            </p>
-          </div>
-        )}
-
-        <p className={styles.category}>Skills:</p>
-        {editSkillsInput ? (
-          <>
-            <p>
-              <div>
-                <textarea
-                  type="text"
-                  onChange={(e) => setEditSkills(e.target.value)}
-                ></textarea>
-                <button
-                  onClick={() =>
-                    editCharacter(props.character_id, "char_skills", editSkills)
-                  }
-                  className={styles.editButton}
-                >
-                  Done
-                </button>
-              </div>
-            </p>
-          </>
-        ) : (
-          <div>
-            <p>
-              {props.char_skills}
-              <button
-                onClick={() => setEditSkillsInput(!editSkillsInput)}
-                className={styles.editButton}
-              >
-                edit
-              </button>
-            </p>
-          </div>
-        )}
-
-        <p className={styles.category}>Morality:</p>
-        {editMoralityInput ? (
-          <>
-            <p>
-              <div>
-                <textarea
-                  type="text"
-                  onChange={(e) => setEditMorality(e.target.value)}
-                ></textarea>
-                <button
-                  onClick={() =>
-                    editCharacter(
-                      props.character_id,
-                      "char_morality",
-                      editMorality
-                    )
-                  }
-                  className={styles.editButton}
-                >
-                  Done
-                </button>
-              </div>
-            </p>
-          </>
-        ) : (
-          <div>
-            <p>
-              {props.char_morality}
-              <button
-                onClick={() => setEditMoralityInput(!editMoralityInput)}
-                className={styles.editButton}
-              >
-                edit
-              </button>
-            </p>
-          </div>
-        )}
-
-        <p className={styles.category}>Personal Relationships:</p>
-        {editRelationshipsInput ? (
-          <>
-            <p>
-              <div>
-                <textarea
-                  type="text"
-                  onChange={(e) => setEditRelationships(e.target.value)}
-                ></textarea>
-                <button
-                  onClick={() =>
-                    editCharacter(
-                      props.character_id,
-                      "char_relationships",
-                      editRelationships
-                    )
-                  }
-                  className={styles.editButton}
-                >
-                  Done
-                </button>
-              </div>
-            </p>
-          </>
-        ) : (
-          <div>
-            <p>
-              {props.char_relationships}
-              <button
-                onClick={() =>
-                  setEditRelationshipsInput(!editRelationshipsInput)
-                }
-                className={styles.editButton}
-              >
-                edit
-              </button>
-            </p>
-          </div>
-        )}
-
-        <p className={styles.category}>General Notes:</p>
-        {editNotesInput ? (
-          <>
-            <p>
-              <div>
-                <textarea
-                  type="text"
-                  onChange={(e) => setEditNotes(e.target.value)}
-                ></textarea>
-                <button
-                  onClick={() =>
-                    editCharacter(props.character_id, "char_notes", editNotes)
-                  }
-                  className={styles.editButton}
-                >
-                  Done
-                </button>
-              </div>
-            </p>
-          </>
-        ) : (
-          <div>
-            <p>
-              {props.char_notes}
-              <button
-                onClick={() => setEditNotesInput(!editNotesInput)}
-                className={styles.editButton}
-              >
-                edit
-              </button>
-            </p>
-          </div>
-        )}</div>
-      </div>
       </div>
     </div>
   );
