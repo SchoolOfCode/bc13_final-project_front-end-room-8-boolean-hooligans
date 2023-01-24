@@ -157,8 +157,8 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     justify-content: center;
     align-items: center;
     align-items: center;
-    
-    
+    margin: 75px;
+    gap: 14px;
    
 }
 
@@ -358,3 +358,26 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     color: #000;
 }
 
+@media (max-width: 1024px) {
+    .formContainerStepTwo {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .stepTwoLeftContainer {
+        width: 100%;
+    }
+    .stepTwoRightContainer {
+        width: 100%;
+    }
+
+}
+@media (max-width: 1400px) {
+    .formContainerStepTwo {
+
+        font-size: 14px;
+    }
+    .formContainerStepTwo textarea {
+        font-size: 14px;
+    }
+
+}

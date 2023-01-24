@@ -33,6 +33,7 @@ export default function Home() {
                 height={320}
                 width={427}
                 alt="Earth"
+                unoptimized={true}
               />
 
               <p>
