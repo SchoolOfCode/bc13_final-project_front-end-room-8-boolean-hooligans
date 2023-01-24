@@ -7,12 +7,10 @@ import { useSession } from "next-auth/react";
 import { BiSearchAlt } from "react-icons/bi";
 import NewNavBar from "../Components/NewNavBar.js";
 import PleaseLogin from "../Components/PleaseLogin.js"
+import NoCharactersYet from "../Components/NoCharactersYet.js";
+
 export default function characterList() {
   const { data: session } = useSession();
-
-
-
-
 
   useEffect(() => {
     if (session) {
@@ -53,6 +51,14 @@ export default function characterList() {
     return (
       <>
        <PleaseLogin />
+      </>
+    );
+  }
+
+  if (charactersArray.length < 1) {
+    return (
+      <>
+        <NoCharactersYet />
       </>
     );
   }

@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import { BiSearchAlt } from "react-icons/bi";
 import NewNavBar from "../Components/NewNavBar";
-import PleaseLogin from "../Components/PleaseLogin.js"
+import PleaseLogin from "../Components/PleaseLogin.js";
+import NoCharactersShared from "../Components/NoCharactersShared.js";
 
 export default function characterList() {
   const { data: session } = useSession();
@@ -38,6 +39,14 @@ export default function characterList() {
       method: (a, b) => (a.character_id > b.character_id ? -1 : 1)
     }
   };
+
+  if (charactersArray.length < 1) {
+    return (
+      <>
+        <NoCharactersShared />
+      </>
+    )
+  }
 
   if (!session) {
     return (

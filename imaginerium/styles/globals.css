@@ -20,7 +20,10 @@ body {
 
   -webkit-animation: AnimationName 14s ease infinite;
   animation: AnimationName 14s ease infinite;
- 
+
+  /* text-transform: lowercase; */
+  color: white;
+
   scroll-snap-type: y mandatory;
   position: relative;
   height: 100vh;
@@ -124,7 +127,7 @@ body {
   /* ********** Character cards CSS ************** */
   
   
-  .centre {
+  .center {
     width: 360px;
     height: 200px;
   }
