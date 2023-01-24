@@ -40,7 +40,7 @@ export default function Step3({ setStep, formValues, setFormValues }) {
 
   return (
     <div className={styles.mainStepTwo}>
-      <h2 className={styles.heading}>Miscellaneous</h2>
+      <h2>Other Details</h2>
       <form
         className={styles.mainContainer}
         onSubmit={handleSubmit(onSubmit)}
