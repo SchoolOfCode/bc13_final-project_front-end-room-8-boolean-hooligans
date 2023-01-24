@@ -134,21 +134,29 @@ export default function CharacterPopUp(props) {
             </button>
           </div>
         )}
-        <button
-          className={styles.deleteButton}
-          onClick={() => destroyCharacter(props.character_id)}
-        >
-          delete {props.char_name}
-        </button>
+      <button
+    className={styles.deleteButton}
+    onClick={() => {
+        if (confirm("Are you sure you want to delete " + props.char_name + "? This cannot be undone.")) {
+            destroyCharacter(props.character_id);
+        }
+    }}
+>
+    delete {props.char_name}
+</button>
+
+
 
         {emailTrigger ? (
           <div>
             <input type="text" onChange={(e) => setEmail(e.target.value)} />
-            <button onClick={shareCharacter}>Share Char</button>
+            <button onClick={()=> { if (confirm("Are you sure you want to share " + props.char_name + " with this person? They will be able to edit anything they choose.")) {
+             {shareCharacter} }}}> Share Char</button>
           </div>
         ) : (
           <button
-            onClick={() => {
+            onClick={() => {;
+          
               setEmailTrigger(!emailTrigger);
             }}
           >
