@@ -110,33 +110,33 @@ export default function Step1({ setStep, formValues, setFormValues }) {
             />
           </div>
           <div>
-            <label htmlFor="char_haircolour">Hair colour</label>
+            <label htmlFor="char_hairColour">Hair colour</label>
             <input
-              defaultValue={formValues.char_haircolour}
+              defaultValue={formValues.char_hairColour}
               type="text"
-              {...register("char_haircolour", { required: false })}
-              name="char_haircolour"
-              id="char_haircolour"
+              {...register("char_hairColour", { required: false })}
+              name="char_hairColour"
+              id="char_hairColour"
             />
           </div>
           <div>
-            <label htmlFor="char_eyecolour">Eye colour</label>
+            <label htmlFor="char_eyeColour">Eye colour</label>
             <input
-              defaultValue={formValues.char_eyecolour}
+              defaultValue={formValues.char_eyeColour}
               type="text"
-              {...register("char_eyecolour", { required: false })}
-              name="char_eyecolour"
-              id="char_eyecolour"
+              {...register("char_eyeColour", { required: false })}
+              name="char_eyeColour"
+              id="char_eyeColour"
             />
           </div>
           <div>
-            <label htmlFor="char_skincolour">Skin colour</label>
+            <label htmlFor="char_skinColour">Skin colour</label>
             <input
-              defaultValue={formValues.char_skincolour}
+              defaultValue={formValues.char_skinColour}
               type="text"
-              {...register("char_skincolour", { required: false })}
-              name="char_skincolour"
-              id="char_skincolour"
+              {...register("char_skinColour", { required: false })}
+              name="char_skinColour"
+              id="char_skinColour"
             />
           </div>
           <div>
