@@ -1,9 +1,7 @@
 import { SlGhost } from "react-icons/sl";
 import { GiHeartInside } from "react-icons/gi";
-import { RiCake2Fill } from "react-icons/ri";
-import { HiUserGroup } from "react-icons/hi";
-import { MdHeight } from "react-icons/md";
-import { useEffect, useState } from "react";
+
+import { useState } from "react";
 import styles from "../styles/characterPopup.module.css";
 
 export default function CharacterPopUp(props) {
@@ -11,7 +9,6 @@ export default function CharacterPopUp(props) {
   const [editName, setEditName] = useState(null);
   const [editAgeInput, setEditAgeInput] = useState(false);
   const [editAge, setEditAge] = useState(null);
-  const [editAlive, setEditAlive] = useState(null);
   const [editBackgroundInput, setEditBackgroundInput] = useState(false);
   const [editBackground, setEditBackground] = useState(null);
   const [editDescInput, setEditDescInput] = useState(false);
@@ -32,8 +29,7 @@ export default function CharacterPopUp(props) {
   const [editHeight, setEditHeight] = useState(null);
   const [editHopesInput, setEditHopesInput] = useState(false);
   const [editHopes, setEditHopes] = useState(null);
-  // const[editImgInput, setEditImgInput] = useState(false)
-  // const[editImg, setImgEdit] = useState(null)
+
   const [editJobInput, setEditJobInput] = useState(false);
   const [editJob, setEditJob] = useState(null);
   const [editLikesInput, setEditLikesInput] = useState(false);
@@ -72,7 +68,6 @@ export default function CharacterPopUp(props) {
   }
 
   async function editCharacter(id, key, value) {
- 
     let body = {};
     body.user_id = 1;
     body[key] = value;
@@ -82,7 +77,6 @@ export default function CharacterPopUp(props) {
       mode: "cors",
       headers: { "Content-Type": "application/json" },
     });
-
   }
 
   async function shareCharacter() {
@@ -211,11 +205,8 @@ export default function CharacterPopUp(props) {
           <div className={styles.section}>
             <h2>Physical Appearance:</h2>
 
-            {/* <p className="category">Portrait:</p>
-            {editImgInput?(<div><input type='text' onChange={(e)=>setEditImg(e.target.value)}></input><button onClick={()=>editImg(props.character_id, 'char_img', editImg)} className="edit-button">Done</button></div>):(<div><p>{props.char_img}</p><button onClick={()=>setEditImgInput(!editImgInput)} className="edit-button">edit</button></div>)} */}
-
             <div className={styles.category}>
-             <div>Age in years: </div>
+              <div>Age in years: </div>
               <div hidden={editAgeInput}>
                 <button
                   onClick={() => setEditAgeInput(!editAgeInput)}
@@ -235,13 +226,13 @@ export default function CharacterPopUp(props) {
                       onChange={(e) => setEditAge(e.target.value)}
                     ></input>
                     <button
-                      onClick={() =>{
-                        editCharacter(props.character_id, "char_age", editAge)
-                        props.searchByName("")
+                      onClick={() => {
+                        editCharacter(props.character_id, "char_age", editAge);
+                        props.searchByName("");
                         setTimeout(() => {
-                            setEditAgeInput(false)
-                        }, 600)
-                    }}
+                          setEditAgeInput(false);
+                        }, 700);
+                      }}
                       className={styles.editButton}
                     >
                       Done
@@ -255,14 +246,14 @@ export default function CharacterPopUp(props) {
               </>
             )}
 
-<div className={styles.category}>
-             <div>Species / ethnicity: </div>
+            <div className={styles.category}>
+              <div>Species / ethnicity: </div>
               <div hidden={editSpeciesInput}>
                 <button
-                  onClick={() => editSpeciesInput(!editSpeciesInput)}
+                  onClick={() => setEditSpeciesInput(!editSpeciesInput)}
                   className={styles.editButton}
                 >
-                     edit
+                  edit
                 </button>
               </div>
             </div>
@@ -276,13 +267,17 @@ export default function CharacterPopUp(props) {
                       onChange={(e) => setEditSpecies(e.target.value)}
                     ></input>
                     <button
-                      onClick={() =>{
-                        editCharacter(props.character_id, "char_species", editSpecies)
-                        props.searchByName("")
+                      onClick={() => {
+                        editCharacter(
+                          props.character_id,
+                          "char_species",
+                          editSpecies
+                        );
+                        props.searchByName("");
                         setTimeout(() => {
-                            setEditSpeciesInput(false)
-                        }, 600)
-                    }}
+                          setEditSpeciesInput(false);
+                        }, 700);
+                      }}
                       className={styles.editButton}
                     >
                       Done
