@@ -8,19 +8,19 @@ export default function Step2({ setStep, formValues, setFormValues }) {
   const myForm = useRef();
 
   async function onSubmit(values, e) {
-    e.preventDefault();
+    // e.preventDefault();
     setFormValues({ ...formValues, ...values });
-    if (myForm.current.buttonId === "back") {
-      setStep(1);
-    } else {
+    console.log("step2:", formValues);
+    if (myForm.current.buttonId === "next") {
       setStep(3);
+    } else {
+      setStep(1);
     }
 
     const buttonId = e;
-    console.log(buttonId);
+    // console.log(buttonId);
   }
 
-  console.log("step2:", formValues);
   return (
     <div className={styles.mainStepTwo}>
       <h2 className={styles.heading}>Personality</h2>

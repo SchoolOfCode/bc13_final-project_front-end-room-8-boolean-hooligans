@@ -32,19 +32,20 @@ export default function Step1({ setStep, formValues, setFormValues }) {
   useEffect(() => {
     randomName();
     // setTrigger(true);
-  }, [trigger]);
+  }, []);
 
   let user = { user_email: session.user.email };
 
+  console.log("step1:", formValues);
+
   async function onSubmit(values, e) {
-    e.preventDefault();
+    // e.preventDefault();
     setFormValues({ ...user, ...formValues, ...values });
     setStep(2);
     //   if(myForm.current.buttonId === 'next') {
     // }
   }
 
-  console.log("step1:", formValues);
   return (
     <div className={styles.mainStepTwo}>
       <h2 className={styles.heading}>Physical features</h2>
@@ -84,6 +85,7 @@ export default function Step1({ setStep, formValues, setFormValues }) {
             {...register("char_img", { required: false })}
             name="char_img"
             type="text"
+            id="char_img"
           />
         </div>
 
