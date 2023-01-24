@@ -30,7 +30,7 @@
   animation: AnimationName 14s ease infinite;
 }
 
-/* @-webkit-keyframes AnimationName {
+@-webkit-keyframes AnimationName {
   0% {
     background-position: 0% 29%;
   }
@@ -51,7 +51,7 @@
   100% {
     background-position: 0% 29%;
   }
-} */
+}
 
 
 .titleContainer {
@@ -208,7 +208,7 @@ text-decoration: none;
 
 }
 
-/* @media (max-width: 600px) {
+@media (max-width: 600px) {
 
   .main h1  {
     margin: 0;
@@ -227,4 +227,4 @@ text-decoration: none;
     background-color: red;
   }
 
-} */
+}
