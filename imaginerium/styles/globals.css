@@ -75,7 +75,7 @@ body {
     background: linear-gradient(#b3e5ee, #a2bfcc);
     align-items: baseline;
     padding: 10px;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  box-shadow:   10px 20px 30px rgba(0, 0, 0, 0.253);
     height: 70vh;
    
   }

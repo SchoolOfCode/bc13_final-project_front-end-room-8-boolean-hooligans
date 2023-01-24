@@ -195,7 +195,7 @@ export default function CharacterPopUp(props) {
 
       <div className={styles.popUpRight}>
         <button
-          className={styles.editButton}
+          className={styles.closePopUpButton}
           onClick={() => {
             router.reload(window.location.pathname);
           }}

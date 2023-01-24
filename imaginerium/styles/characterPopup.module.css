@@ -54,7 +54,9 @@
   }
   
 
-  
+  .deleteButton:hover,
+  .shareButton:hover,
+  .closePopUpButton:hover,
   .editButton:hover {
     box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
     transform: scale(1.05) rotate(-1deg);
@@ -103,13 +105,26 @@ margin-right: -20px;
   height: 41%;
 align-content: center;
 justify-content: center;
+align-items: center;
 }
 
 .deleteButton {
   margin: 5px;
+  box-shadow: rgba(187, 73, 44, 0.2) 0 -25px 18px -14px inset, rgba(187, 96, 44, 0.15) 0 1px 2px, rgba(187, 130, 44, 0.15) 0 2px 4px, rgba(187, 77, 44, 0.15) 0 4px 8px, rgba(187, 65, 44, 0.15) 0 8px 16px, rgba(187, 113, 44, 0.15) 0 16px 32px;
+  background-color: rgb(253, 183, 125);
+  color: rgb(77, 1, 1);
 }
 .shareButton {
   margin: 5px;
+  box-shadow: rgba(187, 73, 44, 0.2) 0 -25px 18px -14px inset, rgba(187, 96, 44, 0.15) 0 1px 2px, rgba(187, 130, 44, 0.15) 0 2px 4px, rgba(187, 77, 44, 0.15) 0 4px 8px, rgba(187, 65, 44, 0.15) 0 8px 16px, rgba(187, 113, 44, 0.15) 0 16px 32px;
+  background-color: rgb(251, 253, 125);
+  color: rgb(0, 44, 3);
+}
+.closePopUpButton {
+
+  box-shadow: rgba(187, 73, 44, 0.2) 0 -25px 18px -14px inset, rgba(187, 96, 44, 0.15) 0 1px 2px, rgba(187, 130, 44, 0.15) 0 2px 4px, rgba(187, 77, 44, 0.15) 0 4px 8px, rgba(187, 65, 44, 0.15) 0 8px 16px, rgba(187, 113, 44, 0.15) 0 16px 32px;
+  background-color: rgb(251, 253, 125);
+  color: rgb(0, 44, 3);
 }
 .editNameButton {
   margin: 5px;
@@ -120,6 +135,7 @@ justify-content: center;
   margin-bottom: 20px;
   border-radius: 10px;
   padding: 10px;
+  line-height: 120%;
 }
 .section h2 {
   font-size: 1.3rem;
@@ -129,7 +145,6 @@ justify-content: center;
   border-radius: 10px;
   box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 82, 187, 0.15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 130, 187, 0.15) 0 4px 8px, rgba(44, 154, 187, 0.15) 0 8px 16px, rgba(44, 106, 187, 0.15) 0 16px 32px;
    margin-top: 18px;
-    font-weight: 500px;
     padding: 15px;
     font-size: 1.1rem;
   }
