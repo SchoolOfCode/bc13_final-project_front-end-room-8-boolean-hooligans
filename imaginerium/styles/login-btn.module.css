@@ -1,5 +1,5 @@
 
-.loggedInUserDiv, .loggedOutUserDiv{
+.logInOutContainer {
     display: flex;
     flex-direction: row;
     height: 50px;
@@ -9,10 +9,7 @@
     z-index: 50;
     top: 30px;
     right: 10px;
-    cursor: pointer;
     gap: 5%;
-    
-
 }
 
 .profilePic{

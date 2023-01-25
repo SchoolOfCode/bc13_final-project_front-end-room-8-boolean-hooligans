@@ -157,6 +157,7 @@
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   transition: 200ms;
+  cursor: pointer;
 }
 .buttonMain:before {
   content: "";
