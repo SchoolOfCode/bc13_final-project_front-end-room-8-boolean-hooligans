@@ -27,7 +27,7 @@ export default function characterList() {
     }
   }, [session]);
 
-  async function searchByName() {
+  async function searchByName(nameToSearch) {
     const response = await fetch(
       `https://imaginerium-qpii.onrender.com/characters?char_name=${nameToSearch}&user_email=${session.user.email}`
     );
