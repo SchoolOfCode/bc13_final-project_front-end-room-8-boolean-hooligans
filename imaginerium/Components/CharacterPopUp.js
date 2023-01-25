@@ -1,6 +1,7 @@
 import { SlGhost } from "react-icons/sl";
 import { GiHeartInside } from "react-icons/gi";
 import { AiFillEdit } from "react-icons/ai"
+import { MdFileDownloadDone } from "react-icons/md"
 import { useState } from "react";
 import styles from "../styles/characterPopup.module.css";
 
@@ -156,7 +157,7 @@ export default function CharacterPopUp(props) {
                       )
                     ) {
                       {
-                        shareCharacter;
+                        shareCharacter();
                       }
                     }
                   }}
@@ -251,7 +252,7 @@ export default function CharacterPopUp(props) {
                       }}
                       className={styles.editButton}
                     >
-                      Done
+                      < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
@@ -296,7 +297,7 @@ export default function CharacterPopUp(props) {
                       }}
                       className={styles.editButton}
                     >
-                      Done
+                      < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
@@ -341,7 +342,7 @@ export default function CharacterPopUp(props) {
                       }}
                       className={styles.editButton}
                     >
-                      Done
+                      < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
@@ -360,7 +361,7 @@ export default function CharacterPopUp(props) {
                   onClick={() => setEditEyeInput(!editEyeInput)}
                   className={styles.editButton}
                 >
-                  edit
+                   < AiFillEdit />
                 </button>
               </div>
             </div>
@@ -387,7 +388,7 @@ export default function CharacterPopUp(props) {
                       }}
                       className={styles.editButton}
                     >
-                      Done
+                      < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
@@ -407,7 +408,7 @@ export default function CharacterPopUp(props) {
                   onClick={() => setEditSkinInput(!editSkinInput)}
                   className={styles.editButton}
                 >
-                  edit
+                   < AiFillEdit />
                 </button>
               </div>
             </div>
@@ -434,7 +435,7 @@ export default function CharacterPopUp(props) {
                       }}
                       className={styles.editButton}
                     >
-                      Done
+                     < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
@@ -446,156 +447,198 @@ export default function CharacterPopUp(props) {
             )}
 
 
-            <p className={styles.category}>Height in metres:</p>
+<div className={styles.category}>
+              <div>Height in meters: </div>
+              <div hidden={editHeightInput}>
+                <button
+                  onClick={() => setEditHeightInput(!editHeightInput)}
+                  className={styles.editButton}
+                >
+                   < AiFillEdit />
+                </button>
+              </div>
+            </div>
             {editHeightInput ? (
               <>
                 <p>
                   <div>
                     <input
+                      defaultValue={props.char_height}
                       type="number"
                       onChange={(e) => setEditHeight(e.target.value)}
                     ></input>
                     <button
-                      onClick={() =>
+                      onClick={() => {
                         editCharacter(
                           props.character_id,
                           "char_height",
                           editHeight
-                        )
-                      }
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditHeightInput(false);
+                          });
+                        });
+                      }}
+                      className={styles.editButton}
                     >
-                      Done
+                      < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
               </>
             ) : (
-              <div>
-                <p>
-                  {props.char_height}
-                  <button
-                    onClick={() => setEditHeightInput(!editHeightInput)}
-                    className={styles.editButton}
-                  >
-                    edit
-                  </button>
-                </p>
-              </div>
+              <>
+                <p>{props.char_height}</p>
+              </>
             )}
 
-            <p className={styles.category}>Weight in Kilograms:</p>
+
+
+<div className={styles.category}>
+              <div>Weight in kilograms: </div>
+              <div hidden={editWeightInput}>
+                <button
+                  onClick={() => setEditWeightInput(!editWeightInput)}
+                  className={styles.editButton}
+                >
+                   < AiFillEdit />
+                </button>
+              </div>
+            </div>
             {editWeightInput ? (
               <>
                 <p>
                   <div>
                     <input
-                      type="text"
+                      defaultValue={props.char_weight}
+                      type="number"
                       onChange={(e) => setEditWeight(e.target.value)}
                     ></input>
                     <button
-                      onClick={() =>
+                      onClick={() => {
                         editCharacter(
                           props.character_id,
                           "char_weight",
                           editWeight
-                        )
-                      }
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditWeightInput(false);
+                          });
+                        });
+                      }}
                       className={styles.editButton}
                     >
-                      Done
+                      < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
               </>
             ) : (
-              <div>
-                <p>
-                  {props.char_weight}
-                  <button
-                    onClick={() => setEditWeightInput(!editWeightInput)}
-                    className={styles.editButton}
-                  >
-                    edit
-                  </button>
-                </p>
-              </div>
+              <>
+                <p>{props.char_weight}</p>
+              </>
             )}
 
-            <p className={styles.category}>Distinguishing features:</p>
+
+
+
+<div className={styles.category}>
+              <div>Distinguishing features: </div>
+              <div hidden={editFeaturesInput}>
+                <button
+                  onClick={() => setEditFeaturesInput(!editFeaturesInput)}
+                  className={styles.editButton}
+                >
+                   < AiFillEdit />
+                </button>
+              </div>
+            </div>
             {editFeaturesInput ? (
               <>
                 <p>
                   <div>
                     <input
+                      defaultValue={props.char_features}
                       type="text"
                       onChange={(e) => setEditFeatures(e.target.value)}
                     ></input>
                     <button
-                      onClick={() =>
+                      onClick={() => {
                         editCharacter(
                           props.character_id,
                           "char_features",
                           editFeatures
-                        )
-                      }
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditFeaturesInput(false);
+                          });
+                        });
+                      }}
                       className={styles.editButton}
                     >
-                      Done
+                      < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
               </>
             ) : (
-              <div>
-                <p>
-                  {props.char_features}
-                  <button
-                    onClick={() => setEditFeaturesInput(!editFeaturesInput)}
-                    className={styles.editButton}
-                  >
-                    edit
-                  </button>
-                </p>
-              </div>
+              <>
+                <p>{props.char_features}</p>
+              </>
             )}
 
-            <p className={styles.category}>Physical Description:</p>
+
+
+<div className={styles.category}>
+              <div>Physical description: </div>
+              <div hidden={editDescInput}>
+                <button
+                  onClick={() => setEditDescInput(!editDescInput)}
+                  className={styles.editButton}
+                >
+                   < AiFillEdit />
+                </button>
+              </div>
+            </div>
             {editDescInput ? (
               <>
                 <p>
                   <div>
                     <textarea
+                      defaultValue={props.char_desc}
                       type="text"
                       onChange={(e) => setEditDesc(e.target.value)}
                     ></textarea>
                     <button
-                      onClick={() =>
-                        editCharacter(props.character_id, "char_desc", editDesc)
-                      }
+                      onClick={() => {
+                        editCharacter(
+                          props.character_id,
+                          "char_desc",
+                          editDesc
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditDescInput(false);
+                          });
+                        });
+                      }}
                       className={styles.editButton}
                     >
-                      Done
+                      < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
               </>
             ) : (
-              <div>
-                <p>
-                  {props.char_desc}
-                  <button
-                    onClick={() => setEditDescInput(!editDescInput)}
-                    className={styles.editButton}
-                  >
-                    edit
-                  </button>
-                </p>
-              </div>
+              <>
+                <p>{props.char_desc}</p>
+              </>
             )}
+
+
 
             {props.char_alive ? (
               <>
-                <p className={styles.category}>Status:</p>
+                <div className={styles.category}>Status:</div>
                 <p>
                   {" "}
                   <GiHeartInside /> Alive!
@@ -630,547 +673,661 @@ export default function CharacterPopUp(props) {
           <div className={styles.section}>
             <h2>Personality:</h2>
 
-            <p className={styles.category}>
-              Hopes, dreams, motivation, and goals:
-            </p>
+
+
+            
+<div className={styles.category}>
+              <div>Hopes, dreams, motivation, and goals: </div>
+              <div hidden={editHopesInput}>
+                <button
+                  onClick={() => setEditHopesInput(!editHopesInput)}
+                  className={styles.editButton}
+                >
+                   < AiFillEdit />
+                </button>
+              </div>
+            </div>
             {editHopesInput ? (
               <>
                 <p>
                   <div>
                     <textarea
+                      defaultValue={props.char_hopes}
                       type="text"
                       onChange={(e) => setEditHopes(e.target.value)}
                     ></textarea>
                     <button
-                      onClick={() =>
+                      onClick={() => {
                         editCharacter(
                           props.character_id,
                           "char_hopes",
                           editHopes
-                        )
-                      }
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditHopesInput(false);
+                          });
+                        });
+                      }}
                       className={styles.editButton}
                     >
-                      Done
+                      < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
               </>
             ) : (
-              <div>
-                <p>
-                  {props.char_hopes}
-                  <button
-                    onClick={() => setEditHopesInput(!editHopes)}
-                    className={styles.editButton}
-                  >
-                    edit
-                  </button>
-                </p>
-              </div>
+              <>
+                <p>{props.char_hopes}</p>
+              </>
             )}
 
-            <p className={styles.category}>Fears, troubles, and flaws:</p>
+
+            
+<div className={styles.category}>
+              <div>Fears, troubles, and flaws: </div>
+              <div hidden={editFearsInput}>
+                <button
+                  onClick={() => setEditFearsInput(!editFearsInput)}
+                  className={styles.editButton}
+                >
+                   < AiFillEdit />
+                </button>
+              </div>
+            </div>
             {editFearsInput ? (
               <>
                 <p>
                   <div>
                     <textarea
+                      defaultValue={props.char_fears}
                       type="text"
                       onChange={(e) => setEditFears(e.target.value)}
                     ></textarea>
                     <button
-                      onClick={() =>
+                      onClick={() => {
                         editCharacter(
                           props.character_id,
                           "char_fears",
                           editFears
-                        )
-                      }
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditFearsInput(false);
+                          });
+                        });
+                      }}
                       className={styles.editButton}
                     >
-                      Done
+                      < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
               </>
             ) : (
-              <div>
-                <p>
-                  {props.char_fears}
-                  <button
-                    onClick={() => setEditFearsInput(!editFearsInput)}
-                    className={styles.editButton}
-                  >
-                    edit
-                  </button>
-                </p>
-              </div>
+              <>
+                <p>{props.char_fears}</p>
+              </>
             )}
 
-            <p className={styles.category}>
-              Catchphrases, speech patterns, languages spoken:
-            </p>
+
+          
+                        
+<div className={styles.category}>
+              <div>Catchphrases, speech patterns, languages spoken: </div>
+              <div hidden={editSpeechInput}>
+                <button
+                  onClick={() => setEditSpeechInput(!editSpeechInput)}
+                  className={styles.editButton}
+                >
+                   < AiFillEdit />
+                </button>
+              </div>
+            </div>
             {editSpeechInput ? (
               <>
                 <p>
                   <div>
                     <textarea
+                      defaultValue={props.char_speech}
                       type="text"
                       onChange={(e) => setEditSpeech(e.target.value)}
                     ></textarea>
                     <button
-                      onClick={() =>
+                      onClick={() => {
                         editCharacter(
                           props.character_id,
                           "char_speech",
                           editSpeech
-                        )
-                      }
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditSpeechInput(false);
+                          });
+                        });
+                      }}
                       className={styles.editButton}
                     >
-                      Done
+                      < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
               </>
             ) : (
-              <div>
-                <p>
-                  {props.char_speech}
-                  <button
-                    onClick={() => setEditSpeechInput(!editSpeechInput)}
-                    className={styles.editButton}
-                  >
-                    edit
-                  </button>
-                </p>
-              </div>
+              <>
+                <p>{props.char_speech}</p>
+              </>
             )}
 
-            <p className={styles.category}>Likes and dislikes:</p>
+<div className={styles.category}>
+              <div>Likes and dislikes: </div>
+              <div hidden={editLikesInput}>
+                <button
+                  onClick={() => setEditLikesInput(!editLikesInput)}
+                  className={styles.editButton}
+                >
+                   < AiFillEdit />
+                </button>
+              </div>
+            </div>
             {editLikesInput ? (
               <>
                 <p>
                   <div>
                     <textarea
+                      defaultValue={props.char_likes}
                       type="text"
                       onChange={(e) => setEditLikes(e.target.value)}
                     ></textarea>
                     <button
-                      onClick={() =>
+                      onClick={() => {
                         editCharacter(
                           props.character_id,
                           "char_likes",
                           editLikes
-                        )
-                      }
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditLikesInput(false);
+                          });
+                        });
+                      }}
                       className={styles.editButton}
                     >
-                      Done
+                      < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
               </>
             ) : (
-              <div>
-                <p>
-                  {props.char_likes}
-                  <button
-                    onClick={() => setEditLikesInput(!editLikesInput)}
-                    className={styles.editButton}
-                  >
-                    edit
-                  </button>
-                </p>
-              </div>
+              <>
+                <p>{props.char_likes}</p>
+              </>
             )}
-          </div>
+
+
+
           <div className={styles.section}>
             <h2>Other Details:</h2>
-
-            <p className={styles.category}>Brief Background:</p>
+            <div className={styles.category}>
+              <div>Character background: </div>
+              <div hidden={editBackgroundInput}>
+                <button
+                  onClick={() => setEditBackgroundInput(!editBackgroundInput)}
+                  className={styles.editButton}
+                >
+                   < AiFillEdit />
+                </button>
+              </div>
+            </div>
             {editBackgroundInput ? (
               <>
                 <p>
                   <div>
                     <textarea
+                      defaultValue={props.char_background}
                       type="text"
                       onChange={(e) => setEditBackground(e.target.value)}
                     ></textarea>
                     <button
-                      onClick={() =>
+                      onClick={() => {
                         editCharacter(
                           props.character_id,
                           "char_background",
                           editBackground
-                        )
-                      }
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditBackgroundInput(false);
+                          });
+                        });
+                      }}
                       className={styles.editButton}
                     >
-                      Done
+                      < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
               </>
             ) : (
-              <div>
-                <p>
-                  {props.char_background}
-                  <button
-                    onClick={() => setEditBackgroundInput(!editBackgroundInput)}
-                    className={styles.editButton}
-                  >
-                    edit
-                  </button>
-                </p>
-              </div>
+              <>
+                <p>{props.char_background}</p>
+              </>
             )}
 
-            <p className={styles.category}>Disabilities:</p>
+
+<div className={styles.category}>
+              <div>Disabilities: </div>
+              <div hidden={editDisabilitiesInput}>
+                <button
+                  onClick={() => setEditDisabilitiesInput(!editDisabilitiesInput)}
+                  className={styles.editButton}
+                >
+                   < AiFillEdit />
+                </button>
+              </div>
+            </div>
             {editDisabilitiesInput ? (
               <>
                 <p>
                   <div>
                     <textarea
+                      defaultValue={props.char_disabilities}
                       type="text"
                       onChange={(e) => setEditDisabilities(e.target.value)}
                     ></textarea>
                     <button
-                      onClick={() =>
+                      onClick={() => {
                         editCharacter(
                           props.character_id,
                           "char_disabilities",
                           editDisabilities
-                        )
-                      }
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditDisabilitiesInput(false);
+                          });
+                        });
+                      }}
                       className={styles.editButton}
                     >
-                      Done
+                      < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
               </>
             ) : (
-              <div>
-                <p>
-                  {props.char_disabilities}
-                  <button
-                    onClick={() =>
-                      setEditDisabilitiesInput(!editDisabilitiesInput)
-                    }
-                    className={styles.editButton}
-                  >
-                    edit
-                  </button>
-                </p>
-              </div>
+              <>
+                <p>{props.char_disabilities}</p>
+              </>
             )}
 
-            <p className={styles.category}>Job:</p>
+
+<div className={styles.category}>
+              <div>Career and education: </div>
+              <div hidden={editJobInput}>
+                <button
+                  onClick={() => setEditJobInput(!editJobInput)}
+                  className={styles.editButton}
+                >
+                   < AiFillEdit />
+                </button>
+              </div>
+            </div>
             {editJobInput ? (
               <>
                 <p>
                   <div>
                     <textarea
+                      defaultValue={props.char_job}
                       type="text"
                       onChange={(e) => setEditJob(e.target.value)}
                     ></textarea>
                     <button
-                      onClick={() =>
-                        editCharacter(props.character_id, "char_job", editJob)
-                      }
+                      onClick={() => {
+                        editCharacter(
+                          props.character_id,
+                          "char_job",
+                          editJob
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditJobInput(false);
+                          });
+                        });
+                      }}
                       className={styles.editButton}
                     >
-                      Done
+                      < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
               </>
             ) : (
-              <div>
-                <p>
-                  {props.char_job}
-                  <button
-                    onClick={() => setEditJobInput(!editJobInput)}
-                    className={styles.editButton}
-                  >
-                    edit
-                  </button>
-                </p>
-              </div>
+              <>
+                <p>{props.char_job}</p>
+              </>
             )}
 
-            <p className={styles.category}>Gender:</p>
+
+<div className={styles.category}>
+              <div>Gender: </div>
+              <div hidden={editGenderInput}>
+                <button
+                  onClick={() => setEditGenderInput(!editGenderInput)}
+                  className={styles.editButton}
+                >
+                   < AiFillEdit />
+                </button>
+              </div>
+            </div>
             {editGenderInput ? (
               <>
                 <p>
                   <div>
                     <input
+                      defaultValue={props.char_gender}
                       type="text"
                       onChange={(e) => setEditGender(e.target.value)}
                     ></input>
                     <button
-                      onClick={() =>
+                      onClick={() => {
                         editCharacter(
                           props.character_id,
                           "char_gender",
                           editGender
-                        )
-                      }
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditGenderInput(false);
+                          });
+                        });
+                      }}
                       className={styles.editButton}
                     >
-                      Done
+                      < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
               </>
             ) : (
-              <div>
-                <p>
-                  {props.char_gender}
-                  <button
-                    onClick={() => setEditGenderInput(!editGenderInput)}
-                    className={styles.editButton}
-                  >
-                    edit
-                  </button>
-                </p>
-              </div>
+              <>
+                <p>{props.char_gender}</p>
+              </>
             )}
 
-            <p className={styles.category}>Pronouns:</p>
+<div className={styles.category}>
+              <div>Pronouns: </div>
+              <div hidden={editPronounsInput}>
+                <button
+                  onClick={() => setEditPronounsInput(!editPronounsInput)}
+                  className={styles.editButton}
+                >
+                   < AiFillEdit />
+                </button>
+              </div>
+            </div>
             {editPronounsInput ? (
               <>
                 <p>
                   <div>
                     <input
+                      defaultValue={props.char_pronouns}
                       type="text"
                       onChange={(e) => setEditPronouns(e.target.value)}
                     ></input>
                     <button
-                      onClick={() =>
+                      onClick={() => {
                         editCharacter(
                           props.character_id,
                           "char_pronouns",
                           editPronouns
-                        )
-                      }
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditPronounsInput(false);
+                          });
+                        });
+                      }}
                       className={styles.editButton}
                     >
-                      Done
+                      < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
               </>
             ) : (
-              <div>
-                <p>
-                  {props.char_pronouns}
-                  <button
-                    onClick={() => setEditPronounsInput(!editPronounsInput)}
-                    className={styles.editButton}
-                  >
-                    edit
-                  </button>
-                </p>
-              </div>
+              <>
+                <p>{props.char_pronouns}</p>
+              </>
             )}
 
-            <p className={styles.category}>Sexuality:</p>
+<div className={styles.category}>
+              <div>Sexuality: </div>
+              <div hidden={editSexualityInput}>
+                <button
+                  onClick={() => setEditSexualityInput(!editSexualityInput)}
+                  className={styles.editButton}
+                >
+                   < AiFillEdit />
+                </button>
+              </div>
+            </div>
             {editSexualityInput ? (
               <>
                 <p>
                   <div>
                     <input
+                      defaultValue={props.char_sexuality}
                       type="text"
                       onChange={(e) => setEditSexuality(e.target.value)}
                     ></input>
                     <button
-                      onClick={() =>
+                      onClick={() => {
                         editCharacter(
                           props.character_id,
                           "char_sexuality",
                           editSexuality
-                        )
-                      }
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditSexualityInput(false);
+                          });
+                        });
+                      }}
                       className={styles.editButton}
                     >
-                      Done
+                      < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
               </>
             ) : (
-              <div>
-                <p>
-                  {props.char_sexuality}
-                  <button
-                    onClick={() => setEditSexualityInput(!editSexualityInput)}
-                    className={styles.editButton}
-                  >
-                    edit
-                  </button>
-                </p>
-              </div>
+              <>
+                <p>{props.char_sexuality}</p>
+              </>
             )}
 
-            <p className={styles.category}>Skills:</p>
+
+<div className={styles.category}>
+              <div>Skills: </div>
+              <div hidden={editSkillsInput}>
+                <button
+                  onClick={() => setEditSkillsInput(!editSkillsInput)}
+                  className={styles.editButton}
+                >
+                   < AiFillEdit />
+                </button>
+              </div>
+            </div>
             {editSkillsInput ? (
               <>
                 <p>
                   <div>
                     <textarea
+                      defaultValue={props.char_skills}
                       type="text"
                       onChange={(e) => setEditSkills(e.target.value)}
                     ></textarea>
                     <button
-                      onClick={() =>
+                      onClick={() => {
                         editCharacter(
                           props.character_id,
                           "char_skills",
                           editSkills
-                        )
-                      }
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditSkillsInput(false);
+                          });
+                        });
+                      }}
                       className={styles.editButton}
                     >
-                      Done
+                      < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
               </>
             ) : (
-              <div>
-                <p>
-                  {props.char_skills}
-                  <button
-                    onClick={() => setEditSkillsInput(!editSkillsInput)}
-                    className={styles.editButton}
-                  >
-                    edit
-                  </button>
-                </p>
-              </div>
+              <>
+                <p>{props.char_skills}</p>
+              </>
             )}
 
-            <p className={styles.category}>Morality:</p>
+
+<div className={styles.category}>
+              <div>Morality: </div>
+              <div hidden={editMoralityInput}>
+                <button
+                  onClick={() => setEditMoralityInput(!editMoralityInput)}
+                  className={styles.editButton}
+                >
+                   < AiFillEdit />
+                </button>
+              </div>
+            </div>
             {editMoralityInput ? (
               <>
                 <p>
                   <div>
-                    <textarea
+                    <input
+                      defaultValue={props.char_morality}
                       type="text"
                       onChange={(e) => setEditMorality(e.target.value)}
-                    ></textarea>
+                    ></input>
                     <button
-                      onClick={() =>
+                      onClick={() => {
                         editCharacter(
                           props.character_id,
                           "char_morality",
                           editMorality
-                        )
-                      }
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditMoralityInput(false);
+                          });
+                        });
+                      }}
                       className={styles.editButton}
                     >
-                      Done
+                      < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
               </>
             ) : (
-              <div>
-                <p>
-                  {props.char_morality}
-                  <button
-                    onClick={() => setEditMoralityInput(!editMoralityInput)}
-                    className={styles.editButton}
-                  >
-                    edit
-                  </button>
-                </p>
-              </div>
+              <>
+                <p>{props.char_morality}</p>
+              </>
             )}
 
-            <p className={styles.category}>Personal Relationships:</p>
+
+
+     
+<div className={styles.category}>
+              <div>Key relationships - family, friends, romance: </div>
+              <div hidden={editRelationshipsInput}>
+                <button
+                  onClick={() => setEditRelationshipsInput(!editRelationshipsInput)}
+                  className={styles.editButton}
+                >
+                   < AiFillEdit />
+                </button>
+              </div>
+            </div>
             {editRelationshipsInput ? (
               <>
                 <p>
                   <div>
                     <textarea
+                      defaultValue={props.char_relationships}
                       type="text"
-                      onChange={(e) => setEditRelationships(e.target.value)}
+                      onChange={(e) => setEditRelationshops(e.target.value)}
                     ></textarea>
                     <button
-                      onClick={() =>
+                      onClick={() => {
                         editCharacter(
                           props.character_id,
                           "char_relationships",
                           editRelationships
-                        )
-                      }
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditRelationshipsInput(false);
+                          });
+                        });
+                      }}
                       className={styles.editButton}
                     >
-                      Done
+                      < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
               </>
             ) : (
-              <div>
-                <p>
-                  {props.char_relationships}
-                  <button
-                    onClick={() =>
-                      setEditRelationshipsInput(!editRelationshipsInput)
-                    }
-                    className={styles.editButton}
-                  >
-                    edit
-                  </button>
-                </p>
-              </div>
+              <>
+                <p>{props.char_relationships}</p>
+              </>
             )}
 
-            <p className={styles.category}>General Notes:</p>
+     
+<div className={styles.category}>
+              <div>Any other character notes: </div>
+              <div hidden={editNotesInput}>
+                <button
+                  onClick={() => setEditNotesInput(!editNotesInput)}
+                  className={styles.editButton}
+                >
+                   < AiFillEdit />
+                </button>
+              </div>
+            </div>
             {editNotesInput ? (
               <>
                 <p>
                   <div>
                     <textarea
+                      defaultValue={props.char_notes}
                       type="text"
                       onChange={(e) => setEditNotes(e.target.value)}
                     ></textarea>
                     <button
-                      onClick={() =>
+                      onClick={() => {
                         editCharacter(
                           props.character_id,
                           "char_notes",
                           editNotes
-                        )
-                      }
+                        ).then(() => {
+                          props.searchByName("").then(() => {
+                            setEditNotesInput(false);
+                          });
+                        });
+                      }}
                       className={styles.editButton}
                     >
-                      Done
+                      < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
               </>
             ) : (
-              <div>
-                <p>
-                  {props.char_notes}
-                  <button
-                    onClick={() => setEditNotesInput(!editNotesInput)}
-                    className={styles.editButton}
-                  >
-                    edit
-                  </button>
-                </p>
-              </div>
+              <>
+                <p>{props.char_notes}</p>
+              </>
             )}
+
+
           </div>
         </div>
       </div>
-    </div>
+    </div></div>
   );
 }
