@@ -7,7 +7,6 @@ import Navigation from "../Components/Navigation";
 import NewNavBar from "../Components/NewNavBar.js";
 import ButtonLink from "../Components/ButtonLink";
 import { VscPersonAdd, VscOrganization, VscGlobe } from "react-icons/vsc";
-import Blob from "../Components/Blob";
 
 const inter = Inter({ subsets: ["latin"] });
 

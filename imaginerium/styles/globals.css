@@ -347,21 +347,7 @@ body {
     overflow: hidden;
   }
 
-  button{
-    position: relative;
-    z-index: 10;
-  }
-
-  textarea{
-    position: relative;
-    z-index: 10;
-  }
-
-  input{
-    position: relative;
-    z-index: 10;
-  }
-
+  
   
   
 /* LIGHT DARK THEME TOGGLE */
