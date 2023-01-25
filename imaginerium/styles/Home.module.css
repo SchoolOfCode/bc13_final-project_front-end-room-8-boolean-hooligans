@@ -263,6 +263,18 @@ text-decoration: none;
     width: 450px;
     height: 200px;
   }
+
+  .titleContainer {
+    margin-top: 20%;
+  }
+
+  .buttonsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 22.5px;
+    margin-bottom: 15%;
+  }
 }
 
 
@@ -272,7 +284,7 @@ text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     padding: 1px;
     color: rgb(230, 230, 230);
-    width: 300px;
+    width: 340px;
     height: 320px;
   }
   .descriptionContainer p {
@@ -280,6 +292,17 @@ text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     padding: 3px;
     color: rgb(230, 230, 230)
+  }
+  
+  .titleContainer {
+    width: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    margin-top: 10em;
+    
   }
 
 
@@ -296,7 +319,7 @@ text-decoration: none;
     justify-content: space-around;
     align-items: center;
     gap: 50px;
-    margin-top: 400px;
+    margin-top: 23em;
     
   }
 
@@ -315,31 +338,64 @@ text-decoration: none;
     padding: 1px;
     color: rgb(230, 230, 230);
     width: 300px;
-    height: 450px;
+    height: 350px;
   }
 
   .descriptionContainer p {
-    margin: 40% 5% 10% 5%;
+    margin: 10% 5% 10% 5%;
     font-family: Arial, Helvetica, sans-serif;
     padding: 2px;
     color: rgb(230, 230, 230);
   }
 
   .earth {
-    position: absolute;
-    top: -120px;
-    left:-60px;
+    display: none;
   }
 
-  .buttonsContainer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 22.5px;
-    
-  }
+
+
   .buttonMain{
     width: 150px;
     height: 125px;
   }
+}
+
+@media (max-width: 360px) {
+
+
+  .titleContainer {
+    margin-top: 20em;
+  }
+
+}
+
+@media (max-width: 321px) {
+
+
+  .titleContainer {
+    margin-top: 30em;
+  }
+
+}
+
+@media (max-width: 285px) {
+
+
+  .titleContainer {
+    margin-top: 43em;
+  }
+
+  .descriptionContainer {
+    width: 250px;
+    height: 350px;
+  }
+
+  .descriptionContainer p {
+    font-size: 18px;
+  }
+
+  .main h1  {
+    font-size: 20px;
+  }
+
 }
