@@ -654,9 +654,15 @@ export default function CharacterPopUp(props) {
                     <GiHeartInside /> Alive!
                     <button
                       className={styles.editButton}
-                      onClick={() =>
-                        editCharacter(props.character_id, "char_alive", false)
-                      }
+                      onClick={() => {
+                        editCharacter(
+                          props.character_id,
+                          "char_alive",
+                          editAlive
+                        ).then(() => {
+                          props.searchByName("")
+                        });
+                      }}
                     >
                       Kill!
                     </button>
@@ -670,9 +676,15 @@ export default function CharacterPopUp(props) {
                     <SlGhost /> Dead
                     <button
                       className={styles.editButton}
-                      onClick={() =>
-                        editCharacter(props.character_id, "char_alive", true)
-                      }
+                      onClick={() => {
+                        editCharacter(
+                          props.character_id,
+                          "char_alive",
+                          editAlive
+                        ).then(() => {
+                          props.searchByName("")
+                        });
+                      }}
                     >
                       Resurrect!
                     </button>
