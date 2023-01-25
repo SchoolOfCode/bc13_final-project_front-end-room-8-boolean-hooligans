@@ -67,6 +67,7 @@ export default function characterList() {
     <div className={styles.main}>
       <NewNavBar />
       <div>
+
         <div className={styles.header}>
           <div role="heading" aria-level="1">
             <h1 className={styles.h1}>Your Characters</h1>
@@ -74,62 +75,74 @@ export default function characterList() {
         </div>
 
         <div className={styles.filters} aria-level="2">
-          <div id={styles.cover}>
-            <form
-              className={styles.form}
-              onSubmit={(e) => {
-                e.preventDefault();
-                const formData = new FormData(e.target);
-                let nameToSearch = formData.get("char_name");
+          
+        <div id={styles.cover}>
+          <form className={styles.form}
+            onSubmit={(e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            let nameToSearch = formData.get("char_name");
 
-                searchByName(nameToSearch);
-              }}
-            >
-              <div className={styles.tb}>
-                <div className={styles.td} id={styles.sCover}>
-                  {/* <label htmlFor="char_name">Search by name:</label> */}
-                  <input
-                    placeholder="search by name"
-                    className={styles.input}
-                    type="text"
-                    name="char_name"
-                    id="char_name"
-                  />
-                  <button className={styles.button} type="submit">
-                    <span>
-                      <BiSearchAlt size="60" />
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div>
-            <button
-              className={styles.allButton}
-              onClick={() => searchByName("")}
-            >
-              <div>view all</div>
-            </button>
-          </div>
-          <div>
-            <select
-              className={styles.allButton}
-              defaultValue={"DEFAULT"}
-              onChange={(e) => setSortState(e.target.value)}
-            >
-              <option className="option" value="DEFAULT" disabled>
-                sort by: date created
-              </option>
-              <option className="option" value="ascending">
-                newest to oldest
-              </option>
-              <option className="option" value="descending">
-                oldest to newest
-              </option>
-            </select>{" "}
-          </div>
+            searchByName(nameToSearch);
+          }} >
+            <div className={styles.tb}>
+              <div className={styles.td} id={styles.sCover}>
+              <input
+                placeholder="search by name"
+                className={styles.input}
+                type="text"
+                name="char_name"
+                id="char_name"
+              />
+              <button className={styles.button} type="submit">
+              <span>
+                <BiSearchAlt size="60" />
+              </span>
+              </button>
+            </div>
+            </div>
+          </form>
         </div>
+        
+        <div>
+          <button
+            className={styles.allButton}
+            onClick={() => searchByName("")}
+          >
+          <div>View All</div>
+          </button>
+        </div>
+         
+        <div>
+          <select
+            className={styles.allButton}
+            defaultValue={"DEFAULT"}
+            onChange={(e) => setSortState(e.target.value)}
+          >
+          <option
+            className="option"
+            value="DEFAULT" disabled
+          >
+            Sort By: Date Created
+          </option>
+
+          <option
+            className="option"
+            value="ascending"
+          >
+            Newest to Oldest
+          </option>
+
+          <option
+            className="option"
+            value="descending"
+          >
+            Oldest to Newest
+          </option>
+          </select>{" "}
+        </div>
+      </div>
+      </div>
 
         {/* {charactersArray.length === 0 : <p>loading..</p> */}
         <div className={styles.cardsContainer}>
@@ -173,7 +186,6 @@ export default function characterList() {
               );
             })}
         </div>
-      </div>
     </div>
   );
 }
