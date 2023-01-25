@@ -55,6 +55,10 @@ export default function Step1({ setStep, formValues, setFormValues }) {
     // }
   }
 
+  if (isOn === true) {
+    formValues.char_alive = true;
+  }
+
   const toggleSwitch = () => {
     setIsOn(!isOn);
     if (isOn === true) {

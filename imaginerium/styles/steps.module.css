@@ -79,7 +79,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 
 .randomButton{
     width: 40%;
-    height: 3vh;
+    height: 35px;
     border: none;
     padding: 5px;
     border-radius: 0.5rem;
@@ -453,6 +453,10 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 
 }
 @media (max-width: 1400px) {
+
+    .stepOneLeftContainer{
+        width:70%;
+    }
     .formContainerStepTwo {
 
         font-size: 14px;
@@ -466,7 +470,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     }
     .formContainerStepTwo input {
         font-size: 14px;
-        width: 80%;
+        
     }
 
     .stepThreeLeftContainer{
@@ -476,6 +480,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     }
     .stepThreeLeftContainer input{
         font-size: 14px;
+        width: 100%;
         
     }
     .stepThreeRightContainer{
