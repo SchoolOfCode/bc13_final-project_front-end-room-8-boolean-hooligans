@@ -408,7 +408,7 @@ export default function CharacterPopUp(props) {
                   onClick={() => setEditSkinInput(!editSkinInput)}
                   className={styles.editButton}
                 >
-                  edit
+                   < AiFillEdit />
                 </button>
               </div>
             </div>
@@ -435,7 +435,7 @@ export default function CharacterPopUp(props) {
                       }}
                       className={styles.editButton}
                     >
-                      Done
+                     < MdFileDownloadDone />
                     </button>
                   </div>
                 </p>
