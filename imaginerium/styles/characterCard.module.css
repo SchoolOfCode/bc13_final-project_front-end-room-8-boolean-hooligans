@@ -131,7 +131,9 @@
   
   }
   
-  
+  .moreInfo .stats {
+    display: grid;
+  }
   
   .card .additional .stats {
     font-size: 1.3rem;

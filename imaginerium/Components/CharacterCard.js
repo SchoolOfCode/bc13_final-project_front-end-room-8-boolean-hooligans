@@ -1,8 +1,9 @@
 import styles from "../styles/characterCard.module.css";
 import { SlGhost } from "react-icons/sl";
-import { GiHeartInside } from "react-icons/gi";
+import { GiHeartInside, GiWeight } from "react-icons/gi";
 import { RiCake2Fill } from "react-icons/ri";
 import { HiUserGroup } from "react-icons/hi";
+import { FaEye } from "react-icons/fa";
 import { MdHeight } from "react-icons/md";
 import { useState } from "react";
 import PopUpCharacterCard from "../modals/popUpCharacterCard";
@@ -37,18 +38,23 @@ export default function CharacterCard(props) {
             />)}
           </div>
           <div className={styles.moreInfo}>
-            <h1>{props.char_name}</h1>
+            {/* <h1>{props.char_name}</h1> */}
 
             <div className={styles.stats}>
               <div>
                 <div className={styles.title}>Age</div>
                 <RiCake2Fill />
-                <div className={styles.valu}>{props.char_age}</div>
+                <div className={styles.value}>{props.char_age}</div>
               </div>
               <div>
                 <div className={styles.title}>Height</div>
                 <MdHeight />
-                <div className={styles.value}>{props.char_height}ft</div>
+                <div className={styles.value}>{props.char_height}m</div>
+              </div>
+              <div>
+                <div className={styles.title}>Weight</div>
+                <GiWeight />
+                <div className={styles.value}>{props.char_weight}kg</div>
               </div>
             </div>
           </div>
