@@ -1,24 +1,26 @@
 
 .cardsContainer {
- align-content: center;
+  align-content: center;
   margin: 0 auto; 
   margin-top: 5vh;
   max-width: 95vw;
   padding-left: 80px;
   padding-right: 80px;
-
   margin-left: 0px;
- display: grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   grid-column-gap: 10px;
   grid-row-gap: 5px;
+}
+
+.main {
+  margin: 5vh 0vw 5vh 0vw;
 }
  
 .h1{
   padding: 20px;
   color: white;
 }
-
 
 .header {
   margin-top: 2.5vh;
@@ -34,7 +36,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
 }
 
 .tb {
@@ -57,12 +58,10 @@
   width: 440px;
   padding: 22.4px;
   background: rgba(255, 255, 255, 0.2);
-
   border: 1px solid rgba(255, 255, 255, 0.603);
   border-radius: 16px;
   box-shadow: 0 10px 30px #fcb5b5, 0 0 0 15px #ffffffeb;
   transform: scale(0.48);
-  margin: 0px;
 }
 .input:focus {
   outline: 0;
@@ -86,10 +85,7 @@
 }
 
 
-
-
 .allButton {
- 
   max-width: 18.6vw;
   height: 9vh;
   color: #fff;
@@ -103,23 +99,23 @@
   border-bottom-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
   text-decoration: none;
-  margin: 17px;
+  margin: 5px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-cursor: pointer;
+  cursor: pointer;
   box-sizing: border-box;
   transition: 200ms;
-  padding: 15px;
+  padding: 5px;
 }
 
-.allButton:hover {
+/* .allButton:hover {
   transform: translateY(-20px);
 }
 .allButton:hover:before {
   transform: skewX(45deg) translateX(calc(var(--width) * -1 - 50%));
-}
+} */
 
 .allButton option {
   color: black;
