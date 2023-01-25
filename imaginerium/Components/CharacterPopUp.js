@@ -11,6 +11,7 @@ export default function CharacterPopUp(props) {
   const [editName, setEditName] = useState(null);
   const [editAgeInput, setEditAgeInput] = useState(false);
   const [editAge, setEditAge] = useState(null);
+
   const [editBackgroundInput, setEditBackgroundInput] = useState(false);
   const [editBackground, setEditBackground] = useState(null);
   const [editDescInput, setEditDescInput] = useState(false);
@@ -655,15 +656,17 @@ export default function CharacterPopUp(props) {
                     <button
                       className={styles.editButton}
                       onClick={() => {
+                      
                         editCharacter(
                           props.character_id,
                           "char_alive",
-                          editAlive
+                          false
                         ).then(() => {
                           props.searchByName("")
                         });
                       }}
                     >
+                    
                       Kill!
                     </button>
                   </p>
@@ -677,10 +680,11 @@ export default function CharacterPopUp(props) {
                     <button
                       className={styles.editButton}
                       onClick={() => {
+                      
                         editCharacter(
                           props.character_id,
                           "char_alive",
-                          editAlive
+                          true
                         ).then(() => {
                           props.searchByName("")
                         });
