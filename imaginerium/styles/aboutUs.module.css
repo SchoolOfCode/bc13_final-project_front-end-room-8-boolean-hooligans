@@ -20,7 +20,8 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 7%; 
+    margin-top: 7%;
+    margin-bottom: 2%; 
     height: 25%;
     width: 25%;
     padding: 20px;
@@ -29,7 +30,8 @@
 .headerBlock {
     display: flex;
     text-align: left;
-    margin: 50px 250px;
+    margin-left: 20%;
+    margin-right: 20% ;
 }
 
 .headerText {
@@ -55,7 +57,7 @@
     overflow: hidden;
     position: relative;
     font-size: 0.8rem;
-    margin: 10% 0% 0% 0%;
+    margin: 15% 0% 0% 0%;
   }
 
 .userCard {
@@ -209,8 +211,14 @@
   margin: 15% 0 10% 0; 
 }
   @media (max-width: 374) {
+
+    .headerBlock {
+      display: flex;
+      text-align: left;
+      margin: 50px 250px 0% 0% ;
+  }
+
     .card {
-     
       font-size: 5px;
     }
   
