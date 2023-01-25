@@ -40,8 +40,8 @@ export default function Step1({ setStep, formValues, setFormValues }) {
 
   useEffect(() => {
     randomName();
-    // setTrigger(true);
-  }, []);
+    setTrigger(true);
+  }, [trigger]);
 
   let user = { user_email: session.user.email };
 
@@ -49,7 +49,8 @@ export default function Step1({ setStep, formValues, setFormValues }) {
 
   async function onSubmit(values, e) {
     // e.preventDefault();
-    setFormValues({ ...user, ...formValues, ...values });
+    setFormValues({ ...user, ...formValues, ...values, char_alive: isOn });
+
     setStep(2);
     //   if(myForm.current.buttonId === 'next') {
     // }

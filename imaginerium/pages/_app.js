@@ -9,24 +9,24 @@ import { Session } from "next-auth";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-// import NProgress from 'nprogress';
-// import Spinner from "../components/Spinner";
+import NProgress from "nprogress";
+import Spinner from "../components/Spinner";
 
 export default function App({
   Component,
   pageProps: { session, ...pageProps }
 }) {
-  // const router = useRouter();
-  // const [delay, setDelay] = useState(0)
+  const router = useRouter();
+  const [delay, setDelay] = useState(0);
 
-  // useEffect(() => {
-  //   router.events.on('routeChangeStart', () =>  NProgress.start());
+  useEffect(() => {
+    router.events.on("routeChangeStart", () => NProgress.start());
 
-  //   router.events.on('routeChangeComplete', () =>  NProgress.done());
-  //   router.events.on('routeChangeError', () =>  NProgress.done());
-  // }, []);
+    router.events.on("routeChangeComplete", () => NProgress.done());
+    router.events.on("routeChangeError", () => NProgress.done());
+  }, []);
 
-  // setTimeout(() => setDelay(1), 5000)
+  setTimeout(() => setDelay(1), 5000);
 
   return (
     <SessionProvider session={session}>
@@ -42,8 +42,8 @@ export default function App({
           />
         </Head>
         <ThemeProvider>
+          {delay === 0 ? <Spinner /> : null}
           <Component {...pageProps} />
-          {/* {delay === 0 ? <Spinner /> : null} */}
         </ThemeProvider>
       </React.Fragment>
     </SessionProvider>
