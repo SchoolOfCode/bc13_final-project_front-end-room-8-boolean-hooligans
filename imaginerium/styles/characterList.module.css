@@ -67,9 +67,7 @@
 .input:focus {
   outline: 0;
   }
-.form {
-  height: 4.8vh;
-}
+
 
 .input[type="text"] {
   width: 100%;
