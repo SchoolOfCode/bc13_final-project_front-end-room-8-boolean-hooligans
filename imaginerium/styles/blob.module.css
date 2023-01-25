@@ -4,8 +4,8 @@
     top: 10%;
     will-change: transform;
     border-radius: 50%;
-    background: rgba(208, 198, 198, 0.484);
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    background: rgba(149, 100, 190, 0.705);
+    box-shadow: 10px 10px 5px 0px rgba(240, 235, 235, 0.75);
     opacity: 1;
   }
   

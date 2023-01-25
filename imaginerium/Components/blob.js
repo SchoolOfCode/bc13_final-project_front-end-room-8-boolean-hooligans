@@ -26,7 +26,7 @@ export default function Blob() {
           <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="30" />
           <feColorMatrix
             in="blur"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 30 -7"
+            values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 30 -7"
           />
         </filter>
       </svg>

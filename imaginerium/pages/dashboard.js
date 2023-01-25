@@ -7,6 +7,7 @@ import Navigation from "../Components/Navigation";
 import NewNavBar from "../Components/NewNavBar.js";
 import ButtonLink from "../Components/ButtonLink";
 import { VscPersonAdd, VscOrganization, VscGlobe } from "react-icons/vsc";
+import Blob from "../Components/Blob";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <div className={styles.homeContainer}>
         <NewNavBar />
         <main className={styles.main}>
@@ -46,28 +48,36 @@ export default function Home() {
             <div className={styles.buttonsContainer}>
               <Link className={styles.buttonText} href="/createCharacter">
                 <button className={styles.buttonMain}>
-                  <div><VscPersonAdd className={styles.icon} /></div>
+                  <div>
+                    <VscPersonAdd className={styles.icon} />
+                  </div>
                   <div>Create Character</div>
                 </button>
               </Link>
 
               <Link className={styles.buttonText} href="/characterList">
                 <button className={styles.buttonMain}>
-                  <div><VscOrganization className={styles.icon} /></div>
+                  <div>
+                    <VscOrganization className={styles.icon} />
+                  </div>
                   <div>Your Characters</div>
                 </button>
               </Link>
 
               <Link className={styles.buttonText} href="/sharedCharacters">
                 <button className={styles.buttonMain}>
-                  <div><VscOrganization className={styles.icon} /></div>
+                  <div>
+                    <VscOrganization className={styles.icon} />
+                  </div>
                   <div>Shared Characters</div>
                 </button>
               </Link>
 
               <Link className={styles.buttonText} href="/createNewWorld">
                 <button className={styles.buttonMain}>
-                  <div><VscGlobe className={styles.icon} /></div>
+                  <div>
+                    <VscGlobe className={styles.icon} />
+                  </div>
                   <div>Create World</div>
                 </button>
               </Link>

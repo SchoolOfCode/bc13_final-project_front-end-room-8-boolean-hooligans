@@ -8,6 +8,7 @@ import { AppProps } from "next/app";
 import { Session } from "next-auth";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import Blob from "../Components/Blob.js";
 
 // import NProgress from 'nprogress';
 // import Spinner from "../components/Spinner";
@@ -42,6 +43,7 @@ export default function App({
           />
         </Head>
         <ThemeProvider>
+          <Blob />
           <Component {...pageProps} />
           {/* {delay === 0 ? <Spinner /> : null} */}
         </ThemeProvider>
