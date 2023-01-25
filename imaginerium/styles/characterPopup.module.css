@@ -1,34 +1,57 @@
-
-  .popUp {
-  
-    display: flex;
-    flex-direction: row;
-   
-    background: rgba(255, 255, 255, 0);
-    height: 70vh;
+.popUp {
+  display: flex;
+  flex-direction: row;
+  color: black;
+  background: rgba(255, 255, 255, 0);
+  height: 70vh;
   font-family: tahoma;
-  
-  
-  }
+}
 
-  .popUpLeft {
-   
-    padding: 15px;
-    width: 30%;
-   
-    border-radius: 10px;
-    height: 90%;
-    z-index:5;
-   
+.popUpLeft {
+  padding: 15px;
+  width: 30%;
+  color: black;
+  border-radius: 10px;
+  height: 90%;
+  z-index: 5;
+}
+
+.popUpImage {
+  margin-top: 20px;
+  max-width: 14vw;
+  border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
   }
-  
-  .popUpImage {
-  
-    max-width: 14vw;
-    border-radius: 50%;
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-15px);
   }
-  
-  .editButton,
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+.buttonsContainerLeft {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  width: 95%;
+
+}
+
+/* .editButton,
   .deleteButton,
   .shareButton,
   .closePopUpButton {
@@ -38,22 +61,19 @@
     box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
     color: green;
     cursor: pointer;
-    display: block;
-    /*inline-block removed due to float: right on line 94*/
-    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
-    padding: 7px 20px;
-    margin-top: -10px;
+    /* display: block; */
+/* font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+    padding: 7px 14px;
     text-align: center;
     text-decoration: none;
     transition: all 250ms;
     border: 0;
-    font-size: 16px;
+    font-size: 1rem;
     user-select: none;
     -webkit-user-select: none;
-    touch-action: manipulation;
-  }
-  
+    touch-action: manipulation; }*/
 
+/* 
   .deleteButton:hover,
   .shareButton:hover,
   .closePopUpButton:hover,
@@ -61,68 +81,66 @@
     box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
     transform: scale(1.05) rotate(-1deg);
   }
-  
-  
-  
-  .popUpRight {
-   
-    padding: 15px;
-    width: 96%;
- 
-  }
-  .infoContainer {
-height: 80%;
-    overflow: auto;
-    border-radius: 10px;
-margin-right: -20px;
-  }
-  .infoContainer::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0, 33, 36, 0.3);
-	border-radius: 10px;
-	background-color: #f5f5f500;
+   */
+
+.popUpRight {
+  padding: 15px;
+  width: 96%;
 }
-.infoContainer::-webkit-scrollbar
-{
-	width: 12px;
-	background-color: #f5f5f500;
+.infoContainer {
+  height: 80%;
+  overflow: auto;
+  border-radius: 10px;
+  margin-right: -10px;
+  box-shadow: 0  10px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.infoContainer::-webkit-scrollbar-track {
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0, 33, 36, 0.3); */
+  border-radius: 10px;
+  background-color: #ebecf000;
+}
+.infoContainer::-webkit-scrollbar {
+  width: 12px;
+  background-color: #45454600;
 }
 
-.infoContainer::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: rgb(57, 51, 88);
+.infoContainer::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #535970;
 }
 
 .leftStuffContainer {
-  margin-top: 30px;;
-  background: rgb(233, 233, 248);;
+  margin-top: 30px;
+  background: #ebecf0;
   border-radius: 10px;
   padding: 10px;
   display: flex;
   flex-direction: column;
-  height: 41%;
-align-content: center;
-justify-content: center;
-align-items: center;
+  height: 36%;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 15px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
-.deleteButton {
+/* .deleteButton {
   margin: 5px;
   box-shadow: rgba(187, 73, 44, 0.2) 0 -25px 18px -14px inset, rgba(187, 96, 44, 0.15) 0 1px 2px, rgba(187, 130, 44, 0.15) 0 2px 4px, rgba(187, 77, 44, 0.15) 0 4px 8px, rgba(187, 65, 44, 0.15) 0 8px 16px, rgba(187, 113, 44, 0.15) 0 16px 32px;
-  background-color: rgb(253, 183, 125);
-  color: rgb(77, 1, 1);
+  background-color: rgb(253, 197, 125);
+  color: rgb(26, 0, 0);
 }
 .shareButton {
   margin: 5px;
   box-shadow: rgba(187, 73, 44, 0.2) 0 -25px 18px -14px inset, rgba(187, 96, 44, 0.15) 0 1px 2px, rgba(187, 130, 44, 0.15) 0 2px 4px, rgba(187, 77, 44, 0.15) 0 4px 8px, rgba(187, 65, 44, 0.15) 0 8px 16px, rgba(187, 113, 44, 0.15) 0 16px 32px;
   background-color: rgb(251, 253, 125);
   color: rgb(0, 44, 3);
-}
+} */
 .closePopUpButton {
-
-  box-shadow: rgba(187, 73, 44, 0.2) 0 -25px 18px -14px inset, rgba(187, 96, 44, 0.15) 0 1px 2px, rgba(187, 130, 44, 0.15) 0 2px 4px, rgba(187, 77, 44, 0.15) 0 4px 8px, rgba(187, 65, 44, 0.15) 0 8px 16px, rgba(187, 113, 44, 0.15) 0 16px 32px;
+  box-shadow: rgba(187, 73, 44, 0.2) 0 -25px 18px -14px inset,
+    rgba(187, 96, 44, 0.15) 0 1px 2px, rgba(187, 130, 44, 0.15) 0 2px 4px,
+    rgba(187, 77, 44, 0.15) 0 4px 8px, rgba(187, 65, 44, 0.15) 0 8px 16px,
+    rgba(187, 113, 44, 0.15) 0 16px 32px;
   background-color: rgb(251, 253, 125);
   color: rgb(0, 44, 3);
 }
@@ -131,20 +149,87 @@ align-items: center;
 }
 
 .section {
-  background: rgb(233, 233, 248);;
+  background: #ebecf0;
   margin-bottom: 20px;
   border-radius: 10px;
   padding: 10px;
   line-height: 120%;
 }
+.popUpLeft input,
+.section input {
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid rgba(187, 130, 233, 0.493);
+  width: 80%;
+}
+.section textarea {
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid rgba(187, 130, 233, 0.493);
+  width: 80%;
+}
 .section h2 {
   font-size: 1.3rem;
-  font-weight: 600px;;
+  font-weight: 600px;
+}
+.section p {
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px white;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  margin-left: 8px;
+  margin-top: -8px;
 }
 .category {
   border-radius: 10px;
-  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 82, 187, 0.15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 130, 187, 0.15) 0 4px 8px, rgba(44, 154, 187, 0.15) 0 8px 16px, rgba(44, 106, 187, 0.15) 0 16px 32px;
-   margin-top: 18px;
-    padding: 15px;
-    font-size: 1.1rem;
-  }
+
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+
+
+/* .shareButton:hover,
+.deleteButton:hover {
+  background: radial-gradient(circle, rgb(248, 245, 245) 0%, #d6d6d6 60%);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.shareButton:active,
+.deleteButton:active {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+} */
+.closePopUpButton,
+.editButton {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.199);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  float: right;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  margin-top: -10px;
+  box-sizing: border-box;
+}
+.editButton:hover {
+  background: #4a47fc;
+  color: #ffffff;
+}
