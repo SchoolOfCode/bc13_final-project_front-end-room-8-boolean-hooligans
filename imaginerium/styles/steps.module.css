@@ -3,6 +3,7 @@
     width: 80%;
     height:100%;
     display: flex;
+    
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -21,6 +22,7 @@
     width: 90%;
     height: 100%;
     display: flex;
+    
     padding: 3rem;
     flex-direction: row;
     justify-content: center;
@@ -61,6 +63,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 
 .stepOneLeftContainer input {
     width: 80%;
+    
     height: 3vh;
     border: none;
     padding: 5px;
@@ -79,7 +82,8 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 
 .randomButton{
     width: 40%;
-    height: 3vh;
+   
+    z-index: 10;
     border: none;
     padding: 5px;
     border-radius: 0.5rem;
@@ -129,12 +133,13 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     font-size: 1.2rem;
     font-weight: 500;
     color: #000;
+   
 }
 
 
 
 .stepOneRightContainer input {
-
+    
     width: 80%;
     height: 3vh;
     border: none;
@@ -453,6 +458,10 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 
 }
 @media (max-width: 1400px) {
+
+    .stepOneLeftContainer{
+        width:70%;
+    }
     .formContainerStepTwo {
 
         font-size: 14px;
@@ -466,7 +475,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     }
     .formContainerStepTwo input {
         font-size: 14px;
-        width: 80%;
+        
     }
 
     .stepThreeLeftContainer{
@@ -476,6 +485,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     }
     .stepThreeLeftContainer input{
         font-size: 14px;
+        width: 100%;
         
     }
     .stepThreeRightContainer{

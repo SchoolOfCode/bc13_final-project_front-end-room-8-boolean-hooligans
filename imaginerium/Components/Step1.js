@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { useSession } from "next-auth/react";
 import styles from "../styles/steps.module.css";
 import { motion } from "framer-motion";
-import Switch from "./Switch";
+
 import style from "../styles/switch.module.css";
 
 export default function Step1({ setStep, formValues, setFormValues }) {
@@ -215,10 +215,15 @@ export default function Step1({ setStep, formValues, setFormValues }) {
               data-isOn={formValues.char_alive}
               onClick={toggleSwitch}
             >
-              <motion.div className={style.handle} transition={spring} />
-
-              {console.log(isOn)}
-              <p>{formValues.char_alive ? "Alive" : "Dead"}</p>
+              <motion.div className={style.handle} layout transition={spring} />
+              {console.log("alive?:", formValues.char_alive)}
+              <p>
+                {formValues.char_alive === undefined
+                  ? "Yes"
+                  : formValues.char_alive
+                  ? "Yes"
+                  : "No"}
+              </p>
             </div>
           </div>
 
