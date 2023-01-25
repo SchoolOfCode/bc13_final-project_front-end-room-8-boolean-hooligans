@@ -1,5 +1,5 @@
 import Navigation from "../Components/Navigation.js";
-import CharacterCard from "../Components/CharacterCard.js";
+import SharedCharacterCard from "../Components/SharedCharacterCard.js";
 import styles from "../styles/characterList.module.css";
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
@@ -97,7 +97,7 @@ export default function characterList() {
             .sort(sortMethods[sortState].method)
             .map((character) => {
               return (
-                <CharacterCard
+                <SharedCharacterCard
                
                   className="cctest"
                   key={character.character_id}
