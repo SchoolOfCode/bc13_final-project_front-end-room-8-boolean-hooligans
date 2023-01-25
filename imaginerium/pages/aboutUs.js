@@ -86,7 +86,7 @@ export default function aboutUs() {
             <div className={styles.general}>
                 <img
                   className={styles.image2}
-                  src="./andres_pfp.png"
+                  src="./andres_pfp.jpg"
                   alt="Pixel art of Andrés."
                 />
             </div>
