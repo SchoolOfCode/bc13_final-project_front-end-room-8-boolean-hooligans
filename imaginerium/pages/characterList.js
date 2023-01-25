@@ -128,14 +128,14 @@ export default function characterList() {
 
           <option
             className="option"
-            value="ascending"
+            value="descending"
           >
             Newest to Oldest
           </option>
 
           <option
             className="option"
-            value="descending"
+            value="ascending"
           >
             Oldest to Newest
           </option>
