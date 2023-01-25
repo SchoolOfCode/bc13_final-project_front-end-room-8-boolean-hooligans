@@ -103,10 +103,11 @@ export default function CharacterPopUp(props) {
     <div className={styles.popUp}>
       
       <div className={styles.popUpLeft}>
-        <img
-          className={styles.popUpImage}
-          src="https://deepgrouplondon.com/wp-content/uploads/2019/06/person-placeholder-5.png"
-        />
+         {props.char_img ?( <img
+          className={styles.popUpImage} src={props.char_img} />): (<img
+            className={styles.popUpImage} src="https://deepgrouplondon.com/wp-content/uploads/2019/06/person-placeholder-5.png"/>)}
+      
+        
         <div className={styles.leftStuffContainer}>
           { emailTrigger ? (
 
