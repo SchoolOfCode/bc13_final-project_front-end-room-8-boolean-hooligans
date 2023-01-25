@@ -20,7 +20,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.homeContainer}>
-        {/* <Navigation /> */}
         <NewNavBar />
         <main className={styles.main}>
           <div className={styles.titleContainer}>

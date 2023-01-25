@@ -1,5 +1,5 @@
 
-.loggedInUserDiv, .loggedOutUserDiv{
+.logInOutContainer {
     display: flex;
     flex-direction: row;
     height: 50px;
@@ -9,10 +9,9 @@
     z-index: 50;
     top: 30px;
     right: 10px;
-    cursor: pointer;
+    width: 150px;
+    height: 50px;
     gap: 5%;
-    
-
 }
 
 .profilePic{
@@ -23,8 +22,8 @@
 }
 
 .logIOBtn {
-    width: 10vh;
-    height: 5vw;
+    width: 80px;
+    height: 55.75px;
     background: none;
     color: white;
     border: none;
@@ -34,4 +33,9 @@
 
 .logIOBtn:hover {
     text-decoration: underline;
+  }
+
+  @media (max-width: 285px) {
+    .logIOBtn {
+        width: 60px;}
   }
