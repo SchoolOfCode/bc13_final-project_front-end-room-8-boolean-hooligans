@@ -191,6 +191,8 @@
   transition: all 0.2s ease-in-out;
   margin-left: 8px;
   margin-top: -8px;
+  line-height: 150%;
+  word-spacing:0.15em;
 }
 .category {
   border-radius: 10px;
