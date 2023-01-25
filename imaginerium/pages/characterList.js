@@ -120,7 +120,7 @@ export default function characterList() {
             onChange={(e) => setSortState(e.target.value)}
           >
           <option
-            className="option"
+            className={styles.dropdownContent}
             value="DEFAULT" disabled
           >
             Sort By: Date Created
