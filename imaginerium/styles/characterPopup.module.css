@@ -54,37 +54,8 @@
 
 }
 
-/* .editButton,
-  .deleteButton,
-  .shareButton,
-  .closePopUpButton {
-    float: right;
-    background-color: #c7fbc2;
-    border-radius: 100px;
-    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
-    color: green;
-    cursor: pointer;
-    /* display: block; */
-/* font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
-    padding: 7px 14px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 250ms;
-    border: 0;
-    font-size: 1rem;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation; }*/
 
-/* 
-  .deleteButton:hover,
-  .shareButton:hover,
-  .closePopUpButton:hover,
-  .editButton:hover {
-    box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
-    transform: scale(1.05) rotate(-1deg);
-  }
-   */
+
 
 .popUpRight {
   padding: 15px;
@@ -104,8 +75,10 @@
   border-right-color: rgba(255, 255, 255, 0.1);
   border-bottom-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-  
-  
+
+}
+.popUpRight h1 {
+  color:white;
 }
 .infoContainer::-webkit-scrollbar-track {
   /* -webkit-box-shadow: inset 0 0 6px rgba(0, 33, 36, 0.3); */
@@ -149,18 +122,7 @@
   box-shadow: 0 15px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
-/* .deleteButton {
-  margin: 5px;
-  box-shadow: rgba(187, 73, 44, 0.2) 0 -25px 18px -14px inset, rgba(187, 96, 44, 0.15) 0 1px 2px, rgba(187, 130, 44, 0.15) 0 2px 4px, rgba(187, 77, 44, 0.15) 0 4px 8px, rgba(187, 65, 44, 0.15) 0 8px 16px, rgba(187, 113, 44, 0.15) 0 16px 32px;
-  background-color: rgb(253, 197, 125);
-  color: rgb(26, 0, 0);
-}
-.shareButton {
-  margin: 5px;
-  box-shadow: rgba(187, 73, 44, 0.2) 0 -25px 18px -14px inset, rgba(187, 96, 44, 0.15) 0 1px 2px, rgba(187, 130, 44, 0.15) 0 2px 4px, rgba(187, 77, 44, 0.15) 0 4px 8px, rgba(187, 65, 44, 0.15) 0 8px 16px, rgba(187, 113, 44, 0.15) 0 16px 32px;
-  background-color: rgb(251, 253, 125);
-  color: rgb(0, 44, 3);
-} */
+
 .closePopUpButton {
   box-shadow: rgba(187, 73, 44, 0.2) 0 -25px 18px -14px inset,
     rgba(187, 96, 44, 0.15) 0 1px 2px, rgba(187, 130, 44, 0.15) 0 2px 4px,
@@ -172,6 +134,9 @@
 .editNameButton {
   margin: 5px;
 }
+.doneButton {
+  outline:rgba(0, 0, 0, 0.295)
+}
 
 .section {
   background: #e3e7f7;
@@ -179,7 +144,6 @@
   border-radius: 10px;
   padding: 10px;
   line-height: 120%;
- 
  
 }
 .popUpLeft input,
@@ -206,6 +170,7 @@
 .section h2 {
   font-size: 1.3rem;
   font-weight: 600px;
+  color: black
 }
 .section p {
   border-radius: 10px;
@@ -230,20 +195,10 @@
 
 
 
-/* .shareButton:hover,
-.deleteButton:hover {
-  background: radial-gradient(circle, rgb(248, 245, 245) 0%, #d6d6d6 60%);
-  color: rgba(0, 0, 0, 0.5);
-}
 
-.shareButton:active,
-.deleteButton:active {
-  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
-    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
-    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
-    inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
-} */
+.doneButton,
 .closePopUpButton,
+.editNameButton,
 .editButton {
   position: relative;
   background: #ffffff;
@@ -264,6 +219,8 @@
   margin-top: -10px;
   box-sizing: border-box;
 }
+.doneButton:hover,
+.editNameButton:hover,
 .closePopUpButton:hover,
 .editButton:hover {
   background: #4a47fc;
@@ -296,4 +253,13 @@
 
   background: #4a47fc;
   color: #ffffff;
+}
+.editNameButton{
+  top:20%;
+  margin-bottom: -5px;
+}
+
+.doneButton {
+  border: solid;
+  border: 1px;
 }
