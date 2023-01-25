@@ -5,17 +5,26 @@ import { useRef } from "react";
 import { useSession } from "next-auth/react";
 import styles from "../styles/steps.module.css";
 import { motion } from "framer-motion";
+import Switch from "./Switch";
+import style from "../styles/switch.module.css";
 
 export default function Step1({ setStep, formValues, setFormValues }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [image, setImage] = useState("");
   const [trigger, setTrigger] = useState(true);
+  const [isOn, setIsOn] = useState(true);
   const myForm = useRef();
 
   const { register, handleSubmit } = useForm();
 
   const { data: session } = useSession();
+
+  const spring = {
+    type: "spring",
+    stiffness: 700,
+    damping: 30
+  };
 
   async function randomName() {
     const response = await fetch(`https://randomuser.me/api/`);
@@ -46,6 +55,17 @@ export default function Step1({ setStep, formValues, setFormValues }) {
     // }
   }
 
+  const toggleSwitch = () => {
+    setIsOn(!isOn);
+    if (isOn === true) {
+      let addAlive = { ...formValues, char_alive: false };
+      setFormValues(addAlive);
+    } else {
+      let addAlive = { ...formValues, char_alive: true };
+      setFormValues(addAlive);
+    }
+  };
+
   return (
     <div className={styles.mainStepTwo}>
       <h2>Physical Features</h2>
@@ -66,7 +86,11 @@ export default function Step1({ setStep, formValues, setFormValues }) {
             name="char_name"
             id="char_name"
           />
-          <button type="button" onClick={() => randomName()}>
+          <button
+            className={styles.randomButton}
+            type="button"
+            onClick={() => randomName()}
+          >
             Randomise
           </button>
           {formValues.char_img ? ( // if image is true, show image, else show placeholder
@@ -78,7 +102,6 @@ export default function Step1({ setStep, formValues, setFormValues }) {
               alt="Character placeholder"
             />
           )}
-
           <label htmlFor="char_img">Enter image url</label>
           <input
             defaultValue={formValues.char_img}
@@ -142,7 +165,7 @@ export default function Step1({ setStep, formValues, setFormValues }) {
             />
           </div>
           <div>
-            <label htmlFor="char_height">Height in metres?</label>
+            <label htmlFor="char_height">Height in centimetres?</label>
             <input
               defaultValue={formValues.char_height}
               placeholder="Enter number"
@@ -174,7 +197,7 @@ export default function Step1({ setStep, formValues, setFormValues }) {
               id="char_features"
             />
           </div>
-          <div>
+          <div className={styles.textBoxStepOne}>
             <label htmlFor="char_desc">Character description</label>
             <textarea
               defaultValue={formValues.char_desc}
@@ -186,16 +209,17 @@ export default function Step1({ setStep, formValues, setFormValues }) {
           </div>
           <div>
             <label htmlFor="char_alive">Are they alive?</label>
-            <select
-              defaultValue={formValues.char_alive}
-              className="dropdown"
-              {...register("char_alive", { required: false })}
-              name="char_alive"
-              id="char_alive"
+
+            <div
+              className={style.switch}
+              data-isOn={formValues.char_alive}
+              onClick={toggleSwitch}
             >
-              <option value="true">They're alive!</option>
-              <option value="false">They're dead!</option>
-            </select>
+              <motion.div className={style.handle} transition={spring} />
+
+              {console.log(isOn)}
+              <p>{formValues.char_alive ? "Alive" : "Dead"}</p>
+            </div>
           </div>
 
           <button type="submit" id="next" className={styles.stepOneButton}>
