@@ -9,7 +9,7 @@
     z-index: 50;
     top: 30px;
     right: 10px;
-    width: 126px;
+    width: 150px;
     height: 50px;
     gap: 5%;
 }
@@ -22,7 +22,7 @@
 }
 
 .logIOBtn {
-    width: 55.7px;
+    width: 80px;
     height: 55.75px;
     background: none;
     color: white;
@@ -33,4 +33,9 @@
 
 .logIOBtn:hover {
     text-decoration: underline;
+  }
+
+  @media (max-width: 285px) {
+    .logIOBtn {
+        width: 60px;}
   }
