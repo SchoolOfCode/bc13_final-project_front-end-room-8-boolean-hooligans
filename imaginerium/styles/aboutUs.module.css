@@ -54,7 +54,7 @@
     border-radius: 6px;
     overflow: hidden;
     position: relative;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin: 10% 0% 0% 0%;
   }
 
@@ -99,6 +99,9 @@
 }
   /* .card  */
   .additional {
+    display: flex;
+    flex-direction: row;
+    gap:5%;
     position: absolute;
     width: 150px;
     height: 100%;
@@ -121,9 +124,9 @@
     width: 280px;
     float: right;
     position: absolute;
-    left: 120px;
+    left: 150px;
     height: 100%;
-    overflow-x: scroll;
+
   }
 
   .image {
@@ -154,35 +157,61 @@
   }
 
   .icon {
+    width: 50px;
+    height: auto;
     padding: 0 5px 0 0;
   }
 
   .description {
-    margin-top: 0px;
     width: 80%;
     float: right;
     text-align: left;
     overflow-y: scroll;
-    height: 100%;
-    padding: 10px;
+    height: 90%;
+    padding: 0px;
+    margin-right: 53px;
+    margin-bottom: 15px;
+    margin-top: 11px;
   }
 
   .additional .aliveStatus {
-    margin: 5px;
+    margin-top: 15px;
     color: #fff;
     text-transform: uppercase;
     font-size: 1em;
     font-weight: bold;
     background: rgba(0, 0, 0, 0.15);
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: 5px;
+    padding-bottom: 2px;
     border-radius: 100px;
     white-space: nowrap;
     overflow: hidden;
     text-align: center;
+    width: 105px;
+    margin-left: 21px;
   }
 
   .card:hover .additional {
     width: 100%;
     border-radius: 0 5px 5px 0;
+  }
+
+.socialsContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 11px;
+  gap: 1%;
+}
+
+.userCard h2 {
+  margin: 15% 0 10% 0; 
+}
+  @media (max-width: 374) {
+    .card {
+     
+      font-size: 5px;
+    }
+  
   }

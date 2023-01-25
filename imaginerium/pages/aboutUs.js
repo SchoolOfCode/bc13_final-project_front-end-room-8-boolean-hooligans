@@ -40,11 +40,9 @@ export default function aboutUs() {
                     </span>
                 </div>
                 <div className={styles.stats}>
-                  <div>
-                  <p><AiFillLinkedin className={styles.icon}/><Link className={styles.link} href="https://www.linkedin.com/in/felicitycullen" target="_blank">LinkedIn</Link></p>
-                  </div>
-                  <div>
-                  <p><AiFillGithub className={styles.icon} /><Link className={styles.link} href="https://github.com/Fliss317" target="_blank">GitHub</Link></p>
+                <div className={styles.socialsContainer}>
+                  <div><Link className={styles.link} href="https://www.linkedin.com/in/felicitycullen" target="_blank"><AiFillLinkedin className={styles.icon}/></Link></div>
+                  <div><Link className={styles.link} href="https://github.com/Fliss317" target="_blank"><AiFillGithub className={styles.icon} /></Link></div>
                   </div>
                 </div>
               </div>
@@ -75,11 +73,9 @@ export default function aboutUs() {
                     </span>
                 </div>
                 <div className={styles.stats}>
-                  <div>
-                  <p><AiFillLinkedin className={styles.icon}/><Link className={styles.link} href="https://www.linkedin.com/in/andres-e-036492108/" target="_blank">LinkedIn</Link></p>
-                  </div>
-                  <div>
-                  <p><AiFillGithub className={styles.icon} /><Link className={styles.link} href="https://github.com/andres3m" target="_blank">GitHub</Link></p>
+                <div className={styles.socialsContainer}>
+                  <div><Link className={styles.link} href="https://www.linkedin.com/in/andres-e-036492108/" target="_blank"><AiFillLinkedin className={styles.icon}/></Link></div>
+                  <div><Link className={styles.link} href="https://github.com/andres3m" target="_blank"><AiFillGithub className={styles.icon} /></Link></div>
                   </div>
                 </div>
               </div>
@@ -103,18 +99,16 @@ export default function aboutUs() {
           <div className={styles.card}>
             <div className={styles.additional}>
               <div className={styles.userCard}>
-                <h2>Iona Rose</h2>
-                <div className={styles.aliveStatus}>
+                <h2>Iona<br/>Rose</h2>
+                 <div className={styles.aliveStatus}>
                     <span>
                       <GiHeartInside /> <span>Alive</span>
                     </span>
-                </div>
+                </div> 
                 <div className={styles.stats}>
-                  <div>
-                  <p><AiFillLinkedin className={styles.icon}/><Link className={styles.link} href="linkedin.com/in/iona-rose/" target="_blank">LinkedIn</Link></p>
-                  </div>
-                  <div>
-                  <p><AiFillGithub className={styles.icon} /><Link className={styles.link} href="https://github.com/ionarose" target="_blank">GitHub</Link></p>
+                  <div className={styles.socialsContainer}>
+                  <div><Link className={styles.link} href="linkedin.com/in/iona-rose/" target="_blank"><AiFillLinkedin className={styles.icon}/></Link></div>
+                  <div><Link className={styles.link} href="https://github.com/ionarose" target="_blank"><AiFillGithub className={styles.icon} /></Link></div>
                   </div>
                 </div>
               </div>
@@ -145,13 +139,11 @@ export default function aboutUs() {
                     </span>
                 </div>
                 <div className={styles.stats}>
-                  <div>
-                  <p><AiFillLinkedin className={styles.icon}/><Link className={styles.link} href="https://www.linkedin.com/in/filip-ruminski/" target="_blank">LinkedIn</Link></p>
+                <div className={styles.socialsContainer}>
+                  <div><Link className={styles.link} href="https://www.linkedin.com/in/filip-ruminski/" target="_blank"><AiFillLinkedin className={styles.icon}/></Link></div>
+                  <div><Link className={styles.link} href="https://github.com/fruminski" target="_blank"><AiFillGithub className={styles.icon} /></Link></div>
                   </div>
-                  <div>
-                  <p><AiFillGithub className={styles.icon} /><Link className={styles.link} href="https://github.com/fruminski" target="_blank">GitHub</Link></p>
                   </div>
-                </div>
               </div>
               <div className={styles.moreInfo}>
                 <p className={styles.description}>WORDS HERE </p>
@@ -180,13 +172,11 @@ export default function aboutUs() {
                     </span>
                 </div>
                 <div className={styles.stats}>
-                  <div>
-                  <p><AiFillLinkedin className={styles.icon}/><Link className={styles.link} href="https://www.linkedin.com/in/charlessajan/" target="_blank">LinkedIn</Link></p>
+                <div className={styles.socialsContainer}>
+                  <div><Link className={styles.link} href="https://www.linkedin.com/in/charlessajan/" target="_blank"><AiFillLinkedin className={styles.icon}/></Link></div>
+                  <div><Link className={styles.link} href="https://github.com/csajan" target="_blank"><AiFillGithub className={styles.icon} /></Link></div>
                   </div>
-                  <div>
-                  <p><AiFillGithub className={styles.icon} /><Link className={styles.link} href="https://github.com/csajan" target="_blank">GitHub</Link></p>
-                  </div>
-                </div>
+              </div>
               </div>
               <div className={styles.moreInfo}>
                 <p className={styles.description}>WORDS HERE </p>
