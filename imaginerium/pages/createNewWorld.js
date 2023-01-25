@@ -22,6 +22,12 @@ const { data: session } = useSession();
         className={styles.map}
         src="https://azgaar.github.io/Fantasy-Map-Generator/"
       ></iframe>
+      <div className={styles.guide}>
+        <h2>
+          Brief User Guide:
+        </h2>
+        <p></p>
+      </div>
     </>
   );
 }

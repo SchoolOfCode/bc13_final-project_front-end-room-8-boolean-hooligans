@@ -5,3 +5,7 @@
     width: 76vw;
     height: 90vh;
   }
+
+.guide {
+  display: right;
+}

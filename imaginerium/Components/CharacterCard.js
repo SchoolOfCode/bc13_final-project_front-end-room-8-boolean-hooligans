@@ -2,6 +2,7 @@ import styles from "../styles/characterCard.module.css";
 import { SlGhost } from "react-icons/sl";
 import { GiHeartInside, GiWeight } from "react-icons/gi";
 import { RiCake2Fill } from "react-icons/ri";
+import { MdTransgender } from "react-icons/md";
 import { HiUserGroup } from "react-icons/hi";
 import { FaEye } from "react-icons/fa";
 import { MdHeight } from "react-icons/md";
@@ -37,10 +38,16 @@ export default function CharacterCard(props) {
               src="https://deepgrouplondon.com/wp-content/uploads/2019/06/person-placeholder-5.png"
             />)}
           </div>
-          <div className={styles.moreInfo}>
+            <div className={styles.moreInfo}>
             {/* <h1>{props.char_name}</h1> */}
-
+           
+      
             <div className={styles.stats}>
+              <div>
+              <div className={styles.title}>Gender</div>
+              <MdTransgender/>
+              <div className={styles.value}>{props.char_gender}</div>
+              </div>
               <div>
                 <div className={styles.title}>Age</div>
                 <RiCake2Fill />
