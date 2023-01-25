@@ -55,10 +55,6 @@ export default function Step1({ setStep, formValues, setFormValues }) {
     // }
   }
 
-  if (isOn === true) {
-    formValues.char_alive = true;
-  }
-
   const toggleSwitch = () => {
     setIsOn(!isOn);
     if (isOn === true) {
@@ -220,9 +216,14 @@ export default function Step1({ setStep, formValues, setFormValues }) {
               onClick={toggleSwitch}
             >
               <motion.div className={style.handle} transition={spring} />
-
-              {console.log(isOn)}
-              <p>{formValues.char_alive ? "Alive" : "Dead"}</p>
+              {console.log("alive?:", formValues.char_alive)}
+              <p>
+                {formValues.char_alive === undefined
+                  ? "Yes"
+                  : formValues.char_alive
+                  ? "Yes"
+                  : "No"}
+              </p>
             </div>
           </div>
 
