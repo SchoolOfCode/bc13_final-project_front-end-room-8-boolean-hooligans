@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useRef } from "react";
 import styles from "../styles/steps.module.css";
+import { motion } from "framer-motion";
 
 export default function Step2({ setStep, formValues, setFormValues }) {
   const { register, handleSubmit } = useForm();
@@ -25,7 +26,9 @@ export default function Step2({ setStep, formValues, setFormValues }) {
     <div className={styles.mainStepTwo}>
       <h2>Personality</h2>
 
-      <form
+      <motion.form
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
         className={styles.mainContainer}
         onSubmit={handleSubmit(onSubmit)}
         ref={myForm}
@@ -112,7 +115,7 @@ export default function Step2({ setStep, formValues, setFormValues }) {
             </button>
           </div>
         </div>
-      </form>
+      </motion.form>
     </div>
   );
 }

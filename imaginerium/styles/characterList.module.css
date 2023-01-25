@@ -43,8 +43,7 @@
 }
 
 .td {
-  display: table-cell;
-  vertical-align: middle;
+  display: flex;
 }
 
 .input,
@@ -74,7 +73,7 @@
 
 .input[type="text"] {
   width: 100%;
-  height: 6vh;
+  
   font-size: 2.4rem;
   line-height: 1;
 }
@@ -88,15 +87,6 @@
   padding-left: 16px;
 }
 
-.button {
-  position: relative;
-  float: right;
-  width: 32px;
-  height: 40px;
-  right: 7%;
-  bottom: 8.2vh;
-  cursor: pointer;
-}
 
 .allButton {
   max-width: 18.6vw;
