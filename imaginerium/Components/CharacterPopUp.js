@@ -2,6 +2,7 @@ import { SlGhost } from "react-icons/sl";
 import { GiHeartInside } from "react-icons/gi";
 import { AiFillEdit } from "react-icons/ai"
 import { MdFileDownloadDone } from "react-icons/md"
+import { GrFormClose } from "react-icons/gr"
 import { useState } from "react";
 import styles from "../styles/characterPopup.module.css";
 
@@ -104,6 +105,12 @@ export default function CharacterPopUp(props) {
         />
         <div className={styles.leftStuffContainer}>
           <div className={styles.editName}>
+          <button
+                  onClick={() => setEditNameInput(!editNameInput)}
+                  className={styles.editButton}
+                >
+                  < AiFillEdit />
+                </button>
             {editNameInput ? (
               <div>
                 <input
@@ -124,21 +131,16 @@ export default function CharacterPopUp(props) {
                   }}
                   className={styles.editButton}
                 >
-                  Done
+                  < MdFileDownloadDone />
                 </button>
               </div>
             ) : (
-              <div>
+              
                 <div>
                   <p>{props.char_name}</p>
                 </div>
-                <button
-                  onClick={() => setEditNameInput(!editNameInput)}
-                  className={styles.editButton}
-                >
-                  < AiFillEdit />
-                </button>
-              </div>
+                
+             
             )}
           </div>
 <div className={styles.buttonsContainerLeft}>
@@ -162,12 +164,12 @@ export default function CharacterPopUp(props) {
                     }
                   }}
                 >
-               
+               share
                 </button>
               </div>
             ) : (
               <button
-                className={styles.shareButton}
+                className={styles.buttons}
                 onClick={() => {
                   setEmailTrigger(!emailTrigger);
                 }}
@@ -178,7 +180,7 @@ export default function CharacterPopUp(props) {
           </div>
           <div className={styles.deleteContainer}>
             <button
-              className={styles.deleteButton}
+              className={styles.buttons}
               onClick={() => {
                 if (
                   confirm(
@@ -208,8 +210,10 @@ export default function CharacterPopUp(props) {
             props.setShowModal(false);
           }}
         >
-          close
+          <GrFormClose/>
         </button>
+
+
         <h1 className={styles.header}>{props.char_name}</h1>
         <div className={styles.infoContainer}>
           <div className={styles.section}>
