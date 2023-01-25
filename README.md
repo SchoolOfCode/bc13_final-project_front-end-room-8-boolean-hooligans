@@ -18,23 +18,25 @@ Then try [Imaginerium](https://imaginerium.netlify.app)!
 
 Imaginerium is a world-building site for creatives of all stripes - writers, gamers, and anyone who has an original character or concept they'd like to put down on the internet. Unlike other similar sites, Imaginerium has been designed with accessibility and simplicity of use as the foremost consideration. Using Imaginerium you can create characters and collaborate with your friends, as well as generate and edit world maps for all sorts of storytelling ideas.
 
-## :factory: Development Team:
+## :construction_worker: Development Team:
 
-A team of five from the School of Code's 13th Cohort, and Imaginerium is our final, four-week long project, built in January 2023. We had four days' planning, 14 days' programming, and one day to present. We are... the **BOOLEAN HOOLIGANS**:
+A team of five from the School of Code's 13th Cohort. Imaginerium is our final, four-week long project, built in January 2023. We had four days' planning, 14 days' programming, and one day to present. We are... 
 
-<!-- markdownlint-disable -->
-<table align="center">
-<br>
-  <tbody>
-    <tr>
-      <td align="center"><a href="https://github.com/csajan" <img src="https://avatars.githubusercontent.com/u/112533895?v=4" width="100px;" alt="Charles Sajan"/><br /><sub><b>Charles Sajan</b></sub></a><br /> <a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3Acsajan" title="Reviewed Pull Requests">:microscope:</a><a href="https://github.com/SchoolOfCode/bc13_final-project_front-end-room-8-boolean-hooligans/commits?author=csajan" title="Commits">💻</a><a href="https://github.com/SchoolOfCode/bc13_final-project_back-end-room-8-boolean-hooligans/commits?author=csajan" title="Backend">💾</a></td>
-      <td align="center"><a href="https://github.com/fruminski" <img src="https://avatars.githubusercontent.com/u/112521014?v=4" width="100px;" alt="Filip Ruminski"/><br /><sub><b>Filip Ruminski</b></sub></a><br /> <a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3Afruminski" title="Reviewed Pull Requests">:microscope:</a><a href="https://github.com/SchoolOfCode/bc13_final-project_front-end-room-8-boolean-hooligans/commits?author=fruminski" title="Commits">💻</a><a href="https://github.com/SchoolOfCode/bc13_final-project_back-end-room-8-boolean-hooligans/commits?author=fruminski" title="Backend">💾</a></td>
-      <td align="center"><a href="https://github.com/ionarose" <img src="https://avatars.githubusercontent.com/u/111660604" width="100px;" alt="Iona Rose"/><br /><sub><b>Iona Rose</b></sub></a><br /> <a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3Aionarose" title="Reviewed Pull Requests">:microscope:</a><a href="https://github.com/SchoolOfCode/bc13_final-project_front-end-room-8-boolean-hooligans/commits?author=ionarose" title="Commits">💻</a><a href="https://github.com/SchoolOfCode/bc13_final-project_back-end-room-8-boolean-hooligans/commits?author=ionarose" title="Backend">💾</a></td>
-      <td align="center"><a href="https://github.com/andres3m" <img src="https://avatars.githubusercontent.com/u/111457760?v=4" width="100px;" alt="Andrés Espin"/><br /><sub><b>Andrés Espin</b></sub></a><br /> <a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3Aandres3m" title="Reviewed Pull Requests">:microscope:</a><a href="https://github.com/SchoolOfCode/bc13_final-project_front-end-room-8-boolean-hooligans/commits?author=andres3m" title="Commits">💻</a><a href="https://github.com/SchoolOfCode/bc13_final-project_back-end-room-8-boolean-hooligans/commits?author=andres3m" title="Backend">💾</a></td>
-      <td align="center"><a href="https://github.com/Fliss317" <img src="https://avatars.githubusercontent.com/u/112476896?v=4" width="100px;" alt="Felicity Cullen"/><br /><sub><b>Felicity Cullen</b></sub></a><br /> <a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3AFliss317" title="Reviewed Pull Requests">:microscope:</a><a href="https://github.com/SchoolOfCode/bc13_final-project_front-end-room-8-boolean-hooligans/commits?author=Fliss317" title="Commits">💻</a><a href="https://github.com/SchoolOfCode/bc13_final-project_back-end-room-8-boolean-hooligans/commits?author=Fliss317" title="Backend">💾</a></td>
-  </tbody>
-</table>
-<br>
+<div align="center">
+  <b>THE BOOLEAN HOOLIGANS:</b>
+</div>
+
+[CHARLES SAJAN](https://github.com/csajan) - <a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3Acsajan" title="Reviewed Pull Requests">:microscope:</a><a href="https://github.com/SchoolOfCode/bc13_final-project_front-end-room-8-boolean-hooligans/commits?author=csajan" title="Front End Commits">:memo:</a><a href="https://github.com/SchoolOfCode/bc13_final-project_back-end-room-8-boolean-hooligans/commits?author=csajan" title="Back End Commits">:card_index:</a><a href="https://www.linkedin.com/in/charlessajan/" title="LinkedIn">:bust_in_silhouette:</a>
+
+[FILIP RUMINSKI](https://github.com/fruminski) - <a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3Afruminski" title="Reviewed Pull Requests">:microscope:</a><a href="https://github.com/SchoolOfCode/bc13_final-project_front-end-room-8-boolean-hooligans/commits?author=fruminski" title="Front End Commits">:memo:</a><a href="https://github.com/SchoolOfCode/bc13_final-project_back-end-room-8-boolean-hooligans/commits?author=fruminski" title="Back End Commits">:card_index:</a><a href="https://www.linkedin.com/in/filip-ruminski/" title="LinkedIn">:bust_in_silhouette:</a>
+
+[IONA ROSE](https://github.com/ionarose) - <a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3Aionarose" title="Reviewed Pull Requests">:microscope:</a><a href="https://github.com/SchoolOfCode/bc13_final-project_front-end-room-8-boolean-hooligans/commits?author=ionarose" title="Front End Commits">:memo:</a><a href="https://github.com/SchoolOfCode/bc13_final-project_back-end-room-8-boolean-hooligans/commits?author=ionarose" title="Back End Commits">:card_index:</a><a href="linkedin.com/in/iona-rose/" title="LinkedIn">:bust_in_silhouette:</a>
+
+[ANDRES ESPIN](https://github.com/andres3m) - <a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3Aandres3m" title="Reviewed Pull Requests">:microscope:</a><a href="https://github.com/SchoolOfCode/bc13_final-project_front-end-room-8-boolean-hooligans/commits?author=andres3m" title="Front End Commits">:memo:</a><a href="https://github.com/SchoolOfCode/bc13_final-project_back-end-room-8-boolean-hooligans/commits?author=andres3m" title="Back End Commits">:card_index:</a><a href="https://www.linkedin.com/in/andres-e-036492108/" title="LinkedIn">:bust_in_silhouette:</a>
+
+_and_
+
+[FELICITY CULLEN](https://github.com/Fliss317) - <a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3AFliss317" title="Reviewed Pull Requests">:microscope:</a><a href="https://github.com/SchoolOfCode/bc13_final-project_front-end-room-8-boolean-hooligans/commits?author=Fliss317" title="Front End Commits">:memo:</a><a href="https://github.com/SchoolOfCode/bc13_final-project_back-end-room-8-boolean-hooligans/commits?author=Fliss317" title="Back End Commits">:card_index:</a><a href="https://www.linkedin.com/in/felicitycullen" title="LinkedIn">:bust_in_silhouette:</a>
 
 ## :wrench: Tech Stack:
 
@@ -42,8 +44,8 @@ IMAGINERIUM is a [Next.js](https://nextjs.org/) project bootstrapped with [`crea
 
 ### :computer: Front End Tech:
 
-* Next.js v.13.1.1
-* React.js v.18.2.0
+* [Next.js](https://nextjs.org/) v.13.1.1
+* [React.js](https://reactjs.org/) v.18.2.0
 * ES6 (JavaScript)
 * CSS3
 
@@ -53,7 +55,7 @@ IMAGINERIUM is a [Next.js](https://nextjs.org/) project bootstrapped with [`crea
 * [Express.js](http://expressjs.com/) v.4.18.2
 * [Morgan](https://www.npmjs.com/package/morgan) v.1.10.0
 * ES6 (JavaScript)
-* PostgreSQL v.8.8.0
+* [PostgreSQL](https://www.npmjs.com/package/pg) v.8.8.0
 
 ### :house: Hosting:
 
@@ -64,10 +66,10 @@ IMAGINERIUM is a [Next.js](https://nextjs.org/) project bootstrapped with [`crea
 ### :hammer: Testing Tools:
 
 * [Cypress v12.3.0](https://www.cypress.io/) (end-to-end testing)
-* Supertest v.6.3.3 (integration testing)
+* [Supertest v.6.3.3](https://www.npmjs.com/package/supertest) (integration testing)
 * [Jest v29.3.1](https://jestjs.io/) (unit testing)
 * [Postman](https://www.postman.com/) (api testing)
-* Lighthouse (accessibility testing)
+* [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) (accessibility testing)
 
 ### :book: Libraries:
 
@@ -93,7 +95,6 @@ IMAGINERIUM is a [Next.js](https://nextjs.org/) project bootstrapped with [`crea
 
 For those who want to add their own spin on IMAGINERIUM or simply just rummage around in our code, here are the commands you'll need to run both the front and back end:
 
-
 Front end:
 ```
 npm i
@@ -105,12 +106,7 @@ Back end:
 npm run dev
 ```
 
-Front end testing:
-```
-npx cypress open
-```
-
-Back end testing:
+Testing - front and back end:
 ```
 npm run test
 ```
