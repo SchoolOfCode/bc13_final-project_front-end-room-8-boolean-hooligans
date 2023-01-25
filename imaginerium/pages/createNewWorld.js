@@ -18,6 +18,14 @@ const { data: session } = useSession();
     <>
       {/* <Navigation /> */}
       <NewNavBar />
+      <div className={styles.guide}>
+        <ul>
+          <strong>Brief User Guide:</strong>
+          <li>The arrow in the top left of the map is your menu</li>
+          <li>You can save to device, dropbox, or the browser with the Save option in the menu</li>
+          <li>To generate a new map, hover over the arrow and select New Map when it appears</li>
+        </ul>
+      </div>
       <iframe
         className={styles.map}
         src="https://azgaar.github.io/Fantasy-Map-Generator/"

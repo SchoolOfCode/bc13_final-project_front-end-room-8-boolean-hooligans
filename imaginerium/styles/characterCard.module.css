@@ -131,16 +131,18 @@
   
   }
   
-  
-  
   .card .additional .stats {
     font-size: 1.3rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-row: auto auto;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
     position: absolute;
     bottom: 1rem;
-    left: 1rem;
+    left: 2rem;
     right: 1rem;
-    top: auto;
+    top: 1rem;
     color: #224C36;
     overflow: hidden;
   }
@@ -155,7 +157,7 @@
   }
   
   .card .additional .stats i {
-    display: block;
+    display: grid;
   }
   
   .card .additional .stats div.title {
