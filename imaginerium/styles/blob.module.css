@@ -2,9 +2,10 @@
     position:absolute;
     left: 5%;
     top: 10%;
+    z-index: 10000;
     will-change: transform;
     border-radius: 50%;
-    background: rgba(149, 100, 190, 0.705);
+    background: rgba(42, 121, 194, 0.678);
     box-shadow: 10px 10px 5px 0px rgba(240, 235, 235, 0.75);
     opacity: 1;
   }
