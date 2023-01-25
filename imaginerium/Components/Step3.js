@@ -6,6 +6,7 @@ import Link from "next/link";
 import Router from "next/router";
 import { useSession } from "next-auth/react";
 import styles from "../styles/steps.module.css";
+import { motion } from "framer-motion";
 
 export default function Step3({ setStep, formValues, setFormValues }) {
   const { register, handleSubmit } = useForm();
@@ -41,7 +42,10 @@ export default function Step3({ setStep, formValues, setFormValues }) {
   return (
     <div className={styles.mainStepTwo}>
       <h2>Other Details</h2>
-      <form
+
+      <motion.form
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
         className={styles.mainContainer}
         onSubmit={handleSubmit(onSubmit)}
         ref={myForm}
@@ -175,22 +179,24 @@ export default function Step3({ setStep, formValues, setFormValues }) {
             </button>
           </div>
         </div>
-      </form>
+      </motion.form>
 
       {showModal ? (
         <FormSubmissionPopUp>
           <div className={"form-submission-pop-up"}>
             <h3>Character created successfully!</h3>
-            <button
-              onClick={() => {
-                Router.reload(window.location.createCharacter);
-              }}
-            >
-              Create another character
-            </button>
-            <Link href="/characterList">
-              <button>View Characters</button>
-            </Link>
+            <div className="submision-buttons">
+              <button
+                onClick={() => {
+                  Router.reload(window.location.createCharacter);
+                }}
+              >
+                Create another character
+              </button>
+              <Link href="/characterList">
+                <button>View Characters</button>
+              </Link>
+            </div>
           </div>
         </FormSubmissionPopUp>
       ) : null}

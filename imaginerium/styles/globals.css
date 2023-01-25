@@ -25,7 +25,7 @@ body {
   /* text-transform: lowercase; */
   scroll-snap-type: y mandatory;
   position: relative;
-  height: 100vh;
+  /* height: 100vh; */
   overflow-y: scroll;
   /* background: linear-gradient(230deg, #59c0e6, #4e6db9, #a571fb);
   background-size: 600% 600%;
@@ -92,13 +92,14 @@ body {
   
   #form-submission-pop-up {
     position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
+   
+    color: rgb(87, 75, 75);
     z-index: 10;
-    width: 40vw;
-    height: 30vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 200px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -110,6 +111,34 @@ body {
   
   }
   
+
+    .submision-buttons{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+    }
+
+   
+
+    #form-submission-pop-up button{
+      margin-top: 10px;
+      width: 150px;
+      height: 50px;
+      border-radius: 6px;
+      background-color: rgb(87, 75, 75);
+      color: white;
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #form-submission-pop-up button:hover{
+      background-color: rgb(87, 75, 75, 0.8);
+    }
+
   #form-submission-pop-up:empty {
     display: none;
   }

@@ -10,8 +10,8 @@
     background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(5px); */
     border: 1px solid rgba(255, 255, 255, 0.3);
         align-items: center ;
    
@@ -28,8 +28,8 @@
     background: rgba(255, 255, 255, 0.2);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
+/* backdrop-filter: blur(1px); */
+/* -webkit-backdrop-filter: blur(5px); */
 border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -75,6 +75,20 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     /* height: 100%; */
     object-fit: cover;
     border-radius: 1rem;
+}
+
+.randomButton{
+    width: 40%;
+    height: 3vh;
+    border: none;
+    padding: 5px;
+    border-radius: 0.5rem;
+    /* outline: none; */
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color:rgb(87, 75, 75);
+    cursor: pointer;
 }
 
 .stepOneRightContainer {
@@ -132,6 +146,11 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     color: #000;
 }
 
+.textBoxStepOne{
+    margin-bottom: 10px;
+}
+
+
 .stepOneButton{
     width: 20%;
     height: 3rem;
@@ -158,6 +177,16 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     transform: scale(0.98);
 }
 
+.alive{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.alive label{
+    text-align: left;
+}
+
+
 .mainStepTwo{
     
     display: flex;
@@ -168,6 +197,11 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     margin: 75px;
     gap: 14px;
    
+}
+
+
+.mainStepTwoSubmision{
+    opacity: 0.2;
 }
 
 .formContainerStepTwo {
@@ -252,7 +286,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .stepTwoButton {
-    width: 30%;
+    width: 15vw;
     height: 3rem;
     border: none;
     border-radius: 0.5rem;
@@ -287,7 +321,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 
 .stepThreeLeftContainer{
     width: 80%;
-    height: 40vh;
+    /* height: 40vh; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -298,7 +332,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 
 .stepThreeRightContainer{
     width: 50%;
-    height: 40vh;
+    /* height: 40vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -376,6 +410,32 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 @media (max-width: 1024px) {
+.formContainerOne {
+    flex-direction: column;
+    gap: 60px;
+    width: 100%;
+    font-size: 14px;
+
+}
+
+.stepOneRightContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.stepOneRightContainer input{
+    font-size: 14px;
+}
+
+.stepOneRightContainer textarea{
+    font-size: 14px;
+}
+
     .formContainerStepTwo {
         flex-direction: column;
         gap: 20px;
@@ -387,6 +447,10 @@ border: 1px solid rgba(255, 255, 255, 0.3);
         width: 100%;
     }
 
+    .randomButton{
+        font-size: 14px;
+    }
+
 }
 @media (max-width: 1400px) {
     .formContainerStepTwo {
@@ -396,5 +460,41 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     .formContainerStepTwo textarea {
         font-size: 14px;
     }
+    .formContainer{
+        font-size: 14px;
+        flex-direction: column;
+    }
+    .formContainerStepTwo input {
+        font-size: 14px;
+        width: 80%;
+    }
 
+    .stepThreeLeftContainer{
+        font-size: 14px;
+        width: 120%;
+        align-items: space-between;
+    }
+    .stepThreeLeftContainer input{
+        font-size: 14px;
+        
+    }
+    .stepThreeRightContainer{
+        font-size: 14px;
+        width: 80%;
+        margin-top: 40px;
+        align-items: center;
+    }
+    .stepThreeRightContainer textarea{
+        font-size: 14px;
+        
+    }
+
+    .stepOneButton{
+        font-size: 14px;
+    }
+
+    .stepTwoButton{
+        
+        font-size: 14px;
+    }
 }
