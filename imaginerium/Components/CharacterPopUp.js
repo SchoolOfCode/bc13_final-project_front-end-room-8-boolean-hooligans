@@ -156,7 +156,7 @@ export default function CharacterPopUp(props) {
                       )
                     ) {
                       {
-                        shareCharacter;
+                        shareCharacter();
                       }
                     }
                   }}
