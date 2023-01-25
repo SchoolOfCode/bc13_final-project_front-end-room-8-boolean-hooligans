@@ -9,6 +9,7 @@ import PleaseLogin from "../Components/PleaseLogin.js";
 import NoCharactersShared from "../Components/NoCharactersShared.js";
 
 export default function characterList() {
+ 
   const { data: session } = useSession();
 
   useEffect(() => {
@@ -26,19 +27,26 @@ export default function characterList() {
     }
   }, [session]);
 
- 
-
-  //sort by date created functionality
   const [charactersArray, setCharactersArray] = useState([]);
-  const [sortState, setSortState] = useState("none");
 
-  const sortMethods = {
-    none: { method: (a, b) => null },
-    ascending: { method: (a, b) => (a.character_id < b.character_id ? -1 : 1) },
-    descending: {
-      method: (a, b) => (a.character_id > b.character_id ? -1 : 1)
-    }
-  };
+  async function searchByName() {
+    const response = await fetch(
+      `https://imaginerium-qpii.onrender.com/collab?user_email=${session.user.email}`
+    );
+    const data = await response.json();
+    setCharactersArray(data.payload);
+  }
+  //sort by date created functionality
+  // const [charactersArray, setCharactersArray] = useState([]);
+  // const [sortState, setSortState] = useState("none");
+
+  // const sortMethods = {
+  //   none: { method: (a, b) => null },
+  //   ascending: { method: (a, b) => (a.character_id < b.character_id ? -1 : 1) },
+  //   descending: {
+  //     method: (a, b) => (a.character_id > b.character_id ? -1 : 1)
+  //   }
+  // };
 
   if (charactersArray.length < 1) {
     return (
@@ -71,7 +79,7 @@ export default function characterList() {
         <div className={styles.filters} aria-level="2">
 
          
-          <div >
+          {/* <div >
 
             <select
               className={styles.allButton}
@@ -88,18 +96,19 @@ export default function characterList() {
                 oldest to newest
               </option>
             </select>{" "}
-          </div>
+          </div> */}
         </div>
 
         {/* {charactersArray.length === 0 : <p>loading..</p> */}
         <div className={styles.cardsContainer}>
           {charactersArray
-            .sort(sortMethods[sortState].method)
+            // .sort(sortMethods[sortState].method)
             .map((character) => {
               return (
                 <SharedCharacterCard
                
                   className="cctest"
+                  searchByName={searchByName}
                   key={character.character_id}
                   character_id={character.character_id}
                   user_email={character.user_email}

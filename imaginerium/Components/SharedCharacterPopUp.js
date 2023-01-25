@@ -113,7 +113,7 @@ export default function SharedCharacterPopUp(props) {
                             "char_name",
                             editName
                           ).then(() => {
-                            props.searchByName("").then(() => {
+                            props.searchByName().then(() => {
                               setEditNameInput(false);
                             });
                           });
@@ -134,7 +134,7 @@ export default function SharedCharacterPopUp(props) {
                 <div className={styles.buttonsContainerLeft}>
                   <div className={styles.shareContainer}>
                     
-             <p>This character was shared with you.</p>
+             
             
           </div>
         </div>
@@ -143,7 +143,7 @@ export default function SharedCharacterPopUp(props) {
           <button
             className={styles.closePopUpButton}
             onClick={() => {
-              props.searchByName("");
+              props.searchByName();
               props.setShowModal(false);
             }}
           >
@@ -182,7 +182,7 @@ export default function SharedCharacterPopUp(props) {
                             "char_age",
                             editAge
                           ).then(() => {
-                            props.searchByName("").then(() => {
+                            props.searchByName().then(() => {
                               setEditAgeInput(false);
                             });
                           });
@@ -227,7 +227,7 @@ export default function SharedCharacterPopUp(props) {
                             "char_species",
                             editSpecies
                           ).then(() => {
-                            props.searchByName("").then(() => {
+                            props.searchByName().then(() => {
                               setEditSpeciesInput(false);
                             });
                           });
@@ -272,7 +272,7 @@ export default function SharedCharacterPopUp(props) {
                             "char_haircolour",
                             editHair
                           ).then(() => {
-                            props.searchByName("").then(() => {
+                            props.searchByName().then(() => {
                               setEditHairInput(false);
                             });
                           });
@@ -317,7 +317,7 @@ export default function SharedCharacterPopUp(props) {
                             "char_eyecolour",
                             editEye
                           ).then(() => {
-                            props.searchByName("").then(() => {
+                            props.searchByName().then(() => {
                               setEditEyeInput(false);
                             });
                           });
@@ -362,7 +362,7 @@ export default function SharedCharacterPopUp(props) {
                             "char_skincolour",
                             editSkin
                           ).then(() => {
-                            props.searchByName("").then(() => {
+                            props.searchByName().then(() => {
                               setEditSkinInput(false);
                             });
                           });
@@ -407,7 +407,7 @@ export default function SharedCharacterPopUp(props) {
                             "char_height",
                             editHeight
                           ).then(() => {
-                            props.searchByName("").then(() => {
+                            props.searchByName().then(() => {
                               setEditHeightInput(false);
                             });
                           });
@@ -452,7 +452,7 @@ export default function SharedCharacterPopUp(props) {
                             "char_weight",
                             editWeight
                           ).then(() => {
-                            props.searchByName("").then(() => {
+                            props.searchByName().then(() => {
                               setEditWeightInput(false);
                             });
                           });
@@ -497,7 +497,7 @@ export default function SharedCharacterPopUp(props) {
                             "char_features",
                             editFeatures
                           ).then(() => {
-                            props.searchByName("").then(() => {
+                            props.searchByName().then(() => {
                               setEditFeaturesInput(false);
                             });
                           });
@@ -542,7 +542,7 @@ export default function SharedCharacterPopUp(props) {
                             "char_desc",
                             editDesc
                           ).then(() => {
-                            props.searchByName("").then(() => {
+                            props.searchByName().then(() => {
                               setEditDescInput(false);
                             });
                           });
@@ -624,7 +624,7 @@ export default function SharedCharacterPopUp(props) {
                             "char_hopes",
                             editHopes
                           ).then(() => {
-                            props.searchByName("").then(() => {
+                            props.searchByName().then(() => {
                               setEditHopesInput(false);
                             });
                           });
@@ -669,7 +669,7 @@ export default function SharedCharacterPopUp(props) {
                             "char_fears",
                             editFears
                           ).then(() => {
-                            props.searchByName("").then(() => {
+                            props.searchByName().then(() => {
                               setEditFearsInput(false);
                             });
                           });
@@ -714,7 +714,7 @@ export default function SharedCharacterPopUp(props) {
                             "char_speech",
                             editSpeech
                           ).then(() => {
-                            props.searchByName("").then(() => {
+                            props.searchByName().then(() => {
                               setEditSpeechInput(false);
                             });
                           });
@@ -759,7 +759,7 @@ export default function SharedCharacterPopUp(props) {
                             "char_likes",
                             editLikes
                           ).then(() => {
-                            props.searchByName("").then(() => {
+                            props.searchByName().then(() => {
                               setEditLikesInput(false);
                             });
                           });
@@ -808,7 +808,7 @@ export default function SharedCharacterPopUp(props) {
                               "char_background",
                               editBackground
                             ).then(() => {
-                              props.searchByName("").then(() => {
+                              props.searchByName().then(() => {
                                 setEditBackgroundInput(false);
                               });
                             });
@@ -855,7 +855,7 @@ export default function SharedCharacterPopUp(props) {
                               "char_disabilities",
                               editDisabilities
                             ).then(() => {
-                              props.searchByName("").then(() => {
+                              props.searchByName().then(() => {
                                 setEditDisabilitiesInput(false);
                               });
                             });
@@ -900,7 +900,7 @@ export default function SharedCharacterPopUp(props) {
                               "char_job",
                               editJob
                             ).then(() => {
-                              props.searchByName("").then(() => {
+                              props.searchByName().then(() => {
                                 setEditJobInput(false);
                               });
                             });
@@ -945,7 +945,7 @@ export default function SharedCharacterPopUp(props) {
                               "char_gender",
                               editGender
                             ).then(() => {
-                              props.searchByName("").then(() => {
+                              props.searchByName().then(() => {
                                 setEditGenderInput(false);
                               });
                             });
@@ -990,7 +990,7 @@ export default function SharedCharacterPopUp(props) {
                               "char_pronouns",
                               editPronouns
                             ).then(() => {
-                              props.searchByName("").then(() => {
+                              props.searchByName().then(() => {
                                 setEditPronounsInput(false);
                               });
                             });
@@ -1035,7 +1035,7 @@ export default function SharedCharacterPopUp(props) {
                               "char_sexuality",
                               editSexuality
                             ).then(() => {
-                              props.searchByName("").then(() => {
+                              props.searchByName().then(() => {
                                 setEditSexualityInput(false);
                               });
                             });
@@ -1080,7 +1080,7 @@ export default function SharedCharacterPopUp(props) {
                               "char_skills",
                               editSkills
                             ).then(() => {
-                              props.searchByName("").then(() => {
+                              props.searchByName().then(() => {
                                 setEditSkillsInput(false);
                               });
                             });
@@ -1125,7 +1125,7 @@ export default function SharedCharacterPopUp(props) {
                               "char_morality",
                               editMorality
                             ).then(() => {
-                              props.searchByName("").then(() => {
+                              props.searchByName().then(() => {
                                 setEditMoralityInput(false);
                               });
                             });
@@ -1172,7 +1172,7 @@ export default function SharedCharacterPopUp(props) {
                               "char_relationships",
                               editRelationships
                             ).then(() => {
-                              props.searchByName("").then(() => {
+                              props.searchByName().then(() => {
                                 setEditRelationhipsInput(false);
                               });
                             });
@@ -1217,7 +1217,7 @@ export default function SharedCharacterPopUp(props) {
                               "char_notes",
                               editNotes
                             ).then(() => {
-                              props.searchByName("").then(() => {
+                              props.searchByName().then(() => {
                                 setEditNotesInput(false);
                               });
                             });
