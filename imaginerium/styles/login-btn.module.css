@@ -9,6 +9,8 @@
     z-index: 50;
     top: 30px;
     right: 10px;
+    width: 126px;
+    height: 50px;
     gap: 5%;
 }
 
@@ -20,8 +22,8 @@
 }
 
 .logIOBtn {
-    width: 10vh;
-    height: 5vw;
+    width: 55.7px;
+    height: 55.75px;
     background: none;
     color: white;
     border: none;

@@ -295,17 +295,17 @@ text-decoration: none;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    gap: 70px;
-    margin-top: 100px;
+    gap: 50px;
+    margin-top: 400px;
     
   }
 
   .main h1  {
     margin-top: 0px;
     width: fit-content;
-    font-size: 30px;
+    font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 14px;
+    letter-spacing: 10px;
     color: #ffffff;
   }
 
@@ -315,7 +315,7 @@ text-decoration: none;
     padding: 1px;
     color: rgb(230, 230, 230);
     width: 300px;
-    height: 315px;
+    height: 450px;
   }
 
   .descriptionContainer p {
@@ -327,8 +327,8 @@ text-decoration: none;
 
   .earth {
     position: absolute;
-    top: -140px;
-    left:-75px;
+    top: -120px;
+    left:-60px;
   }
 
   .buttonsContainer{
