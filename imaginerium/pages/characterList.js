@@ -1,7 +1,7 @@
-import Navigation from "../Components/Navigation.js";
+
 import CharacterCard from "../Components/CharacterCard.js";
 import styles from "../styles/characterList.module.css";
-import useFetch from "../hooks/useFetch";
+
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import { BiSearchAlt } from "react-icons/bi";
@@ -94,7 +94,7 @@ export default function characterList() {
                 name="char_name"
                 id="char_name"
               />
-              <button className={styles.button} type="submit">
+              <button className={styles.button} aria-label="search" type="submit">
               <span>
                 <BiSearchAlt size="60" />
               </span>

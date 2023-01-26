@@ -102,10 +102,10 @@ export default function CharacterPopUp(props) {
       <div className={styles.popUp}>
         <div className={styles.popUpLeft}>
           {props.char_img ? (
-            <img className={styles.popUpImage} src={props.char_img} />
+            <img className={styles.popUpImage} src={props.char_img} alt="character portrait"/>
           ) : (
             <img
-              className={styles.popUpImage}
+              className={styles.popUpImage} alt="character portrait"
               src="https://deepgrouplondon.com/wp-content/uploads/2019/06/person-placeholder-5.png"
             />
           )}
