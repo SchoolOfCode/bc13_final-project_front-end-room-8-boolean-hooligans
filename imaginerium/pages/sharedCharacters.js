@@ -51,6 +51,7 @@ export default function characterList() {
   if (charactersArray.length < 1) {
     return (
       <>
+      <title>Shared Characters</title>
         <NoCharactersShared />
       </>
     )
@@ -59,12 +60,15 @@ export default function characterList() {
   if (!session) {
     return (
       <>
+      <title>Shared Characters</title>
         <PleaseLogin/>
       </>
     )
   }
 
   return (
+    <>
+    <title>Shared Characters</title>
     <div className={styles.main}>
       {/* <Navigation /> */}
       <NewNavBar />
@@ -143,5 +147,6 @@ export default function characterList() {
         </div>
       </div>
     </div>
+  </>
   );
 }
