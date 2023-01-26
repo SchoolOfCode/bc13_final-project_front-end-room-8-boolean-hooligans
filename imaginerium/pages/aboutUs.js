@@ -152,14 +152,14 @@ export default function aboutUs() {
                   </div>
               </div>
               <div className={styles.moreInfo}>
-                <p className={styles.description}>WORDS HERE </p>
+                <p className={styles.description}>Filip's background is music education. Before joining the SoC Bootcamp, he worked within the transport industry. At some point when starting his own business he had to deal with creating the company's website and dived into code - now he can't stop.</p>
               </div>
             </div>
             <div className={styles.general}>
                 <Image
                   className={styles.image2}
-                  src="/filip_pfp.png"
-                  alt="Pixel art of Filip."
+                  src="/filip_pfp.jpg"
+                  alt="Photo of Filip looking like an action hero."
                   height={200}
                   width={150}
                 />
