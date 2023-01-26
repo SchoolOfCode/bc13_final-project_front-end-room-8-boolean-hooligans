@@ -4,8 +4,7 @@ import { GiHeartInside } from "react-icons/gi";
 import NewNavBar from "../Components/NewNavBar";
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
-
-// import Image from "next/image";
+import Image from "next/image";
 
 export default function aboutUs() {
 
@@ -15,10 +14,10 @@ export default function aboutUs() {
     {/* <Navigation /> */}
     <NewNavBar />
     <div>
-    <img
+    <Image
         className={styles.teamLogo}
         alt="Boolean Hooligans logo - showing a revolver firing the words true and false between the words Boolean at the top and Hooligans at the bottom"
-        src="./boolean_hoolingans_transparent.png"
+        src="/boolean_hoolingans_transparent.png"
         height={500}
         width={500}/>
     <div className={styles.headerBlock}>
@@ -52,10 +51,12 @@ export default function aboutUs() {
               </div>
             </div>
             <div className={styles.general}>
-                <img
+                <Image
                   className={styles.image}
-                  src="./felicity_pfp.jpg"
+                  src="/felicity_pfp.jpg"
                   alt="A photo of Felicity, holding a toy soldier. She is smiling."
+                  height={100}
+                  width={120}
                 />
             </div>
           </div>
@@ -85,10 +86,12 @@ export default function aboutUs() {
               </div>
             </div>
             <div className={styles.general}>
-                <img
+                <Image
                   className={styles.image2}
-                  src="./andres_pfp.jpg"
+                  src="/andres_pfp.jpg"
                   alt="A photo of Andrés."
+                  height={150}
+                  width={150}
                 />
             </div>
           </div>
@@ -118,10 +121,12 @@ export default function aboutUs() {
               </div>
             </div>
             <div className={styles.general}>
-                <img
+                <Image
                   className={styles.image2}
-                  src="./iona_pfp.jpg"
+                  src="/iona_pfp.jpg"
                   alt="A photo of Iona."
+                  height={150}
+                  width={150}
                 />
             </div>
           </div>
@@ -151,10 +156,12 @@ export default function aboutUs() {
               </div>
             </div>
             <div className={styles.general}>
-                <img
+                <Image
                   className={styles.image2}
-                  src="./filip_pfp.png"
+                  src="/filip_pfp.png"
                   alt="Pixel art of Filip."
+                  height={200}
+                  width={150}
                 />
             </div>
           </div>
@@ -184,10 +191,12 @@ export default function aboutUs() {
               </div>
             </div>
             <div className={styles.general}>
-                <img
+                <Image
                   className={styles.image3}
-                  src="./charles_pfp.jpg"
+                  src="/charles_pfp.jpg"
                   alt="A photo of Charles."
+                  height={150}
+                  width={125}
                 />
             </div>
           </div>
