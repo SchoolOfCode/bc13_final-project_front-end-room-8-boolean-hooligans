@@ -238,21 +238,14 @@
   }
   .buttonsContainer {
 
-height: 31vh;
+height: 42vh;
     display:flex;
     flex-direction: row;
     width:27vw;
     position: absolute;
     top: 24%;
     left: 36%;
-    background: rgba(220, 252, 252, 0.103);
-    -webkit-backdrop-filter: blur(2px);
-            backdrop-filter: blur(2px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-right-color: rgba(255, 255, 255, 0.1);
-    border-bottom-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
+ 
     align-items: center;
     justify-content: center;
    gap:29px;
@@ -265,12 +258,12 @@ height: 31vh;
   }
 
   .socialsButtons{
-    width: 120px;
+    width: 200px;
     height: 120px;
-    color: rgb(0, 0, 26);
+    color: rgb(255, 255, 255);
     font-size: 30px;
     border-radius: 5px;
-    background: rgba(240, 253, 253, 0.274);
+    background: rgba(240, 253, 253, 0.089);
     -webkit-backdrop-filter: blur(2px);
             backdrop-filter: blur(2px);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -284,7 +277,7 @@ height: 31vh;
     justify-content: center;
     align-items: center;
     font-size: 20px;
- font-weight: bold;
+ 
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     transition: 200ms;

@@ -3,6 +3,7 @@ import { getProviders, signIn, getSession } from "next-auth/react"
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import styles from '../styles/pleaseLogin.module.css'
+import { AiOutlineLogin } from "react-icons/ai";
 
 export default function SignIn({ providers }) {
   const router = useRouter()
@@ -21,7 +22,7 @@ export default function SignIn({ providers }) {
       {Object.values(providers).map((provider) => (
         <div key={provider.name}>
           <button className={styles.socialsButtons} onClick={() => signIn(provider.id)}>
-            Sign in with {provider.name}
+          <div><AiOutlineLogin className={styles.icon} /></div>Sign in with {provider.name}
           </button>
         </div>
       ))}</div>
