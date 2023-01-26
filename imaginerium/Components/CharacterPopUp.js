@@ -654,7 +654,7 @@ export default function CharacterPopUp(props) {
                     {" "}
                     <GiHeartInside /> Alive!
                     <button
-                      className={styles.editButton}
+                      className={styles.buttons}
                       onClick={() => {
                       
                         editCharacter(
@@ -678,7 +678,7 @@ export default function CharacterPopUp(props) {
                     {" "}
                     <SlGhost /> Dead
                     <button
-                      className={styles.editButton}
+                      className={styles.buttons}
                       onClick={() => {
                       
                         editCharacter(
