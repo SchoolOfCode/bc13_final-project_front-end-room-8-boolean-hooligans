@@ -1,4 +1,3 @@
-import Navigation from "../Components/Navigation";
 import styles from "../styles/aboutUs.module.css";
 import Link from "next/link";
 import { GiHeartInside } from "react-icons/gi";
@@ -12,11 +11,13 @@ export default function aboutUs() {
 
   return (
    <>
+   <title>About Us</title>
     {/* <Navigation /> */}
     <NewNavBar />
     <div>
     <img
         className={styles.teamLogo}
+        alt="Boolean Hooligans logo - showing a revolver firing the words true and false between the words Boolean at the top and Hooligans at the bottom"
         src="./boolean_hoolingans_transparent.png"
         height={500}
         width={500}/>
@@ -33,7 +34,7 @@ export default function aboutUs() {
           <div className={styles.card}>
             <div className={styles.additional}>
               <div className={styles.userCard}>
-                <h2>Felicity Cullen</h2>
+                <h2>Felicity <br></br> Cullen</h2>
                 <div className={styles.aliveStatus}>
                     <span>
                       <GiHeartInside /> <span>Alive</span>
@@ -66,7 +67,7 @@ export default function aboutUs() {
           <div className={styles.card}>
             <div className={styles.additional}>
               <div className={styles.userCard}>
-                <h2>Andrés Espin</h2>
+                <h2>Andrés <br></br> Espin</h2>
                 <div className={styles.aliveStatus}>
                     <span>
                       <GiHeartInside /> <span>Alive</span>
@@ -87,7 +88,7 @@ export default function aboutUs() {
                 <img
                   className={styles.image2}
                   src="./andres_pfp.jpg"
-                  alt="Pixel art of Andrés."
+                  alt="A photo of Andrés."
                 />
             </div>
           </div>
@@ -132,7 +133,7 @@ export default function aboutUs() {
           <div className={styles.card}>
             <div className={styles.additional}>
               <div className={styles.userCard}>
-                <h2>Filip Ruminski</h2>
+                <h2>Filip <br/> Ruminski</h2>
                 <div className={styles.aliveStatus}>
                     <span>
                       <GiHeartInside /> <span>Alive</span>
@@ -165,7 +166,7 @@ export default function aboutUs() {
           <div className={styles.card}>
             <div className={styles.additional}>
               <div className={styles.userCard}>
-                <h2>Charles Sajan</h2>
+                <h2>Charles <br/> Sajan</h2>
                 <div className={styles.aliveStatus}>
                     <span>
                       <GiHeartInside /> <span>Alive</span>

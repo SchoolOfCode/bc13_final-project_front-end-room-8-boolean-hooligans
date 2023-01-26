@@ -9,6 +9,7 @@ const { data: session } = useSession();
   if (!session) {
     return (
       <>
+      <title>Create World Map</title>
        <PleaseLogin />
       </>
     );
@@ -16,7 +17,7 @@ const { data: session } = useSession();
   
   return (
     <>
-      {/* <Navigation /> */}
+      <title>Create World Map</title>
       <NewNavBar />
       <div className={styles.guide}>
         <ul>

@@ -14,6 +14,7 @@ export default function createCharacter() {
   if (!session) {
     return (
       <>
+       <title>Create Character</title>
        <PleaseLogin />
       </>
     );
@@ -21,6 +22,7 @@ export default function createCharacter() {
 
   return (
     <>
+      <title>Create Character</title>
       <NewNavBar />
       <Form />
     </>

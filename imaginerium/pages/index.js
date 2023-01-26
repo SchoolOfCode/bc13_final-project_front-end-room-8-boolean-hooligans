@@ -8,7 +8,8 @@ export default function landing(){
 return (
 
 <>
-<div className={styles.body}>
+  <title>Imaginerium</title>
+  <div className={styles.body}>
         <div className={styles.scene}>
         <div className={styles.upper}>
           <img onClick={() => signIn(GoogleProvider.id || GithubProvider.id, {

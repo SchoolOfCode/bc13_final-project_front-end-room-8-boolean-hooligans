@@ -50,6 +50,7 @@ export default function characterList() {
   if (!session) {
     return (
       <>
+      <title>Your Characters</title>
        <PleaseLogin />
       </>
     );
@@ -58,12 +59,15 @@ export default function characterList() {
   if (!charactersArray) {
     return (
       <>
+      <title>Your Characters</title>
         <NoCharactersYet />
       </>
     );
   }
 
   return (
+    <>
+    <title>Your Characters</title>
     <div className={styles.main}>
       <NewNavBar />
       <div>
@@ -187,5 +191,6 @@ export default function characterList() {
             })}
         </div>
     </div>
+</>
   );
 }
