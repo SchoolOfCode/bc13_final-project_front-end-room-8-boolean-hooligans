@@ -2,24 +2,18 @@ import { signIn } from "next-auth/react";
 import GoogleProvider from "next-auth/providers/google";
 import GithubProvider from "next-auth/providers/github";
 import styles from "../styles/landing.module.css";
+import Link from "next/link";
 
 export default function landing() {
   return (
     <>
       <div className={styles.body}>
         <div className={styles.scene}>
-          <div className={styles.upper}>
-            <img
-              onClick={() =>
-                signIn(GoogleProvider.id || GithubProvider.id, {
-                  callbackUrl: `${window.location.origin}/dashboard`
-                })
-              }
-              className={styles.earth}
-              src="./earth1.png"
-              alt="earth"
-            />
-            <img className={styles.moon1copy} src="./moon1.png" alt="moon" />
+        <div className={styles.upper}>
+        <Link href="/signIn">
+          <img className={styles.earth} src="./earth1.png" alt="earth"/>
+          </Link>
+          <img className={styles.moon1copy} src="./moon1.png" alt="moon" />
             <img className={styles.moon1} src="./moon1.png" alt="moon" />
             <img className={styles.moon2copy} src="./moon3.png" alt="moon" />
             <img className={styles.moon2} src="./moon3.png" alt="moon" />
