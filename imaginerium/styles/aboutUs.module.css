@@ -168,12 +168,13 @@
     width: 80%;
     float: right;
     text-align: left;
-    overflow-y: scroll;
+    overflow-x: scroll;
     height: 90%;
-    padding: 0px;
-    margin-right: 53px;
-    margin-bottom: 15px;
-    margin-top: 11px;
+    /* padding: 10px 20px 10px 10px; */
+    margin-right: 20px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
 
   .additional .aliveStatus {
