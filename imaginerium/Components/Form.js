@@ -11,7 +11,6 @@ export default function Form() {
 
   return (
     <div>
-      {/* <p>Step {step} of 3</p> */}
       {step === 1 && (
         <Step1
           setStep={setStep}

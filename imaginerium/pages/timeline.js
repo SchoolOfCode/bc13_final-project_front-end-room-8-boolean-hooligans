@@ -1,5 +1,5 @@
 import styles from "../styles/timeline.module.css";
-import Navigation from "../Components/Navigation";
+
 import NewNavBar from "../Components/NewNavBar";
 
 export default function Timeline() {
@@ -11,7 +11,6 @@ export default function Timeline() {
   ];
   return (
     <div>
-      {/* <Navigation /> */}
       <NewNavBar />
       <div className={styles.container}>
         <div className={styles.wrapper}>
