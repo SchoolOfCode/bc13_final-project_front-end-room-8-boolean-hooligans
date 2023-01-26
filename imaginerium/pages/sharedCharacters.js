@@ -1,4 +1,3 @@
-import Navigation from "../Components/Navigation.js";
 import SharedCharacterCard from "../Components/SharedCharacterCard.js";
 import styles from "../styles/characterList.module.css";
 import { useEffect, useState } from "react";
@@ -9,14 +8,13 @@ import PleaseLogin from "../Components/PleaseLogin.js";
 import NoCharactersShared from "../Components/NoCharactersShared.js";
 
 export default function characterList() {
- 
   const { data: session } = useSession();
 
   useEffect(() => {
     if (session) {
       async function fetchData() {
         const response = await fetch(
-           `https://imaginerium-qpii.onrender.com/collab?user_email=${session.user.email}`
+          `https://imaginerium-qpii.onrender.com/collab?user_email=${session.user.email}`
         );
         const data = await response.json();
         setCharactersArray(data.payload);
@@ -51,38 +49,30 @@ export default function characterList() {
   if (charactersArray.length < 1) {
     return (
       <>
-      <title>Shared Characters</title>
         <NoCharactersShared />
       </>
-    )
+    );
   }
 
   if (!session) {
     return (
       <>
-      <title>Shared Characters</title>
-        <PleaseLogin/>
+        <PleaseLogin />
       </>
-    )
+    );
   }
 
   return (
-    <>
-    <title>Shared Characters</title>
     <div className={styles.main}>
-      {/* <Navigation /> */}
       <NewNavBar />
       <div>
         <div className={styles.header}>
           <div role="heading" aria-level="1">
             <h1 className={styles.h1}>Characters shared with you</h1>
-           
           </div>
         </div>
 
         <div className={styles.filters} aria-level="2">
-
-         
           {/* <div >
 
             <select
@@ -110,7 +100,6 @@ export default function characterList() {
             .map((character) => {
               return (
                 <SharedCharacterCard
-               
                   className="cctest"
                   searchByName={searchByName}
                   key={character.character_id}
@@ -147,6 +136,5 @@ export default function characterList() {
         </div>
       </div>
     </div>
-  </>
   );
 }

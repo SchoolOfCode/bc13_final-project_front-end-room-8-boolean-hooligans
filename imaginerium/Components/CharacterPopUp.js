@@ -5,6 +5,7 @@ import { MdFileDownloadDone } from "react-icons/md";
 import { GrFormClose } from "react-icons/gr";
 import { useState } from "react";
 import styles from "../styles/characterPopup.module.css";
+import { motion } from "framer-motion";
 
 export default function CharacterPopUp(props) {
   const [editNameInput, setEditNameInput] = useState(false);
@@ -99,7 +100,11 @@ export default function CharacterPopUp(props) {
 
   return (
     <>
-      <div className={styles.popUp}>
+      <motion.div
+        initial={{ x: -1000 }}
+        animate={{ x: 0 }}
+        className={styles.popUp}
+      >
         <div className={styles.popUpLeft}>
           {props.char_img ? (
             <img className={styles.popUpImage} src={props.char_img} alt="character portrait"/>
@@ -1340,7 +1345,7 @@ export default function CharacterPopUp(props) {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
