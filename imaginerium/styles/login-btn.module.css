@@ -23,8 +23,8 @@
 
 .profilePic[alt] {
     font-size: 5px;
-    text-align: right;
-    border-radius: 0%;
+    text-align: center;
+    border-radius: 50%;
     width: 10em;
     height: auto;
 }
