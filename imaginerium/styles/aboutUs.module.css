@@ -6,8 +6,10 @@
      align-items: center;
      justify-content: center;
      gap: 5%;
-     margin-bottom: 10%;
-     
+     width: 70%;
+     margin: 0 auto;
+     margin-bottom: 7vh;
+
    }
 
 .center {
