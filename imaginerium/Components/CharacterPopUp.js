@@ -152,7 +152,7 @@ export default function CharacterPopUp(props) {
                     <button
                       onClick={() => setEditNameInput(!editNameInput)}
                       className={styles.editNameButton}
-                      hidden={editNameInput}
+                      hidden={editNameInput} aria-label="Edit Name"
                     >
                       <AiFillEdit />
                     </button>
@@ -175,7 +175,7 @@ export default function CharacterPopUp(props) {
                             });
                           });
                         }}
-                        className={styles.editButton}
+                        className={styles.editButton} aria-label="Finished editing"
                       >
                         <MdFileDownloadDone />
                       </button>
@@ -227,7 +227,7 @@ export default function CharacterPopUp(props) {
         </div>
 
         <div className={styles.popUpRight}>
-          <button
+          <button aria-label="Close pop up"
             className={styles.closePopUpButton}
             onClick={() => {
               props.searchByName("");
@@ -247,7 +247,7 @@ export default function CharacterPopUp(props) {
                 <div hidden={editAgeInput}>
                   <button
                     onClick={() => setEditAgeInput(!editAgeInput)}
-                    className={styles.editButton}
+                    className={styles.editButton} aria-label="Edit"
                   >
                     <AiFillEdit />
                   </button>
@@ -274,7 +274,7 @@ export default function CharacterPopUp(props) {
                             });
                           });
                         }}
-                        className={styles.editButton}
+                        className={styles.editButton} aria-label="Finished editing" 
                       >
                         <MdFileDownloadDone />
                       </button>
@@ -292,7 +292,7 @@ export default function CharacterPopUp(props) {
                 <div hidden={editSpeciesInput}>
                   <button
                     onClick={() => setEditSpeciesInput(!editSpeciesInput)}
-                    className={styles.editButton}
+                    className={styles.editButton} aria-label="Edit"
                   >
                     <AiFillEdit />
                   </button>
@@ -319,7 +319,7 @@ export default function CharacterPopUp(props) {
                             });
                           });
                         }}
-                        className={styles.editButton}
+                        className={styles.editButton} aria-label="Finished editing" 
                       >
                         <MdFileDownloadDone />
                       </button>
@@ -337,7 +337,7 @@ export default function CharacterPopUp(props) {
                 <div hidden={editHairInput}>
                   <button
                     onClick={() => setEditHairInput(!editHairInput)}
-                    className={styles.editButton}
+                    className={styles.editButton} aria-label="Edit"
                   >
                     <AiFillEdit />
                   </button>
@@ -364,7 +364,7 @@ export default function CharacterPopUp(props) {
                             });
                           });
                         }}
-                        className={styles.editButton}
+                        className={styles.editButton} aria-label="Finished editing" 
                       >
                         <MdFileDownloadDone />
                       </button>
@@ -382,7 +382,7 @@ export default function CharacterPopUp(props) {
                 <div hidden={editEyeInput}>
                   <button
                     onClick={() => setEditEyeInput(!editEyeInput)}
-                    className={styles.editButton}
+                    className={styles.editButton} aria-label="Edit"
                   >
                     <AiFillEdit />
                   </button>
@@ -409,7 +409,7 @@ export default function CharacterPopUp(props) {
                             });
                           });
                         }}
-                        className={styles.editButton}
+                        className={styles.editButton} aria-label="Finished editing"
                       >
                         <MdFileDownloadDone />
                       </button>
@@ -427,7 +427,7 @@ export default function CharacterPopUp(props) {
                 <div hidden={editSkinInput}>
                   <button
                     onClick={() => setEditSkinInput(!editSkinInput)}
-                    className={styles.editButton}
+                    className={styles.editButton} aria-label="Edit"
                   >
                     <AiFillEdit />
                   </button>
@@ -454,7 +454,7 @@ export default function CharacterPopUp(props) {
                             });
                           });
                         }}
-                        className={styles.editButton}
+                        className={styles.editButton} aria-label="Finished editing"
                       >
                         <MdFileDownloadDone />
                       </button>
@@ -472,7 +472,7 @@ export default function CharacterPopUp(props) {
                 <div hidden={editHeightInput}>
                   <button
                     onClick={() => setEditHeightInput(!editHeightInput)}
-                    className={styles.editButton}
+                    className={styles.editButton} aria-label="Edit"
                   >
                     <AiFillEdit />
                   </button>
@@ -499,7 +499,7 @@ export default function CharacterPopUp(props) {
                             });
                           });
                         }}
-                        className={styles.editButton}
+                        className={styles.editButton} aria-label="Finished editing"
                       >
                         <MdFileDownloadDone />
                       </button>
@@ -517,7 +517,7 @@ export default function CharacterPopUp(props) {
                 <div hidden={editWeightInput}>
                   <button
                     onClick={() => setEditWeightInput(!editWeightInput)}
-                    className={styles.editButton}
+                    className={styles.editButton} aria-label="Edit"
                   >
                     <AiFillEdit />
                   </button>
@@ -544,7 +544,7 @@ export default function CharacterPopUp(props) {
                             });
                           });
                         }}
-                        className={styles.editButton}
+                        className={styles.editButton} aria-label="Finished editing"
                       >
                         <MdFileDownloadDone />
                       </button>
@@ -562,7 +562,7 @@ export default function CharacterPopUp(props) {
                 <div hidden={editFeaturesInput}>
                   <button
                     onClick={() => setEditFeaturesInput(!editFeaturesInput)}
-                    className={styles.editButton}
+                    className={styles.editButton} aria-label="Edit"
                   >
                     <AiFillEdit />
                   </button>
@@ -589,7 +589,7 @@ export default function CharacterPopUp(props) {
                             });
                           });
                         }}
-                        className={styles.editButton}
+                        className={styles.editButton} aria-label="Finished editing"
                       >
                         <MdFileDownloadDone />
                       </button>
@@ -607,7 +607,7 @@ export default function CharacterPopUp(props) {
                 <div hidden={editDescInput}>
                   <button
                     onClick={() => setEditDescInput(!editDescInput)}
-                    className={styles.editButton}
+                    className={styles.editButton} aria-label="Edit"
                   >
                     <AiFillEdit />
                   </button>
@@ -634,7 +634,7 @@ export default function CharacterPopUp(props) {
                             });
                           });
                         }}
-                        className={styles.editButton}
+                        className={styles.editButton} aria-label="Finished editing"
                       >
                         <MdFileDownloadDone />
                       </button>
@@ -701,7 +701,7 @@ export default function CharacterPopUp(props) {
                 <div hidden={editHopesInput}>
                   <button
                     onClick={() => setEditHopesInput(!editHopesInput)}
-                    className={styles.editButton}
+                    className={styles.editButton} aria-label="Edit"
                   >
                     <AiFillEdit />
                   </button>
@@ -728,7 +728,7 @@ export default function CharacterPopUp(props) {
                             });
                           });
                         }}
-                        className={styles.editButton}
+                        className={styles.editButton} aria-label="Finished editing"
                       >
                         <MdFileDownloadDone />
                       </button>
@@ -746,7 +746,7 @@ export default function CharacterPopUp(props) {
                 <div hidden={editFearsInput}>
                   <button
                     onClick={() => setEditFearsInput(!editFearsInput)}
-                    className={styles.editButton}
+                    className={styles.editButton} aria-label="Edit"
                   >
                     <AiFillEdit />
                   </button>
@@ -773,7 +773,7 @@ export default function CharacterPopUp(props) {
                             });
                           });
                         }}
-                        className={styles.editButton}
+                        className={styles.editButton} aria-label="Finished editing"
                       >
                         <MdFileDownloadDone />
                       </button>
@@ -791,7 +791,7 @@ export default function CharacterPopUp(props) {
                 <div hidden={editSpeechInput}>
                   <button
                     onClick={() => setEditSpeechInput(!editSpeechInput)}
-                    className={styles.editButton}
+                    className={styles.editButton} aria-label="Edit"
                   >
                     <AiFillEdit />
                   </button>
@@ -818,7 +818,7 @@ export default function CharacterPopUp(props) {
                             });
                           });
                         }}
-                        className={styles.editButton}
+                        className={styles.editButton} aria-label="Finished editing"
                       >
                         <MdFileDownloadDone />
                       </button>
@@ -836,7 +836,7 @@ export default function CharacterPopUp(props) {
                 <div hidden={editLikesInput}>
                   <button
                     onClick={() => setEditLikesInput(!editLikesInput)}
-                    className={styles.editButton}
+                    className={styles.editButton} aria-label="Edit"
                   >
                     <AiFillEdit />
                   </button>
@@ -863,7 +863,7 @@ export default function CharacterPopUp(props) {
                             });
                           });
                         }}
-                        className={styles.editButton}
+                        className={styles.editButton} aria-label="Finished editing"
                       >
                         <MdFileDownloadDone />
                       </button>
@@ -885,7 +885,7 @@ export default function CharacterPopUp(props) {
                       onClick={() =>
                         setEditBackgroundInput(!editBackgroundInput)
                       }
-                      className={styles.editButton}
+                      className={styles.editButton} aria-label="Edit"
                     >
                       <AiFillEdit />
                     </button>
@@ -912,7 +912,7 @@ export default function CharacterPopUp(props) {
                               });
                             });
                           }}
-                          className={styles.editButton}
+                          className={styles.editButton} aria-label="Finished editing"
                         >
                           <MdFileDownloadDone />
                         </button>
@@ -932,7 +932,7 @@ export default function CharacterPopUp(props) {
                       onClick={() =>
                         setEditDisabilitiesInput(!editDisabilitiesInput)
                       }
-                      className={styles.editButton}
+                      className={styles.editButton} aria-label="Edit"
                     >
                       <AiFillEdit />
                     </button>
@@ -959,7 +959,7 @@ export default function CharacterPopUp(props) {
                               });
                             });
                           }}
-                          className={styles.editButton}
+                          className={styles.editButton} aria-label="Finished editing"
                         >
                           <MdFileDownloadDone />
                         </button>
@@ -977,7 +977,7 @@ export default function CharacterPopUp(props) {
                   <div hidden={editJobInput}>
                     <button
                       onClick={() => setEditJobInput(!editJobInput)}
-                      className={styles.editButton}
+                      className={styles.editButton} aria-label="Edit"
                     >
                       <AiFillEdit />
                     </button>
@@ -1004,7 +1004,7 @@ export default function CharacterPopUp(props) {
                               });
                             });
                           }}
-                          className={styles.editButton}
+                          className={styles.editButton} aria-label="Finished editing"
                         >
                           <MdFileDownloadDone />
                         </button>
@@ -1022,7 +1022,7 @@ export default function CharacterPopUp(props) {
                   <div hidden={editGenderInput}>
                     <button
                       onClick={() => setEditGenderInput(!editGenderInput)}
-                      className={styles.editButton}
+                      className={styles.editButton} aria-label="Edit"
                     >
                       <AiFillEdit />
                     </button>
@@ -1049,7 +1049,7 @@ export default function CharacterPopUp(props) {
                               });
                             });
                           }}
-                          className={styles.editButton}
+                          className={styles.editButton} aria-label="Finished editing"
                         >
                           <MdFileDownloadDone />
                         </button>
@@ -1067,7 +1067,7 @@ export default function CharacterPopUp(props) {
                   <div hidden={editPronounsInput}>
                     <button
                       onClick={() => setEditPronounsInput(!editPronounsInput)}
-                      className={styles.editButton}
+                      className={styles.editButton} aria-label="Edit"
                     >
                       <AiFillEdit />
                     </button>
@@ -1094,7 +1094,7 @@ export default function CharacterPopUp(props) {
                               });
                             });
                           }}
-                          className={styles.editButton}
+                          className={styles.editButton} aria-label="Finished editing"
                         >
                           <MdFileDownloadDone />
                         </button>
@@ -1112,7 +1112,7 @@ export default function CharacterPopUp(props) {
                   <div hidden={editSexualityInput}>
                     <button
                       onClick={() => setEditSexualityInput(!editSexualityInput)}
-                      className={styles.editButton}
+                      className={styles.editButton} aria-label="Edit"
                     >
                       <AiFillEdit />
                     </button>
@@ -1139,7 +1139,7 @@ export default function CharacterPopUp(props) {
                               });
                             });
                           }}
-                          className={styles.editButton}
+                          className={styles.editButton} aria-label="Finished editing"
                         >
                           <MdFileDownloadDone />
                         </button>
@@ -1157,7 +1157,7 @@ export default function CharacterPopUp(props) {
                   <div hidden={editSkillsInput}>
                     <button
                       onClick={() => setEditSkillsInput(!editSkillsInput)}
-                      className={styles.editButton}
+                      className={styles.editButton} aria-label="Edit"
                     >
                       <AiFillEdit />
                     </button>
@@ -1184,7 +1184,7 @@ export default function CharacterPopUp(props) {
                               });
                             });
                           }}
-                          className={styles.editButton}
+                          className={styles.editButton} aria-label="Finished editing"
                         >
                           <MdFileDownloadDone />
                         </button>
@@ -1202,7 +1202,7 @@ export default function CharacterPopUp(props) {
                   <div hidden={editMoralityInput}>
                     <button
                       onClick={() => setEditMoralityInput(!editMoralityInput)}
-                      className={styles.editButton}
+                      className={styles.editButton} aria-label="Edit"
                     >
                       <AiFillEdit />
                     </button>
@@ -1229,7 +1229,7 @@ export default function CharacterPopUp(props) {
                               });
                             });
                           }}
-                          className={styles.editButton}
+                          className={styles.editButton} aria-label="Finished editing"
                         >
                           <MdFileDownloadDone />
                         </button>
@@ -1249,7 +1249,7 @@ export default function CharacterPopUp(props) {
                       onClick={() =>
                         setEditRelationshipsInput(!editRelationshipsInput)
                       }
-                      className={styles.editButton}
+                      className={styles.editButton} aria-label="Edit"
                     >
                       <AiFillEdit />
                     </button>
@@ -1276,7 +1276,7 @@ export default function CharacterPopUp(props) {
                               });
                             });
                           }}
-                          className={styles.editButton}
+                          className={styles.editButton} aria-label="Finished editing"
                         >
                           <MdFileDownloadDone />
                         </button>
@@ -1294,7 +1294,7 @@ export default function CharacterPopUp(props) {
                   <div hidden={editNotesInput}>
                     <button
                       onClick={() => setEditNotesInput(!editNotesInput)}
-                      className={styles.editButton}
+                      className={styles.editButton} aria-label="Edit"
                     >
                       <AiFillEdit />
                     </button>
@@ -1321,7 +1321,7 @@ export default function CharacterPopUp(props) {
                               });
                             });
                           }}
-                          className={styles.editButton}
+                          className={styles.editButton} aria-label="Finished editing"
                         >
                           <MdFileDownloadDone />
                         </button>
