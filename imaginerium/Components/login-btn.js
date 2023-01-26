@@ -10,7 +10,7 @@ export default function LoginOutButton() {
         <button className={styles.logIOBtn} onClick={() => {
             signOut();
             `http://localhost:3000`;
-          }}>Sign out</button>
+          }}>Sign Out</button>
 
       <img className={styles.profilePic} src={session.user.image} alt="User Profile Picture"/>
       </div>
@@ -18,7 +18,7 @@ export default function LoginOutButton() {
   }
   return (
     <div className={styles.logInOutContainer}>
-      <button className={styles.logIOBtn} onClick={() => signIn()}>Sign in</button>
+      <button className={styles.logIOBtn} onClick={() => signIn()}>Sign In</button>
       <img className={styles.profilePic} src="https://deepgrouplondon.com/wp-content/uploads/2019/06/person-placeholder-5.png" />
     </div>
   )
