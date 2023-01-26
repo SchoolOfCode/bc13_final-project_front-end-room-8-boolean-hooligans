@@ -671,7 +671,7 @@ export default function CharacterPopUp(props) {
                 </>
               ) : (
                 <>
-                  <p className={styles.category}>Status:</p>
+                  <div className={styles.category}>Status:</div>
                   <p>
                     {" "}
                     <SlGhost /> Dead
