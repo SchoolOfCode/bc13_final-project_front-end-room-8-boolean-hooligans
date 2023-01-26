@@ -270,21 +270,28 @@ export default function aboutUs() {
                       </div>
                     </div>
                   </div>
-              <div className={styles.moreInfo}>
-                <p className={styles.description}>Filip's background is music education. Before joining the SoC Bootcamp, he worked within the transport industry. At some point when starting his own business he had to deal with creating the company's website and dived into code - now he can't stop.</p>
+                  <div className={styles.moreInfo}>
+                    <p className={styles.description}>
+                      Filip's background is music education. Before joining the
+                      SoC Bootcamp, he worked within the transport industry. At
+                      some point when starting his own business he had to deal
+                      with creating the company's website and dived into code -
+                      now he can't stop.
+                    </p>
+                  </div>
+                </div>
+                <div className={styles.general}>
+                  <Image
+                    className={styles.image2}
+                    src="/filip_pfp.jpg"
+                    alt="Photo of Filip looking like an action hero."
+                    height={200}
+                    width={150}
+                  />
+                </div>
               </div>
             </div>
-            <div className={styles.general}>
-                <Image
-                  className={styles.image2}
-                  src="/filip_pfp.jpg"
-                  alt="Photo of Filip looking like an action hero."
-                  height={200}
-                  width={150}
-                />
-            </div>
           </div>
-
           <div>
             <div className={styles.center}>
               <div className={styles.card}>
@@ -318,27 +325,32 @@ export default function aboutUs() {
                         </div>
                       </div>
                     </div>
+                  </div>
+                  <div className={styles.moreInfo}>
+                    <p className={styles.description}>
+                      Charles, a recent Chemical Engineering graduate, is a
+                      highly motivated individual who is passionate about
+                      problem-solving. He has found programming to be a medium
+                      through which he can express his creativity and skills. He
+                      is excited to continue honing his abilities and applying
+                      them to real-world challenges.
+                    </p>
+                  </div>
+                </div>
+                <div className={styles.general}>
+                  <Image
+                    className={styles.image3}
+                    src="/charles_pfp.jpg"
+                    alt="A photo of Charles."
+                    height={150}
+                    width={125}
+                  />
+                </div>
               </div>
-              <div className={styles.moreInfo}>
-                <p className={styles.description}>Charles, a recent Chemical Engineering graduate, is a highly motivated individual who is passionate about problem-solving. He has found programming to be a medium through which he can express his creativity and skills. He is excited to continue honing his abilities and applying them to real-world challenges.</p>
-              </div>
-            </div>
-            <div className={styles.general}>
-                <Image
-                  className={styles.image3}
-                  src="/charles_pfp.jpg"
-                  alt="A photo of Charles."
-                  height={150}
-                  width={125}
-                />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-  </div>
-</div>
-    </motion.div>
-  </div>
-</>
-  )
+    </>
+  );
 }
