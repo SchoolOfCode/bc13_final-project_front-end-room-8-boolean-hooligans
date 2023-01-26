@@ -17,14 +17,37 @@ export default function SignIn({ providers }) {
 
   return (
     <div className={styles.body}>
-
+      <div className={styles.buttonsContainer}>
       {Object.values(providers).map((provider) => (
         <div key={provider.name}>
-          <button onClick={() => signIn(provider.id)}>
+          <button className={styles.socialsButtons} onClick={() => signIn(provider.id)}>
             Sign in with {provider.name}
           </button>
         </div>
-      ))}
+      ))}</div>
+
+      <div className={styles.context}>
+
+      
+       
+            <h1 className={styles.signInHeader}>I M A G I N E R I U M</h1>
+           
+         </div>
+
+         <div className={styles.area}>
+           <ul className={styles.circles}>
+             <li></li>
+             <li></li>
+             <li></li>
+             <li></li>
+             <li></li>
+             <li></li>
+             <li></li>
+             <li></li>
+             <li></li>
+             <li></li>
+           </ul>
+         </div>
 
     </div>
   )
