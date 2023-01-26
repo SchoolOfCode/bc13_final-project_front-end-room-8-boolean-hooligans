@@ -5,6 +5,7 @@ import { MdFileDownloadDone } from "react-icons/md";
 import { GrFormClose } from "react-icons/gr";
 import { useState } from "react";
 import styles from "../styles/characterPopup.module.css";
+import { motion } from "framer-motion";
 
 export default function SharedCharacterPopUp(props) {
   const [editNameInput, setEditNameInput] = useState(false);
@@ -56,10 +57,6 @@ export default function SharedCharacterPopUp(props) {
   const [editSpeech, setEditSpeech] = useState(null);
   const [editWeightInput, setEditWeightInput] = useState(false);
   const [editWeight, setEditWeight] = useState(null);
- 
- 
-
-
 
   async function editCharacter(id, key, value) {
     let body = {};
@@ -69,14 +66,17 @@ export default function SharedCharacterPopUp(props) {
       method: "PATCH",
       body: JSON.stringify(body),
       mode: "cors",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" }
     });
   }
 
-
   return (
     <>
-      <div className={styles.popUp}>
+      <motion.div
+        initial={{ x: -1000 }}
+        animate={{ x: 0 }}
+        className={styles.popUp}
+      >
         <div className={styles.popUpLeft}>
           {props.char_img ? (
             <img className={styles.popUpImage} src={props.char_img} />
@@ -88,57 +88,51 @@ export default function SharedCharacterPopUp(props) {
           )}
 
           <div className={styles.leftStuffContainer}>
-            
-              
-                <div className={styles.editName}>
-                  <div hidden={editNameInput}>
-                    <button
-                      onClick={() => setEditNameInput(!editNameInput)}
-                      className={styles.editNameButton}
-                      hidden={editNameInput}
-                    >
-                      <AiFillEdit />
-                    </button>
-                  </div>
-                  {editNameInput ? (
-                    <div>
-                      <input
-                        defaultValue={props.char_name}
-                        onChange={(e) => setEditName(e.target.value)}
-                      ></input>
-                      <button
-                        onClick={() => {
-                          editCharacter(
-                            props.character_id,
-                            "char_name",
-                            editName
-                          ).then(() => {
-                            props.searchByName().then(() => {
-                              setEditNameInput(false);
-                            });
-                          });
-                        }}
-                        className={styles.editButton}
-                      >
-                        <MdFileDownloadDone />
-                      </button>
-                    </div>
-                  ) : (
-                    <div>
-                      <p>{props.char_name}</p>
-                    </div>
-                  )}
+            <div className={styles.editName}>
+              <div hidden={editNameInput}>
+                <button
+                  onClick={() => setEditNameInput(!editNameInput)}
+                  className={styles.editNameButton}
+                  hidden={editNameInput}
+                >
+                  <AiFillEdit />
+                </button>
+              </div>
+              {editNameInput ? (
+                <div>
+                  <input
+                    defaultValue={props.char_name}
+                    onChange={(e) => setEditName(e.target.value)}
+                  ></input>
+                  <button
+                    onClick={() => {
+                      editCharacter(
+                        props.character_id,
+                        "char_name",
+                        editName
+                      ).then(() => {
+                        props.searchByName().then(() => {
+                          setEditNameInput(false);
+                        });
+                      });
+                    }}
+                    className={styles.editButton}
+                  >
+                    <MdFileDownloadDone />
+                  </button>
                 </div>
-               
+              ) : (
+                <div>
+                  <p>{props.char_name}</p>
+                </div>
+              )}
+            </div>
 
-                <div className={styles.buttonsContainerLeft}>
-                  <div className={styles.shareContainer}>
-                    
-             
-            
+            <div className={styles.buttonsContainerLeft}>
+              <div className={styles.shareContainer}></div>
+            </div>
           </div>
         </div>
-</div></div>
         <div className={styles.popUpRight}>
           <button
             className={styles.closePopUpButton}
@@ -1238,7 +1232,7 @@ export default function SharedCharacterPopUp(props) {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

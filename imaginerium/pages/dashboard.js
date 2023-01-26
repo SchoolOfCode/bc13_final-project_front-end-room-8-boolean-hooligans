@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-import Navigation from "../Components/Navigation";
+
 import NewNavBar from "../Components/NewNavBar.js";
 import ButtonLink from "../Components/ButtonLink";
 import { VscPersonAdd, VscOrganization, VscGlobe } from "react-icons/vsc";
@@ -34,6 +34,7 @@ export default function Home() {
                 width={427}
                 alt="Earth"
                 unoptimized={true}
+                sizes="(max-width: 900px) 100vw, (max-width: 800px) 75vw, (max-width: 600px) 50vw"
               />
 
               <p>

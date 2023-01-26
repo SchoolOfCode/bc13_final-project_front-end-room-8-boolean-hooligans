@@ -122,15 +122,7 @@
     overflow: hidden;
   }
 
-  /* .additional */.moreInfo {
-    width: 280px;
-    float: right;
-    position: absolute;
-    left: 150px;
-    height: 100%;
-
-  }
-
+  
   .image {
     margin: 25px 25px 10px 20px;
     max-width: 80%;
@@ -139,7 +131,7 @@
     float: right;
     /* justify-content: center; */
   }
-
+  
   .image2 {
     margin: 25px 15px 10px 20px;
     max-width: 80%;
@@ -148,7 +140,7 @@
     float: right;
     /* justify-content: center; */
   }
-
+  
   .image3 {
     margin: 25px 30px 10px 20px;
     max-width: 80%;
@@ -157,23 +149,30 @@
     float: right;
     /* justify-content: center; */
   }
-
+  
   .icon {
     width: 50px;
     height: auto;
     padding: 0 5px 0 0;
   }
+  
+  /* .additional */.moreInfo {
+    width: 280px;
+    float: right;
+    position: absolute;
+    left: 150px;
+    height: 100%;
+    /* padding: 10px; */
+  }
 
   .description {
-    width: 80%;
+    width: 70%;
     float: right;
     text-align: left;
-    overflow-y: scroll;
+    overflow-x: scroll;
     height: 90%;
-    padding: 0px;
-    margin-right: 53px;
-    margin-bottom: 15px;
-    margin-top: 11px;
+    /* padding: 10px; */
+    margin: 5px 80px 5px 0px;
   }
 
   .additional .aliveStatus {
