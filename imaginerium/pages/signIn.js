@@ -3,7 +3,8 @@ import { getProviders, signIn, getSession } from "next-auth/react"
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import styles from '../styles/pleaseLogin.module.css'
-import { AiOutlineLogin } from "react-icons/ai";
+import { FaGoogle } from "react-icons/fa";
+import { SiAuth0 } from "react-icons/si"
 
 export default function SignIn({ providers }) {
   const router = useRouter()
@@ -20,12 +21,14 @@ export default function SignIn({ providers }) {
     <div className={styles.body}>
       <div className={styles.buttonsContainer}>
       {Object.values(providers).map((provider) => (
-        <div key={provider.name}>
+      
+        <div key={provider.name}>{  console.log(provider)}
           <button className={styles.socialsButtons} onClick={() => signIn(provider.id)}>
-          <div><AiOutlineLogin className={styles.icon} /></div>Sign in with {provider.name}
+          {provider.name==='Google' ? (<div><FaGoogle className={styles.icon} /></div>) : (<div> <SiAuth0 className={styles.icon}/></div>)}Sign in with {provider.name}
           </button>
         </div>
       ))}</div>
+      
 
       <div className={styles.context}>
 
