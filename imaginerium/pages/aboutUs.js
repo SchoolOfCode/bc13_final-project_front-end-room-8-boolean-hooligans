@@ -11,10 +11,10 @@ export default function aboutUs() {
 
   return (
    <>
+   <title>About Us</title>
     {/* <Navigation /> */}
     <NewNavBar />
     <div>
-    <title>About Us</title>
     <img
         className={styles.teamLogo}
         alt="Boolean Hooligans logo - showing a revolver firing the words true and false between the words Boolean at the top and Hooligans at the bottom"
