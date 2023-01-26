@@ -34,6 +34,7 @@ export default function Home() {
                 width={427}
                 alt="Earth"
                 unoptimized={true}
+                sizes="(max-width: 900px) 100vw, (max-width: 800px) 75vw, (max-width: 600px) 50vw"
               />
 
               <p>
