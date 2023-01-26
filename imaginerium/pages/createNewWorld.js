@@ -28,6 +28,7 @@ const { data: session } = useSession();
         </ul>
       </div>
       <iframe
+        title="Azgaar's Fantasy Map Generator"
         className={styles.map}
         src="https://azgaar.github.io/Fantasy-Map-Generator/"
       ></iframe>
