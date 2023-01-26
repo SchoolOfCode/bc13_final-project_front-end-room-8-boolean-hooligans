@@ -187,7 +187,7 @@ export default function aboutUs() {
               </div>
               </div>
               <div className={styles.moreInfo}>
-                <p className={styles.description}>WORDS HERE </p>
+                <p className={styles.description}>Charles, a recent Chemical Engineering graduate, is a highly motivated individual who is passionate about problem-solving. He has found programming to be a medium through which he can express his creativity and skills. He is excited to continue honing his abilities and applying them to real-world challenges.</p>
               </div>
             </div>
             <div className={styles.general}>
