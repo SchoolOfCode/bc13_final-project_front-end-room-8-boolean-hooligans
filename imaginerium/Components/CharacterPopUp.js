@@ -66,7 +66,7 @@ export default function CharacterPopUp(props) {
     await fetch(`https://imaginerium-qpii.onrender.com/characters/${id}`, {
       method: "DELETE",
       mode: "cors",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" }
     });
   }
 
@@ -78,7 +78,7 @@ export default function CharacterPopUp(props) {
       method: "PATCH",
       body: JSON.stringify(body),
       mode: "cors",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" }
     });
   }
 
@@ -92,7 +92,7 @@ export default function CharacterPopUp(props) {
       method: "POST",
       body: JSON.stringify(body),
       mode: "cors",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" }
     });
     console.log(body);
   }
@@ -141,8 +141,8 @@ export default function CharacterPopUp(props) {
                       }
                     }}
                   >
-                   <MdFileDownloadDone />
-                      </button>
+                    <MdFileDownloadDone />
+                  </button>
                 </div>
               </div>
             ) : (
@@ -468,7 +468,7 @@ export default function CharacterPopUp(props) {
               )}
 
               <div className={styles.category}>
-                <div>Height in meters: </div>
+                <div>Height in centimeters: </div>
                 <div hidden={editHeightInput}>
                   <button
                     onClick={() => setEditHeightInput(!editHeightInput)}
@@ -656,17 +656,15 @@ export default function CharacterPopUp(props) {
                     <button
                       className={styles.buttons}
                       onClick={() => {
-                      
                         editCharacter(
                           props.character_id,
                           "char_alive",
                           false
                         ).then(() => {
-                          props.searchByName("")
+                          props.searchByName("");
                         });
                       }}
                     >
-                    
                       Kill!
                     </button>
                   </p>
@@ -680,13 +678,12 @@ export default function CharacterPopUp(props) {
                     <button
                       className={styles.buttons}
                       onClick={() => {
-                      
                         editCharacter(
                           props.character_id,
                           "char_alive",
                           true
                         ).then(() => {
-                          props.searchByName("")
+                          props.searchByName("");
                         });
                       }}
                     >
