@@ -5,8 +5,7 @@ import NewNavBar from "../Components/NewNavBar";
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { delay, motion } from "framer-motion";
-
-// import Image from "next/image";
+import Image from "next/image";
 
 const spring = {
   type: "spring",
@@ -334,8 +333,12 @@ export default function aboutUs() {
                 />
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
-    </>
-  );
+  </div>
+</div>
+    </motion.div>
+  </div>
+</>
+  )
 }
