@@ -12,7 +12,7 @@ export default function LoginOutButton() {
             `http://localhost:3000`;
           }}>Sign out</button>
 
-      <img className={styles.profilePic} src={session.user.imeg} alt="User Profile Picture"/>
+      <img className={styles.profilePic} src={session.user.image} alt="User Profile Picture"/>
       </div>
     )
   }
