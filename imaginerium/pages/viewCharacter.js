@@ -1,11 +1,10 @@
 import { React, state, useState } from "react";
-import Navigation from "../Components/Navigation";
+
 import NewNavBar from "../Components/NewNavBar";
 
 function viewCharacter() {
   return (
     <div>
-      {/* <Navigation/> */}
       <NewNavBar />
       <div>viewCharacter</div>
 
