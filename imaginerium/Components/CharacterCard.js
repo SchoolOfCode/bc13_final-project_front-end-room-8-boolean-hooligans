@@ -34,7 +34,7 @@ export default function CharacterCard(props) {
            { props.char_img ? (  
            <img
            src={props.char_img}
-           className={styles.image} />) : (<img className={styles.image}
+           className={styles.image} />) : (<img className={styles.image} alt="character portrait"
               src="https://deepgrouplondon.com/wp-content/uploads/2019/06/person-placeholder-5.png"
             />)}
           </div>
