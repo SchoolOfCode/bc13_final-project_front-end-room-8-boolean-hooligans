@@ -211,11 +211,14 @@ export default function CharacterPopUp(props) {
                               "? This cannot be undone."
                           )
                         ) {
-                          destroyCharacter(props.character_id);
-                          props.searchByName("");
-                          props.setShowModal(false);
-                        }
-                      }}
+                          
+                            destroyCharacter(props.character_id).then(() => {
+                              props.searchByName("").then(() => {
+                                props.setShowModal(false);;
+                              });
+                            });
+                          }}}
+                         
                     >
                       delete
                     </button>
