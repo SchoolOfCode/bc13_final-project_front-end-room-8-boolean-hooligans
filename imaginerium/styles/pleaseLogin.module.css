@@ -252,9 +252,8 @@ height: 42vh;
   }
 
   .signInHeader {
-    position: absolute;
-    bottom: -20vh;
-    left: 30%;
+
+    margin: 12vh auto
   }
 
   .socialsButtons{
