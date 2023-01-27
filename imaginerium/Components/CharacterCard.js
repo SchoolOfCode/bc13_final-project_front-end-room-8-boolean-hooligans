@@ -62,7 +62,7 @@ export default function CharacterCard(props) {
                 <div>
                   <div className={styles.title}>Height</div>
                   <MdHeight />
-                  <div className={styles.value}>{props.char_height}m</div>
+                  <div className={styles.value}>{props.char_height}cm</div>
                 </div>
                 <div>
                   <div className={styles.title}>Weight</div>

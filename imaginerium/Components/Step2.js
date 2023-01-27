@@ -79,7 +79,7 @@ export default function Step2({ setStep, formValues, setFormValues }) {
             </div>
             <div>
               <label htmlFor="char_likes">
-                What are their likes and dislikes?
+                What do they enjoy and what do they dislike??
               </label>
               <textarea
                 defaultValue={formValues.char_likes}

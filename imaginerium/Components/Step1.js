@@ -110,6 +110,7 @@ export default function Step1({ setStep, formValues, setFormValues }) {
             name="char_img"
             type="text"
             id="char_img"
+            placeholder="Make sure to use a square image"
           />
         </div>
 
