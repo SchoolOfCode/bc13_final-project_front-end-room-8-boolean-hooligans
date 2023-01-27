@@ -1,16 +1,18 @@
 
 .cardsContainer {
-  align-content: center;
   margin: 0 auto; 
   margin-top: 5vh;
   max-width: 95vw;
-  padding-left: 80px;
-  padding-right: 80px;
   margin-left: 0px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5%;
+ 
+  /* grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   grid-column-gap: 10px;
-  grid-row-gap: 5px;
+  grid-row-gap: 5px; */
 }
 
 .main {
