@@ -7,10 +7,10 @@
   
   .description {
     margin-top: 0px;
-    width: 80%;
+    width: 95%;
     float: right;
     overflow: hidden;
-    height: 48%;
+    height: 38%;
   }
   
   .card {
@@ -177,7 +177,7 @@
   }
   
   .general {
-    width: 240px;
+    width: 210px;
     height: 100%;
     position: absolute;
     top: 0;
