@@ -27,7 +27,9 @@ export default function landing() {
         </div>
       </div>
       <div>
+      <div className={styles.title_container}>
         <div className={styles.title}>
+      
           <div className={styles.hover}>
             <h1>I</h1>
           </div>
@@ -60,6 +62,7 @@ export default function landing() {
           </div>
           <div className={styles.hover}>
             <h1>M</h1>
+            </div>
           </div>
         </div>
       </div>

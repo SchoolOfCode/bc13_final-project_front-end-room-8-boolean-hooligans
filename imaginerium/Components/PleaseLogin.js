@@ -10,7 +10,7 @@ export default function PleaseLogin() {
     return (
       <>
         <NewNavBar />
-        <Link className={styles.buttonText} href="/">
+        <Link className={styles.buttonText} href="/signIn">
                 <button className={styles.buttonMain}>
                   <div><AiOutlineLogin className={styles.icon} /></div>
                   <div>Log in</div>
