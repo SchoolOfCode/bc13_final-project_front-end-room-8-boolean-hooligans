@@ -46,7 +46,7 @@ align-items: center;
   justify-content: space-around;
   align-items: center;
   height: 80px;
-  width: 95%;
+  width: 100%;
   z-index: 20;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -124,6 +124,7 @@ align-items: center;
   justify-content: center;
   align-items: center;
   box-shadow: 0 15px 15px 0px rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
 .leftClosePopUpButton {
   box-shadow: rgba(187, 73, 44, 0.2) 0 -25px 18px -14px inset,
@@ -292,7 +293,7 @@ align-items: center;
 
 
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
  .popUp {
   flex-direction: column;
   width: 94vw;
@@ -325,28 +326,3 @@ align-items: center;
 }
 }
 
-
-@media (max-width: 480px) {
-
-
-
-}
-
-@media (max-width: 360px) {
-
-
-
-}
-
-@media (max-width: 321px) {
-
-
-
-}
-
-@media (max-width: 285px) {
-
-
- 
-
-}
