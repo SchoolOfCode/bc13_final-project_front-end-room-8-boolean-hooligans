@@ -125,7 +125,15 @@ align-items: center;
   align-items: center;
   box-shadow: 0 15px 15px 0px rgba(0, 0, 0, 0.2);
 }
-
+.leftClosePopUpButton {
+  box-shadow: rgba(187, 73, 44, 0.2) 0 -25px 18px -14px inset,
+    rgba(187, 96, 44, 0.15) 0 1px 2px, rgba(187, 130, 44, 0.15) 0 2px 4px,
+    rgba(187, 77, 44, 0.15) 0 4px 8px, rgba(187, 65, 44, 0.15) 0 8px 16px,
+    rgba(187, 113, 44, 0.15) 0 16px 32px;
+  background-color: rgb(251, 253, 125);
+  color: rgb(0, 44, 3);
+  visibility: hidden;
+}
 
 .closePopUpButton {
   box-shadow: rgba(187, 73, 44, 0.2) 0 -25px 18px -14px inset,
@@ -204,7 +212,7 @@ align-items: center;
 
 
 
-
+.leftClosePopUpButton,
 .doneButton,
 .closePopUpButton,
 .editNameButton,
@@ -229,6 +237,7 @@ align-items: center;
   box-sizing: border-box;
   color: black;
 }
+.leftClosePopUpButton:hover,
 .doneButton:hover,
 .editNameButton:hover,
 .closePopUpButton:hover,
@@ -283,7 +292,7 @@ align-items: center;
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
  .popUp {
   flex-direction: column;
   width: 94vw;
@@ -302,10 +311,18 @@ align-items: center;
   width: 20vw;
  }
   .popUpRight {
-    margin-top: -12px;
+    margin-top: -13vh;
   }
   
-
+.leftClosePopUpButton{
+  visibility: visible;
+}
+.closePopUpButton {
+  visibility: hidden;
+}
+.header {
+  visibility: hidden;
+}
 }
 
 
