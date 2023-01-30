@@ -352,7 +352,10 @@ justify-content: space-between;
     box-sizing: border-box;
 
   }
-  
+  .scene {
+    top: 12vh;
+   
+  }
   .star5 {
     
     position: absolute;
@@ -502,6 +505,9 @@ width:  17vw;
 position: absolute;
 top: 42vh;
 right: 9vw;
+}
+.scene {
+  top: 12vh;
 }
 
 }

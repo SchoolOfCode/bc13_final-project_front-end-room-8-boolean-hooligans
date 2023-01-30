@@ -279,3 +279,57 @@ align-items: center;
 .section .buttons {
   width: 100px;
 }
+
+
+
+
+@media (max-width: 600px) {
+ .popUp {
+  flex-direction: column;
+  width: 94vw;
+  padding: 0px;
+  position: absolute;
+  left: -10vw;
+ }
+ .popUpLeft {
+  width: 100%;
+  padding: 0px;
+ }
+ .leftStuffContainer {
+  width: 75%;
+ }
+ .buttons{
+  width: 20vw;
+ }
+  .popUpRight {
+    margin-top: -12px;
+  }
+  
+
+}
+
+
+@media (max-width: 480px) {
+
+
+
+}
+
+@media (max-width: 360px) {
+
+
+
+}
+
+@media (max-width: 321px) {
+
+
+
+}
+
+@media (max-width: 285px) {
+
+
+ 
+
+}
