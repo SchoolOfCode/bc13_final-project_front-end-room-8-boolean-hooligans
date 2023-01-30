@@ -95,7 +95,7 @@ export default function SharedCharacterPopUp(props) {
                   className={styles.editNameButton}
                   hidden={editNameInput}
                 >
-                  <AiFillEdit />
+                  <AiFillEdit aria-label="edit trait" />
                 </button>
               </div>
               {editNameInput ? (
@@ -118,7 +118,7 @@ export default function SharedCharacterPopUp(props) {
                     }}
                     className={styles.editButton}
                   >
-                    <MdFileDownloadDone />
+                    <MdFileDownloadDone aria-label="done" />
                   </button>
                 </div>
               ) : (
@@ -156,7 +156,7 @@ export default function SharedCharacterPopUp(props) {
                     onClick={() => setEditAgeInput(!editAgeInput)}
                     className={styles.editButton}
                   >
-                    <AiFillEdit />
+                    <AiFillEdit aria-label="edit trait" />
                   </button>
                 </div>
               </div>
@@ -183,7 +183,7 @@ export default function SharedCharacterPopUp(props) {
                         }}
                         className={styles.editButton}
                       >
-                        <MdFileDownloadDone />
+                        <MdFileDownloadDone aria-label="done" />
                       </button>
                     </div>
                   </p>
@@ -201,7 +201,7 @@ export default function SharedCharacterPopUp(props) {
                     onClick={() => setEditSpeciesInput(!editSpeciesInput)}
                     className={styles.editButton}
                   >
-                    <AiFillEdit />
+                    <AiFillEdit aria-label="edit trait" />
                   </button>
                 </div>
               </div>
@@ -228,7 +228,7 @@ export default function SharedCharacterPopUp(props) {
                         }}
                         className={styles.editButton}
                       >
-                        <MdFileDownloadDone />
+                        <MdFileDownloadDone aria-label="done" />
                       </button>
                     </div>
                   </p>
@@ -246,7 +246,7 @@ export default function SharedCharacterPopUp(props) {
                     onClick={() => setEditHairInput(!editHairInput)}
                     className={styles.editButton}
                   >
-                    <AiFillEdit />
+                    <AiFillEdit aria-label="edit trait" />
                   </button>
                 </div>
               </div>
@@ -273,7 +273,7 @@ export default function SharedCharacterPopUp(props) {
                         }}
                         className={styles.editButton}
                       >
-                        <MdFileDownloadDone />
+                        <MdFileDownloadDone aria-label="done" />
                       </button>
                     </div>
                   </p>
@@ -291,7 +291,7 @@ export default function SharedCharacterPopUp(props) {
                     onClick={() => setEditEyeInput(!editEyeInput)}
                     className={styles.editButton}
                   >
-                    <AiFillEdit />
+                    <AiFillEdit aria-label="edit trait" />
                   </button>
                 </div>
               </div>
@@ -318,7 +318,7 @@ export default function SharedCharacterPopUp(props) {
                         }}
                         className={styles.editButton}
                       >
-                        <MdFileDownloadDone />
+                        <MdFileDownloadDone aria-label="done" />
                       </button>
                     </div>
                   </p>
@@ -336,7 +336,7 @@ export default function SharedCharacterPopUp(props) {
                     onClick={() => setEditSkinInput(!editSkinInput)}
                     className={styles.editButton}
                   >
-                    <AiFillEdit />
+                    <AiFillEdit aria-label="edit trait" />
                   </button>
                 </div>
               </div>
@@ -363,7 +363,7 @@ export default function SharedCharacterPopUp(props) {
                         }}
                         className={styles.editButton}
                       >
-                        <MdFileDownloadDone />
+                        <MdFileDownloadDone aria-label="done" />
                       </button>
                     </div>
                   </p>
@@ -381,7 +381,7 @@ export default function SharedCharacterPopUp(props) {
                     onClick={() => setEditHeightInput(!editHeightInput)}
                     className={styles.editButton}
                   >
-                    <AiFillEdit />
+                    <AiFillEdit aria-label="edit trait" />
                   </button>
                 </div>
               </div>
@@ -408,7 +408,7 @@ export default function SharedCharacterPopUp(props) {
                         }}
                         className={styles.editButton}
                       >
-                        <MdFileDownloadDone />
+                        <MdFileDownloadDone aria-label="done" />
                       </button>
                     </div>
                   </p>
@@ -426,7 +426,7 @@ export default function SharedCharacterPopUp(props) {
                     onClick={() => setEditWeightInput(!editWeightInput)}
                     className={styles.editButton}
                   >
-                    <AiFillEdit />
+                    <AiFillEdit aria-label="edit trait" />
                   </button>
                 </div>
               </div>
@@ -453,7 +453,7 @@ export default function SharedCharacterPopUp(props) {
                         }}
                         className={styles.editButton}
                       >
-                        <MdFileDownloadDone />
+                        <MdFileDownloadDone aria-label="done" />
                       </button>
                     </div>
                   </p>
@@ -471,7 +471,7 @@ export default function SharedCharacterPopUp(props) {
                     onClick={() => setEditFeaturesInput(!editFeaturesInput)}
                     className={styles.editButton}
                   >
-                    <AiFillEdit />
+                    <AiFillEdit aria-label="edit trait" />
                   </button>
                 </div>
               </div>
@@ -498,7 +498,7 @@ export default function SharedCharacterPopUp(props) {
                         }}
                         className={styles.editButton}
                       >
-                        <MdFileDownloadDone />
+                        <MdFileDownloadDone aria-label="done" />
                       </button>
                     </div>
                   </p>
@@ -516,7 +516,7 @@ export default function SharedCharacterPopUp(props) {
                     onClick={() => setEditDescInput(!editDescInput)}
                     className={styles.editButton}
                   >
-                    <AiFillEdit />
+                    <AiFillEdit aria-label="edit trait" />
                   </button>
                 </div>
               </div>
@@ -543,7 +543,7 @@ export default function SharedCharacterPopUp(props) {
                         }}
                         className={styles.editButton}
                       >
-                        <MdFileDownloadDone />
+                        <MdFileDownloadDone aria-label="done" />
                       </button>
                     </div>
                   </p>
@@ -598,7 +598,7 @@ export default function SharedCharacterPopUp(props) {
                     onClick={() => setEditHopesInput(!editHopesInput)}
                     className={styles.editButton}
                   >
-                    <AiFillEdit />
+                    <AiFillEdit aria-label="edit trait" />
                   </button>
                 </div>
               </div>
@@ -625,7 +625,7 @@ export default function SharedCharacterPopUp(props) {
                         }}
                         className={styles.editButton}
                       >
-                        <MdFileDownloadDone />
+                        <MdFileDownloadDone aria-label="done" />
                       </button>
                     </div>
                   </p>
@@ -643,7 +643,7 @@ export default function SharedCharacterPopUp(props) {
                     onClick={() => setEditFearsInput(!editFearsInput)}
                     className={styles.editButton}
                   >
-                    <AiFillEdit />
+                    <AiFillEdit aria-label="edit trait" />
                   </button>
                 </div>
               </div>
@@ -670,7 +670,7 @@ export default function SharedCharacterPopUp(props) {
                         }}
                         className={styles.editButton}
                       >
-                        <MdFileDownloadDone />
+                        <MdFileDownloadDone aria-label="done" />
                       </button>
                     </div>
                   </p>
@@ -688,7 +688,7 @@ export default function SharedCharacterPopUp(props) {
                     onClick={() => setEditSpeechInput(!editSpeechInput)}
                     className={styles.editButton}
                   >
-                    <AiFillEdit />
+                    <AiFillEdit aria-label="edit trait" />
                   </button>
                 </div>
               </div>
@@ -715,7 +715,7 @@ export default function SharedCharacterPopUp(props) {
                         }}
                         className={styles.editButton}
                       >
-                        <MdFileDownloadDone />
+                        <MdFileDownloadDone aria-label="done" />
                       </button>
                     </div>
                   </p>
@@ -733,7 +733,7 @@ export default function SharedCharacterPopUp(props) {
                     onClick={() => setEditLikesInput(!editLikesInput)}
                     className={styles.editButton}
                   >
-                    <AiFillEdit />
+                    <AiFillEdit aria-label="edit trait" />
                   </button>
                 </div>
               </div>
@@ -760,7 +760,7 @@ export default function SharedCharacterPopUp(props) {
                         }}
                         className={styles.editButton}
                       >
-                        <MdFileDownloadDone />
+                        <MdFileDownloadDone aria-label="done" />
                       </button>
                     </div>
                   </p>
@@ -782,7 +782,7 @@ export default function SharedCharacterPopUp(props) {
                       }
                       className={styles.editButton}
                     >
-                      <AiFillEdit />
+                      <AiFillEdit aria-label="edit trait" />
                     </button>
                   </div>
                 </div>
@@ -809,7 +809,7 @@ export default function SharedCharacterPopUp(props) {
                           }}
                           className={styles.editButton}
                         >
-                          <MdFileDownloadDone />
+                          <MdFileDownloadDone aria-label="done" />
                         </button>
                       </div>
                     </p>
@@ -829,7 +829,7 @@ export default function SharedCharacterPopUp(props) {
                       }
                       className={styles.editButton}
                     >
-                      <AiFillEdit />
+                      <AiFillEdit aria-label="edit trait" />
                     </button>
                   </div>
                 </div>
@@ -856,7 +856,7 @@ export default function SharedCharacterPopUp(props) {
                           }}
                           className={styles.editButton}
                         >
-                          <MdFileDownloadDone />
+                          <MdFileDownloadDone aria-label="done" />
                         </button>
                       </div>
                     </p>
@@ -874,7 +874,7 @@ export default function SharedCharacterPopUp(props) {
                       onClick={() => setEditJobInput(!editJobInput)}
                       className={styles.editButton}
                     >
-                      <AiFillEdit />
+                      <AiFillEdit aria-label="edit trait" />
                     </button>
                   </div>
                 </div>
@@ -901,7 +901,7 @@ export default function SharedCharacterPopUp(props) {
                           }}
                           className={styles.editButton}
                         >
-                          <MdFileDownloadDone />
+                          <MdFileDownloadDone aria-label="done" />
                         </button>
                       </div>
                     </p>
@@ -919,7 +919,7 @@ export default function SharedCharacterPopUp(props) {
                       onClick={() => setEditGenderInput(!editGenderInput)}
                       className={styles.editButton}
                     >
-                      <AiFillEdit />
+                      <AiFillEdit aria-label="edit trait" />
                     </button>
                   </div>
                 </div>
@@ -946,7 +946,7 @@ export default function SharedCharacterPopUp(props) {
                           }}
                           className={styles.editButton}
                         >
-                          <MdFileDownloadDone />
+                          <MdFileDownloadDone aria-label="done" />
                         </button>
                       </div>
                     </p>
@@ -964,7 +964,7 @@ export default function SharedCharacterPopUp(props) {
                       onClick={() => setEditPronounsInput(!editPronounsInput)}
                       className={styles.editButton}
                     >
-                      <AiFillEdit />
+                      <AiFillEdit aria-label="edit trait" />
                     </button>
                   </div>
                 </div>
@@ -991,7 +991,7 @@ export default function SharedCharacterPopUp(props) {
                           }}
                           className={styles.editButton}
                         >
-                          <MdFileDownloadDone />
+                          <MdFileDownloadDone aria-label="done" />
                         </button>
                       </div>
                     </p>
@@ -1009,7 +1009,7 @@ export default function SharedCharacterPopUp(props) {
                       onClick={() => setEditSexualityInput(!editSexualityInput)}
                       className={styles.editButton}
                     >
-                      <AiFillEdit />
+                      <AiFillEdit aria-label="edit trait" />
                     </button>
                   </div>
                 </div>
@@ -1036,7 +1036,7 @@ export default function SharedCharacterPopUp(props) {
                           }}
                           className={styles.editButton}
                         >
-                          <MdFileDownloadDone />
+                          <MdFileDownloadDone aria-label="done" />
                         </button>
                       </div>
                     </p>
@@ -1054,7 +1054,7 @@ export default function SharedCharacterPopUp(props) {
                       onClick={() => setEditSkillsInput(!editSkillsInput)}
                       className={styles.editButton}
                     >
-                      <AiFillEdit />
+                      <AiFillEdit aria-label="edit trait" />
                     </button>
                   </div>
                 </div>
@@ -1081,7 +1081,7 @@ export default function SharedCharacterPopUp(props) {
                           }}
                           className={styles.editButton}
                         >
-                          <MdFileDownloadDone />
+                          <MdFileDownloadDone aria-label="done" />
                         </button>
                       </div>
                     </p>
@@ -1099,7 +1099,7 @@ export default function SharedCharacterPopUp(props) {
                       onClick={() => setEditMoralityInput(!editMoralityInput)}
                       className={styles.editButton}
                     >
-                      <AiFillEdit />
+                      <AiFillEdit aria-label="edit trait" />
                     </button>
                   </div>
                 </div>
@@ -1126,7 +1126,7 @@ export default function SharedCharacterPopUp(props) {
                           }}
                           className={styles.editButton}
                         >
-                          <MdFileDownloadDone />
+                          <MdFileDownloadDone aria-label="done" />
                         </button>
                       </div>
                     </p>
@@ -1146,7 +1146,7 @@ export default function SharedCharacterPopUp(props) {
                       }
                       className={styles.editButton}
                     >
-                      <AiFillEdit />
+                      <AiFillEdit aria-label="edit trait" />
                     </button>
                   </div>
                 </div>
@@ -1173,7 +1173,7 @@ export default function SharedCharacterPopUp(props) {
                           }}
                           className={styles.editButton}
                         >
-                          <MdFileDownloadDone />
+                          <MdFileDownloadDone aria-label="done" />
                         </button>
                       </div>
                     </p>
@@ -1191,7 +1191,7 @@ export default function SharedCharacterPopUp(props) {
                       onClick={() => setEditNotesInput(!editNotesInput)}
                       className={styles.editButton}
                     >
-                      <AiFillEdit />
+                      <AiFillEdit aria-label="edit trait" />
                     </button>
                   </div>
                 </div>
@@ -1218,7 +1218,7 @@ export default function SharedCharacterPopUp(props) {
                           }}
                           className={styles.editButton}
                         >
-                          <MdFileDownloadDone />
+                          <MdFileDownloadDone aria-label="done" />
                         </button>
                       </div>
                     </p>

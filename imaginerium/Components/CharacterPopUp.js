@@ -106,6 +106,15 @@ export default function CharacterPopUp(props) {
         className={styles.popUp}
       >
         <div className={styles.popUpLeft}>
+        <button aria-label="Close pop up"
+            className={styles.leftClosePopUpButton}
+            onClick={() => {
+              props.searchByName("");
+              props.setShowModal(false);
+            }}
+          >
+            <GrFormClose />
+          </button>
           {props.char_img ? (
             <img className={styles.popUpImage} src={props.char_img} alt="character portrait"/>
           ) : (

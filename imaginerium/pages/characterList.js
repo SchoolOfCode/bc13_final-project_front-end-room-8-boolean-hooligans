@@ -93,7 +93,7 @@ export default function characterList() {
                     name="char_name"
                     id="char_name"
                   />
-                  <button className={styles.button} type="submit">
+                  <button className={styles.button} type="submit" aria-label="search">
                     <span>
                       <BiSearchAlt size="60" />
                     </span>

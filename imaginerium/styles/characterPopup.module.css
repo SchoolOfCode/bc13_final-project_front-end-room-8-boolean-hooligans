@@ -47,7 +47,7 @@ align-items: center;
   justify-content: space-around;
   align-items: center;
   height: 80px;
-  width: 95%;
+  width: 100%;
   z-index: 20;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -125,8 +125,17 @@ align-items: center;
   justify-content: center;
   align-items: center;
   box-shadow: 0 15px 15px 0px rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
-
+.leftClosePopUpButton {
+  box-shadow: rgba(187, 73, 44, 0.2) 0 -25px 18px -14px inset,
+    rgba(187, 96, 44, 0.15) 0 1px 2px, rgba(187, 130, 44, 0.15) 0 2px 4px,
+    rgba(187, 77, 44, 0.15) 0 4px 8px, rgba(187, 65, 44, 0.15) 0 8px 16px,
+    rgba(187, 113, 44, 0.15) 0 16px 32px;
+  background-color: rgb(251, 253, 125);
+  color: rgb(0, 44, 3);
+  visibility: hidden;
+}
 
 .closePopUpButton {
   box-shadow: rgba(187, 73, 44, 0.2) 0 -25px 18px -14px inset,
@@ -205,7 +214,7 @@ align-items: center;
 
 
 
-
+.leftClosePopUpButton,
 .doneButton,
 .closePopUpButton,
 .editNameButton,
@@ -230,6 +239,7 @@ align-items: center;
   box-sizing: border-box;
   color: black;
 }
+.leftClosePopUpButton:hover,
 .doneButton:hover,
 .editNameButton:hover,
 .closePopUpButton:hover,
@@ -280,3 +290,40 @@ align-items: center;
 .section .buttons {
   width: 100px;
 }
+
+
+
+
+@media (max-width: 800px) {
+ .popUp {
+  flex-direction: column;
+  width: 94vw;
+  padding: 0px;
+  position: absolute;
+  left: -10vw;
+ }
+ .popUpLeft {
+  width: 100%;
+  padding: 0px;
+ }
+ .leftStuffContainer {
+  width: 75%;
+ }
+ .buttons{
+  width: 20vw;
+ }
+  .popUpRight {
+    margin-top: -13vh;
+  }
+  
+.leftClosePopUpButton{
+  visibility: visible;
+}
+.closePopUpButton {
+  visibility: hidden;
+}
+.header {
+  visibility: hidden;
+}
+}
+

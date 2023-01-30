@@ -68,7 +68,7 @@
   left: 36vw;
   top: 10vh;
     box-sizing: border-box;
-    opacity: 0.9;
+    
     transform: translatey(0px);
     animation: float 6s ease-in-out infinite;
     cursor:pointer;
@@ -295,19 +295,25 @@
   
   /* *************** TITLE ******************* */
   
+  .title_container{
+width: 100vw;
+display: flex;
+align-items: center;
+justify-content: center;
+
+  }
   
   .title {
     padding: 2em;
     height: 20vh;
     position: absolute;
-    width: 70vw;
+    width: 80vw;
     height: 18vh;
     top: 70%;
     display: grid;
-    grid: 100% / repeat(11, auto);
-  align-self: center;
-  margin-left: 13vw;
-   
+    grid: 100% / repeat(12, auto);
+align-items: center;
+justify-content: space-between;
   }
   .title .hover {
     position: relative;
@@ -330,4 +336,178 @@
     text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
   
+
+
+
+  /* media queries */
+
+
+  @media only screen and (max-width: 500px) {
+      .earth {
+    max-width: 80vw;
+    border-radius: 50%;
+    position: absolute;
+ left: 9.5vw;
+  top: 10vh;
+    box-sizing: border-box;
+
+  }
+  .scene {
+    top: 12vh;
    
+  }
+  .star5 {
+    
+    position: absolute;
+    bottom: 38vh;
+    left: 25vw;
+
+  }
+  .star4 {
+    
+    position: absolute;
+    bottom: 47vh;
+    left: 12vw;
+
+  }
+  .star3 {
+    
+    position: absolute;
+    top: 9vh;
+    right: 3vw;
+
+  }
+  .star2 {
+    
+    position: absolute;
+    top: 12vh;
+    right: 10vw;
+
+  }
+  .star1 {
+    
+    position: absolute;
+    top: 20vh;
+    right: 4vw;
+
+  }
+
+
+
+.moon1 {
+  width: 10vw;
+  
+  position: absolute;
+  top: 13vh;
+  left: 14vw;
+ 
+ 
+}
+.moon1copy {
+  width: 10vw;
+  
+  position: absolute;
+  top: 13vh;
+  left: 14vw;
+}
+
+.moon2 {
+  width:  17vw;
+  position: absolute;
+  top: 5vh;
+  right: 9vw;
+  
+} 
+.moon2copy{
+  width:  17vw;
+  position: absolute;
+  top: 5vh;
+  right: 9vw;
+}
+
+  }
+
+  @media only screen and (max-width: 420px) {
+    .earth {
+  max-width: 80vw;
+  border-radius: 50%;
+  position: absolute;
+left: 9.5vw;
+top: 10vh;
+  box-sizing: border-box;
+
+}
+
+.star5 {
+  
+  position: absolute;
+  bottom: 42vh;
+  left: 25vw;
+
+}
+.star4 {
+  
+  position: absolute;
+  bottom: 50vh;
+  left: 12vw;
+
+}
+.star3 {
+  
+  position: absolute;
+  top: 9vh;
+  right: 3vw;
+
+}
+.star2 {
+  
+  position: absolute;
+  top: 12vh;
+  right: 10vw;
+
+}
+.star1 {
+  
+  position: absolute;
+  top: 20vh;
+  right: 4vw;
+
+}
+
+
+
+.moon1 {
+width: 10vw;
+
+position: absolute;
+top: 13vh;
+left: 14vw;
+
+
+}
+.moon1copy {
+width: 10vw;
+
+position: absolute;
+top: 13vh;
+left: 14vw;
+}
+
+.moon2 {
+width:  17vw;
+position: absolute;
+top: 42vh;
+right: 9vw;
+
+} 
+.moon2copy{
+width:  17vw;
+position: absolute;
+top: 42vh;
+right: 9vw;
+}
+.scene {
+  top: 12vh;
+}
+
+}

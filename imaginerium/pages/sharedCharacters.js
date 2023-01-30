@@ -34,17 +34,15 @@ export default function characterList() {
     const data = await response.json();
     setCharactersArray(data.payload);
   }
-  //sort by date created functionality
-  // const [charactersArray, setCharactersArray] = useState([]);
-  // const [sortState, setSortState] = useState("none");
 
-  // const sortMethods = {
-  //   none: { method: (a, b) => null },
-  //   ascending: { method: (a, b) => (a.character_id < b.character_id ? -1 : 1) },
-  //   descending: {
-  //     method: (a, b) => (a.character_id > b.character_id ? -1 : 1)
-  //   }
-  // };
+
+  if (!session) {
+    return (
+      <>
+        <PleaseLogin />
+      </>
+    );
+  }
 
   if (charactersArray.length < 1) {
     return (
@@ -54,13 +52,6 @@ export default function characterList() {
     );
   }
 
-  if (!session) {
-    return (
-      <>
-        <PleaseLogin />
-      </>
-    );
-  }
 
   return (
     <div className={styles.main}>
@@ -73,24 +64,7 @@ export default function characterList() {
         </div>
 
         <div className={styles.filters} aria-level="2">
-          {/* <div >
-
-            <select
-              className={styles.allButton}
-              defaultValue={"DEFAULT"}
-              onChange={(e) => setSortState(e.target.value)}
-            >
-              <option className="option" value="DEFAULT" disabled>
-                sort by: date created
-              </option>
-              <option className="option" value="ascending">
-                newest to oldest
-              </option>
-              <option className="option" value="descending">
-                oldest to newest
-              </option>
-            </select>{" "}
-          </div> */}
+         
         </div>
 
         {/* {charactersArray.length === 0 : <p>loading..</p> */}
