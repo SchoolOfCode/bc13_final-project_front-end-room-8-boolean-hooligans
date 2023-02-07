@@ -54,6 +54,7 @@ export default function SignIn({ providers }) {
         )}
       </div>
 
+
       <div className={styles.context}>
         <h1 className={styles.signInHeader}>I M A G I N E R I U M</h1>
       </div>
@@ -75,4 +76,4 @@ export default function SignIn({ providers }) {
     </div>
   );
 }
-//
+//For commit
