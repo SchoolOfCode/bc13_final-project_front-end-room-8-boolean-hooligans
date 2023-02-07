@@ -1,6 +1,5 @@
 import styles from "../styles/newNavBar.module.css";
 import React from "react";
-import Link from "next/link";
 import { AnimatePresence, clamp, motion, useCycle } from "framer-motion";
 import LoginOutButton from "./login-btn";
 

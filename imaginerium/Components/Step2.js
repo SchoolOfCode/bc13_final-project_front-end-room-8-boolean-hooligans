@@ -11,7 +11,7 @@ export default function Step2({ setStep, formValues, setFormValues }) {
   async function onSubmit(values, e) {
     // e.preventDefault();
     setFormValues({ ...formValues, ...values });
-    console.log("step2:", formValues);
+    // console.log("step2:", formValues);
     if (myForm.current.buttonId === "next") {
       setStep(3);
     } else {

@@ -3,8 +3,6 @@ import { SlGhost } from "react-icons/sl";
 import { GiHeartInside, GiWeight } from "react-icons/gi";
 import { RiCake2Fill } from "react-icons/ri";
 import { MdTransgender } from "react-icons/md";
-import { HiUserGroup } from "react-icons/hi";
-import { FaEye } from "react-icons/fa";
 import { MdHeight } from "react-icons/md";
 import { useState } from "react";
 import PopUpCharacterCard from "../modals/popUpCharacterCard";
@@ -37,17 +35,20 @@ export default function CharacterCard(props) {
               </div>
 
               {props.char_img ? (
-                <img src={props.char_img} className={styles.image} alt="Character portrait image"/>
+                <img
+                  src={props.char_img}
+                  className={styles.image}
+                  alt="Character portrait image"
+                />
               ) : (
                 <img
                   className={styles.image}
-                  src="https://deepgrouplondon.com/wp-content/uploads/2019/06/person-placeholder-5.png" alt="Character portrait image"
+                  src="https://deepgrouplondon.com/wp-content/uploads/2019/06/person-placeholder-5.png"
+                  alt="Character portrait image"
                 />
               )}
             </div>
             <div className={styles.moreInfo}>
-              {/* <h1>{props.char_name}</h1> */}
-
               <div className={styles.stats}>
                 <div>
                   <div className={styles.title}>Gender</div>
@@ -119,4 +120,3 @@ export default function CharacterCard(props) {
     </div>
   );
 }
-/*Comment*/

@@ -4,7 +4,6 @@ import { useState, useRef } from "react";
 import FormSubmissionPopUp from "../modals/formSubmissionPopUp";
 import Link from "next/link";
 import Router from "next/router";
-import { useSession } from "next-auth/react";
 import styles from "../styles/steps.module.css";
 import { motion } from "framer-motion";
 
@@ -12,8 +11,6 @@ export default function Step3({ setStep, formValues, setFormValues }) {
   const { register, handleSubmit } = useForm();
   const [showModal, setShowModal] = useState(false);
   const myForm = useRef();
-
-  const { data: session } = useSession();
 
   /*Use to post to backend */
   async function addNewCharacter(formValues) {
@@ -27,10 +24,10 @@ export default function Step3({ setStep, formValues, setFormValues }) {
 
   async function onSubmit(values) {
     // e.preventDefault();
-    console.log("values", values);
+    // console.log("values", values);
     let updatedValues = { ...formValues, ...values };
     setFormValues(updatedValues);
-    console.log("After submit", updatedValues);
+    // console.log("After submit", updatedValues);
     if (myForm.current.buttonId === "submit") {
       addNewCharacter(updatedValues);
       setShowModal(true);
