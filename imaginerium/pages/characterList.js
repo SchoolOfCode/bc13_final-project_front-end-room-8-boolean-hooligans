@@ -1,6 +1,5 @@
 import CharacterCard from "../Components/CharacterCard.js";
 import styles from "../styles/characterList.module.css";
-import useFetch from "../hooks/useFetch";
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import { BiSearchAlt } from "react-icons/bi";
@@ -10,8 +9,10 @@ import NoCharactersYet from "../Components/NoCharactersYet.js";
 
 export default function characterList() {
   const { data: session } = useSession();
+  const [charactersArray, setCharactersArray] = useState([]);
 
   useEffect(() => {
+    //fetchData only runs once session has returned
     if (session) {
       async function fetchData() {
         const response = await fetch(
@@ -19,11 +20,9 @@ export default function characterList() {
         );
         const data = await response.json();
         setCharactersArray(data.payload);
-
-        console.log(session.user.email);
       }
       fetchData();
-    }
+    } //Data will be refetched if the user log out and another user log in
   }, [session]);
 
   async function searchByName(nameToSearch) {
@@ -34,16 +33,15 @@ export default function characterList() {
     setCharactersArray(data.payload);
   }
 
-  //sort by date created functionality
-  const [charactersArray, setCharactersArray] = useState([]);
+  //sort by date created characters functionality
   const [sortState, setSortState] = useState("none");
 
   const sortMethods = {
     none: { method: (a, b) => null },
     ascending: { method: (a, b) => (a.character_id < b.character_id ? -1 : 1) },
     descending: {
-      method: (a, b) => (a.character_id > b.character_id ? -1 : 1)
-    }
+      method: (a, b) => (a.character_id > b.character_id ? -1 : 1),
+    },
   };
 
   if (!session) {
@@ -67,20 +65,20 @@ export default function characterList() {
       <NewNavBar />
       <div>
         <div className={styles.header}>
+          {/*Role and aria -level properties for screen readers / acessibility*/}
           <div role="heading" aria-level="1">
             <h1 className={styles.h1}>Your Characters</h1>
           </div>
         </div>
-
         <div className={styles.filters} aria-level="2">
           <div id={styles.cover}>
+          {/*Search by name form */}
             <form
               className={styles.form}
               onSubmit={(e) => {
                 e.preventDefault();
                 const formData = new FormData(e.target);
                 let nameToSearch = formData.get("char_name");
-
                 searchByName(nameToSearch);
               }}
             >
@@ -93,7 +91,11 @@ export default function characterList() {
                     name="char_name"
                     id="char_name"
                   />
-                  <button className={styles.button} type="submit" aria-label="search">
+                  <button
+                    className={styles.button}
+                    type="submit"
+                    aria-label="search"
+                  >
                     <span>
                       <BiSearchAlt size="60" />
                     </span>
@@ -111,7 +113,7 @@ export default function characterList() {
               <div>View All</div>
             </button>
           </div>
-
+            {/*"Sort by" dropdown button */}
           <div>
             <select
               className={styles.allButton}
@@ -138,14 +140,12 @@ export default function characterList() {
         </div>
       </div>
 
-      {/* {charactersArray.length === 0 : <p>loading..</p> */}
       <div className={styles.cardsContainer}>
         {charactersArray
           .sort(sortMethods[sortState].method)
           .map((character) => {
             return (
               <CharacterCard
-                className="cctest"
                 searchByName={searchByName}
                 key={character.character_id}
                 character_id={character.character_id}

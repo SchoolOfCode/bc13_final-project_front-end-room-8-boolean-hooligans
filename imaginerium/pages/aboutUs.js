@@ -4,13 +4,13 @@ import { GiHeartInside } from "react-icons/gi";
 import NewNavBar from "../Components/NewNavBar";
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const spring = {
   type: "spring",
   damping: 10,
-  stiffness: 100
+  stiffness: 100,
 };
 
 export default function aboutUs() {
@@ -18,6 +18,7 @@ export default function aboutUs() {
     <>
       <NewNavBar />
       <div>
+        {/*Animation for the logo */}
         <motion.img
           transition={{ duration: 0.6, spring }}
           initial={{ scale: 0, rotate: 0 }}
@@ -37,7 +38,8 @@ export default function aboutUs() {
               target="_blank"
             >
               School of Code's
-            </Link>{" "}
+            </Link>
+            {" "}
             Cohort 13, and this site is our final project. We built it over the
             course of four weeks in January 2023, and are very pleased with the
             end result!<br></br>
@@ -58,7 +60,6 @@ export default function aboutUs() {
             developers!
           </p>
         </div>
-
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
