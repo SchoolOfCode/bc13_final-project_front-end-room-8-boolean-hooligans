@@ -1,4 +1,5 @@
 
+
 .mainContainer {
     width: 80%;
     height:100%;
@@ -11,8 +12,7 @@
     background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    /* backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(5px); */
+    
     border: 1px solid rgba(255, 255, 255, 0.3);
         align-items: center ;
    
@@ -30,8 +30,7 @@
     background: rgba(255, 255, 255, 0.2);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-/* backdrop-filter: blur(1px); */
-/* -webkit-backdrop-filter: blur(5px); */
+
 border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -68,16 +67,24 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     border: none;
     padding: 5px;
     border-radius: 0.5rem;
-    /* outline: none; */
-    font-size: 1.2rem;
+  
     font-weight: 500;
     color: #000;
+    -webkit-box-shadow: 2px 5px 24px 0px rgba(66, 68, 90, 1);
+-moz-box-shadow: 2px 5px 24px 0px rgba(66, 68, 90, 1);
+box-shadow: 2px 5px 24px 0px rgba(66, 68, 90, 1);
+    
 }
 .stepOneLeftContainer img {
     width: 50%;
     /* height: 100%; */
     object-fit: cover;
-    border-radius: 1rem;
+    border-radius: 20rem;
+    padding: 5px;
+    border: 3px solid #ffffff;
+    -webkit-box-shadow: 2px 1px 32px -3px rgba(66, 68, 90, 1);
+-moz-box-shadow: 2px 1px 32px -3px rgba(66, 68, 90, 1);
+box-shadow: 2px 1px 32px -3px rgba(66, 68, 90, 1);
 }
 
 .randomButton{
@@ -85,14 +92,20 @@ border: 1px solid rgba(255, 255, 255, 0.3);
    
     z-index: 10;
     border: none;
-    padding: 5px;
+    padding: 7px;
     border-radius: 0.5rem;
     /* outline: none; */
-    font-size: 1.2rem;
+    font-size: 1rem;
+   
     font-weight: 500;
     color: rgb(255, 255, 255);
     background-color:rgb(87, 75, 75);
     cursor: pointer;
+}
+
+.randomButton:hover{
+    background-color: rgb(87, 75, 75);
+    opacity: 0.8;
 }
 
 .stepOneRightContainer {
@@ -121,6 +134,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 
 .stepOneRightContainer label {
     width: 40%;
+    font-size: 14px;
 }
 
 .stepOneRightContainer textarea {
@@ -129,10 +143,13 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     border: none;
     padding: 5px;
     border-radius: 0.5rem;
-    /* outline: none; */
-    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+  
     font-weight: 500;
     color: #000;
+    -webkit-box-shadow: 2px 5px 24px 0px rgba(66, 68, 90, 1);
+-moz-box-shadow: 2px 5px 24px 0px rgba(66, 68, 90, 1);
+box-shadow: 2px 5px 24px 0px rgba(66, 68, 90, 1);
    
 }
 
@@ -145,10 +162,12 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     border: none;
     padding: 5px;
     border-radius: 0.5rem;
-    /* outline: none; */
-    font-size: 1.2rem;
+    
     font-weight: 500;
     color: #000;
+    -webkit-box-shadow: 2px 5px 24px 0px rgba(66, 68, 90, 1);
+-moz-box-shadow: 2px 5px 24px 0px rgba(66, 68, 90, 1);
+box-shadow: 2px 5px 24px 0px rgba(66, 68, 90, 1);
 }
 
 .textBoxStepOne{
@@ -243,10 +262,14 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 
 .stepTwoLeftContainer label {
     width: 80%;
+    height: 4rem;
+    font-size: 14px;
 }
 
 .stepTwoRightContainer label {
     width: 80%;
+    height: 4rem;
+    font-size: 14px;
 }
 
 .stepTwoRightContainer div {
@@ -316,33 +339,35 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     border: none;
     padding: 5px;
     border-radius: 0.5rem;
-    /* outline: none; */
-    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     color: #000;
+    -webkit-box-shadow: 2px 5px 24px 0px rgba(66, 68, 90, 1);
+-moz-box-shadow: 2px 5px 24px 0px rgba(66, 68, 90, 1);
+box-shadow: 2px 5px 24px 0px rgba(66, 68, 90, 1);
 }
 
 
 
 .stepThreeLeftContainer{
     width: 80%;
-    /* height: 40vh; */
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    gap: 1.7rem;
+    gap: 2.2rem;
     
 }
 
 .stepThreeRightContainer{
     width: 50%;
-    /* height: 40vh; */
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    gap: 1.7rem;
+    gap: 1.2rem;
     
 }
 
@@ -356,15 +381,19 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     border: none;
     border-bottom: 1px solid #000;
     outline: none;
-    font-size: 1.2rem;
+   
     font-weight: 500;
     color: #000;
+    -webkit-box-shadow: 2px 5px 24px 0px rgba(66, 68, 90, 1);
+-moz-box-shadow: 2px 5px 24px 0px rgba(66, 68, 90, 1);
+box-shadow: 2px 5px 24px 0px rgba(66, 68, 90, 1);
 }
 
 
 
 .stepThreeLeftContainer label {
     text-align: left;
+    font-size: 14px;
     
 }
 .stepThreeRightContainer textarea {
@@ -373,15 +402,20 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     border: none;
     padding: 5px;
     border-radius: 0.5rem;
-    /* outline: none; */
-    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     color: #000;
-    
+    -webkit-box-shadow: 2px 5px 24px 0px rgba(66, 68, 90, 1);
+-moz-box-shadow: 2px 5px 24px 0px rgba(66, 68, 90, 1);
+box-shadow: 2px 5px 24px 0px rgba(66, 68, 90, 1);
     
 }
 
-
+.stepThreeRightContainer label {
+   
+    font-size: 14px;
+    
+}
 
 .stepThreeLeftContainer div {
     width: 80%;
@@ -398,19 +432,23 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 
 .stepThreeLeftContainer label {
     width: 40%;
+    font-size: 14px;
 }
 
 
 .stepThreeLeftContainer input {
 
     width: 80%;
-    height: 3vh;
+    height: 25px;
     border: none;
     padding: 5px;
     border-radius: 0.5rem;
     /* outline: none; */
-    font-size: 1.2rem;
+    
     font-weight: 500;
+    -webkit-box-shadow: 2px 5px 24px 0px rgba(66, 68, 90, 1);
+-moz-box-shadow: 2px 5px 24px 0px rgba(66, 68, 90, 1);
+box-shadow: 2px 5px 24px 0px rgba(66, 68, 90, 1);
     color: #000;
 }
 

@@ -57,6 +57,7 @@ export default function Step3({ setStep, formValues, setFormValues }) {
                 {...register("char_gender", { required: false })}
                 name="char_gender"
                 id="char_gender"
+                placeholder="Female, Male, etc"
               />
             </div>
             <div>
@@ -67,6 +68,7 @@ export default function Step3({ setStep, formValues, setFormValues }) {
                 {...register("char_pronouns", { required: false })}
                 name="char_pronouns"
                 id="char_pronouns"
+                placeholder="she/her, he/him, they/them"
               />
             </div>
             <div>
@@ -77,6 +79,7 @@ export default function Step3({ setStep, formValues, setFormValues }) {
                 {...register("char_sexuality", { required: false })}
                 name="char_sexuality"
                 id="char_sexuality"
+                placeholder="Heterosexual, Homosexual, etc"
               />
             </div>
             <div>
@@ -109,6 +112,7 @@ export default function Step3({ setStep, formValues, setFormValues }) {
                 {...register("char_disabilities", { required: false })}
                 name="char_disabilities"
                 id="char_disabilities"
+                placeholder="blind, deaf, etc"
               />
             </div>
             <div>
@@ -119,6 +123,7 @@ export default function Step3({ setStep, formValues, setFormValues }) {
                 {...register("char_job", { required: false })}
                 name="char_job"
                 id="char_job"
+                placeholder="farmer, soldier, etc"
               />
             </div>
           </div>
@@ -151,6 +156,7 @@ export default function Step3({ setStep, formValues, setFormValues }) {
               {...register("char_notes", { required: false })}
               name="char_notes"
               id="char_notes"
+              placeholder="Any other notes you want to add"
             />
           </div>
         </div>

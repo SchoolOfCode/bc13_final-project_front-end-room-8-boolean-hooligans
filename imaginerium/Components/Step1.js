@@ -133,6 +133,7 @@ export default function Step1({ setStep, formValues, setFormValues }) {
               {...register("char_species", { required: false })}
               name="char_species"
               id="char_species"
+              placeholder="Human, Elf, Orc, etc."
             />
           </div>
           <div>
@@ -143,6 +144,7 @@ export default function Step1({ setStep, formValues, setFormValues }) {
               {...register("char_hairColour", { required: false })}
               name="char_hairColour"
               id="char_hairColour"
+              placeholder="Brown, blonde, red, etc."
             />
           </div>
           <div>
@@ -153,6 +155,7 @@ export default function Step1({ setStep, formValues, setFormValues }) {
               {...register("char_eyeColour", { required: false })}
               name="char_eyeColour"
               id="char_eyeColour"
+              placeholder="Brown, blue, green, etc."
             />
           </div>
           <div>
@@ -163,10 +166,11 @@ export default function Step1({ setStep, formValues, setFormValues }) {
               {...register("char_skinColour", { required: false })}
               name="char_skinColour"
               id="char_skinColour"
+              placeholder="Green, brown, red, etc."
             />
           </div>
           <div>
-            <label htmlFor="char_height">Height in centimetres?</label>
+            <label htmlFor="char_height">Height in cm?</label>
             <input
               defaultValue={formValues.char_height}
               placeholder="Enter number"
@@ -206,6 +210,7 @@ export default function Step1({ setStep, formValues, setFormValues }) {
               {...register("char_desc", { required: false })}
               name="char_desc"
               id="char_desc"
+              placeholder="Describe your character in a few sentences"
             />
           </div>
           <div>
