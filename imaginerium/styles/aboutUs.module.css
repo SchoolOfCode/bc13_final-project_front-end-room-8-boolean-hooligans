@@ -126,7 +126,7 @@
 
   
   .image {
-    margin: 25px 25px 10px 20px;
+    margin: 25px 26px 10px 20px;
     max-width: 80%;
     max-height: 80%;
     /* padding: 15px; */
@@ -144,10 +144,11 @@
   }
   
   .image3 {
-    margin: 25px 30px 10px 20px;
+    margin: 25px 26px 10px 20px;
+    /* padding-left: 10px; */
     max-width: 80%;
     max-height: 80%;
-    /* padding: 15px; */
+    /* padding: 0px; */
     float: right;
     /* justify-content: center; */
   }
@@ -162,8 +163,9 @@
     width: 280px;
     float: right;
     position: absolute;
-    left: 150px;
+    left: 160px;
     height: 100%;
+    
     /* padding: 10px; */
   }
 
@@ -171,10 +173,11 @@
     width: 70%;
     float: right;
     text-align: left;
-    overflow-x: scroll;
+    overflow-y: scroll;
     height: 90%;
-    /* padding: 10px; */
-    margin: 5px 80px 5px 0px;
+    /* padding: 5px 5px 20px 5px; */
+    margin: 10px 90px 5px 5px;
+    font-size: 15px; /* Description font size increased */
   }
 
   .additional .aliveStatus {

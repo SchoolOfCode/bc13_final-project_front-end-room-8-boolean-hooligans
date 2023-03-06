@@ -69,7 +69,7 @@ export default function aboutUs() {
               <div className={styles.card}>
                 <div className={styles.additional}>
                   <div className={styles.userCard}>
-                    <h2>Felicity Cullen</h2>
+                    <h2>Felicity<br />Cullen</h2>
                     <div className={styles.aliveStatus}>
                       <span>
                         <GiHeartInside /> <span>Alive</span>
@@ -125,7 +125,7 @@ export default function aboutUs() {
               <div className={styles.card}>
                 <div className={styles.additional}>
                   <div className={styles.userCard}>
-                    <h2>Andrés Espin</h2>
+                    <h2>Andrés<br/>Espin</h2>
                     <div className={styles.aliveStatus}>
                       <span>
                         <GiHeartInside /> <span>Alive</span>
@@ -241,7 +241,7 @@ export default function aboutUs() {
               <div className={styles.card}>
                 <div className={styles.additional}>
                   <div className={styles.userCard}>
-                    <h2>Filip Ruminski</h2>
+                    <h2>Filip<br />Ruminski</h2>
                     <div className={styles.aliveStatus}>
                       <span>
                         <GiHeartInside /> <span>Alive</span>
@@ -297,7 +297,7 @@ export default function aboutUs() {
               <div className={styles.card}>
                 <div className={styles.additional}>
                   <div className={styles.userCard}>
-                    <h2>Charles Sajan</h2>
+                    <h2>Charles<br />Sajan</h2>
                     <div className={styles.aliveStatus}>
                       <span>
                         <GiHeartInside /> <span>Alive</span>
