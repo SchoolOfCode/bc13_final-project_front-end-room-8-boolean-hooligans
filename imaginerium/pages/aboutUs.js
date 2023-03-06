@@ -4,7 +4,7 @@ import { GiHeartInside } from "react-icons/gi";
 import NewNavBar from "../Components/NewNavBar";
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const spring = {
@@ -12,12 +12,13 @@ const spring = {
   damping: 10,
   stiffness: 100
 };
-
+// about page
 export default function aboutUs() {
   return (
     <>
       <NewNavBar />
       <div>
+        {/*Animation for the logo */}
         <motion.img
           transition={{ duration: 0.6, spring }}
           initial={{ scale: 0, rotate: 0 }}
@@ -58,7 +59,6 @@ export default function aboutUs() {
             developers!
           </p>
         </div>
-
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

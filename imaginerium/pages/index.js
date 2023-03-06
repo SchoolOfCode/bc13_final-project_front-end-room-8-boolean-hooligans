@@ -1,6 +1,3 @@
-import { signIn } from "next-auth/react";
-import GoogleProvider from "next-auth/providers/google";
-import GithubProvider from "next-auth/providers/github";
 import styles from "../styles/landing.module.css";
 import Link from "next/link";
 
@@ -9,11 +6,11 @@ export default function landing() {
     <>
       <div className={styles.body}>
         <div className={styles.scene}>
-        <div className={styles.upper}>
-        <Link href="/signIn">
-          <img className={styles.earth} src="./earth1.png" alt="earth"/>
-          </Link>
-          <img className={styles.moon1copy} src="./moon1.png" alt="moon" />
+          <div className={styles.upper}>
+            <Link href="/signIn">
+              <img className={styles.earth} src="./earth1.png" alt="earth" />
+            </Link>
+            <img className={styles.moon1copy} src="./moon1.png" alt="moon" />
             <img className={styles.moon1} src="./moon1.png" alt="moon" />
             <img className={styles.moon2copy} src="./moon3.png" alt="moon" />
             <img className={styles.moon2} src="./moon3.png" alt="moon" />
@@ -27,41 +24,40 @@ export default function landing() {
         </div>
       </div>
       <div>
-      <div className={styles.title_container}>
-        <div className={styles.title}>
-      
-          <div className={styles.hover}>
-            <h1>I</h1>
-          </div>
-          <div className={styles.hover}>
-            <h1>M</h1>
-          </div>
-          <div className={styles.hover}>
-            <h1>A</h1>
-          </div>
-          <div className={styles.hover}>
-            <h1>G</h1>
-          </div>
-          <div className={styles.hover}>
-            <h1>I</h1>
-          </div>
-          <div className={styles.hover}>
-            <h1>N</h1>
-          </div>
-          <div className={styles.hover}>
-            <h1>E</h1>
-          </div>
-          <div className={styles.hover}>
-            <h1>R</h1>
-          </div>
-          <div className={styles.hover}>
-            <h1>I</h1>
-          </div>
-          <div className={styles.hover}>
-            <h1>U</h1>
-          </div>
-          <div className={styles.hover}>
-            <h1>M</h1>
+        <div className={styles.title_container}>
+          <div className={styles.title}>
+            <div className={styles.hover}>
+              <h1>I</h1>
+            </div>
+            <div className={styles.hover}>
+              <h1>M</h1>
+            </div>
+            <div className={styles.hover}>
+              <h1>A</h1>
+            </div>
+            <div className={styles.hover}>
+              <h1>G</h1>
+            </div>
+            <div className={styles.hover}>
+              <h1>I</h1>
+            </div>
+            <div className={styles.hover}>
+              <h1>N</h1>
+            </div>
+            <div className={styles.hover}>
+              <h1>E</h1>
+            </div>
+            <div className={styles.hover}>
+              <h1>R</h1>
+            </div>
+            <div className={styles.hover}>
+              <h1>I</h1>
+            </div>
+            <div className={styles.hover}>
+              <h1>U</h1>
+            </div>
+            <div className={styles.hover}>
+              <h1>M</h1>
             </div>
           </div>
         </div>

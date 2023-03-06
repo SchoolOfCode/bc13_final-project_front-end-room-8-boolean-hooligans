@@ -13,7 +13,7 @@ class MainDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          {/*Below we add the modal wrapper*/}
+          {/*Below we add the modal wrapper so they appear in front of everything else*/}
           <div id="modal-root"></div>
           <div id="form-submission-pop-up"></div>
         </body>

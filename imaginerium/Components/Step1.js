@@ -10,7 +10,6 @@ import style from "../styles/switch.module.css";
 
 export default function Step1({ setStep, formValues, setFormValues }) {
   const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
   const [image, setImage] = useState("");
   const [trigger, setTrigger] = useState(true);
   const [isOn, setIsOn] = useState(true);
@@ -45,7 +44,7 @@ export default function Step1({ setStep, formValues, setFormValues }) {
 
   let user = { user_email: session.user.email };
 
-  console.log("step1:", formValues);
+  // console.log("step1:", formValues);
 
   async function onSubmit(values, e) {
     // e.preventDefault();
