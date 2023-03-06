@@ -25,66 +25,57 @@
   z-index: 5;
   display: flex;
   flex-direction: column;
-align-items: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px
 }
 
 .popUpImage {
   margin-top: 20px;
   max-width: 15vw;
   border-radius: 50%;
-  
+
   object-fit: cover;
   border: 1px solid #ffffff;
   box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
 }
 
-
-
 .buttonsContainerLeft {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  justify-content: space-around;
+  gap: 10px;
   align-items: center;
   height: 80px;
   width: 100%;
   z-index: 20;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-right-color: rgba(255, 255, 255, 0.1);
-  border-bottom-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-
 }
-
-
-
-
+.nameinput{
+  margin-top: 20px;
+}
 .popUpRight {
   padding: 15px;
   width: 96%;
-  
 }
 .infoContainer {
   height: 84%;
   overflow: auto;
   border-radius: 10px;
   margin-right: -10px;
-  
+
   width: 100%;
   z-index: 10;
   border-radius: 10px;
-  
+
   border-right-color: rgba(255, 255, 255, 0.1);
   border-bottom-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-
 }
 .popUpRight h1 {
-  color:white;
+  color: white;
 }
 .infoContainer::-webkit-scrollbar-track {
-  /* -webkit-box-shadow: inset 0 0 6px rgba(0, 33, 36, 0.3); */
   border-radius: 10px;
   background-color: #ebecf000;
 }
@@ -98,7 +89,7 @@ align-items: center;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #535970;
 }
-.editName{
+.editName {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,16 +98,16 @@ align-items: center;
 .sharePopUp div p {
   font-weight: normal;
   font-size: 0.9rem;
-  word-spacing:0.05em;
+  word-spacing: 0.05em;
   line-height: 1em;
   color: black;
 }
 .leftStuffContainer {
   color: black;
-  margin-top: 30px;
+ 
   background: #e3e7f7;
   border-radius: 10px;
-  padding: 10px;
+  padding: 0px;
   font-weight: bold;
   display: flex;
   flex-direction: column;
@@ -149,7 +140,8 @@ align-items: center;
   margin: 5px;
 }
 .doneButton {
-  outline:rgba(0, 0, 0, 0.295)
+  outline: rgba(0, 0, 0, 0.295);
+ 
 }
 
 .section {
@@ -159,7 +151,6 @@ align-items: center;
   border-radius: 10px;
   padding: 10px;
   line-height: 120%;
- 
 }
 .popUpLeft input,
 .section input {
@@ -180,15 +171,15 @@ align-items: center;
   resize: vertical;
 
   font-family: Arial, Verdana, Trebuchet, Tahoma, sans-serif;
-  
+
   letter-spacing: 0.1em;
-  word-spacing:0.35em;
+  word-spacing: 0.35em;
   line-height: 1.5em;
 }
 .section h2 {
   font-size: 1.3rem;
   font-weight: 600px;
-  color: black
+  color: black;
 }
 .section p {
   color: black;
@@ -200,7 +191,7 @@ align-items: center;
   margin-left: 8px;
   margin-top: -8px;
   line-height: 150%;
-  word-spacing:0.15em;
+  word-spacing: 0.15em;
 }
 .category {
   border-radius: 10px;
@@ -211,8 +202,6 @@ align-items: center;
   justify-content: space-between;
   padding: 12px;
 }
-
-
 
 .leftClosePopUpButton,
 .doneButton,
@@ -235,7 +224,7 @@ align-items: center;
   float: right;
   border: none;
   -webkit-tap-highlight-color: transparent;
-  margin-top: -10px;
+ 
   box-sizing: border-box;
   color: black;
 }
@@ -249,13 +238,12 @@ align-items: center;
 }
 
 .buttons {
-
   position: relative;
   color: black;
   background: #ffffff;
   border-radius: 10%;
-  width:5vw;
-  height:30px;
+  width: 5vw;
+  height: 30px;
   font-size: 18px;
   display: flex;
   justify-content: center;
@@ -271,13 +259,12 @@ align-items: center;
   box-sizing: border-box;
 }
 
-.buttons:hover{
-
+.buttons:hover {
   background: #4a47fc;
   color: #ffffff;
 }
-.editNameButton{
-  top:20%;
+.editNameButton {
+  top: 20%;
   margin-bottom: -5px;
   color: black;
 }
@@ -286,44 +273,40 @@ align-items: center;
   border: solid;
   border: 1px;
 }
- 
+
 .section .buttons {
   width: 100px;
 }
 
-
-
-
 @media (max-width: 800px) {
- .popUp {
-  flex-direction: column;
-  width: 94vw;
-  padding: 0px;
-  position: absolute;
-  left: -10vw;
- }
- .popUpLeft {
-  width: 100%;
-  padding: 0px;
- }
- .leftStuffContainer {
-  width: 75%;
- }
- .buttons{
-  width: 20vw;
- }
+  .popUp {
+    flex-direction: column;
+    width: 94vw;
+    padding: 0px;
+    position: absolute;
+    left: -10vw;
+  }
+  .popUpLeft {
+    width: 100%;
+    padding: 0px;
+  }
+  .leftStuffContainer {
+    width: 75%;
+  }
+  .buttons {
+    width: 20vw;
+  }
   .popUpRight {
     margin-top: -13vh;
   }
-  
-.leftClosePopUpButton{
-  visibility: visible;
-}
-.closePopUpButton {
-  visibility: hidden;
-}
-.header {
-  visibility: hidden;
-}
-}
 
+  .leftClosePopUpButton {
+    visibility: visible;
+  }
+  .closePopUpButton {
+    visibility: hidden;
+  }
+  .header {
+    visibility: hidden;
+  }
+}
