@@ -1,0 +1,68 @@
+
+  .navBarContainer {
+    display: flex;
+    background-color: none;
+    position: fixed;
+    z-index: 50;
+    top: 0  ;
+    
+  }
+  
+  .aside {
+    
+    width: 18.75rem;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.613);
+border-top-right-radius: 40px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+    
+  }
+  
+  .container {
+    margin: 7.5rem 1.4rem;
+    line-height: 2em; /*Added to increase line height on Navbar links*/
+  }
+  
+  .btnContainer {
+    position: fixed;
+    width: clamp(3rem, 3vw, 3rem);
+    z-index: 50;
+    top: 1.5rem;
+    left: 1.5rem;
+    cursor: pointer;
+  }
+
+  .btnContainer:hover .hamburgerButton div{
+    background-color: #f7f8fa6d;
+  }
+ 
+  .container a {
+    color: #505459;
+    text-decoration: none;
+    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+    font-weight: 600;
+    display: block;
+    margin: 20px;
+    font-family: arial;
+  }
+  
+  .hamburgerButton div{
+    cursor: pointer;
+    height: 3px;
+    width: 2rem;
+    border-radius: 40px;
+    margin: 8px;
+    background-color: #dadbdd;
+    border: 1px solid #ffffff;
+   
+    
+
+    
+  }
+  

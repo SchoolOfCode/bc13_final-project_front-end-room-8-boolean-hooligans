@@ -1,0 +1,312 @@
+.popUp {
+  display: flex;
+  flex-direction: row;
+  color: black;
+  background: rgba(255, 255, 255, 0);
+  height: 70vh;
+  font-family: tahoma;
+  backdrop-filter: blur(20px);
+  z-index: 1;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-right-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.popUpLeft {
+  padding: 15px;
+  width: 30%;
+  color: black;
+  border-radius: 10px;
+  height: 90%;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px
+}
+
+.popUpImage {
+  margin-top: 20px;
+  max-width: 15vw;
+  border-radius: 50%;
+
+  object-fit: cover;
+  border: 1px solid #ffffff;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+}
+
+.buttonsContainerLeft {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  z-index: 20;
+  border-radius: 10px;
+}
+.nameinput{
+  margin-top: 20px;
+}
+.popUpRight {
+  padding: 15px;
+  width: 96%;
+}
+.infoContainer {
+  height: 84%;
+  overflow: auto;
+  border-radius: 10px;
+  margin-right: -10px;
+
+  width: 100%;
+  z-index: 10;
+  border-radius: 10px;
+
+  border-right-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+.popUpRight h1 {
+  color: white;
+}
+.infoContainer::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #ebecf000;
+}
+.infoContainer::-webkit-scrollbar {
+  width: 12px;
+  background-color: #45454600;
+}
+
+.infoContainer::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #535970;
+}
+.editName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sharePopUp div p {
+  font-weight: normal;
+  font-size: 0.9rem;
+  word-spacing: 0.05em;
+  line-height: 1em;
+  color: black;
+}
+.leftStuffContainer {
+  color: black;
+ 
+  background: #e3e7f7;
+  border-radius: 10px;
+  padding: 0px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  height: 36%;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 15px 15px 0px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+.leftClosePopUpButton {
+  box-shadow: rgba(187, 73, 44, 0.2) 0 -25px 18px -14px inset,
+    rgba(187, 96, 44, 0.15) 0 1px 2px, rgba(187, 130, 44, 0.15) 0 2px 4px,
+    rgba(187, 77, 44, 0.15) 0 4px 8px, rgba(187, 65, 44, 0.15) 0 8px 16px,
+    rgba(187, 113, 44, 0.15) 0 16px 32px;
+  background-color: rgb(251, 253, 125);
+  color: rgb(0, 44, 3);
+  visibility: hidden;
+}
+
+.closePopUpButton {
+  box-shadow: rgba(187, 73, 44, 0.2) 0 -25px 18px -14px inset,
+    rgba(187, 96, 44, 0.15) 0 1px 2px, rgba(187, 130, 44, 0.15) 0 2px 4px,
+    rgba(187, 77, 44, 0.15) 0 4px 8px, rgba(187, 65, 44, 0.15) 0 8px 16px,
+    rgba(187, 113, 44, 0.15) 0 16px 32px;
+  background-color: rgb(251, 253, 125);
+  color: rgb(0, 44, 3);
+}
+.editNameButton {
+  margin: 5px;
+}
+.doneButton {
+  outline: rgba(0, 0, 0, 0.295);
+ 
+}
+
+.section {
+  color: black;
+  background: #e3e7f7;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  line-height: 120%;
+}
+.popUpLeft input,
+.section input {
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid rgba(187, 130, 233, 0.493);
+  width: 80%;
+}
+.section textarea {
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid rgba(187, 130, 233, 0.493);
+  width: 80%;
+  resize: vertical;
+
+  font-family: Arial, Verdana, Trebuchet, Tahoma, sans-serif;
+
+  letter-spacing: 0.1em;
+  word-spacing: 0.35em;
+  line-height: 1.5em;
+}
+.section h2 {
+  font-size: 1.3rem;
+  font-weight: 600px;
+  color: black;
+}
+.section p {
+  color: black;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: inset 2px 2px 5px #b0b6c9, inset -5px -5px 10px white;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  margin-left: 8px;
+  margin-top: -8px;
+  line-height: 150%;
+  word-spacing: 0.15em;
+}
+.category {
+  border-radius: 10px;
+  color: black;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.leftClosePopUpButton,
+.doneButton,
+.closePopUpButton,
+.editNameButton,
+.editButton {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.199);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  float: right;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+ 
+  box-sizing: border-box;
+  color: black;
+}
+.leftClosePopUpButton:hover,
+.doneButton:hover,
+.editNameButton:hover,
+.closePopUpButton:hover,
+.editButton:hover {
+  background: #4a47fc;
+  color: #ffffff;
+}
+
+.buttons {
+  position: relative;
+  color: black;
+  background: #ffffff;
+  border-radius: 10%;
+  width: 5vw;
+  height: 30px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.199);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  float: right;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  margin-top: -10px;
+  box-sizing: border-box;
+}
+
+.buttons:hover {
+  background: #4a47fc;
+  color: #ffffff;
+}
+.editNameButton {
+  top: 20%;
+  margin-bottom: -5px;
+  color: black;
+}
+
+.doneButton {
+  border: solid;
+  border: 1px;
+}
+
+.section .buttons {
+  width: 100px;
+}
+
+@media (max-width: 800px) {
+  .popUp {
+    flex-direction: column;
+    width: 94vw;
+    padding: 0px;
+    position: absolute;
+    left: -10vw;
+  }
+  .popUpLeft {
+    width: 100%;
+    padding: 0px;
+  }
+  .leftStuffContainer {
+    width: 75%;
+  }
+  .buttons {
+    width: 20vw;
+  }
+  .popUpRight {
+    margin-top: -13vh;
+  }
+
+  .leftClosePopUpButton {
+    visibility: visible;
+  }
+  .closePopUpButton {
+    visibility: hidden;
+  }
+  .header {
+    visibility: hidden;
+  }
+}

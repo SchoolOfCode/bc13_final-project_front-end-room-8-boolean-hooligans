@@ -1,0 +1,513 @@
+.body {
+    margin: 0;
+    padding: 0;
+    width:  100vw;
+    height: 100%;
+    overflow: hidden;
+    
+    position: relative;
+
+    
+  background: linear-gradient(230deg, #59c0e6, #4e6db9, #a571fb);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 14s ease infinite;
+  animation: AnimationName 14s ease infinite;
+  text-transform: uppercase;
+  scroll-snap-type: y mandatory;
+  position: relative;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 29%;
+  }
+  50% {
+    background-position: 100% 72%;
+  }
+  100% {
+    background-position: 0% 29%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 29%;
+  }
+  50% {
+    background-position: 100% 72%;
+  }
+  100% {
+    background-position: 0% 29%;
+  }
+    
+}
+  
+  .scene {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+  /* 
+    transform: translate(-50%, -50%); */
+  }
+  
+  .upper {
+    width: 100vw;
+    height: 30vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+  }
+  
+  .earth {
+    max-width: 30vw;
+    border-radius: 50%;
+    position: absolute;
+  left: 36vw;
+  top: 10vh;
+    box-sizing: border-box;
+    
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+    cursor:pointer;
+  }
+  
+  
+  @keyframes float {
+      0% {
+          box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+          transform: translatey(0px);
+      }
+      50% {
+          box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+          transform: translatey(-20px);
+      }
+      100% {
+          box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+          transform: translatey(0px);
+      }
+  }
+  
+  @keyframes spin {
+    to {
+      background-position: 200% 0;
+    }}
+  
+  .enter {
+    display:none;
+  }
+  .earth:hover + .enter {
+    display: block;
+    font: 600 2rem sans-serif;
+    text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    color: transparent;
+    -webkit-text-stroke: 2px  #c2733a;
+    text-shadow: none;
+    position: absolute;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    top: 60vh;
+    left: 30vw;
+    animation-duration: 0.5s;
+    animation-name: animate-fade;
+
+    animation-fill-mode: backwards;
+  }
+  @keyframes animate-fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .moon1 {
+    width: 2.5vw;
+    border-radius: 50%;
+    position: absolute;
+    top: 12vh;
+    left: 35vw;
+    background-color: #eba06b;
+    animation: excite1 24s infinite linear;
+   
+  }
+  .moon1copy {
+    width: 2.5vw;
+    border-radius: 50%;
+    position: absolute;
+    top: 12vh;
+    left: 35vw;
+    box-shadow: 0 3px 3px 2px rgba(99, 67, 8, 0.4);
+  }
+  
+  .moon2 {
+    width: 5.5vw;
+    border-radius: 50%;
+    position: absolute;
+    top: 58vh;
+    right: 33vw;
+    background-color: #ffb13d;
+    animation: float2 4s ease-in-out infinite alternate;
+    animation: excite1 18s infinite linear;
+    
+  } 
+  .moon2copy{
+  width: 5.5vw;
+  border-radius: 50%;
+  position: absolute;
+  top: 58vh;
+  right: 33vw;
+  
+  box-shadow: 0 3px 3px 2px rgba(99, 67, 8, 0.4);
+  
+  }
+  
+  
+   @keyframes excite1 {
+    to {transform: rotateZ(360deg);}
+  }
+   .moon2:after {
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.6);  
+   }
+  
+  
+  .star1 {
+    width: 20px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #F4C92F;
+    position: absolute;
+    top: 10vh;
+    right: 33vw;
+    animation: twinkle 0.5s 0.2s linear infinite alternate;
+  }
+  
+  .star1::after {
+    content: "";
+    width: 5px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: rgb(252, 207, 29);
+    position: absolute;
+    top: -7px;
+    right: 8px;
+    animation: twinkle 0.5s 0.2s linear infinite alternate;
+  }
+  
+  .star2 {
+    width: 20px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #F4C92F;
+    position: absolute;
+    top: 15vh;
+    right: 35vw;
+    animation: twinkle 0.5s 0.3s linear infinite alternate;
+  }
+  
+  .star2::after {
+    content: "";
+    width: 5px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: rgb(252, 213, 40);
+    position: absolute;
+    top: -7px;
+    right: 8px;
+    animation: twinkle 0.6s 0.3s linear infinite alternate;
+  }
+  
+  .star3 {
+    width: 20px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #F4C92F;
+    position: absolute;
+    top: 12vh;
+    right: 38vw;
+    animation: twinkle 0.6s linear infinite alternate;
+  }
+  
+  .star3::after {
+    content: "";
+    width: 5px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: rgb(245, 168, 69);
+    position: absolute;
+    top: -7px;
+    left: 8px;
+    animation: twinkle 0.5s linear infinite alternate;
+  }
+  
+  .star4 {
+    width: 20px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #F4C92F;
+    position: absolute;
+    bottom: 34vh;
+    left: 34vw;
+    animation: twinkle 0.4s linear infinite alternate;
+  }
+  
+  .star4::after {
+    content: "";
+    width: 5px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: rgb(255, 234, 116);
+    position: absolute;
+    top: -7px;
+    left: 8px;
+    animation: twinkle 0.6s linear infinite alternate;}
+  
+    .star5 {
+      width: 20px;
+      height: 5px;
+      border-radius: 5px;
+      background-color: #ffdd64;
+      position: absolute;
+      bottom: 28vh;
+      left: 38vw;
+      animation: twinkle 0.4s linear infinite alternate;
+    }
+    
+    .star5::after {
+      content: "";
+      width: 5px;
+      height: 20px;
+      border-radius: 5px;
+      background-color: rgb(253, 196, 37);
+      position: absolute;
+      top: -7px;
+      left: 8px;
+      animation: twinkle 0.6s linear infinite alternate;}
+  
+    
+  
+  @keyframes twinkle {
+    to {
+      background-color: rgb(245, 240, 211);
+    }
+  }
+  
+  
+  
+  
+  /* *************** TITLE ******************* */
+  
+  .title_container{
+width: 100vw;
+display: flex;
+align-items: center;
+justify-content: center;
+
+  }
+  
+  .title {
+    padding: 2em;
+    height: 20vh;
+    position: absolute;
+    width: 80vw;
+    height: 18vh;
+    top: 70%;
+    display: grid;
+    grid: 100% / repeat(12, auto);
+align-items: center;
+justify-content: space-between;
+  }
+  .title .hover {
+    position: relative;
+    display: grid;
+    place-items: center;
+  }
+  .title h1 {
+  
+    font: 600 3rem sans-serif;
+    text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    color: transparent;
+    -webkit-text-stroke: 2px  #f8ede5;
+    text-shadow: none;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .title .hover:hover h1 {
+    transform: scale(1.3);
+    color: #bbc0ff;
+    -webkit-text-stroke: 2px transparent;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+
+
+
+  /* media queries */
+
+
+  @media only screen and (max-width: 500px) {
+      .earth {
+    max-width: 80vw;
+    border-radius: 50%;
+    position: absolute;
+ left: 9.5vw;
+  top: 10vh;
+    box-sizing: border-box;
+
+  }
+  .scene {
+    top: 12vh;
+   
+  }
+  .star5 {
+    
+    position: absolute;
+    bottom: 38vh;
+    left: 25vw;
+
+  }
+  .star4 {
+    
+    position: absolute;
+    bottom: 47vh;
+    left: 12vw;
+
+  }
+  .star3 {
+    
+    position: absolute;
+    top: 9vh;
+    right: 3vw;
+
+  }
+  .star2 {
+    
+    position: absolute;
+    top: 12vh;
+    right: 10vw;
+
+  }
+  .star1 {
+    
+    position: absolute;
+    top: 20vh;
+    right: 4vw;
+
+  }
+
+
+
+.moon1 {
+  width: 10vw;
+  
+  position: absolute;
+  top: 13vh;
+  left: 14vw;
+ 
+ 
+}
+.moon1copy {
+  width: 10vw;
+  
+  position: absolute;
+  top: 13vh;
+  left: 14vw;
+}
+
+.moon2 {
+  width:  17vw;
+  position: absolute;
+  top: 5vh;
+  right: 9vw;
+  
+} 
+.moon2copy{
+  width:  17vw;
+  position: absolute;
+  top: 5vh;
+  right: 9vw;
+}
+
+  }
+
+  @media only screen and (max-width: 420px) {
+    .earth {
+  max-width: 80vw;
+  border-radius: 50%;
+  position: absolute;
+left: 9.5vw;
+top: 10vh;
+  box-sizing: border-box;
+
+}
+
+.star5 {
+  
+  position: absolute;
+  bottom: 42vh;
+  left: 25vw;
+
+}
+.star4 {
+  
+  position: absolute;
+  bottom: 50vh;
+  left: 12vw;
+
+}
+.star3 {
+  
+  position: absolute;
+  top: 9vh;
+  right: 3vw;
+
+}
+.star2 {
+  
+  position: absolute;
+  top: 12vh;
+  right: 10vw;
+
+}
+.star1 {
+  
+  position: absolute;
+  top: 20vh;
+  right: 4vw;
+
+}
+
+
+
+.moon1 {
+width: 10vw;
+
+position: absolute;
+top: 13vh;
+left: 14vw;
+
+
+}
+.moon1copy {
+width: 10vw;
+
+position: absolute;
+top: 13vh;
+left: 14vw;
+}
+
+.moon2 {
+width:  17vw;
+position: absolute;
+top: 42vh;
+right: 9vw;
+
+} 
+.moon2copy{
+width:  17vw;
+position: absolute;
+top: 42vh;
+right: 9vw;
+}
+.scene {
+  top: 12vh;
+}
+
+}

@@ -1,0 +1,17 @@
+/* WORLD MAP */
+
+.guide {
+  position: absolute;
+  margin: 15vh 5vw 15vh 80vw;
+  width: 15vw;
+  height: 60vh;
+  float: right;
+  /* margin-right: 10px; */
+}
+
+.map {
+    margin: 5vh 20vw 5vh 10vw;
+    width: 70vw;
+    height: 90vh;
+    
+  }
