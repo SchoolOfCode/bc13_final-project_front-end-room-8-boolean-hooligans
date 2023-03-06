@@ -88,6 +88,7 @@ export default function SharedCharacterPopUp(props) {
           )}
 
           <div className={styles.leftStuffContainer}>
+          <div style={{height:"40px"}}></div>
             <div className={styles.editName}>
               <div hidden={editNameInput}>
                 <button

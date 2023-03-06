@@ -69,17 +69,26 @@ export default function CharacterPopUp(props) {
     });
   }
 
+ 
+
+
   async function editCharacter(id, key, value) {
-    let body = {};
-    body.user_id = 1;
-    body[key] = value;
-    await fetch(`https://imaginerium-qpii.onrender.com/characters/${id}`, {
-      method: "PATCH",
-      body: JSON.stringify(body),
-      mode: "cors",
-      headers: { "Content-Type": "application/json" }
-    });
+
+    if (value !== null) {
+      let body = {};
+      body.user_id = 1;
+      body[key] = value;
+      await fetch(`https://imaginerium-qpii.onrender.com/characters/${id}`, {
+        method: "PATCH",
+        body: JSON.stringify(body),
+        mode: "cors",
+        headers: { "Content-Type": "application/json" },
+      });
+    } else {
+      console.log("Value is null. Edit not sent.");
+    }
   }
+  
 
   async function shareCharacter() {
     let body = {};
@@ -179,6 +188,7 @@ export default function CharacterPopUp(props) {
                       <input
                         defaultValue={props.char_name}
                         onChange={(e) => setEditName(e.target.value)}
+                        className={styles.nameinput}
                       ></input>
                       <button
                         onClick={() => {
