@@ -162,8 +162,9 @@
     width: 280px;
     float: right;
     position: absolute;
-    left: 150px;
+    left: 160px;
     height: 100%;
+    
     /* padding: 10px; */
   }
 
@@ -171,10 +172,11 @@
     width: 70%;
     float: right;
     text-align: left;
-    overflow-x: scroll;
+    overflow-y: scroll;
     height: 90%;
-    /* padding: 10px; */
-    margin: 5px 80px 5px 0px;
+    /* padding: 5px 5px 20px 5px; */
+    margin: 10px 90px 5px 5px;
+    font-size: 15px; /* Description font size increased */
   }
 
   .additional .aliveStatus {
