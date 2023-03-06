@@ -10,9 +10,9 @@ import Image from "next/image";
 const spring = {
   type: "spring",
   damping: 10,
-  stiffness: 100,
+  stiffness: 100
 };
-
+// about page
 export default function aboutUs() {
   return (
     <>
@@ -38,8 +38,7 @@ export default function aboutUs() {
               target="_blank"
             >
               School of Code's
-            </Link>
-            {" "}
+            </Link>{" "}
             Cohort 13, and this site is our final project. We built it over the
             course of four weeks in January 2023, and are very pleased with the
             end result!<br></br>

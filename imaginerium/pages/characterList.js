@@ -33,15 +33,15 @@ export default function characterList() {
     setCharactersArray(data.payload);
   }
 
-  //sort by date created characters functionality
+  //sort  by date created characters functionality
   const [sortState, setSortState] = useState("none");
 
   const sortMethods = {
     none: { method: (a, b) => null },
     ascending: { method: (a, b) => (a.character_id < b.character_id ? -1 : 1) },
     descending: {
-      method: (a, b) => (a.character_id > b.character_id ? -1 : 1),
-    },
+      method: (a, b) => (a.character_id > b.character_id ? -1 : 1)
+    }
   };
 
   if (!session) {
@@ -72,7 +72,7 @@ export default function characterList() {
         </div>
         <div className={styles.filters} aria-level="2">
           <div id={styles.cover}>
-          {/*Search by name form */}
+            {/*Search by name form */}
             <form
               className={styles.form}
               onSubmit={(e) => {
@@ -113,7 +113,7 @@ export default function characterList() {
               <div>View All</div>
             </button>
           </div>
-            {/*"Sort by" dropdown button */}
+          {/*"Sort by" dropdown button */}
           <div>
             <select
               className={styles.allButton}
