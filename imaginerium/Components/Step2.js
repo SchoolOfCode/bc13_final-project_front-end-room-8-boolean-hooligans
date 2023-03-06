@@ -11,7 +11,7 @@ export default function Step2({ setStep, formValues, setFormValues }) {
   async function onSubmit(values, e) {
     // e.preventDefault();
     setFormValues({ ...formValues, ...values });
-    // console.log("step2:", formValues);
+
     if (myForm.current.buttonId === "next") {
       setStep(3);
     } else {
@@ -19,7 +19,6 @@ export default function Step2({ setStep, formValues, setFormValues }) {
     }
 
     const buttonId = e;
-    // console.log(buttonId);
   }
 
   return (
@@ -46,6 +45,7 @@ export default function Step2({ setStep, formValues, setFormValues }) {
                 {...register("char_hopes", { required: false })}
                 name="char_hopes"
                 id="char_hopes"
+                placeholder="Rule the world, become a famous singer, etc."
               />
             </div>
             <div>
@@ -59,6 +59,7 @@ export default function Step2({ setStep, formValues, setFormValues }) {
                 {...register("char_fears", { required: false })}
                 name="char_fears"
                 id="char_fears"
+                placeholder="Fear of heights, fear of spiders, etc."
               />
             </div>
           </div>
@@ -75,6 +76,7 @@ export default function Step2({ setStep, formValues, setFormValues }) {
                 {...register("char_speech", { required: false })}
                 name="char_speech"
                 id="char_speech"
+                placeholder="We were on a break!"
               />
             </div>
             <div>
